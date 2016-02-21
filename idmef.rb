@@ -3,13 +3,14 @@ require 'json'
 RFC = "rfc4765.txt"
 
 class RfcReader
-  attr_accessor :classes
+  attr_accessor :classes, :tree_classes
 
   def initialize(rfc)
     @rfc = IO.readlines(rfc)
     @classes = {}
     @tree = {}
     parse
+    @tree_classes = Marshal.load(Marshal.dump(@classes))
     classes_to_tree
   end
 
@@ -18,23 +19,36 @@ class RfcReader
   end
 
   def to_json
-    JSON.dump(@tree)
+    JSON.pretty_generate(@tree)
+  end
+
+  def to_file
+    Dir.mkdir("idmef") unless File.exists?("idmef")
+    Dir.chdir("idmef")
+    @classes.each do |name, classe|
+      File.open("#{name}.json", "w") do |f|
+        f.write(JSON.pretty_generate(classe))
+      end
+    end
+    File.open("tree.json", "w") do |f|
+      f.write(JSON.pretty_generate(@tree))
+    end
   end
 
   private
 
   def classes_to_tree
-    @tree["Alert"] = itterate_class(@classes["Alert"])
-    @tree["Heartbeat"] = itterate_class(@classes["Heartbeat"])
+    @tree["Alert"] = itterate_class(@tree_classes["Alert"])
+    @tree["Heartbeat"] = itterate_class(@tree_classes["Heartbeat"])
   end
 
   def itterate_class(class_object)
     class_object[:aggregates].each do |name, aggregate|
-      if @classes[name]
+      if @tree_classes[name]
         if name == class_object[:name] || class_object[:name] == "Linkage"
           aggregate[:type] = name
         else
-          child = itterate_class(@classes[name])
+          child = itterate_class(@tree_classes[name])
           aggregate[:type] = name
           aggregate[:aggregates] = child[:aggregates]
           aggregate[:attributes] = child[:attributes]
@@ -203,4 +217,4 @@ class RfcReader
 end
 
 rfc = RfcReader.new(RFC)
-puts rfc.to_json
+rfc.to_file

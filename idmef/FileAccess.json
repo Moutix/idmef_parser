@@ -1,0 +1,20 @@
+{
+  "name": "FileAccess",
+  "description": "The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems. ",
+  "aggregates": {
+    "UserId": {
+      "name": "UserId",
+      "multiplicity": "1",
+      "type": null,
+      "description": "The user (or group) to which these permissions apply.  The value of the \"type\" attribute must be \"user-privs\", \"group-privs\", or \"other-privs\" as appropriate.  Other values for \"type\" MUST NOT be used in this context."
+    },
+    "Permission": {
+      "name": "Permission",
+      "multiplicity": "1..*",
+      "type": "ENUM",
+      "description": "Level of access allowed.  The permitted values are shown below.  There is no default value.  (See also Section 10.)"
+    }
+  },
+  "attributes": {
+  }
+}
