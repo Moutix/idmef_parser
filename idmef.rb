@@ -30,7 +30,8 @@ class RfcReader
         f.write(JSON.pretty_generate(classe))
       end
     end
-    File.open("tree.json", "w") do |f|
+    Dir.chdir("..")
+    File.open("idmef.json", "w") do |f|
       f.write(JSON.pretty_generate(@tree))
     end
   end

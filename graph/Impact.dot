@@ -1,0 +1,6 @@
+digraph Impact {
+	graph [rankdir=LR];
+	node [label="\N"];
+	graph [bb="0,0,176,88"];
+	Impact [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">Impact</td> </tr>" %<tr><td HREF="#" TITLE="Section 10.)">[ENUM] severity () </td></tr>%<tr><td HREF="#" TITLE="Section 10.)">[ENUM] completion () </td></tr>%<tr><td HREF="#" TITLE="value is &quot;other&quot;.  (See also Section 10.)">[ENUM] type () </td></tr>%</table>>, shape=plaintext, pos="88,44", width="2.4167", height="1.2361"];
+}
