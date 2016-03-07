@@ -1,4 +1,5 @@
 require 'json'
+require 'yaml'
 
 RFC = "rfc4765.txt"
 
@@ -22,17 +23,27 @@ class RfcReader
     JSON.pretty_generate(@tree)
   end
 
-  def to_file
-    Dir.mkdir("idmef") unless File.exists?("idmef")
-    Dir.chdir("idmef")
-    @classes.each do |name, classe|
-      File.open("#{name}.json", "w") do |f|
-        f.write(JSON.pretty_generate(classe))
+  def to_file folder='idmef', ext='json'
+    Dir.mkdir(folder) unless File.exists?(folder)
+    Dir.chdir(folder) do
+      @classes.each do |name, classe|
+        File.open("#{name}.#{ext}", "w") do |f|
+          case ext
+          when "json"
+            f.write(JSON.pretty_generate(classe))
+          when "yml"
+            f.write(YAML.dump(classe))
+          end
+        end
       end
     end
-    Dir.chdir("..")
-    File.open("idmef.json", "w") do |f|
-      f.write(JSON.pretty_generate(@tree))
+    File.open("idmef.#{ext}", "w") do |f|
+      case ext
+      when "json"
+        f.write(JSON.pretty_generate(@tree))
+      when "yml"
+        f.write(YAML.dump(@tree))
+      end
     end
   end
 
@@ -44,16 +55,16 @@ class RfcReader
   end
 
   def itterate_class(class_object)
-    class_object[:aggregates].each do |name, aggregate|
+    class_object["aggregates"].each do |name, aggregate|
       if @tree_classes[name]
-        if name == class_object[:name] || class_object[:name] == "Linkage"
-          aggregate[:type] = name
+        if name == class_object["name"] || class_object["name"] == "Linkage"
+          aggregate["type"] = name
         else
           child = itterate_class(@tree_classes[name])
-          aggregate[:type] = name
-          aggregate[:aggregates] = child[:aggregates]
-          aggregate[:attributes] = child[:attributes]
-          aggregate[:class_description] = child[:description]
+          aggregate["type"] = name
+          aggregate["aggregates"] = child["aggregates"]
+          aggregate["attributes"] = child["attributes"]
+          aggregate["class_description"] = child["description"]
         end
       end
     end
@@ -75,7 +86,7 @@ class RfcReader
       if section == 4
         if (idmef_class = detect_class(line))
           current_class = idmef_class
-          @classes[idmef_class] = {name: idmef_class, description: "", aggregates: {}, attributes: {}}
+          @classes[idmef_class] = {"name" => idmef_class, "description" => "", "aggregates" => {}, "attributes" => {}}
           state = "description"
           next
         elsif current_class == nil
@@ -84,7 +95,7 @@ class RfcReader
 
         if state == "description" ## State: Class description
           if line =~ /^\s*$/
-            if @classes[current_class][:description] != ""
+            if @classes[current_class]["description"] != ""
               state = "schema"
               next
             else
@@ -92,7 +103,7 @@ class RfcReader
             end
           else
             line =~ /^\s+(.+)$/
-            @classes[current_class][:description] += ($1 + " ")
+            @classes[current_class]["description"] += ($1 + " ")
             next
           end
         end
@@ -109,42 +120,42 @@ class RfcReader
 
         if state == "aggregate" ## State: Aggregate Class
           if line =~ /^\s*$/
-            if current_attr[:description]
-              @classes[current_class][:aggregates][current_attr[:name]] = current_attr
+            if current_attr["description"]
+              @classes[current_class]["aggregates"][current_attr["name"]] = current_attr
               current_attr = {}
             end
             next
-          elsif current_attr[:name].nil? && line =~ /^\s+([\w-]+)$/ 
-            current_attr[:name] = $1
+          elsif current_attr["name"].nil? && line =~ /^\s+([\w-]+)$/ 
+            current_attr["name"] = $1
             next
-          elsif current_attr[:multiplicity].nil? && line =~ /^\s+(Exactly|Zero|Optional|One)\s?(?:or)?\s?(one|more)?\.\s+(?:(\S+)\.)?\s*(.+)$/
-            current_attr[:multiplicity] = str_to_multiplicity($1, $2)
-            current_attr[:type] = $3
-            current_attr[:description] = $4
+          elsif current_attr["multiplicity"].nil? && line =~ /^\s+(Exactly|Zero|Optional|One)\s?(?:or)?\s?(one|more)?\.\s+(?:(\S+)\.)?\s*(.+)$/
+            current_attr["multiplicity"] = str_to_multiplicity($1, $2)
+            current_attr["type"] = $3
+            current_attr["description"] = $4
             next
-          elsif current_attr[:description] && line =~ /^\s+(.+)$/
-            current_attr[:description] += " " + $1
+          elsif current_attr["description"] && line =~ /^\s+(.+)$/
+            current_attr["description"] += " " + $1
             next
           end
         end
 
         if state == "attribute" ## State: Aggregate Class
           if line =~ /^\s*$/
-            if current_attr[:description]
-              @classes[current_class][:attributes][current_attr[:name]] = current_attr
+            if current_attr["description"]
+              @classes[current_class]["attributes"][current_attr["name"]] = current_attr
               current_attr = {}
             end
             next
-          elsif current_attr[:name].nil? && line =~ /^\s+([\w-]+)$/ 
-            current_attr[:name] = $1
+          elsif current_attr["name"].nil? && line =~ /^\s+([\w-]+)$/ 
+            current_attr["name"] = $1
             next
-          elsif current_attr[:name] && current_attr[:multiplicity].nil? && line =~ /\s+(Optional|Required)?\.?\s+(?:(\S+)\.)?\s*(.+)$/
-            current_attr[:multiplicity] = $1
-            current_attr[:type] = $2
-            current_attr[:description] = $3
+          elsif current_attr["name"] && current_attr["multiplicity"].nil? && line =~ /\s+(Optional|Required)?\.?\s+(?:(\S+)\.)?\s*(.+)$/
+            current_attr["multiplicity"] = $1
+            current_attr["type"] = $2
+            current_attr["description"] = $3
             next
-          elsif current_attr[:name] && current_attr[:description] && line =~ /^\s+(.+)$/
-            current_attr[:description] += " " + $1
+          elsif current_attr["name"] && current_attr["description"] && line =~ /^\s+(.+)$/
+            current_attr["description"] += " " + $1
             next
           end
         end
@@ -152,13 +163,13 @@ class RfcReader
 
       if section == 10
         if line =~ /^\s+IDMEF\sClass\sName\:\s+(\w+)$/
-          enums.push({class: $1, values: []})
+          enums.push({"class" => $1, "values" => []})
           next
         end
         if line =~ /^\s+IDMEF\sAttribute\sName\:\s+(\w+)$/
-          enums.last()[:attr] = $1
-          if enums.last()[:class] == "UserId" && enums.last()[:attr] == "category"
-            enums.last()[:attr] = "type"
+          enums.last()["attr"] = $1
+          if enums.last()["class"] == "UserId" && enums.last()["attr"] == "category"
+            enums.last()["attr"] = "type"
           end
           next
         end
@@ -167,22 +178,22 @@ class RfcReader
           keyword = $2
           description = $3
           if rank
-            enums.last()[:values].push({rank: rank, keyword: keyword, description: description})
+            enums.last()["values"].push({"rank" => rank, "keyword" => keyword, "description" => description})
           elsif description
-            enums.last()[:values].last()[:description] += " " + description
+            enums.last()["values"].last()["description"] += " " + description
           end
         end
       end
     end
 
     enums.each do |enum|
-      if @classes[enum[:class]][:aggregates].keys.include?(enum[:attr])
-        @classes[enum[:class]][:aggregates][enum[:attr]][:type] = "ENUM"
-        @classes[enum[:class]][:aggregates][enum[:attr]][:values] = enum[:values]
+      if @classes[enum["class"]]["aggregates"].keys.include?(enum[:attr])
+        @classes[enum["class"]]["aggregates"][enum["attr"]]["type"] = "ENUM"
+        @classes[enum["class"]]["aggregates"][enum["attr"]]["values"] = enum["values"]
       end
-      if @classes[enum[:class]][:attributes].keys.include?(enum[:attr])
-        @classes[enum[:class]][:attributes][enum[:attr]][:type] = "ENUM"
-        @classes[enum[:class]][:attributes][enum[:attr]][:values] = enum[:values]
+      if @classes[enum["class"]]["attributes"].keys.include?(enum["attr"])
+        @classes[enum["class"]]["attributes"][enum["attr"]]["type"] = "ENUM"
+        @classes[enum["class"]]["attributes"][enum["attr"]]["values"] = enum["values"]
       end
     end
   end
@@ -218,4 +229,5 @@ class RfcReader
 end
 
 rfc = RfcReader.new(RFC)
-rfc.to_file
+rfc.to_file "idmef/json", "json"
+rfc.to_file "idmef/yaml", "yml"

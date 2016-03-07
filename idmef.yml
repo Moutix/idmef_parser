@@ -1,0 +1,1249 @@
+---
+Alert:
+  name: Alert
+  description: 'Generally, every time an analyzer detects an event that it has been
+    configured to look for, it sends an Alert message to its manager(s). Depending
+    on the analyzer, an Alert message may correspond to a single detected event or
+    multiple detected events.  Alerts occur asynchronously in response to outside
+    events. '
+  aggregates:
+    Analyzer:
+      name: Analyzer
+      multiplicity: '1'
+      type: Analyzer
+      description: Identification information for the analyzer that originated the
+        alert.
+      aggregates: &11
+        Node:
+          name: Node
+          multiplicity: 0..1
+          type: Node
+          description: Information about the host or device on which the analyzer
+            resides (network address, network name, etc.).
+          aggregates: &1
+            location:
+              name: location
+              multiplicity: 0..1
+              type: STRING
+              description: The location of the equipment.
+            name:
+              name: name
+              multiplicity: 0..1
+              type: STRING
+              description: The name of the equipment.  This information MUST be provided
+                if no Address information is given.
+            Address:
+              name: Address
+              multiplicity: 0..*
+              type: Address
+              description: The network or hardware address of the equipment. Unless
+                a name (above) is provided, at least one address must be specified.
+              aggregates:
+                address:
+                  name: address
+                  multiplicity: '1'
+                  type: STRING
+                  description: The address information.  The format of this data is
+                    governed by the category attribute.
+                netmask:
+                  name: netmask
+                  multiplicity: 0..1
+                  type: STRING
+                  description: The network mask for the address, if appropriate.
+              attributes:
+                ident:
+                  name: ident
+                  multiplicity: Optional
+                  type: 
+                  description: A unique identifier for the address; see Section 3.2.9.
+                category:
+                  name: category
+                  multiplicity: Optional
+                  type: ENUM
+                  description: The type of address represented.  The permitted values
+                    for this attribute are shown below.  The default value is "unknown".  (See
+                    also Section 10.)
+                  values:
+                  - rank: '0'
+                    keyword: unknown
+                    description: Address type unknown
+                  - rank: '1'
+                    keyword: atm
+                    description: Asynchronous Transfer Mode network address
+                  - rank: '2'
+                    keyword: e-mail
+                    description: Electronic mail address (RFC 822)
+                  - rank: '3'
+                    keyword: lotus-notes
+                    description: Lotus Notes e-mail address
+                  - rank: '4'
+                    keyword: mac
+                    description: Media Access Control (MAC) address
+                  - rank: '5'
+                    keyword: sna
+                    description: IBM Shared Network Architecture (SNA) address
+                  - rank: '6'
+                    keyword: vm
+                    description: IBM VM ("PROFS") e-mail address
+                  - rank: '7'
+                    keyword: ipv4-addr
+                    description: IPv4 host address in dotted-decimal notation (a.b.c.d)
+                  - rank: '8'
+                    keyword: ipv4-addr-hex
+                    description: IPv4 host address in hexadecimal notation
+                  - rank: '9'
+                    keyword: ipv4-net
+                    description: IPv4 network address in dotted-decimal notation,
+                      slash, significant bits (a.b.c.d/nn)
+                  - rank: '10'
+                    keyword: ipv4-net-mask
+                    description: IPv4 network address in dotted-decimal notation,
+                      slash, network mask in dotted-decimal notation (a.b.c.d/w.x.y.z)
+                  - rank: '11'
+                    keyword: ipv6-addr
+                    description: IPv6 host address
+                  - rank: '12'
+                    keyword: ipv6-addr-hex
+                    description: IPv6 host address in hexadecimal notation
+                  - rank: '13'
+                    keyword: ipv6-net
+                    description: IPv6 network address, slash, significant bits
+                  - rank: '14'
+                    keyword: ipv6-net-mask
+                    description: IPv6 network address, slash, network mask
+                vlan-name:
+                  name: vlan-name
+                  multiplicity: Optional
+                  type: 
+                  description: The name of the Virtual LAN to which the address belongs.
+                vlan-num:
+                  name: vlan-num
+                  multiplicity: Optional
+                  type: 
+                  description: The number of the Virtual LAN to which the address
+                    belongs.
+              class_description: 'The Address class is used to represent network,
+                hardware, and application addresses. '
+          attributes: &2
+            ident:
+              name: ident
+              multiplicity: Optional
+              type: 
+              description: A unique identifier for the node; see Section 3.2.9.
+            category:
+              name: category
+              multiplicity: Optional
+              type: ENUM
+              description: The "domain" from which the name information was obtained,
+                if relevant.  The permitted values for this attribute are shown in
+                the table below.  The default value is "unknown". (See also Section
+                10 for extensions to the table.)
+              values:
+              - rank: '0'
+                keyword: unknown
+                description: Domain unknown or not relevant
+              - rank: '1'
+                keyword: ads
+                description: Windows 2000 Advanced Directory Services
+              - rank: '2'
+                keyword: afs
+                description: Andrew File System (Transarc)
+              - rank: '3'
+                keyword: coda
+                description: Coda Distributed File System
+              - rank: '4'
+                keyword: dfs
+                description: Distributed File System (IBM)
+              - rank: '5'
+                keyword: dns
+                description: Domain Name System
+              - rank: '6'
+                keyword: hosts
+                description: Local hosts file
+              - rank: '7'
+                keyword: kerberos
+                description: Kerberos realm
+              - rank: '8'
+                keyword: nds
+                description: Novell Directory Services
+              - rank: '9'
+                keyword: nis
+                description: Network Information Services (Sun)
+              - rank: '10'
+                keyword: nisplus
+                description: Network Information Services Plus (Sun)
+              - rank: '11'
+                keyword: nt
+                description: Windows NT domain
+              - rank: '12'
+                keyword: wfw
+                description: Windows for Workgroups
+          class_description: 'The Node class is used to identify hosts and other network
+            devices (routers, switches, etc.). '
+        Process:
+          name: Process
+          multiplicity: 0..1
+          type: Process
+          description: Information about the process in which the analyzer is executing.
+          aggregates: &3
+            name:
+              name: name
+              multiplicity: '1'
+              type: STRING
+              description: The name of the program being executed. This is a short
+                name; path and argument information are provided elsewhere.
+            pid:
+              name: pid
+              multiplicity: 0..1
+              type: INTEGER
+              description: The process identifier of the process.
+            path:
+              name: path
+              multiplicity: 0..1
+              type: STRING
+              description: The full path of the program being executed.
+            arg:
+              name: arg
+              multiplicity: 0..*
+              type: STRING
+              description: A command-line argument to the program. Multiple arguments
+                may be specified (they are assumed to have occurred in the same order
+                they are provided) with multiple uses of arg.
+            env:
+              name: env
+              multiplicity: 0..*
+              type: STRING
+              description: An environment string associated with the process; generally
+                of the format "VARIABLE=value".  Multiple environment strings may
+                be specified with multiple uses of env.
+          attributes: &4
+            ident:
+              name: ident
+              multiplicity: Optional
+              type: 
+              description: A unique identifier for the process; see Section 3.2.9.
+          class_description: 'The Process class is used to describe processes being
+            executed on sources, targets, and analyzers. '
+        Analyzer:
+          name: Analyzer
+          multiplicity: 0..1
+          type: Analyzer
+          description: Information about the analyzer from which the message may have
+            gone through.  The idea behind this mechanism is that when a manager receives
+            an alert and wants to forward it to another analyzer, it needs to substitute
+            the original analyzer
+      attributes: &12
+        analyzerid:
+          name: analyzerid
+          multiplicity: Optional
+          type: 
+          description: "(but see below).  A unique identifier for the analyzer; see
+            Section 3.2.9."
+        name:
+          name: name
+          multiplicity: Optional
+          type: 
+          description: An explicit name for the analyzer that may be easier to understand
+            than the analyzerid.
+        manufacturer:
+          name: manufacturer
+          multiplicity: Optional
+          type: 
+          description: The manufacturer of the analyzer software and/or hardware.
+        model:
+          name: model
+          multiplicity: Optional
+          type: 
+          description: The model name/number of the analyzer software and/or hardware.
+        version:
+          name: version
+          multiplicity: Optional
+          type: 
+          description: The version number of the analyzer software and/or hardware.
+        class:
+          name: class
+          multiplicity: Optional
+          type: 
+          description: The class of analyzer software and/or hardware.
+        ostype:
+          name: ostype
+          multiplicity: Optional
+          type: 
+          description: Operating system name.  On POSIX 1003.1 compliant systems,
+            this is the value returned in utsname.sysname by the uname() system call,
+            or the output of the "uname -s" command.
+        osversion:
+          name: osversion
+          multiplicity: Optional
+          type: 
+          description: Operating system version.  On POSIX 1003.1 compliant systems,
+            this is the value returned in utsname.release by the uname() system call,
+            or the output of the "uname -r" command.
+      class_description: 'The Analyzer class identifies the analyzer from which the
+        Alert or Heartbeat message originates.  Only one analyzer may be encoded for
+        each alert or heartbeat, and that MUST be the analyzer at which the alert
+        or heartbeat originated.  Although the IDMEF data model does not prevent the
+        use of hierarchical intrusion detection systems (where alerts get relayed
+        up the tree), it does not provide any way to record the identity of the "relay"
+        analyzers along the path from the originating analyzer to the manager that
+        ultimately receives the alert. '
+    CreateTime:
+      name: CreateTime
+      multiplicity: '1'
+      type: CreateTime
+      description: The time the alert was created.  Of the three times that may be
+        provided with an Alert, this is the only one that is required.
+      aggregates: &13 {}
+      attributes: &14 {}
+      class_description: 'The CreateTime class is used to indicate the date and time
+        the alert or heartbeat was created by the analyzer. '
+    Classification:
+      name: Classification
+      multiplicity: '1'
+      type: Classification
+      description: The "name" of the alert, or other information allowing the manager
+        to determine what it is.
+      aggregates:
+        Reference:
+          name: Reference
+          multiplicity: 0..*
+          type: Reference
+          description: Information about the message, pointing to external documentation
+            sites, that will provide background information about the alert.
+          aggregates:
+            name:
+              name: name
+              multiplicity: '1'
+              type: STRING
+              description: The name of the alert, from one of the origins listed below.
+            url:
+              name: url
+              multiplicity: '1'
+              type: STRING
+              description: A URL at which the manager (or the human operator of the
+                manager) can find additional information about the alert.  The document
+                pointed to by the URL may include an in-depth description of the attack,
+                appropriate countermeasures, or other information deemed relevant
+                by the vendor.
+          attributes:
+            origin:
+              name: origin
+              multiplicity: Required
+              type: ENUM
+              description: The source from which the name of the alert originates.
+                The permitted values for this attribute are shown below.  The default
+                value is "unknown".  (See also Section 10.)
+              values:
+              - rank: '0'
+                keyword: unknown
+                description: Origin of the name is not known
+              - rank: '1'
+                keyword: vendor-specific
+                description: A vendor-specific name (and hence, URL); this can be
+                  used to provide product-specific information
+              - rank: '2'
+                keyword: user-specific
+                description: A user-specific name (and hence, URL); this can be used
+                  to provide installation-specific information
+              - rank: '3'
+                keyword: bugtraqid
+                description: The SecurityFocus ("Bugtraq") vulnerability database
+                  identifier (http://www.securityfocus.com/bid)
+              - rank: '4'
+                keyword: cve
+                description: The Common Vulnerabilities and Exposures (CVE) name (http://cve.mitre.org/)
+              - rank: '5'
+                keyword: osvdb
+                description: The Open Source Vulnerability Database (http://www.osvdb.org)
+            meaning:
+              name: meaning
+              multiplicity: Optional
+              type: 
+              description: The meaning of the reference, as understood by the alert
+                provider.  This field is only valid if the value of the <origin> attribute
+                is set to "vendor-specific" or "user-specific".
+          class_description: 'The Reference class provides the "name" of an alert,
+            or other information allowing the manager to determine what it is. '
+      attributes:
+        ident:
+          name: ident
+          multiplicity: Optional
+          type: 
+          description: A unique identifier for this classification; see Section 3.2.9.
+        text:
+          name: text
+          multiplicity: Required
+          type: 
+          description: A vendor-provided string identifying the Alert message.
+      class_description: 'The Classification class provides the "name" of an alert,
+        or other information allowing the manager to determine what it is.  This name
+        is chosen by the alert provider. '
+    DetectTime:
+      name: DetectTime
+      multiplicity: 0..1
+      type: DetectTime
+      description: The time the event(s) leading up to the alert was detected.  In
+        the case of more than one event, the time the first event was detected.  In
+        some circumstances, this may not be the same value as CreateTime.
+      aggregates: {}
+      attributes: {}
+      class_description: 'The DetectTime class is used to indicate the date and time
+        that the event(s) producing an alert was detected by the analyzer.  In the
+        case of more than one event, it is the time that the first event was detected.  (This
+        may or may not be the same time as CreateTime; analyzers are not required
+        to send alerts immediately upon detection). '
+    AnalyzerTime:
+      name: AnalyzerTime
+      multiplicity: 0..1
+      type: AnalyzerTime
+      description: The current time on the analyzer (see Section 6.3).
+      aggregates: &15 {}
+      attributes: &16 {}
+      class_description: 'The AnalyzerTime class is used to indicate the current date
+        and time on the analyzer.  Its values should be filled in as late as possible
+        in the message transmission process, ideally immediately before placing the
+        message "on the wire". '
+    Source:
+      name: Source
+      multiplicity: 0..*
+      type: Source
+      description: The source(s) of the event(s) leading up to the alert.
+      aggregates:
+        Node:
+          name: Node
+          multiplicity: 0..1
+          type: Node
+          description: Information about the host or device that appears to be causing
+            the events (network address, network name, etc.).
+          aggregates: *1
+          attributes: *2
+          class_description: 'The Node class is used to identify hosts and other network
+            devices (routers, switches, etc.). '
+        User:
+          name: User
+          multiplicity: 0..1
+          type: User
+          description: Information about the user that appears to be causing the event(s).
+          aggregates: &5
+            UserId:
+              name: UserId
+              multiplicity: 1..*
+              type: UserId
+              description: Identification of a user, as indicated by its type attribute
+                (see Section 4.2.7.3.1).
+              aggregates: &9
+                name:
+                  name: name
+                  multiplicity: 0..1
+                  type: STRING
+                  description: A user or group name.
+                number:
+                  name: number
+                  multiplicity: 0..1
+                  type: INTEGER
+                  description: A user or group number.
+              attributes: &10
+                ident:
+                  name: ident
+                  multiplicity: Optional
+                  type: 
+                  description: A unique identifier for the user id, see Section 3.2.9.
+                type:
+                  name: type
+                  multiplicity: Optional
+                  type: ENUM
+                  description: The type of user information represented.  The permitted
+                    values for this attribute are shown below.  The default value
+                    is "original-user".  (See also Section 10.)
+                  values:
+                  - rank: '0'
+                    keyword: current-user
+                    description: The current user id being used by the user or process.  On
+                      Unix systems, this would be the "real" user id, in general.
+                  - rank: '1'
+                    keyword: original-user
+                    description: The actual identity of the user or process being
+                      reported on.  On those systems that (a) do some type of auditing
+                      and (b) support extracting a user id from the "audit id" token,
+                      that value should be used.  On those systems that do not support
+                      this, and where the user has logged into the system, the "login
+                      id" should be used.
+                  - rank: '2'
+                    keyword: target-user
+                    description: The user id the user or process is attempting to
+                      become.  This would apply, on Unix systems for example, when
+                      the user attempts to use "su", "rlogin", "telnet", etc.
+                  - rank: '3'
+                    keyword: user-privs
+                    description: Another user id the user or process has the ability
+                      to use, or a user id associated with a file permission.  On
+                      Unix systems, this would be the "effective" user id in a user
+                      or process context, and the owner permissions in a file context.  Multiple
+                      UserId elements of this type may be used to specify a list of
+                      privileges.
+                  - rank: '4'
+                    keyword: current-group
+                    description: The current group id (if applicable) being used by
+                      the user or process.  On Unix systems, this would be the "real"
+                      group id, in general.
+                  - rank: '5'
+                    keyword: group-privs
+                    description: Another group id the group or process has the ability
+                      to use, or a group id associated with a file permission.  On
+                      Unix systems, this would be the "effective" group id in a group
+                      or process context, and the group permissions in a file context.  On
+                      BSD-derived Unix systems, multiple UserId elements of this type
+                      would be used to include all the group ids on the "group list".
+                  - rank: '6'
+                    keyword: other-privs
+                    description: Not used in a user, group, or process context, only
+                      used in the file context. The file permissions assigned to users
+                      who do not match either the user or group permissions on the
+                      file.  On Unix systems, this would be the "world" permissions.
+                tty:
+                  name: tty
+                  multiplicity: Optional
+                  type: STRING
+                  description: The tty the user is using.
+              class_description: 'The UserId class provides specific information about
+                a user.  More than one UserId can be used within the User class to
+                indicate attempts to transition from one user to another, or to provide
+                complete information about a user''s (or process'') privileges. '
+          attributes: &6
+            ident:
+              name: ident
+              multiplicity: Optional
+              type: 
+              description: A unique identifier for the user; see Section 3.2.9.
+            category:
+              name: category
+              multiplicity: Optional
+              type: ENUM
+              description: The type of user represented.  The permitted values for
+                this attribute are shown below.  The default value is "unknown". (See
+                also Section 10.)
+              values:
+              - rank: '0'
+                keyword: unknown
+                description: User type unknown
+              - rank: '1'
+                keyword: application
+                description: An application user
+              - rank: '2'
+                keyword: os-device
+                description: An operating system or device user
+          class_description: 'The User class is used to describe users.  It is primarily
+            used as a "container" class for the UserId aggregate class, as shown in
+            Figure 16. '
+        Process:
+          name: Process
+          multiplicity: 0..1
+          type: Process
+          description: Information about the process that appears to be causing the
+            event(s).
+          aggregates: *3
+          attributes: *4
+          class_description: 'The Process class is used to describe processes being
+            executed on sources, targets, and analyzers. '
+        Service:
+          name: Service
+          multiplicity: 0..1
+          type: Service
+          description: Information about the network service involved in the event(s).
+          aggregates: &7
+            name:
+              name: name
+              multiplicity: 0..1
+              type: STRING
+              description: The name of the service.  Whenever possible, the name from
+                the IANA list of well-known ports SHOULD be used.
+            port:
+              name: port
+              multiplicity: 0..1
+              type: INTEGER
+              description: The port number being used.
+            portlist:
+              name: portlist
+              multiplicity: 0..1
+              type: PORTLIST
+              description: A list of port numbers being used; see Section 3.2.8 for
+                formatting rules.  If a portlist is given, the iana_protocol_number
+                and iana_protocol_name MUST apply to all the elements of the list.
+            protocol:
+              name: protocol
+              multiplicity: 0..1
+              type: STRING
+              description: Additional information about the protocol being used.  The
+                intent of the protocol field is to carry additional information related
+                to the protocol being used when the <Service> attributes iana_protocol_number
+                or/and iana_protocol_name are filed.
+          attributes: &8
+            ident:
+              name: ident
+              multiplicity: Optional
+              type: 
+              description: A unique identifier for the service; see Section 3.2.9.
+            ip_version:
+              name: ip_version
+              multiplicity: Optional
+              type: INTEGER
+              description: The IP version number.
+            iana_protocol_number:
+              name: iana_protocol_number
+              multiplicity: Optional
+              type: INTEGER
+              description: The IANA protocol number.
+            iana_protocol_name:
+              name: iana_protocol_name
+              multiplicity: Optional
+              type: STRING
+              description: The IANA protocol name.
+          class_description: 'The Service class describes network services on sources
+            and targets. It can identify services by name, port, and protocol.  When
+            Service occurs as an aggregate class of Source, it is understood that
+            the service is one from which activity of interest is originating; and
+            that the service is "attached" to the Node, Process, and User information
+            also contained in Source.  Likewise, when Service occurs as an aggregate
+            class of Target, it is understood that the service is one to which activity
+            of interest is being directed; and that the service is "attached" to the
+            Node, Process, and User information also contained in Target.  If Service
+            occurs in both Source and Target, then information in both locations should
+            be the same.  If information is the same in both locations and implementers
+            wish to carry it in only one location, they should specify it as an aggregate
+            of the Target class. '
+      attributes:
+        ident:
+          name: ident
+          multiplicity: Optional
+          type: 
+          description: A unique identifier for this source; see Section 3.2.9.
+        spoofed:
+          name: spoofed
+          multiplicity: Optional
+          type: ENUM
+          description: An indication of whether the source is, as far as the analyzer
+            can determine, a spoofed address used for hiding the real origin of the
+            attack.  The permitted values for this attribute are shown below.  The
+            default value is "unknown".  (See also Section 10.)
+          values:
+          - rank: '0'
+            keyword: unknown
+            description: Accuracy of source information unknown
+          - rank: '1'
+            keyword: 'yes'
+            description: Source is believed to be a decoy
+          - rank: '2'
+            keyword: 'no'
+            description: Source is believed to be "real"
+        interface:
+          name: interface
+          multiplicity: Optional
+          type: 
+          description: May be used by a network-based analyzer with multiple interfaces
+            to indicate which interface this source was seen on.
+      class_description: 'The Source class contains information about the possible
+        source(s) of the event(s) that generated an alert.  An event may have more
+        than one source (e.g., in a distributed denial-of-service attack). '
+    Target:
+      name: Target
+      multiplicity: 0..*
+      type: Target
+      description: The target(s) of the event(s) leading up to the alert.
+      aggregates:
+        Node:
+          name: Node
+          multiplicity: 0..1
+          type: Node
+          description: Information about the host or device at which the event(s)
+            (network address, network name, etc.) is being directed.
+          aggregates: *1
+          attributes: *2
+          class_description: 'The Node class is used to identify hosts and other network
+            devices (routers, switches, etc.). '
+        User:
+          name: User
+          multiplicity: 0..1
+          type: User
+          description: Information about the user at which the event(s) is being directed.
+          aggregates: *5
+          attributes: *6
+          class_description: 'The User class is used to describe users.  It is primarily
+            used as a "container" class for the UserId aggregate class, as shown in
+            Figure 16. '
+        Process:
+          name: Process
+          multiplicity: 0..1
+          type: Process
+          description: Information about the process at which the event(s) is being
+            directed.
+          aggregates: *3
+          attributes: *4
+          class_description: 'The Process class is used to describe processes being
+            executed on sources, targets, and analyzers. '
+        Service:
+          name: Service
+          multiplicity: 0..1
+          type: Service
+          description: Information about the network service involved in the event(s).
+          aggregates: *7
+          attributes: *8
+          class_description: 'The Service class describes network services on sources
+            and targets. It can identify services by name, port, and protocol.  When
+            Service occurs as an aggregate class of Source, it is understood that
+            the service is one from which activity of interest is originating; and
+            that the service is "attached" to the Node, Process, and User information
+            also contained in Source.  Likewise, when Service occurs as an aggregate
+            class of Target, it is understood that the service is one to which activity
+            of interest is being directed; and that the service is "attached" to the
+            Node, Process, and User information also contained in Target.  If Service
+            occurs in both Source and Target, then information in both locations should
+            be the same.  If information is the same in both locations and implementers
+            wish to carry it in only one location, they should specify it as an aggregate
+            of the Target class. '
+        File:
+          name: File
+          multiplicity: 0..1
+          type: File
+          description: Information about file(s) involved in the event(s).
+          aggregates:
+            name:
+              name: name
+              multiplicity: '1'
+              type: STRING
+              description: The name of the file to which the alert applies, not including
+                the path to the file.
+            path:
+              name: path
+              multiplicity: '1'
+              type: STRING
+              description: The full path to the file, including the name.  The path
+                name should be represented in as "universal" a manner as possible,
+                to facilitate processing of the alert.
+            create-time:
+              name: create-time
+              multiplicity: 0..1
+              type: DATETIME
+              description: Time the file was created.  Note that this is *not* the
+                Unix "st_ctime" file attribute (which is not file creation time).  The
+                Unix "st_ctime" attribute is contained in the "Inode" class.
+            modify-time:
+              name: modify-time
+              multiplicity: 0..1
+              type: DATETIME
+              description: Time the file was last modified.
+            access-time:
+              name: access-time
+              multiplicity: 0..1
+              type: DATETIME
+              description: Time the file was last accessed.
+            data-size:
+              name: data-size
+              multiplicity: 0..1
+              type: INTEGER
+              description: The size of the data, in bytes.  Typically what is meant
+                when referring to file size.  On Unix UFS file systems, this value
+                corresponds to stat.st_size.  On Windows NTFS, this value corresponds
+                to Valid Data Length (VDL).
+            disk-size:
+              name: disk-size
+              multiplicity: 0..1
+              type: INTEGER
+              description: The physical space on disk consumed by the file, in bytes.  On
+                Unix UFS file systems, this value corresponds to 512 * stat.st_blocks.  On
+                Windows NTFS, this value corresponds to End of File (EOF).
+            FileAccess:
+              name: FileAccess
+              multiplicity: 0..*
+              type: FileAccess
+              description: Access permissions on the file.
+              aggregates:
+                UserId:
+                  name: UserId
+                  multiplicity: '1'
+                  type: UserId
+                  description: The user (or group) to which these permissions apply.  The
+                    value of the "type" attribute must be "user-privs", "group-privs",
+                    or "other-privs" as appropriate.  Other values for "type" MUST
+                    NOT be used in this context.
+                  aggregates: *9
+                  attributes: *10
+                  class_description: 'The UserId class provides specific information
+                    about a user.  More than one UserId can be used within the User
+                    class to indicate attempts to transition from one user to another,
+                    or to provide complete information about a user''s (or process'')
+                    privileges. '
+                Permission:
+                  name: Permission
+                  multiplicity: 1..*
+                  type: ENUM
+                  description: Level of access allowed.  The permitted values are
+                    shown below.  There is no default value.  (See also Section 10.)
+              attributes: {}
+              class_description: 'The FileAccess class represents the access permissions
+                on a file. The representation is intended to be useful across operating
+                systems. '
+            Linkage:
+              name: Linkage
+              multiplicity: 0..*
+              type: Linkage
+              description: File system objects to which this file is linked (other
+                references for the file).
+              aggregates:
+                name:
+                  name: name
+                  multiplicity: '1'
+                  type: STRING
+                  description: The name of the file system object, not including the
+                    path.
+                path:
+                  name: path
+                  multiplicity: '1'
+                  type: STRING
+                  description: The full path to the file system object, including
+                    the name.  The path name should be represented in as "universal"
+                    a manner as possible, to facilitate processing of the alert.
+                File:
+                  name: File
+                  multiplicity: '1'
+                  type: File
+                  description: A <File> element may be used in place of the <name>
+                    and <path> elements if additional information about the file is
+                    to be included.
+              attributes:
+                category:
+                  name: category
+                  multiplicity: 
+                  type: ENUM
+                  description: Section 10.)
+                  values:
+                  - rank: '0'
+                    keyword: hard-link
+                    description: The <name> element represents another name for this
+                      file.  This information may be more easily obtainable on NTFS
+                      file systems than others.
+                  - rank: '1'
+                    keyword: mount-point
+                    description: An alias for the directory specified by the parent's
+                      <name> and <path> elements.
+                  - rank: '2'
+                    keyword: reparse-point
+                    description: Applies only to Windows; excludes symbolic links
+                      and mount points, which are specific types of reparse points.
+                  - rank: '3'
+                    keyword: shortcut
+                    description: The file represented by a Windows "shortcut".  A
+                      shortcut is distinguished from a symbolic link because of the
+                      difference in their contents, which may be of importance to
+                      the manager.
+                  - rank: '4'
+                    keyword: stream
+                    description: An Alternate Data Stream (ADS) in Windows; a fork
+                      on MacOS.  Separate file system entity that is considered an
+                      extension of the main <File>.
+                  - rank: '5'
+                    keyword: symbolic-link
+                    description: The <name> element represents the file to which the
+                      link points.
+              class_description: 'The Linkage class represents file system connections
+                between the file described in the <File> element and other objects
+                in the file system. For example, if the <File> element is a symbolic
+                link or shortcut, then the <Linkage> element should contain the name
+                of the object the link points to.  Further information can be provided
+                about the object in the <Linkage> element with another <File> element,
+                if appropriate. '
+            Inode:
+              name: Inode
+              multiplicity: 0..1
+              type: Inode
+              description: Inode information for this file (relevant to Unix).
+              aggregates:
+                change-time:
+                  name: change-time
+                  multiplicity: 0..1
+                  type: DATETIME
+                  description: The time of the last inode change, given by the st_ctime
+                    element of "struct stat".
+                number:
+                  name: number
+                  multiplicity: 0..1
+                  type: INTEGER
+                  description: The inode number.
+                major-device:
+                  name: major-device
+                  multiplicity: 0..1
+                  type: INTEGER
+                  description: The major device number of the device the file resides
+                    on.
+                minor-device:
+                  name: minor-device
+                  multiplicity: 0..1
+                  type: INTEGER
+                  description: The minor device number of the device the file resides
+                    on.
+                c-major-device:
+                  name: c-major-device
+                  multiplicity: 0..1
+                  type: INTEGER
+                  description: The major device of the file itself, if it is a character
+                    special device.
+                c-minor-device:
+                  name: c-minor-device
+                  multiplicity: 0..1
+                  type: INTEGER
+                  description: The minor device of the file itself, if it is a character
+                    special device.
+              attributes: {}
+              class_description: 'The Inode class is used to represent the additional
+                information contained in a Unix file system i-node. '
+            Checksum:
+              name: Checksum
+              multiplicity: 0..*
+              type: Checksum
+              description: Checksum information for this file.
+              aggregates:
+                value:
+                  name: value
+                  multiplicity: '1'
+                  type: STRING
+                  description: The value of the checksum.
+                key:
+                  name: key
+                  multiplicity: 0..1
+                  type: STRING
+                  description: The key to the checksum, if appropriate.
+              attributes:
+                algorithm:
+                  name: algorithm
+                  multiplicity: 
+                  type: ENUM
+                  description: default value.  (See also Section 10.)
+                  values:
+                  - rank: '0'
+                    keyword: MD4
+                    description: The MD4 algorithm.
+                  - rank: '1'
+                    keyword: MD5
+                    description: The MD5 algorithm.
+                  - rank: '2'
+                    keyword: SHA1
+                    description: The SHA1 algorithm.
+                  - rank: '3'
+                    keyword: SHA2-256
+                    description: The SHA2 algorithm with 256 bits length.
+                  - rank: '4'
+                    keyword: SHA2-384
+                    description: The SHA2 algorithm with 384 bits length.
+                  - rank: '5'
+                    keyword: SHA2-512
+                    description: The SHA2 algorithm with 512 bits length.
+                  - rank: '6'
+                    keyword: CRC-32
+                    description: The CRC algorithm with 32 bits length.
+                  - rank: '7'
+                    keyword: Haval
+                    description: The Haval algorithm.
+                  - rank: '8'
+                    keyword: Tiger
+                    description: The Tiger algorithm.
+                  - rank: '9'
+                    keyword: Gost
+                    description: The Gost algorithm.
+              class_description: 'The Checksum class represents checksum information
+                associated with the file.  This checksum information can be provided
+                by file integrity checkers, among others. '
+            ident:
+              name: ident
+              multiplicity: 0..1
+              type: 
+              description: A unique identifier for this file; see Section 3.2.9.
+            category:
+              name: category
+              multiplicity: 0..1
+              type: 
+              description: The type of file system the file resides on.  This attribute
+                governs how path names and other attributes are interpreted.
+            file-type:
+              name: file-type
+              multiplicity: 0..1
+              type: 
+              description: The type of file, as a mime-type.
+          attributes: {}
+          class_description: 'The File class provides specific information about a
+            file or other file-like object that has been created, deleted, or modified
+            on the target.  The description can provide either the file settings prior
+            to the event or the file settings at the time of the event, as specified
+            using the "category" attribute. '
+      attributes:
+        ident:
+          name: ident
+          multiplicity: Optional
+          type: 
+          description: A unique identifier for this target, see Section 3.2.9.
+        decoy:
+          name: decoy
+          multiplicity: Optional
+          type: ENUM
+          description: An indication of whether the target is, as far as the analyzer
+            can determine, a decoy.  The permitted values for this attribute are shown
+            below.  The default value is "unknown".  (See also Section 10.)
+          values:
+          - rank: '0'
+            keyword: unknown
+            description: Accuracy of target information unknown
+          - rank: '1'
+            keyword: 'yes'
+            description: Target is believed to be a decoy
+          - rank: '2'
+            keyword: 'no'
+            description: Target is believed to be "real"
+        interface:
+          name: interface
+          multiplicity: Optional
+          type: 
+          description: May be used by a network-based analyzer with multiple interfaces
+            to indicate which interface this target was seen on.
+      class_description: 'The Target class contains information about the possible
+        target(s) of the event(s) that generated an alert.  An event may have more
+        than one target (e.g., in the case of a port sweep). '
+    Assessment:
+      name: Assessment
+      multiplicity: 0..1
+      type: Assessment
+      description: Information about the impact of the event, actions taken by the
+        analyzer in response to it, and the analyzer's confidence in its evaluation.
+      aggregates:
+        Impact:
+          name: Impact
+          multiplicity: 0..1
+          type: Impact
+          description: The analyzer's assessment of the impact of the event on the
+            target(s).
+          aggregates: {}
+          attributes:
+            severity:
+              name: severity
+              multiplicity: 
+              type: ENUM
+              description: Section 10.)
+              values:
+              - rank: '0'
+                keyword: info
+                description: 'Alert represents informational activity  '
+              - rank: '1'
+                keyword: low
+                description: 'Low severity  '
+              - rank: '2'
+                keyword: medium
+                description: 'Medium severity  '
+              - rank: '3'
+                keyword: high
+                description: High severity
+            completion:
+              name: completion
+              multiplicity: 
+              type: ENUM
+              description: Section 10.)
+              values:
+              - rank: '0'
+                keyword: failed
+                description: The attempt was not successful
+              - rank: '1'
+                keyword: succeeded
+                description: The attempt succeeded
+            type:
+              name: type
+              multiplicity: 
+              type: ENUM
+              description: value is "other".  (See also Section 10.)
+              values:
+              - rank: '0'
+                keyword: admin
+                description: Administrative privileges were attempted or obtained
+              - rank: '1'
+                keyword: dos
+                description: A denial of service was attempted or completed
+              - rank: '2'
+                keyword: file
+                description: An action on a file was attempted or completed
+              - rank: '3'
+                keyword: recon
+                description: A reconnaissance probe was attempted or completed
+              - rank: '4'
+                keyword: user
+                description: User privileges were attempted or obtained
+              - rank: '5'
+                keyword: other
+                description: Anything not in one of the above categories
+          class_description: 'The Impact class is used to provide the analyzer''s
+            assessment of the impact of the event on the target(s).  It is represented
+            in the IDMEF DTD as follows: '
+        Action:
+          name: Action
+          multiplicity: 0..*
+          type: Action
+          description: The action(s) taken by the analyzer in response to the event.
+          aggregates: {}
+          attributes:
+            category:
+              name: category
+              multiplicity: 
+              type: ENUM
+              description: The default value is "other".  (See also Section 10.)
+              values:
+              - rank: '0'
+                keyword: block-installed
+                description: A block of some sort was installed to prevent an attack
+                  from reaching its destination.  The block could be a port block,
+                  address block, etc., or disabling a user account.
+              - rank: '1'
+                keyword: notification-sent
+                description: A notification message of some sort was sent out-of-band
+                  (via pager, e-mail, etc.).  Does not include the transmission of
+                  this alert.
+              - rank: '2'
+                keyword: taken-offline
+                description: A system, computer, or user was taken offline, as when
+                  the computer is shut down or a user is logged off.
+              - rank: '3'
+                keyword: other
+                description: Anything not in one of the above categories.
+          class_description: 'The Action class is used to describe any actions taken
+            by the analyzer in response to the event.  Is is represented in the IDMEF
+            DTD as follows: '
+        Confidence:
+          name: Confidence
+          multiplicity: 0..1
+          type: Confidence
+          description: A measurement of the confidence the analyzer has in its evaluation
+            of the event.
+          aggregates: {}
+          attributes:
+            rating:
+              name: rating
+              multiplicity: 
+              type: ENUM
+              description: also Section 10.)
+              values:
+              - rank: '0'
+                keyword: low
+                description: The analyzer has little confidence in its validity
+              - rank: '1'
+                keyword: medium
+                description: The analyzer has average confidence in its validity
+              - rank: '2'
+                keyword: high
+                description: The analyzer has high confidence in its validity
+              - rank: '3'
+                keyword: numeric
+                description: The analyzer has provided a posterior probability value
+                  indicating its confidence in its validity
+          class_description: 'The Confidence class is used to represent the analyzer''s
+            best estimate of the validity of its analysis.  It is represented in the
+            IDMEF DTD as follows: '
+      attributes: {}
+      class_description: 'The Assessment class is used to provide the analyzer''s
+        assessment of an event -- its impact, actions taken in response, and confidence. '
+    AdditionalData:
+      name: AdditionalData
+      multiplicity: 0..*
+      type: AdditionalData
+      description: Information included by the analyzer that does not fit into the
+        data model.  This may be an atomic piece of data, or a large amount of data
+        provided through an extension to the IDMEF (see Section 5).
+      aggregates: &17 {}
+      attributes: &18
+        meaning:
+          name: meaning
+          multiplicity: Optional
+          type: 
+          description: A string describing the meaning of the element content. These
+            values will be vendor/implementation dependent; the method for ensuring
+            that managers understand the strings sent by analyzers is outside the
+            scope of this specification.  A list of acceptable meaning keywords is
+            not within the scope of the document, although later versions may undertake
+            to establish such a list.
+      class_description: 'The AdditionalData class is used to provide information
+        that cannot be represented by the data model.  AdditionalData can be used
+        to provide atomic data (integers, strings, etc.) in cases where only small
+        amounts of additional information need to be sent; it can also be used to
+        extend the data model and the DTD to support the transmission of complex data
+        (such as packet headers).  Detailed instructions for extending the data model
+        and the DTD are provided in Section 5. '
+  attributes:
+    messageid:
+      name: messageid
+      multiplicity: Optional
+      type: 
+      description: A unique identifier for the alert; see Section 3.2.9.
+Heartbeat:
+  name: Heartbeat
+  description: 'Analyzers use Heartbeat messages to indicate their current status
+    to managers.  Heartbeats are intended to be sent in a regular period, say, every
+    ten minutes or every hour.  The receipt of a Heartbeat message from an analyzer
+    indicates to the manager that the analyzer is up and running; lack of a Heartbeat
+    message (or more likely, lack of some number of consecutive Heartbeat messages)
+    indicates that the analyzer or its network connection has failed. '
+  aggregates:
+    Analyzer:
+      name: Analyzer
+      multiplicity: '1'
+      type: Analyzer
+      description: Identification information for the analyzer that originated the
+        heartbeat.
+      aggregates: *11
+      attributes: *12
+      class_description: 'The Analyzer class identifies the analyzer from which the
+        Alert or Heartbeat message originates.  Only one analyzer may be encoded for
+        each alert or heartbeat, and that MUST be the analyzer at which the alert
+        or heartbeat originated.  Although the IDMEF data model does not prevent the
+        use of hierarchical intrusion detection systems (where alerts get relayed
+        up the tree), it does not provide any way to record the identity of the "relay"
+        analyzers along the path from the originating analyzer to the manager that
+        ultimately receives the alert. '
+    CreateTime:
+      name: CreateTime
+      multiplicity: '1'
+      type: CreateTime
+      description: The time the heartbeat was created.
+      aggregates: *13
+      attributes: *14
+      class_description: 'The CreateTime class is used to indicate the date and time
+        the alert or heartbeat was created by the analyzer. '
+    HeartbeatInterval:
+      name: HeartbeatInterval
+      multiplicity: 0..1
+      type: 
+      description: The interval in seconds at which heartbeats are generated.
+    AnalyzerTime:
+      name: AnalyzerTime
+      multiplicity: 0..1
+      type: AnalyzerTime
+      description: The current time on the analyzer (see Section 6.3).
+      aggregates: *15
+      attributes: *16
+      class_description: 'The AnalyzerTime class is used to indicate the current date
+        and time on the analyzer.  Its values should be filled in as late as possible
+        in the message transmission process, ideally immediately before placing the
+        message "on the wire". '
+    AdditionalData:
+      name: AdditionalData
+      multiplicity: 0..*
+      type: AdditionalData
+      description: Information included by the analyzer that does not fit into the
+        data model.  This may be an atomic piece of data or a large amount of data
+        provided through an extension to the IDMEF (see Section 5).
+      aggregates: *17
+      attributes: *18
+      class_description: 'The AdditionalData class is used to provide information
+        that cannot be represented by the data model.  AdditionalData can be used
+        to provide atomic data (integers, strings, etc.) in cases where only small
+        amounts of additional information need to be sent; it can also be used to
+        extend the data model and the DTD to support the transmission of complex data
+        (such as packet headers).  Detailed instructions for extending the data model
+        and the DTD are provided in Section 5. '
+  attributes:
+    messageid:
+      name: messageid
+      multiplicity: Optional
+      type: 
+      description: A unique identifier for the heartbeat; see Section 3.2.9.

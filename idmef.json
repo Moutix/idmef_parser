@@ -1763,20 +1763,8 @@
               "category": {
                 "name": "category",
                 "multiplicity": "0..1",
-                "type": "ENUM",
-                "description": "The type of file system the file resides on.  This attribute governs how path names and other attributes are interpreted.",
-                "values": [
-                  {
-                    "rank": "0",
-                    "keyword": "current",
-                    "description": "The file information is from after the reported change"
-                  },
-                  {
-                    "rank": "1",
-                    "keyword": "original",
-                    "description": "The file information is from before the reported change"
-                  }
-                ]
+                "type": null,
+                "description": "The type of file system the file resides on.  This attribute governs how path names and other attributes are interpreted."
               },
               "file-type": {
                 "name": "file-type",
