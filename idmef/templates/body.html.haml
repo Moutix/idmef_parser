@@ -2,7 +2,7 @@
 
 %p= idmef_class["description"]
 
-%img.img-responsive.block-center{src: "/tmp/img/#{idmef_class["name"]}.svg"}
+%img.img-responsive.block-center{src: "/img/#{idmef_class["name"]}.svg"}
 
 %hr
 
@@ -11,7 +11,7 @@
   - idmef_class["childs"].each do |name, child|
     - if classes.include? name
       %h4
-        %a{href: "/tmp/#{name}.html"}= name
+        %a{href: "/#{name}.html"}= name
     - else
       %h4= name
 
@@ -20,7 +20,7 @@
   - idmef_class["aggregates"].each do |name, aggregate|
     %h4
       - if classes.include? name
-        %a{href: "/tmp/#{name}.html"}= name
+        %a{href: "/#{name}.html"}= name
       - else
         = name
       - if aggregate["multiplicity"]

@@ -39,7 +39,7 @@ class HTMLGenerator
   end
 
   def render_footer
-    return render FOOTER
+    return render FOOTER, {classes: @generator.classes}
   end
 
   def render_head idmef_class
