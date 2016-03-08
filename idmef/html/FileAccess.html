@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <title>IDMEF</title>
+    <link href='/tmp/css/bootstrap.min.css' rel='stylesheet'>
+    <script src='/tmp/js/jquery.min.js'></script>
+    <script src='/tmp/js/bootstrap.min.js'></script>
+  </head>
+  <body>
+    <div class='navbar navbar-default navbar-inverse' role='navigation'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='/tmp' title='IDMEF'>IDMEF</a>
+        </div>
+        <div class='collapse navbar-collapse'>
+          <ul class='nav navbar-nav'>
+            <li class='dropdown'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+                Main classes
+                <span class='caret'></span>
+              </a>
+              <ul class='dropdown-menu'>
+                <li class=''>
+                  <a href='/tmp/IDMEF-Message.html'>IDMEF-Message</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Target.html'>Target</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/User.html'>User</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Service.html'>Service</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Analyzer.html'>Analyzer</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Heartbeat.html'>Heartbeat</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Classification.html'>Classification</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/File.html'>File</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Assessment.html'>Assessment</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Node.html'>Node</a>
+                </li>
+                <li class='active'>
+                  <a href='/tmp/FileAccess.html'>FileAccess</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Alert.html'>Alert</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Linkage.html'>Linkage</a>
+                </li>
+                <li class=''>
+                  <a href='/tmp/Source.html'>Source</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class='container'>
+      <h1>FileAccess</h1>
+      <p>The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems.</p>
+      <img class='img-responsive block-center' src='/tmp/img/FileAccess.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/tmp/UserId.html'>UserId</a>
+        (1)
+      </h4>
+      <blockquote>
+        The user (or group) to which these permissions apply.  The value of the "type" attribute must be "user-privs", "group-privs", or "other-privs" as appropriate.  Other values for "type" MUST NOT be used in this context.
+      </blockquote>
+      <h4>
+        Permission
+        (1..*)
+      </h4>
+      <blockquote>
+        Level of access allowed.  The permitted values are shown below.  There is no default value.  (See also Section 10.)
+      </blockquote>
+      <hr>
+    </div>
+    <hr>
+    Super footer
+  </body>
+</html>

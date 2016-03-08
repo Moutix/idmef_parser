@@ -80,6 +80,8 @@ class IDMEFGraph
 end
 
 class GraphGenerator
+  attr_accessor :classes
+
   MAPPING = {
     "json" => Proc.new {|a| JSON.parse(a)},
     "yml" => Proc.new {|a| YAML.load(a)},
@@ -106,6 +108,25 @@ class GraphGenerator
     @classes.each_key do |idmef_class|
       generate_graph! idmef_class, folder
     end
+  end
+
+  def get_class_tree(root=TOPCLASS, deepness=0)
+    classes = {}
+    return {} if deepness > 5
+
+    @classes[root].fetch("childs", {}).each_key do |idmef_class|
+      if @classes.include? idmef_class and idmef_class != root
+        classes[idmef_class] = get_class_tree(idmef_class, deepness+1)
+      end
+    end
+
+    @classes[root].fetch("aggregates", {}).each_key do |idmef_class|
+      if @classes.include? idmef_class and idmef_class != root
+        classes[idmef_class] = get_class_tree(idmef_class, deepness+1)
+      end
+    end
+
+    return classes
   end
 
   private
