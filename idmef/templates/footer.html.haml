@@ -1,8 +1,9 @@
-.row
-  - classes.keys.each_slice(classes.length/4) do |idmef_classes|
-    .col-md-3
-      %ul
-        - idmef_classes.each do |idmef_class|
-          %li
-            %a{href: "/#{location}/#{idmef_class}.html"}= idmef_class
+.container
+  .row
+    - classes.keys.each_slice(classes.length/4) do |idmef_classes|
+      .col-md-3
+        %ul
+          - idmef_classes.each do |idmef_class|
+            %li
+              %a{href: "/#{location}/#{idmef_class}.html"}= idmef_class
 

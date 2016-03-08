@@ -16,5 +16,5 @@
             - classes.each do |key, value|
               - if !value.fetch("aggregates", {}).merge(value.fetch("childs", {})).select{|k, v| classes.include? k}.empty?
                 %li{class: key == idmef_class ? "active" : ""}
-                  %a{href: "/#{location}#{key}.html"}= key
+                  %a{href: "/#{location}/#{key}.html"}= key
 
