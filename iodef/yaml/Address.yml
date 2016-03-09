@@ -1,0 +1,27 @@
+---
+name: Address
+description: 'The Address class represents a hardware (layer-2), network (layer-3),
+  or application (layer-7) address. '
+aggregates: {}
+attributes:
+  category:
+    name: category
+    multiplicity: Required
+    type: ENUM
+    description: The type of address represented.  The permitted values for this attribute
+      are shown below.  The default value is "ipv4-addr".
+  ext-category:
+    name: ext-category
+    multiplicity: Optional
+    type: STRING
+    description: A means by which to extend the category attribute.  See Section 5.1.
+  vlan-name:
+    name: vlan-name
+    multiplicity: Optional
+    type: STRING
+    description: The name of the Virtual LAN to which the address belongs.
+  vlan-num:
+    name: vlan-num
+    multiplicity: Optional
+    type: STRING
+    description: The number of the Virtual LAN to which the address belongs.

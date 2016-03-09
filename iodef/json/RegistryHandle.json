@@ -1,0 +1,20 @@
+{
+  "name": "RegistryHandle",
+  "description": "The RegistryHandle class represents a handle into an Internet registry or community-specific database.  The handle is specified in the element content and the type attribute specifies the database. ",
+  "aggregates": {
+  },
+  "attributes": {
+    "registry": {
+      "name": "registry",
+      "multiplicity": "Required",
+      "type": "ENUM",
+      "description": "The database to which the handle belongs.  The default value is 'local'.  The possible values are:"
+    },
+    "ext-registry": {
+      "name": "ext-registry",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A means by which to extend the registry attribute.  See Section 5.1."
+    }
+  }
+}

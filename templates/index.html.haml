@@ -1,0 +1,9 @@
+.jumbotron
+  .container
+    .row
+      - generators.each_key do |generator|
+        .col-md-6
+          .text-center
+            %h1
+              %a{href: "#{location}/#{generator}"}=generator
+

@@ -1,0 +1,8 @@
+{
+  "name": "RecordItem",
+  "description": "The RecordItem class provides a way to incorporate relevant logs, audit trails, or forensic data to support the conclusions made during the course of analyzing the incident.  The class supports both the direct encapsulation of the data, as well as, provides primitives to reference data stored elsewhere. ",
+  "aggregates": {
+  },
+  "attributes": {
+  }
+}

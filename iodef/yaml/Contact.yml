@@ -1,0 +1,91 @@
+---
+name: Contact
+description: 'The Contact class describes contact information for organizations and
+  personnel involved in the incident.  This class allows for the naming of the involved
+  party, specifying contact information for them, and identifying their role in the
+  incident. '
+aggregates:
+  ContactName:
+    name: ContactName
+    multiplicity: 0..1
+    type: ML_STRING
+    description: The name of the contact.  The contact may either be an organization
+      or a person.  The type attribute disambiguates the semantics.
+  Description:
+    name: Description
+    multiplicity: 0..*
+    type: ML_STRING
+    description: A free-form description of this contact.  In the case of a person,
+      this is often the organizational title of the individual.
+  RegistryHandle:
+    name: RegistryHandle
+    multiplicity: 0..*
+    type: 
+    description: A handle name into the registry of the contact.
+  PostalAddress:
+    name: PostalAddress
+    multiplicity: 0..1
+    type: 
+    description: The postal address of the contact.
+  Email:
+    name: Email
+    multiplicity: 0..*
+    type: 
+    description: The email address of the contact.
+  Telephone:
+    name: Telephone
+    multiplicity: 0..*
+    type: 
+    description: The telephone number of the contact.
+  Fax:
+    name: Fax
+    multiplicity: 0..1
+    type: 
+    description: The facsimile telephone number of the contact.
+  Timezone:
+    name: Timezone
+    multiplicity: 0..1
+    type: TIMEZONE
+    description: The timezone in which the contact resides formatted according to
+      Section 2.9.
+  Contact:
+    name: Contact
+    multiplicity: 0..*
+    type: 
+    description: A Contact instance contained within another Contact instance inherits
+      the values of the parent(s).  This recursive definition can be used to group
+      common data pertaining to multiple points of contact and is especially useful
+      when listing multiple contacts at the same organization.
+  AdditionalData:
+    name: AdditionalData
+    multiplicity: 0..*
+    type: 
+    description: A mechanism by which to extend the data model.
+attributes:
+  role:
+    name: role
+    multiplicity: Required
+    type: ENUM
+    description: 'Indicates the role the contact fulfills.  This attribute is defined
+      as an enumerated list:'
+  ext-role:
+    name: ext-role
+    multiplicity: Optional
+    type: STRING
+    description: A means by which to extend the role attribute. See Section 5.1.
+  type:
+    name: type
+    multiplicity: Required
+    type: ENUM
+    description: 'Indicates the type of contact being described. This attribute is
+      defined as an enumerated list:'
+  ext-type:
+    name: ext-type
+    multiplicity: Optional
+    type: STRING
+    description: A means by which to extend the type attribute. See Section 5.1.
+  restriction:
+    name: restriction
+    multiplicity: Optional
+    type: ENUM
+    description: This attribute is defined in Section 3.2.

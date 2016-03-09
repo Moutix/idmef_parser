@@ -1,0 +1,12 @@
+---
+name: Method
+description: 'The Method class describes the methodology used by the intruder to perpetrate
+  the events of the incident.  This class consists of a list of references describing
+  the attack method and a free form description of the technique. '
+aggregates: {}
+attributes:
+  restriction:
+    name: restriction
+    multiplicity: Optional
+    type: ENUM
+    description: This attribute is defined in Section 3.2.

@@ -1,0 +1,50 @@
+{
+  "name": "Service",
+  "description": "The Service class describes a network service of a host or network. The service is identified by specific port or list of ports, along with the application listening on that port. ",
+  "aggregates": {
+    "Port": {
+      "name": "Port",
+      "multiplicity": "0..1",
+      "type": "INTEGER",
+      "description": "A port number."
+    },
+    "Portlist": {
+      "name": "Portlist",
+      "multiplicity": "0..1",
+      "type": "PORTLIST",
+      "description": "A list of port numbers formatted according to Section 2.10."
+    },
+    "ProtoCode": {
+      "name": "ProtoCode",
+      "multiplicity": "0..1",
+      "type": "INTEGER",
+      "description": "A layer-4 protocol-specific code field (e.g., ICMP code field)."
+    },
+    "ProtoType": {
+      "name": "ProtoType",
+      "multiplicity": "0..1",
+      "type": "INTEGER",
+      "description": "A layer-4 protocol specific type field (e.g., ICMP type field)."
+    },
+    "ProtoFlags": {
+      "name": "ProtoFlags",
+      "multiplicity": "0..1",
+      "type": "INTEGER",
+      "description": "A layer-4 protocol specific flag field (e.g., TCP flag field)."
+    },
+    "Application": {
+      "name": "Application",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "The application bound to the specified Port or Portlist."
+    }
+  },
+  "attributes": {
+    "ip_protocol": {
+      "name": "ip_protocol",
+      "multiplicity": "Required",
+      "type": "INTEGER",
+      "description": "The IANA protocol number."
+    }
+  }
+}

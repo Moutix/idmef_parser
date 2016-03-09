@@ -1,0 +1,56 @@
+{
+  "name": "Assessment",
+  "description": "The Assessment class describes the technical and non-technical repercussions of the incident on the CSIRT's constituency. ",
+  "aggregates": {
+    "Impact": {
+      "name": "Impact",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "Technical impact of the incident on a network."
+    },
+    "TimeImpact": {
+      "name": "TimeImpact",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "Impact of the activity measured with respect to time."
+    },
+    "MonetaryImpact": {
+      "name": "MonetaryImpact",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "Impact of the activity measured with respect to financial loss."
+    },
+    "Counter": {
+      "name": "Counter",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "A counter with which to summarize the magnitude of the activity."
+    },
+    "Confidence": {
+      "name": "Confidence",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "An estimate of confidence in the assessment."
+    },
+    "AdditionalData": {
+      "name": "AdditionalData",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "A mechanism by which to extend the data model."
+    }
+  },
+  "attributes": {
+    "occurrence": {
+      "name": "occurrence",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "Specifies whether the assessment is describing actual or potential outcomes.  The default is \"actual\" and is assumed if not specified."
+    },
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute is defined in Section 3.2."
+    }
+  }
+}

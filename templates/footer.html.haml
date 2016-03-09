@@ -1,0 +1,13 @@
+.container
+  - generators.each do |name, gen|
+    %hr
+    %h4= name
+    - classes = gen[:generator].classes
+    .row
+      - classes.keys.sort.each_slice((classes.length + 3)/4) do |group_classes|
+        .col-md-3
+          %ul
+            - group_classes.each do |class_|
+              %li
+                %a{href: "/#{location}/#{name}/#{class_}.html"}= class_
+

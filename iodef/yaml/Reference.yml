@@ -1,0 +1,7 @@
+---
+name: Reference
+description: 'The Reference class is a reference to a vulnerability, IDS alert, malware
+  sample, advisory, or attack technique.  A reference consists of a name, a URL to
+  this reference, and an optional description. '
+aggregates: {}
+attributes: {}

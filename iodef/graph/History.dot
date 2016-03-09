@@ -1,0 +1,6 @@
+digraph History {
+	graph [rankdir=LR];
+	node [label="\N"];
+	graph [bb="0,0,230,48"];
+	History [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The History class is a log of the significant events or actions performed by the involved parties during the course of handling the incident. ">History</td> </tr>" %<tr><td HREF="#" TITLE="This attribute is defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%</table>>, shape=plaintext, pos="115,24", width="3.1667", height="0.68056"];
+}

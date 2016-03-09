@@ -1,0 +1,26 @@
+{
+  "name": "NodeRole",
+  "description": "The NodeRole class describes the intended function performed by a particular host. ",
+  "aggregates": {
+  },
+  "attributes": {
+    "category": {
+      "name": "category",
+      "multiplicity": "Required",
+      "type": "ENUM",
+      "description": "Functionality provided by a node."
+    },
+    "ext-category": {
+      "name": "ext-category",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A means by which to extend the category attribute.  See Section 5.1."
+    },
+    "lang": {
+      "name": "lang",
+      "multiplicity": "Required",
+      "type": "ENUM",
+      "description": "A valid language code per RFC 4646 [7] constrained by the definition of \"xs:language\".  The interpretation of this code is described in Section 6."
+    }
+  }
+}

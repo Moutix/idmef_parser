@@ -1,0 +1,73 @@
+---
+name: System
+description: 'The System class describes a system or network involved in an event.
+  The systems or networks represented by this class are categorized according to the
+  role they played in the incident through the category attribute.  The value of this
+  category attribute dictates the semantics of the aggregated classes in the System
+  class.  If the category attribute has a value of "source", then the aggregated classes
+  denote the machine and service from which the activity is originating.  With a category
+  attribute value of "target" or "intermediary", then the machine or service is the
+  one targeted in the activity.  A value of "sensor" dictates that this System was
+  part of an instrumentation to monitor the network. '
+aggregates:
+  Node:
+    name: Node
+    multiplicity: 1..1
+    type: 
+    description: A host or network involved in the incident.
+  Service:
+    name: Service
+    multiplicity: 0..*
+    type: 
+    description: A network service running on the system.
+  OperatingSystem:
+    name: OperatingSystem
+    multiplicity: 0..1
+    type: 
+    description: The operating system running on the system.
+  Counter:
+    name: Counter
+    multiplicity: 0..*
+    type: 
+    description: A counter with which to summarize properties of this host or network.
+  Description:
+    name: Description
+    multiplicity: 0..*
+    type: ML_STRING
+    description: A free-form text description of the System.
+  AdditionalData:
+    name: AdditionalData
+    multiplicity: 0..*
+    type: 
+    description: A mechanism by which to extend the data model.
+attributes:
+  restriction:
+    name: restriction
+    multiplicity: Optional
+    type: ENUM
+    description: This attribute is defined in Section 3.2.
+  category:
+    name: category
+    multiplicity: Required
+    type: ENUM
+    description: 'Classifies the role the host or network played in the incident.  The
+      possible values are:'
+  ext-category:
+    name: ext-category
+    multiplicity: Optional
+    type: STRING
+    description: A means by which to extend the category attribute.  See Section 5.1.
+  interface:
+    name: interface
+    multiplicity: Optional
+    type: STRING
+    description: Specifies the interface on which the event(s) on this System originated.  If
+      the Node class specifies a network rather than a host, this attribute has no
+      meaning.
+  spoofed:
+    name: spoofed
+    multiplicity: Optional
+    type: ENUM
+    description: An indication of confidence in whether this System was the true target
+      or attacking host.  The permitted values for this attribute are shown below.  The
+      default value is "unknown".

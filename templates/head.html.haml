@@ -1,0 +1,25 @@
+.navbar.navbar-default.navbar-inverse{role: "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{href: "/#{location}", title: title}= title
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        - generators.each do |name, gen|
+          - classes = gen[:generator].classes
+          %li.dropdown
+            %a.dropdown-toggle{href: "#", "data-toggle" => 'dropdown', role: "button"}
+              = name
+              %span.caret
+            %ul.dropdown-menu
+              %li{class: (gen[:top_class] == active_class && name == generator) ? "active" : ""}
+                %a{href: "/#{location}/#{name}"}= gen[:top_class]
+              %li.divider
+
+              - classes.select{|k, v| k != gen[:top_class] and !v.fetch("aggregates", {}).merge(v.fetch("childs", {})).select{|key, val| classes.include?(key)}.empty?}.keys.sort.each do |class_|
+                %li{class: (class_ == active_class && name == generator) ? "active" : ""}
+                  %a{href: "/#{location}/#{name}/#{class_}.html"}= class_
+

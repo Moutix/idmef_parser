@@ -1,0 +1,44 @@
+---
+name: RecordData
+description: 'The RecordData class groups log or audit data from a given sensor (e.g.,
+  IDS, firewall log) and provides a way to annotate the output. '
+aggregates:
+  DateTime:
+    name: DateTime
+    multiplicity: 0..1
+    type: 
+    description: Timestamp of the RecordItem data.
+  Description:
+    name: Description
+    multiplicity: 0..*
+    type: ML_STRING
+    description: Free-form textual description of the provided RecordItem data.  At
+      minimum, this description should convey the significance of the provided RecordItem
+      data.
+  Application:
+    name: Application
+    multiplicity: 0..1
+    type: 
+    description: Information about the sensor used to generate the RecordItem data.
+  RecordPattern:
+    name: RecordPattern
+    multiplicity: 0..*
+    type: 
+    description: A search string to precisely find the relevant data in a RecordItem.
+  RecordItem:
+    name: RecordItem
+    multiplicity: 1..*
+    type: 
+    description: Log, audit, or forensic data.
+  AdditionalData:
+    name: AdditionalData
+    multiplicity: 0..1
+    type: 
+    description: An extension mechanism for data not explicitly represented in the
+      data model.
+attributes:
+  restriction:
+    name: restriction
+    multiplicity: Optional
+    type: ENUM
+    description: This attribute has been defined in Section 3.2.

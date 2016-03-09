@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <title>IDMEF and IODEF</title>
+    <link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
+    <script src='/idmef_parser/js/jquery.min.js'></script>
+    <script src='/idmef_parser/js/bootstrap.min.js'></script>
+  </head>
+  <body>
+    <div class='navbar navbar-default navbar-inverse' role='navigation'>
+      <div class='container'>
+        <div class='navbar-header'>
+          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+          </button>
+          <a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
+        </div>
+        <div class='collapse navbar-collapse'>
+          <ul class='nav navbar-nav'>
+            <li class='dropdown'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+                IDMEF
+                <span class='caret'></span>
+              </a>
+              <ul class='dropdown-menu'>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
+                </li>
+                <li class='divider'></li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/File.html'>File</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IDMEF/User.html'>User</a>
+                </li>
+              </ul>
+            </li>
+            <li class='dropdown'>
+              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+                IODEF
+                <span class='caret'></span>
+              </a>
+              <ul class='dropdown-menu'>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF'>IODEF-Document</a>
+                </li>
+                <li class='divider'></li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+                </li>
+                <li class='active'>
+                  <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Node.html'>Node</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Record.html'>Record</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/Service.html'>Service</a>
+                </li>
+                <li class=''>
+                  <a href='/idmef_parser/IODEF/System.html'>System</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class='container'>
+      <h1>Incident</h1>
+      <p>Every incident is represented by an instance of the Incident class. This class provides a standardized representation for commonly exchanged incident data.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Incident.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+        (1..1)
+      </h4>
+      <blockquote>
+        An incident tracking number assigned to this incident by the CSIRT that generated the IODEF document.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The incident tracking numbers used by other CSIRTs to refer to the incident described in the document.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The incident tracking numbers of related incidents.
+      </blockquote>
+      <h4>
+        DetectTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the incident was first detected.
+      </blockquote>
+      <h4>
+        StartTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the incident started.
+      </blockquote>
+      <h4>
+        EndTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the incident ended.
+      </blockquote>
+      <h4>
+        ReportTime
+        (1..1)
+      </h4>
+      <blockquote>
+        The time the incident was reported.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form textual description of the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        A characterization of the impact of the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Method.html'>Method</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The techniques used by the intruder in the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        Contact information for the parties involved in the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Description of the events comprising the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/History.html'>History</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        A log of significant events or actions that occurred during the course of handling the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Mechanism by which to extend the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        purpose
+        (Required)
+      </h4>
+      <blockquote>
+        The purpose attribute represents the reason why the IODEF document was created.  It is closely related to the Expectation class (Section 3.13).  This attribute is defined as an enumerated list:
+      </blockquote>
+      <h4>
+        ext-purpose
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the purpose attribute.  See Section 5.1.
+      </blockquote>
+      <h4>
+        lang
+        (Optional)
+      </h4>
+      <blockquote>
+        A valid language code per RFC 4646 [7] constrained by the definition of "xs:language".  The interpretation of this code is described in Section 6.
+      </blockquote>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute indicates the disclosure guidelines to which the sender expects the recipient to adhere for the information represented in this class and its children.  This guideline provides no security since there are no specified technical means to ensure that the recipient of the document handles the information as the sender requested.
+      </blockquote>
+    </div>
+    <hr>
+    <div class='container'>
+      <hr>
+      <h4>IDMEF</h4>
+      <div class='row'>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IDMEF/Action.html'>Action</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Address.html'>Address</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/File.html'>File</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/User.html'>User</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <h4>IODEF</h4>
+      <div class='row'>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Address.html'>Address</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Application.html'>Application</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Email.html'>Email</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/History.html'>History</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IODEF/Method.html'>Method</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Node.html'>Node</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Record.html'>Record</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
+            </li>
+          </ul>
+        </div>
+        <div class='col-md-3'>
+          <ul>
+            <li>
+              <a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/Service.html'>Service</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/System.html'>System</a>
+            </li>
+            <li>
+              <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

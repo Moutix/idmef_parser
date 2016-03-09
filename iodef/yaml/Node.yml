@@ -1,0 +1,39 @@
+---
+name: Node
+description: 'The Node class names a system (e.g., PC, router) or network. '
+aggregates:
+  NodeName:
+    name: NodeName
+    multiplicity: 0..*
+    type: ML_STRING
+    description: The name of the Node (e.g., fully qualified domain name).  This information
+      MUST be provided if no Address information is given.
+  Address:
+    name: Address
+    multiplicity: 0..*
+    type: 
+    description: The hardware, network, or application address of the Node.  If a
+      NodeName is not provided, at least one Address MUST be specified.
+  Location:
+    name: Location
+    multiplicity: 0..1
+    type: ML_STRING
+    description: A free-from description of the physical location of the equipment.
+  DateTime:
+    name: DateTime
+    multiplicity: 0..1
+    type: 
+    description: A timestamp of when the resolution between the name and address was
+      performed.  This information SHOULD be provided if both an Address and NodeName
+      are specified.
+  NodeRole:
+    name: NodeRole
+    multiplicity: 0..*
+    type: 
+    description: The intended purpose of the Node.
+  Counter:
+    name: Counter
+    multiplicity: 0..*
+    type: 
+    description: A counter with which to summarizes properties of this host or network.
+attributes: {}

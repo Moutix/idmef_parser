@@ -1,0 +1,86 @@
+{
+  "name": "EventData",
+  "description": "The EventData class describes a particular event of the incident for a given set of hosts or networks.  This description includes the systems from which the activity originated and those targeted, an assessment of the techniques used by the intruder, the impact of the activity on the organization, and any forensic evidence discovered. ",
+  "aggregates": {
+    "Description": {
+      "name": "Description",
+      "multiplicity": "0..*",
+      "type": "ML_STRING",
+      "description": "A free-form textual description of the event."
+    },
+    "DetectTime": {
+      "name": "DetectTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time the event was detected."
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time the event started."
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time the event ended."
+    },
+    "Contact": {
+      "name": "Contact",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "Contact information for the parties involved in the event."
+    },
+    "Assessment": {
+      "name": "Assessment",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The impact of the event on the target and the actions taken."
+    },
+    "Method": {
+      "name": "Method",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "The technique used by the intruder in the event."
+    },
+    "Flow": {
+      "name": "Flow",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "A description of the systems or networks involved."
+    },
+    "Expectation": {
+      "name": "Expectation",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "The expected action to be performed by the recipient for the described event."
+    },
+    "Record": {
+      "name": "Record",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "Supportive data (e.g., log files) that provides additional information about the event."
+    },
+    "EventData": {
+      "name": "EventData",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "EventData instances contained within another EventData instance inherit the values of the parent(s); this recursive definition can be used to group common data pertaining to multiple events.  When EventData elements are defined recursively, only the leaf instances (those EventData instances not containing other EventData instances) represent actual events."
+    },
+    "AdditionalData": {
+      "name": "AdditionalData",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "An extension mechanism for data not explicitly represented in the data model."
+    }
+  },
+  "attributes": {
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute is defined in Section 3.2."
+    }
+  }
+}

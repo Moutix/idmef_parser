@@ -1,0 +1,29 @@
+---
+name: Counter
+description: 'The Counter class summarize multiple occurrences of some event, or conveys
+  counts or rates on various features (e.g., packets, sessions, events). '
+aggregates: {}
+attributes:
+  type:
+    name: type
+    multiplicity: Required
+    type: ENUM
+    description: Specifies the units of the element content.
+  ext-type:
+    name: ext-type
+    multiplicity: Optional
+    type: STRING
+    description: A means by which to extend the type attribute. See Section 5.1.
+  duration:
+    name: duration
+    multiplicity: Optional
+    type: ENUM
+    description: If present, the Counter class represents a rate rather than a count
+      over the entire event.  In that case, this attribute specifies the denominator
+      of the rate (where the type attribute specified the nominator).  The possible
+      values of this attribute are defined in Section 3.10.2
+  ext-duration:
+    name: ext-duration
+    multiplicity: Optional
+    type: STRING
+    description: A means by which to extend the duration attribute.  See Section 5.1.

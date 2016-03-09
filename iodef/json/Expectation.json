@@ -1,0 +1,56 @@
+{
+  "name": "Expectation",
+  "description": "The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting.  The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. ",
+  "aggregates": {
+    "Description": {
+      "name": "Description",
+      "multiplicity": "0..*",
+      "type": "ML_STRING",
+      "description": "A free-form description of the desired action(s)."
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time at which the action should be performed.  A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible.  The absence of this element leaves the execution of the expectation to the discretion of the recipient."
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed."
+    },
+    "Contact": {
+      "name": "Contact",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The expected actor for the action."
+    }
+  },
+  "attributes": {
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute is defined in Section 3.2."
+    },
+    "severity": {
+      "name": "severity",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent."
+    },
+    "action": {
+      "name": "action",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "Classifies the type of action requested.  This attribute is an enumerated list with no default value."
+    },
+    "ext-action": {
+      "name": "ext-action",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A means by which to extend the action attribute.  See Section 5.1."
+    }
+  }
+}

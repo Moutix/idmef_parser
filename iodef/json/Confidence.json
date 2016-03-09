@@ -1,0 +1,8 @@
+{
+  "name": "Confidence",
+  "description": "The Confidence class represents a best estimate of the validity and accuracy of the described impact (see Section 3.10) of the incident activity.  This estimate can be expressed as a category or a numeric calculation. ",
+  "aggregates": {
+  },
+  "attributes": {
+  }
+}

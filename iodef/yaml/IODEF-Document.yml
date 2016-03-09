@@ -1,0 +1,29 @@
+---
+name: IODEF-Document
+description: 'The IODEF-Document class is the top level class in the IODEF data model.  All
+  IODEF documents are an instance of this class. '
+aggregates:
+  Incident:
+    name: Incident
+    multiplicity: 1..*
+    type: 
+    description: The information related to a single incident.
+attributes:
+  version:
+    name: version
+    multiplicity: Required
+    type: STRING
+    description: The IODEF specification version number to which this IODEF document
+      conforms.  The value of this attribute MUST be "1.00"
+  lang:
+    name: lang
+    multiplicity: Required
+    type: ENUM
+    description: A valid language code per RFC 4646 [7] constrained by the definition
+      of "xs:language".  The interpretation of this code is described in Section 6.
+  formatid:
+    name: formatid
+    multiplicity: Optional
+    type: STRING
+    description: A free-form string to convey processing instructions to the recipient
+      of the document.  Its semantics must be negotiated out-of-band.

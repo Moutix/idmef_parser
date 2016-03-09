@@ -1,0 +1,38 @@
+{
+  "name": "AdditionalData",
+  "description": "The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model.  For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF).  A detailed discussion for extending the data model and the schema can be found in Section 5. ",
+  "aggregates": {
+  },
+  "attributes": {
+    "dtype": {
+      "name": "dtype",
+      "multiplicity": "Required",
+      "type": "ENUM",
+      "description": "The data type of the element content.  The permitted values for this attribute are shown below.  The default value is \"string\"."
+    },
+    "ext-dtype": {
+      "name": "ext-dtype",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A means by which to extend the dtype attribute.  See Section 5.1."
+    },
+    "meaning": {
+      "name": "meaning",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A free-form description of the element content."
+    },
+    "formatid": {
+      "name": "formatid",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "An identifier referencing the format and semantics of the element content."
+    },
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute has been defined in Section 3.2."
+    }
+  }
+}

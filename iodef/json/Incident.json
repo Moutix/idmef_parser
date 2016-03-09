@@ -1,0 +1,116 @@
+{
+  "name": "Incident",
+  "description": "Every incident is represented by an instance of the Incident class. This class provides a standardized representation for commonly exchanged incident data. ",
+  "aggregates": {
+    "IncidentID": {
+      "name": "IncidentID",
+      "multiplicity": "1..1",
+      "type": null,
+      "description": "An incident tracking number assigned to this incident by the CSIRT that generated the IODEF document."
+    },
+    "AlternativeID": {
+      "name": "AlternativeID",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The incident tracking numbers used by other CSIRTs to refer to the incident described in the document."
+    },
+    "RelatedActivity": {
+      "name": "RelatedActivity",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The incident tracking numbers of related incidents."
+    },
+    "DetectTime": {
+      "name": "DetectTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time the incident was first detected."
+    },
+    "StartTime": {
+      "name": "StartTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time the incident started."
+    },
+    "EndTime": {
+      "name": "EndTime",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "The time the incident ended."
+    },
+    "ReportTime": {
+      "name": "ReportTime",
+      "multiplicity": "1..1",
+      "type": null,
+      "description": "The time the incident was reported."
+    },
+    "Description": {
+      "name": "Description",
+      "multiplicity": "0..*",
+      "type": "ML_STRING",
+      "description": "A free-form textual description of the incident."
+    },
+    "Assessment": {
+      "name": "Assessment",
+      "multiplicity": "1..*",
+      "type": null,
+      "description": "A characterization of the impact of the incident."
+    },
+    "Method": {
+      "name": "Method",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "The techniques used by the intruder in the incident."
+    },
+    "Contact": {
+      "name": "Contact",
+      "multiplicity": "1..*",
+      "type": null,
+      "description": "Contact information for the parties involved in the incident."
+    },
+    "EventData": {
+      "name": "EventData",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "Description of the events comprising the incident."
+    },
+    "History": {
+      "name": "History",
+      "multiplicity": "0..1",
+      "type": null,
+      "description": "A log of significant events or actions that occurred during the course of handling the incident."
+    },
+    "AdditionalData": {
+      "name": "AdditionalData",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "Mechanism by which to extend the data model."
+    }
+  },
+  "attributes": {
+    "purpose": {
+      "name": "purpose",
+      "multiplicity": "Required",
+      "type": "ENUM",
+      "description": "The purpose attribute represents the reason why the IODEF document was created.  It is closely related to the Expectation class (Section 3.13).  This attribute is defined as an enumerated list:"
+    },
+    "ext-purpose": {
+      "name": "ext-purpose",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A means by which to extend the purpose attribute.  See Section 5.1."
+    },
+    "lang": {
+      "name": "lang",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "A valid language code per RFC 4646 [7] constrained by the definition of \"xs:language\".  The interpretation of this code is described in Section 6."
+    },
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute indicates the disclosure guidelines to which the sender expects the recipient to adhere for the information represented in this class and its children.  This guideline provides no security since there are no specified technical means to ensure that the recipient of the document handles the information as the sender requested."
+    }
+  }
+}

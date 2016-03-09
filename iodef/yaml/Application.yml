@@ -1,0 +1,47 @@
+---
+name: Application
+description: 'The Application class describes an application running on a System providing
+  a Service. '
+aggregates:
+  URL:
+    name: URL
+    multiplicity: 0..1
+    type: URL
+    description: A URL describing the application.
+attributes:
+  swid:
+    name: swid
+    multiplicity: Optional
+    type: STRING
+    description: An identifier that can be used to reference this software.
+  configid:
+    name: configid
+    multiplicity: Optional
+    type: STRING
+    description: An identifier that can be used to reference a particular configuration
+      of this software.
+  vendor:
+    name: vendor
+    multiplicity: Optional
+    type: STRING
+    description: Vendor name of the software.
+  family:
+    name: family
+    multiplicity: Optional
+    type: STRING
+    description: Family of the software.
+  name:
+    name: name
+    multiplicity: Optional
+    type: STRING
+    description: Name of the software.
+  version:
+    name: version
+    multiplicity: Optional
+    type: STRING
+    description: Version of the software.
+  patch:
+    name: patch
+    multiplicity: Optional
+    type: STRING
+    description: Patch or service pack level of the software.

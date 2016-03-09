@@ -1,0 +1,6 @@
+digraph RecordItem {
+	graph [rankdir=LR];
+	node [label="\N"];
+	graph [bb="0,0,102,36"];
+	RecordItem [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The RecordItem class provides a way to incorporate relevant logs, audit trails, or forensic data to support the conclusions made during the course of analyzing the incident. The class supports both the direct encapsulation of the data, as well as, provides primitives to reference data stored elsewhere. ">RecordItem</td> </tr>" %</table>>, shape=plaintext, pos="51,18", width="1.4167", height="0.5"];
+}

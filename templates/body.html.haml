@@ -1,0 +1,55 @@
+%h1= active_class["name"]
+
+%p= active_class["description"]
+
+%img.img-responsive.block-center{src: "/#{location}/img/#{generator}/#{active_class["name"]}.svg"}
+
+%hr
+
+- if active_class["childs"] and !active_class["childs"].empty?
+  %h3 Childs
+  - active_class["childs"].each do |name, child|
+    - if classes.include? name
+      %h4
+        %a{href: "/#{location}/#{name}.html"}= name
+    - else
+      %h4= name
+
+- if active_class["aggregates"] and !active_class["aggregates"].empty?
+  %h3 Aggregates
+  - active_class["aggregates"].each do |name, aggregate|
+    %h4
+      - if classes.include? name
+        %a{href: "/#{location}/#{generator}/#{name}.html"}= name
+      - else
+        = name
+      - if aggregate["multiplicity"]
+        = "(#{aggregate["multiplicity"]})"
+    %blockquote
+      = aggregate["description"]
+
+%hr
+
+- if active_class["attributes"] and !active_class["attributes"].empty?
+  %h3 Attributes
+  - active_class["attributes"].each do |attr_name, attribute|
+    %h4
+      = attr_name
+      - if attribute["multiplicity"]
+        = "(#{attribute["multiplicity"]})"
+    %blockquote
+      = attribute["description"]
+      - if attribute["values"]
+        %table.table.table-striped.table-bordered
+          %thead
+            %tr
+              %th Rank
+              %th Keyword
+              %th Description
+          %tbody
+            - attribute["values"].each do |value|
+              %tr
+                %td= value["rank"]
+                %td= value["keyword"]
+                %td= value["description"]
+

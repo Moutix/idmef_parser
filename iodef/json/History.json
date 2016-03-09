@@ -1,0 +1,14 @@
+{
+  "name": "History",
+  "description": "The History class is a log of the significant events or actions performed by the involved parties during the course of handling the incident. ",
+  "aggregates": {
+  },
+  "attributes": {
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute is defined in Section 3.2."
+    }
+  }
+}

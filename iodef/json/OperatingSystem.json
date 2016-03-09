@@ -1,0 +1,8 @@
+{
+  "name": "OperatingSystem",
+  "description": "The OperatingSystem class describes the operating system running on a System.  The definition is identical to the Application class (Section 3.17.1). ",
+  "aggregates": {
+  },
+  "attributes": {
+  }
+}

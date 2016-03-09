@@ -1,0 +1,17 @@
+---
+name: PostalAddress
+description: 'The PostalAddress class specifies a postal address formatted according
+  to the POSTAL data type (Section 2.11). '
+aggregates: {}
+attributes:
+  meaning:
+    name: meaning
+    multiplicity: Optional
+    type: ENUM
+    description: A free-form description of the element content.
+  lang:
+    name: lang
+    multiplicity: Required
+    type: ENUM
+    description: A valid language code per RFC 4646 [7] constrained by the definition
+      of "xs:language".  The interpretation of this code is described in Section 6.

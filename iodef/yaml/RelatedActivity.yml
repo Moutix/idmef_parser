@@ -1,0 +1,23 @@
+---
+name: RelatedActivity
+description: 'The RelatedActivity class lists either incident tracking numbers of
+  incidents or URLs (not both) that refer to activity related to the one described
+  in the IODEF document.  These references may be to local incident tracking numbers
+  or to those of other CSIRTs. '
+aggregates:
+  IncidentID:
+    name: IncidentID
+    multiplicity: 1..*
+    type: 
+    description: The incident tracking number of a related incident.
+  URL:
+    name: URL
+    multiplicity: 1..*
+    type: URL
+    description: A URL to activity related to this incident.
+attributes:
+  restriction:
+    name: restriction
+    multiplicity: Optional
+    type: ENUM
+    description: This attribute has been defined in Section 3.2.
