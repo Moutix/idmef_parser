@@ -100,7 +100,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,69 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>HistoryItem</h1>
+      <p>The HistoryItem class is an entry in the History (Section 3.11) log that documents a particular action or event that occurred in the course of handling the incident.  The details of the entry are a free-form description, but each can be categorized with the type attribute.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/HistoryItem.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        DateTime
+        (1..1)
+      </h4>
+      <blockquote>
+        Timestamp of this entry in the history log (e.g., when the action described in the Description was taken).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        In a history log created by multiple parties, the IncidentID provides a mechanism to specify which CSIRT created a particular entry and references this organization's incident tracking number.  When a single organization is maintaining the log, this class can be ignored.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Provides contact information for the person that performed the action documented in this class.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form textual description of the action or event.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A mechanism by which to extend the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute has been defined in Section 3.2.
+      </blockquote>
+      <h4>
+        action
+        (Required)
+      </h4>
+      <blockquote>
+        Classifies a performed action or occurrence documented in this history log entry.  As activity will likely have been instigated either through a previously conveyed expectation or internal investigation, this attribute is identical to the category attribute of the Expectation class.  The difference is only one of tense.  When an action is in this class, it has been completed.  See Section 3.13.
+      </blockquote>
+      <h4>
+        ext-action
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the action attribute.  See Section 5.1.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

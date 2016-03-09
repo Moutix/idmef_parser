@@ -132,26 +132,68 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>SNMPService</h1>
+      <p>The SNMPService class carries additional information related to SNMP traffic.  The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16].</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/SNMPService.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        oid
+        (0..1)
+      </h4>
+      <blockquote>
+        The object identifier in the request.
+      </blockquote>
+      <h4>
+        messageProcessingModel
+        (0..1)
+      </h4>
+      <blockquote>
+        The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.
+      </blockquote>
+      <h4>
+        securityModel
+        (0..1)
+      </h4>
+      <blockquote>
+        The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.
+      </blockquote>
+      <h4>
+        securityName
+        (0..1)
+      </h4>
+      <blockquote>
+        The object's security name; see RFC 3411 [15] Section 3.2.2.
+      </blockquote>
+      <h4>
+        securityLevel
+        (0..1)
+      </h4>
+      <blockquote>
+        The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.
+      </blockquote>
+      <h4>
+        contextName
+        (0..1)
+      </h4>
+      <blockquote>
+        The object's context name; see RFC 3411 [15] Section 3.3.3.
+      </blockquote>
+      <h4>
+        contextEngineID
+        (0..1)
+      </h4>
+      <blockquote>
+        The object's context engine identifier; see RFC 3411 [15] Section 3.3.2.
+      </blockquote>
+      <h4>
+        command
+        (0..1)
+      </h4>
+      <blockquote>
+        The command sent to the SNMP server (GET, SET, etc.).
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

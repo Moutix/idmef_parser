@@ -132,26 +132,54 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Inode</h1>
+      <p>The Inode class is used to represent the additional information contained in a Unix file system i-node.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Inode.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        change-time
+        (0..1)
+      </h4>
+      <blockquote>
+        The time of the last inode change, given by the st_ctime element of "struct stat".
+      </blockquote>
+      <h4>
+        number
+        (0..1)
+      </h4>
+      <blockquote>
+        The inode number.
+      </blockquote>
+      <h4>
+        major-device
+        (0..1)
+      </h4>
+      <blockquote>
+        The major device number of the device the file resides on.
+      </blockquote>
+      <h4>
+        minor-device
+        (0..1)
+      </h4>
+      <blockquote>
+        The minor device number of the device the file resides on.
+      </blockquote>
+      <h4>
+        c-major-device
+        (0..1)
+      </h4>
+      <blockquote>
+        The major device of the file itself, if it is a character special device.
+      </blockquote>
+      <h4>
+        c-minor-device
+        (0..1)
+      </h4>
+      <blockquote>
+        The minor device of the file itself, if it is a character special device.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

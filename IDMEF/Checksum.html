@@ -132,26 +132,94 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Checksum</h1>
+      <p>The Checksum class represents checksum information associated with the file.  This checksum information can be provided by file integrity checkers, among others.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Checksum.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        value
+        (1)
+      </h4>
+      <blockquote>
+        The value of the checksum.
+      </blockquote>
+      <h4>
+        key
+        (0..1)
+      </h4>
+      <blockquote>
+        The key to the checksum, if appropriate.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        algorithm
+      </h4>
+      <blockquote>
+        default value.  (See also Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>MD4</td>
+              <td>The MD4 algorithm.</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>MD5</td>
+              <td>The MD5 algorithm.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>SHA1</td>
+              <td>The SHA1 algorithm.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>SHA2-256</td>
+              <td>The SHA2 algorithm with 256 bits length.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>SHA2-384</td>
+              <td>The SHA2 algorithm with 384 bits length.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>SHA2-512</td>
+              <td>The SHA2 algorithm with 512 bits length.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>CRC-32</td>
+              <td>The CRC algorithm with 32 bits length.</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Haval</td>
+              <td>The Haval algorithm.</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Tiger</td>
+              <td>The Tiger algorithm.</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Gost</td>
+              <td>The Gost algorithm.</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

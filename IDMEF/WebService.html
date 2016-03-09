@@ -132,26 +132,40 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>WebService</h1>
+      <p>The WebService class carries additional information related to web traffic.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/WebService.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        url
+        (1)
+      </h4>
+      <blockquote>
+        The URL in the request.
+      </blockquote>
+      <h4>
+        cgi
+        (0..1)
+      </h4>
+      <blockquote>
+        The CGI script in the request, without arguments.
+      </blockquote>
+      <h4>
+        http-method
+        (0..1)
+      </h4>
+      <blockquote>
+        The HTTP method (PUT, GET) used in the request.
+      </blockquote>
+      <h4>
+        arg
+        (0..*)
+      </h4>
+      <blockquote>
+        The arguments to the CGI script.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

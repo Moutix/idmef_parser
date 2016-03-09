@@ -132,26 +132,49 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Action</h1>
+      <p>The Action class is used to describe any actions taken by the analyzer in response to the event.  Is is represented in the IDMEF DTD as follows:</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Action.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        category
+      </h4>
+      <blockquote>
+        The default value is "other".  (See also Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>block-installed</td>
+              <td>A block of some sort was installed to prevent an attack from reaching its destination.  The block could be a port block, address block, etc., or disabling a user account.</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>notification-sent</td>
+              <td>A notification message of some sort was sent out-of-band (via pager, e-mail, etc.).  Does not include the transmission of this alert.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>taken-offline</td>
+              <td>A system, computer, or user was taken offline, as when the computer is shut down or a user is logged off.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>other</td>
+              <td>Anything not in one of the above categories.</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

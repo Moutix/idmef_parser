@@ -132,26 +132,40 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Address</h1>
+      <p>The Address class represents a hardware (layer-2), network (layer-3), or application (layer-7) address.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Address.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        category
+        (Required)
+      </h4>
+      <blockquote>
+        The type of address represented.  The permitted values for this attribute are shown below.  The default value is "ipv4-addr".
+      </blockquote>
+      <h4>
+        ext-category
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the category attribute.  See Section 5.1.
+      </blockquote>
+      <h4>
+        vlan-name
+        (Optional)
+      </h4>
+      <blockquote>
+        The name of the Virtual LAN to which the address belongs.
+      </blockquote>
+      <h4>
+        vlan-num
+        (Optional)
+      </h4>
+      <blockquote>
+        The number of the Virtual LAN to which the address belongs.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

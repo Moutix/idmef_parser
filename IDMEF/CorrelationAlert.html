@@ -132,26 +132,26 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>CorrelationAlert</h1>
+      <p>The CorrelationAlert class carries additional information related to the correlation of alert information.  It is intended to group one or more previously-sent alerts together, to say "these alerts are all related".</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/CorrelationAlert.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        name
+        (1)
+      </h4>
+      <blockquote>
+        The reason for grouping the alerts together, for example, a particular correlation method.
+      </blockquote>
+      <h4>
+        alertident
+        (1..*)
+      </h4>
+      <blockquote>
+        The list of alert identifiers that are related to this alert.  Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional "analyzerid" attribute of "alertident" should be used to identify the analyzer that a particular alert came from.  If the "analyzerid" is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

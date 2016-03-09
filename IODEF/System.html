@@ -121,7 +121,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Service.html'>Service</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/System.html'>System</a>
                 </li>
               </ul>
@@ -132,26 +132,90 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>System</h1>
+      <p>The System class describes a system or network involved in an event. The systems or networks represented by this class are categorized according to the role they played in the incident through the category attribute.  The value of this category attribute dictates the semantics of the aggregated classes in the System class.  If the category attribute has a value of "source", then the aggregated classes denote the machine and service from which the activity is originating.  With a category attribute value of "target" or "intermediary", then the machine or service is the one targeted in the activity.  A value of "sensor" dictates that this System was part of an instrumentation to monitor the network.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/System.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IODEF/Node.html'>Node</a>
+        (1..1)
+      </h4>
+      <blockquote>
+        A host or network involved in the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Service.html'>Service</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A network service running on the system.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The operating system running on the system.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A counter with which to summarize properties of this host or network.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form text description of the System.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A mechanism by which to extend the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute is defined in Section 3.2.
+      </blockquote>
+      <h4>
+        category
+        (Required)
+      </h4>
+      <blockquote>
+        Classifies the role the host or network played in the incident.  The possible values are:
+      </blockquote>
+      <h4>
+        ext-category
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the category attribute.  See Section 5.1.
+      </blockquote>
+      <h4>
+        interface
+        (Optional)
+      </h4>
+      <blockquote>
+        Specifies the interface on which the event(s) on this System originated.  If the Node class specifies a network rather than a host, this attribute has no meaning.
+      </blockquote>
+      <h4>
+        spoofed
+        (Optional)
+      </h4>
+      <blockquote>
+        An indication of confidence in whether this System was the true target or attacking host.  The permitted values for this attribute are shown below.  The default value is "unknown".
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

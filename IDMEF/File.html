@@ -43,7 +43,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/File.html'>File</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,110 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>File</h1>
+      <p>The File class provides specific information about a file or other file-like object that has been created, deleted, or modified on the target.  The description can provide either the file settings prior to the event or the file settings at the time of the event, as specified using the "category" attribute.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/File.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        name
+        (1)
+      </h4>
+      <blockquote>
+        The name of the file to which the alert applies, not including the path to the file.
+      </blockquote>
+      <h4>
+        path
+        (1)
+      </h4>
+      <blockquote>
+        The full path to the file, including the name.  The path name should be represented in as "universal" a manner as possible, to facilitate processing of the alert.
+      </blockquote>
+      <h4>
+        create-time
+        (0..1)
+      </h4>
+      <blockquote>
+        Time the file was created.  Note that this is *not* the Unix "st_ctime" file attribute (which is not file creation time).  The Unix "st_ctime" attribute is contained in the "Inode" class.
+      </blockquote>
+      <h4>
+        modify-time
+        (0..1)
+      </h4>
+      <blockquote>
+        Time the file was last modified.
+      </blockquote>
+      <h4>
+        access-time
+        (0..1)
+      </h4>
+      <blockquote>
+        Time the file was last accessed.
+      </blockquote>
+      <h4>
+        data-size
+        (0..1)
+      </h4>
+      <blockquote>
+        The size of the data, in bytes.  Typically what is meant when referring to file size.  On Unix UFS file systems, this value corresponds to stat.st_size.  On Windows NTFS, this value corresponds to Valid Data Length (VDL).
+      </blockquote>
+      <h4>
+        disk-size
+        (0..1)
+      </h4>
+      <blockquote>
+        The physical space on disk consumed by the file, in bytes.  On Unix UFS file systems, this value corresponds to 512 * stat.st_blocks.  On Windows NTFS, this value corresponds to End of File (EOF).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Access permissions on the file.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        File system objects to which this file is linked (other references for the file).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Inode information for this file (relevant to Unix).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Checksum information for this file.
+      </blockquote>
+      <h4>
+        ident
+        (0..1)
+      </h4>
+      <blockquote>
+        A unique identifier for this file; see Section 3.2.9.
+      </blockquote>
+      <h4>
+        category
+        (0..1)
+      </h4>
+      <blockquote>
+        The type of file system the file resides on.  This attribute governs how path names and other attributes are interpreted.
+      </blockquote>
+      <h4>
+        file-type
+        (0..1)
+      </h4>
+      <blockquote>
+        The type of file, as a mime-type.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

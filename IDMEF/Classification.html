@@ -40,7 +40,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,34 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Classification</h1>
+      <p>The Classification class provides the "name" of an alert, or other information allowing the manager to determine what it is.  This name is chosen by the alert provider.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Classification.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Information about the message, pointing to external documentation sites, that will provide background information about the alert.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        ident
+        (Optional)
+      </h4>
+      <blockquote>
+        A unique identifier for this classification; see Section 3.2.9.
+      </blockquote>
+      <h4>
+        text
+        (Required)
+      </h4>
+      <blockquote>
+        A vendor-provided string identifying the Alert message.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

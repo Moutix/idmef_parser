@@ -78,7 +78,7 @@
                 <span class='caret'></span>
               </a>
               <ul class='dropdown-menu'>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF'>IODEF-Document</a>
                 </li>
                 <li class='divider'></li>
@@ -132,26 +132,41 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>IODEF-Document</h1>
+      <p>The IODEF-Document class is the top level class in the IODEF data model.  All IODEF documents are an instance of this class.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/IODEF-Document.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        The information related to a single incident.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        version
+        (Required)
+      </h4>
+      <blockquote>
+        The IODEF specification version number to which this IODEF document conforms.  The value of this attribute MUST be "1.00"
+      </blockquote>
+      <h4>
+        lang
+        (Required)
+      </h4>
+      <blockquote>
+        A valid language code per RFC 4646 [7] constrained by the definition of "xs:language".  The interpretation of this code is described in Section 6.
+      </blockquote>
+      <h4>
+        formatid
+        (Optional)
+      </h4>
+      <blockquote>
+        A free-form string to convey processing instructions to the recipient of the document.  Its semantics must be negotiated out-of-band.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

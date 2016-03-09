@@ -106,7 +106,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/Node.html'>Node</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,54 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Node</h1>
+      <p>The Node class names a system (e.g., PC, router) or network.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Node.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        NodeName
+        (0..*)
+      </h4>
+      <blockquote>
+        The name of the Node (e.g., fully qualified domain name).  This information MUST be provided if no Address information is given.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Address.html'>Address</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The hardware, network, or application address of the Node.  If a NodeName is not provided, at least one Address MUST be specified.
+      </blockquote>
+      <h4>
+        Location
+        (0..1)
+      </h4>
+      <blockquote>
+        A free-from description of the physical location of the equipment.
+      </blockquote>
+      <h4>
+        DateTime
+        (0..1)
+      </h4>
+      <blockquote>
+        A timestamp of when the resolution between the name and address was performed.  This information SHOULD be provided if both an Address and NodeName are specified.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The intended purpose of the Node.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A counter with which to summarizes properties of this host or network.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

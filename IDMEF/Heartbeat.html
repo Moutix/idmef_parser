@@ -49,7 +49,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,55 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Heartbeat</h1>
+      <p>Analyzers use Heartbeat messages to indicate their current status to managers.  Heartbeats are intended to be sent in a regular period, say, every ten minutes or every hour.  The receipt of a Heartbeat message from an analyzer indicates to the manager that the analyzer is up and running; lack of a Heartbeat message (or more likely, lack of some number of consecutive Heartbeat messages) indicates that the analyzer or its network connection has failed.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Heartbeat.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+        (1)
+      </h4>
+      <blockquote>
+        Identification information for the analyzer that originated the heartbeat.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+        (1)
+      </h4>
+      <blockquote>
+        The time the heartbeat was created.
+      </blockquote>
+      <h4>
+        HeartbeatInterval
+        (0..1)
+      </h4>
+      <blockquote>
+        The interval in seconds at which heartbeats are generated.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The current time on the analyzer (see Section 6.3).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Information included by the analyzer that does not fit into the data model.  This may be an atomic piece of data or a large amount of data provided through an extension to the IDMEF (see Section 5).
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        messageid
+        (Optional)
+      </h4>
+      <blockquote>
+        A unique identifier for the heartbeat; see Section 3.2.9.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

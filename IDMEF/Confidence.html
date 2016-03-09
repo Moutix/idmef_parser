@@ -132,26 +132,49 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Confidence</h1>
+      <p>The Confidence class is used to represent the analyzer's best estimate of the validity of its analysis.  It is represented in the IDMEF DTD as follows:</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Confidence.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        rating
+      </h4>
+      <blockquote>
+        also Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>low</td>
+              <td>The analyzer has little confidence in its validity</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>medium</td>
+              <td>The analyzer has average confidence in its validity</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>high</td>
+              <td>The analyzer has high confidence in its validity</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>numeric</td>
+              <td>The analyzer has provided a posterior probability value indicating its confidence in its validity</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

@@ -34,7 +34,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,90 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Analyzer</h1>
+      <p>The Analyzer class identifies the analyzer from which the Alert or Heartbeat message originates.  Only one analyzer may be encoded for each alert or heartbeat, and that MUST be the analyzer at which the alert or heartbeat originated.  Although the IDMEF data model does not prevent the use of hierarchical intrusion detection systems (where alerts get relayed up the tree), it does not provide any way to record the identity of the "relay" analyzers along the path from the originating analyzer to the manager that ultimately receives the alert.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Analyzer.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the host or device on which the analyzer resides (network address, network name, etc.).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the process in which the analyzer is executing.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the analyzer from which the message may have gone through.  The idea behind this mechanism is that when a manager receives an alert and wants to forward it to another analyzer, it needs to substitute the original analyzer
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        analyzerid
+        (Optional)
+      </h4>
+      <blockquote>
+        (but see below).  A unique identifier for the analyzer; see Section 3.2.9.
+      </blockquote>
+      <h4>
+        name
+        (Optional)
+      </h4>
+      <blockquote>
+        An explicit name for the analyzer that may be easier to understand than the analyzerid.
+      </blockquote>
+      <h4>
+        manufacturer
+        (Optional)
+      </h4>
+      <blockquote>
+        The manufacturer of the analyzer software and/or hardware.
+      </blockquote>
+      <h4>
+        model
+        (Optional)
+      </h4>
+      <blockquote>
+        The model name/number of the analyzer software and/or hardware.
+      </blockquote>
+      <h4>
+        version
+        (Optional)
+      </h4>
+      <blockquote>
+        The version number of the analyzer software and/or hardware.
+      </blockquote>
+      <h4>
+        class
+        (Optional)
+      </h4>
+      <blockquote>
+        The class of analyzer software and/or hardware.
+      </blockquote>
+      <h4>
+        ostype
+        (Optional)
+      </h4>
+      <blockquote>
+        Operating system name.  On POSIX 1003.1 compliant systems, this is the value returned in utsname.sysname by the uname() system call, or the output of the "uname -s" command.
+      </blockquote>
+      <h4>
+        osversion
+        (Optional)
+      </h4>
+      <blockquote>
+        Operating system version.  On POSIX 1003.1 compliant systems, this is the value returned in utsname.release by the uname() system call, or the output of the "uname -r" command.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

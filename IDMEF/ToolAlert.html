@@ -132,26 +132,33 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>ToolAlert</h1>
+      <p>The ToolAlert class carries additional information related to the use of attack tools or malevolent programs such as Trojan horses and can be used by the analyzer when it is able to identify these tools.  It is intended to group one or more previously-sent alerts together, to say "these alerts were all the result of someone using this tool".</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/ToolAlert.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        name
+        (1)
+      </h4>
+      <blockquote>
+        The reason for grouping the alerts together, for example, the name of a particular tool.
+      </blockquote>
+      <h4>
+        command
+        (0..1)
+      </h4>
+      <blockquote>
+        The command or operation that the tool was asked to perform, for example, a BackOrifice ping.
+      </blockquote>
+      <h4>
+        alertident
+        (1..*)
+      </h4>
+      <blockquote>
+        The list of alert identifiers that are related to this alert.  Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional "analyzerid" attribute of "alertident" should be used to identify the analyzer that a particular alert came from.  If the "analyzerid" is not provided, the alert is assumed to have come from the same analyzer that is sending the ToolAlert.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

@@ -1,0 +1,6 @@
+digraph Reference {
+	graph [rankdir=LR];
+	node [label="\N"];
+	graph [bb="0,0,92,36"];
+	Reference [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The Reference class is a reference to a vulnerability, IDS alert, malware sample, advisory, or attack technique. A reference consists of a name, a URL to this reference, and an optional description. ">Reference</td> </tr>" %</table>>, shape=plaintext, pos="46,18", width="1.2778", height="0.5"];
+}

@@ -132,26 +132,47 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>TimeImpact</h1>
+      <p>The TimeImpact class describes the impact of the incident on an organization as a function of time.  It provides a way to convey down time and recovery time.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/TimeImpact.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        severity
+        (Optional)
+      </h4>
+      <blockquote>
+        An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value.
+      </blockquote>
+      <h4>
+        metric
+        (Required)
+      </h4>
+      <blockquote>
+        Defines the metric in which the time is expressed.  The permitted values are shown below.  There is no default value.
+      </blockquote>
+      <h4>
+        ext-metric
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the metric attribute.  See Section 5.1.
+      </blockquote>
+      <h4>
+        duration
+        (Required)
+      </h4>
+      <blockquote>
+        Defines a unit of time, that when combined with the metric attribute, fully describes a metric of impact that will be conveyed in the element content.  The permitted values are shown below.  The default value is "hour".
+      </blockquote>
+      <h4>
+        ext-duration
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the duration attribute.  See Section 5.1.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

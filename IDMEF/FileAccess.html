@@ -46,7 +46,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/File.html'>File</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,26 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>FileAccess</h1>
+      <p>The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/FileAccess.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
+        (1)
+      </h4>
+      <blockquote>
+        The user (or group) to which these permissions apply.  The value of the "type" attribute must be "user-privs", "group-privs", or "other-privs" as appropriate.  Other values for "type" MUST NOT be used in this context.
+      </blockquote>
+      <h4>
+        Permission
+        (1..*)
+      </h4>
+      <blockquote>
+        Level of access allowed.  The permitted values are shown below.  There is no default value.  (See also Section 10.)
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

@@ -94,7 +94,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,69 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Expectation</h1>
+      <p>The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting.  The scope of the requested action is limited to purview of the EventData class in which this class is aggregated.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Expectation.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form description of the desired action(s).
+      </blockquote>
+      <h4>
+        StartTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time at which the action should be performed.  A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible.  The absence of this element leaves the execution of the expectation to the discretion of the recipient.
+      </blockquote>
+      <h4>
+        EndTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The expected actor for the action.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute is defined in Section 3.2.
+      </blockquote>
+      <h4>
+        severity
+        (Optional)
+      </h4>
+      <blockquote>
+        Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.
+      </blockquote>
+      <h4>
+        action
+        (Optional)
+      </h4>
+      <blockquote>
+        Classifies the type of action requested.  This attribute is an enumerated list with no default value.
+      </blockquote>
+      <h4>
+        ext-action
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the action attribute.  See Section 5.1.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

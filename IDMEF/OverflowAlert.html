@@ -132,26 +132,33 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>OverflowAlert</h1>
+      <p>The OverflowAlert carries additional information related to buffer overflow attacks.  It is intended to enable an analyzer to provide the details of the overflow attack itself.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/OverflowAlert.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        program
+        (1)
+      </h4>
+      <blockquote>
+        The program that the overflow attack attempted to run (NOTE: this is not the program that was attacked).
+      </blockquote>
+      <h4>
+        size
+        (0..1)
+      </h4>
+      <blockquote>
+        The size, in bytes, of the overflow (i.e., the number of bytes the attacker sent).
+      </blockquote>
+      <h4>
+        buffer
+        (0..1)
+      </h4>
+      <blockquote>
+        Some or all of the overflow data itself (dependent on how much the analyzer can capture).
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

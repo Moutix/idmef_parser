@@ -115,7 +115,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,34 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>RelatedActivity</h1>
+      <p>The RelatedActivity class lists either incident tracking numbers of incidents or URLs (not both) that refer to activity related to the one described in the IODEF document.  These references may be to local incident tracking numbers or to those of other CSIRTs.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/RelatedActivity.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        The incident tracking number of a related incident.
+      </blockquote>
+      <h4>
+        URL
+        (1..*)
+      </h4>
+      <blockquote>
+        A URL to activity related to this incident.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute has been defined in Section 3.2.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

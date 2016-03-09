@@ -112,7 +112,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Record.html'>Record</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,62 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>RecordData</h1>
+      <p>The RecordData class groups log or audit data from a given sensor (e.g., IDS, firewall log) and provides a way to annotate the output.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/RecordData.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        DateTime
+        (0..1)
+      </h4>
+      <blockquote>
+        Timestamp of the RecordItem data.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        Free-form textual description of the provided RecordItem data.  At minimum, this description should convey the significance of the provided RecordItem data.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Application.html'>Application</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the sensor used to generate the RecordItem data.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A search string to precisely find the relevant data in a RecordItem.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        Log, audit, or forensic data.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        An extension mechanism for data not explicitly represented in the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute has been defined in Section 3.2.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

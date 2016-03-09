@@ -132,26 +132,33 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>NodeRole</h1>
+      <p>The NodeRole class describes the intended function performed by a particular host.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/NodeRole.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        category
+        (Required)
+      </h4>
+      <blockquote>
+        Functionality provided by a node.
+      </blockquote>
+      <h4>
+        ext-category
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the category attribute.  See Section 5.1.
+      </blockquote>
+      <h4>
+        lang
+        (Required)
+      </h4>
+      <blockquote>
+        A valid language code per RFC 4646 [7] constrained by the definition of "xs:language".  The interpretation of this code is described in Section 6.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

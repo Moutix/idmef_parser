@@ -132,26 +132,82 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Reference</h1>
+      <p>The Reference class provides the "name" of an alert, or other information allowing the manager to determine what it is.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Reference.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        name
+        (1)
+      </h4>
+      <blockquote>
+        The name of the alert, from one of the origins listed below.
+      </blockquote>
+      <h4>
+        url
+        (1)
+      </h4>
+      <blockquote>
+        A URL at which the manager (or the human operator of the manager) can find additional information about the alert.  The document pointed to by the URL may include an in-depth description of the attack, appropriate countermeasures, or other information deemed relevant by the vendor.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        origin
+        (Required)
+      </h4>
+      <blockquote>
+        The source from which the name of the alert originates. The permitted values for this attribute are shown below.  The default value is "unknown".  (See also Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>unknown</td>
+              <td>Origin of the name is not known</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>vendor-specific</td>
+              <td>A vendor-specific name (and hence, URL); this can be used to provide product-specific information</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>user-specific</td>
+              <td>A user-specific name (and hence, URL); this can be used to provide installation-specific information</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>bugtraqid</td>
+              <td>The SecurityFocus ("Bugtraq") vulnerability database identifier (http://www.securityfocus.com/bid)</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>cve</td>
+              <td>The Common Vulnerabilities and Exposures (CVE) name (http://cve.mitre.org/)</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>osvdb</td>
+              <td>The Open Source Vulnerability Database (http://www.osvdb.org)</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <h4>
+        meaning
+        (Optional)
+      </h4>
+      <blockquote>
+        The meaning of the reference, as understood by the alert provider.  This field is only valid if the value of the <origin> attribute is set to "vendor-specific" or "user-specific".
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

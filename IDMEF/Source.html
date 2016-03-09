@@ -61,7 +61,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,88 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Source</h1>
+      <p>The Source class contains information about the possible source(s) of the event(s) that generated an alert.  An event may have more than one source (e.g., in a distributed denial-of-service attack).</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Source.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the host or device that appears to be causing the events (network address, network name, etc.).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/User.html'>User</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the user that appears to be causing the event(s).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the process that appears to be causing the event(s).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the network service involved in the event(s).
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        ident
+        (Optional)
+      </h4>
+      <blockquote>
+        A unique identifier for this source; see Section 3.2.9.
+      </blockquote>
+      <h4>
+        spoofed
+        (Optional)
+      </h4>
+      <blockquote>
+        An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack.  The permitted values for this attribute are shown below.  The default value is "unknown".  (See also Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>unknown</td>
+              <td>Accuracy of source information unknown</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>yes</td>
+              <td>Source is believed to be a decoy</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>no</td>
+              <td>Source is believed to be "real"</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <h4>
+        interface
+        (Optional)
+      </h4>
+      <blockquote>
+        May be used by a network-based analyzer with multiple interfaces to indicate which interface this source was seen on.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

@@ -88,7 +88,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,118 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Contact</h1>
+      <p>The Contact class describes contact information for organizations and personnel involved in the incident.  This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Contact.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        ContactName
+        (0..1)
+      </h4>
+      <blockquote>
+        The name of the contact.  The contact may either be an organization or a person.  The type attribute disambiguates the semantics.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form description of this contact.  In the case of a person, this is often the organizational title of the individual.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A handle name into the registry of the contact.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The postal address of the contact.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Email.html'>Email</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The email address of the contact.
+      </blockquote>
+      <h4>
+        Telephone
+        (0..*)
+      </h4>
+      <blockquote>
+        The telephone number of the contact.
+      </blockquote>
+      <h4>
+        Fax
+        (0..1)
+      </h4>
+      <blockquote>
+        The facsimile telephone number of the contact.
+      </blockquote>
+      <h4>
+        Timezone
+        (0..1)
+      </h4>
+      <blockquote>
+        The timezone in which the contact resides formatted according to Section 2.9.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A Contact instance contained within another Contact instance inherits the values of the parent(s).  This recursive definition can be used to group common data pertaining to multiple points of contact and is especially useful when listing multiple contacts at the same organization.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A mechanism by which to extend the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        role
+        (Required)
+      </h4>
+      <blockquote>
+        Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:
+      </blockquote>
+      <h4>
+        ext-role
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the role attribute. See Section 5.1.
+      </blockquote>
+      <h4>
+        type
+        (Required)
+      </h4>
+      <blockquote>
+        Indicates the type of contact being described. This attribute is defined as an enumerated list:
+      </blockquote>
+      <h4>
+        ext-type
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the type attribute. See Section 5.1.
+      </blockquote>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute is defined in Section 3.2.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

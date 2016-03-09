@@ -91,7 +91,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,104 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>EventData</h1>
+      <p>The EventData class describes a particular event of the incident for a given set of hosts or networks.  This description includes the systems from which the activity originated and those targeted, an assessment of the techniques used by the intruder, the impact of the activity on the organization, and any forensic evidence discovered.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/EventData.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form textual description of the event.
+      </blockquote>
+      <h4>
+        DetectTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the event was detected.
+      </blockquote>
+      <h4>
+        StartTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the event started.
+      </blockquote>
+      <h4>
+        EndTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the event ended.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Contact information for the parties involved in the event.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The impact of the event on the target and the actions taken.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Method.html'>Method</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The technique used by the intruder in the event.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A description of the systems or networks involved.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The expected action to be performed by the recipient for the described event.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Record.html'>Record</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Supportive data (e.g., log files) that provides additional information about the event.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        EventData instances contained within another EventData instance inherit the values of the parent(s); this recursive definition can be used to group common data pertaining to multiple events.  When EventData elements are defined recursively, only the leaf instances (those EventData instances not containing other EventData instances) represent actual events.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        An extension mechanism for data not explicitly represented in the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute is defined in Section 3.2.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

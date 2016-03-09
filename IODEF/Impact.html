@@ -132,26 +132,47 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Impact</h1>
+      <p>The Impact class allows for categorizing and describing the technical impact of the incident on the network of an organization.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Impact.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        lang
+        (Required)
+      </h4>
+      <blockquote>
+        A valid language code per RFC 4646 [7] constrained by the definition of "xs:language".  The interpretation of this code is described in Section 6.
+      </blockquote>
+      <h4>
+        severity
+        (Optional)
+      </h4>
+      <blockquote>
+        An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value.
+      </blockquote>
+      <h4>
+        completion
+        (Optional)
+      </h4>
+      <blockquote>
+        An indication whether the described activity was successful.  The permitted values are shown below.  There is no default value.
+      </blockquote>
+      <h4>
+        type
+        (Required)
+      </h4>
+      <blockquote>
+        Classifies the malicious activity into incident categories.  The permitted values are shown below.  The default value is "other".
+      </blockquote>
+      <h4>
+        ext-type
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the type attribute. See Section 5.1.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

@@ -31,7 +31,7 @@
                   <a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
                 </li>
                 <li class='divider'></li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,93 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Alert</h1>
+      <p>Generally, every time an analyzer detects an event that it has been configured to look for, it sends an Alert message to its manager(s). Depending on the analyzer, an Alert message may correspond to a single detected event or multiple detected events.  Alerts occur asynchronously in response to outside events.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Alert.svg'>
+      <hr>
+      <h3>Childs</h3>
+      <h4>
+        <a href='/idmef_parser/OverflowAlert.html'>OverflowAlert</a>
+      </h4>
+      <h4>
+        <a href='/idmef_parser/ToolAlert.html'>ToolAlert</a>
+      </h4>
+      <h4>
+        <a href='/idmef_parser/CorrelationAlert.html'>CorrelationAlert</a>
+      </h4>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+        (1)
+      </h4>
+      <blockquote>
+        Identification information for the analyzer that originated the alert.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+        (1)
+      </h4>
+      <blockquote>
+        The time the alert was created.  Of the three times that may be provided with an Alert, this is the only one that is required.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+        (1)
+      </h4>
+      <blockquote>
+        The "name" of the alert, or other information allowing the manager to determine what it is.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the event(s) leading up to the alert was detected.  In the case of more than one event, the time the first event was detected.  In some circumstances, this may not be the same value as CreateTime.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The current time on the analyzer (see Section 6.3).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The source(s) of the event(s) leading up to the alert.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The target(s) of the event(s) leading up to the alert.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        Information about the impact of the event, actions taken by the analyzer in response to it, and the analyzer's confidence in its evaluation.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Information included by the analyzer that does not fit into the data model.  This may be an atomic piece of data, or a large amount of data provided through an extension to the IDMEF (see Section 5).
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        messageid
+        (Optional)
+      </h4>
+      <blockquote>
+        A unique identifier for the alert; see Section 3.2.9.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

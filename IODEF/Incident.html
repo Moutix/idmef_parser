@@ -103,7 +103,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,139 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Incident</h1>
+      <p>Every incident is represented by an instance of the Incident class. This class provides a standardized representation for commonly exchanged incident data.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Incident.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+        (1..1)
+      </h4>
+      <blockquote>
+        An incident tracking number assigned to this incident by the CSIRT that generated the IODEF document.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The incident tracking numbers used by other CSIRTs to refer to the incident described in the document.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The incident tracking numbers of related incidents.
+      </blockquote>
+      <h4>
+        DetectTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the incident was first detected.
+      </blockquote>
+      <h4>
+        StartTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the incident started.
+      </blockquote>
+      <h4>
+        EndTime
+        (0..1)
+      </h4>
+      <blockquote>
+        The time the incident ended.
+      </blockquote>
+      <h4>
+        ReportTime
+        (1..1)
+      </h4>
+      <blockquote>
+        The time the incident was reported.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form textual description of the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        A characterization of the impact of the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Method.html'>Method</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The techniques used by the intruder in the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+        (1..*)
+      </h4>
+      <blockquote>
+        Contact information for the parties involved in the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Description of the events comprising the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/History.html'>History</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        A log of significant events or actions that occurred during the course of handling the incident.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        Mechanism by which to extend the data model.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        purpose
+        (Required)
+      </h4>
+      <blockquote>
+        The purpose attribute represents the reason why the IODEF document was created.  It is closely related to the Expectation class (Section 3.13).  This attribute is defined as an enumerated list:
+      </blockquote>
+      <h4>
+        ext-purpose
+        (Optional)
+      </h4>
+      <blockquote>
+        A means by which to extend the purpose attribute.  See Section 5.1.
+      </blockquote>
+      <h4>
+        lang
+        (Optional)
+      </h4>
+      <blockquote>
+        A valid language code per RFC 4646 [7] constrained by the definition of "xs:language".  The interpretation of this code is described in Section 6.
+      </blockquote>
+      <h4>
+        restriction
+        (Optional)
+      </h4>
+      <blockquote>
+        This attribute indicates the disclosure guidelines to which the sender expects the recipient to adhere for the information represented in this class and its children.  This guideline provides no security since there are no specified technical means to ensure that the recipient of the document handles the information as the sender requested.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

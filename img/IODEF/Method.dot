@@ -1,0 +1,6 @@
+digraph Method {
+	graph [rankdir=LR];
+	node [label="\N"];
+	graph [bb="0,0,230,48"];
+	Method [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The Method class describes the methodology used by the intruder to perpetrate the events of the incident. This class consists of a list of references describing the attack method and a free form description of the technique. ">Method</td> </tr>" %<tr><td HREF="#" TITLE="This attribute is defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%</table>>, shape=plaintext, pos="115,24", width="3.1667", height="0.68056"];
+}

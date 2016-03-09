@@ -132,26 +132,19 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>AdditionalData</h1>
+      <p>The AdditionalData class is used to provide information that cannot be represented by the data model.  AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers).  Detailed instructions for extending the data model and the DTD are provided in Section 5.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/AdditionalData.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        meaning
+        (Optional)
+      </h4>
+      <blockquote>
+        A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification.  A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

@@ -52,7 +52,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,81 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Linkage</h1>
+      <p>The Linkage class represents file system connections between the file described in the <File> element and other objects in the file system. For example, if the <File> element is a symbolic link or shortcut, then the <Linkage> element should contain the name of the object the link points to.  Further information can be provided about the object in the <Linkage> element with another <File> element, if appropriate.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Linkage.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        name
+        (1)
+      </h4>
+      <blockquote>
+        The name of the file system object, not including the path.
+      </blockquote>
+      <h4>
+        path
+        (1)
+      </h4>
+      <blockquote>
+        The full path to the file system object, including the name.  The path name should be represented in as "universal" a manner as possible, to facilitate processing of the alert.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/File.html'>File</a>
+        (1)
+      </h4>
+      <blockquote>
+        A <File> element may be used in place of the <name> and <path> elements if additional information about the file is to be included.
+      </blockquote>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        category
+      </h4>
+      <blockquote>
+        Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>hard-link</td>
+              <td>The <name> element represents another name for this file.  This information may be more easily obtainable on NTFS file systems than others.</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>mount-point</td>
+              <td>An alias for the directory specified by the parent's <name> and <path> elements.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>reparse-point</td>
+              <td>Applies only to Windows; excludes symbolic links and mount points, which are specific types of reparse points.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>shortcut</td>
+              <td>The file represented by a Windows "shortcut".  A shortcut is distinguished from a symbolic link because of the difference in their contents, which may be of importance to the manager.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>stream</td>
+              <td>An Alternate Data Stream (ADS) in Windows; a fork on MacOS.  Separate file system entity that is considered an extension of the main <File>.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>symbolic-link</td>
+              <td>The <name> element represents the file to which the link points.</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
     </div>
     <hr>
     <div class='container'>

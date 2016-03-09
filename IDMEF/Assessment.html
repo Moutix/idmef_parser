@@ -37,7 +37,7 @@
                 <li class=''>
                   <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
                 </li>
-                <li class=''>
+                <li class='active'>
                   <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
                 </li>
                 <li class=''>
@@ -132,26 +132,33 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Assessment</h1>
+      <p>The Assessment class is used to provide the analyzer's assessment of an event -- its impact, actions taken in response, and confidence.</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Assessment.svg'>
+      <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        The analyzer's assessment of the impact of the event on the target(s).
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Action.html'>Action</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        The action(s) taken by the analyzer in response to the event.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
+        (0..1)
+      </h4>
+      <blockquote>
+        A measurement of the confidence the analyzer has in its evaluation of the event.
+      </blockquote>
+      <hr>
     </div>
     <hr>
     <div class='container'>

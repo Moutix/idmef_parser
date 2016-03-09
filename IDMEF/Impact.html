@@ -132,26 +132,123 @@
     </div>
     <hr>
     <div class='container'>
-      <div class='jumbotron'>
-        <div class='container'>
-          <div class='row'>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IDMEF'>IDMEF</a>
-                </h1>
-              </div>
-            </div>
-            <div class='col-md-6'>
-              <div class='text-center'>
-                <h1>
-                  <a href='idmef_parser/IODEF'>IODEF</a>
-                </h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>Impact</h1>
+      <p>The Impact class is used to provide the analyzer's assessment of the impact of the event on the target(s).  It is represented in the IDMEF DTD as follows:</p>
+      <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Impact.svg'>
+      <hr>
+      <hr>
+      <h3>Attributes</h3>
+      <h4>
+        severity
+      </h4>
+      <blockquote>
+        Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>info</td>
+              <td>Alert represents informational activity</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>low</td>
+              <td>Low severity</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>medium</td>
+              <td>Medium severity</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>high</td>
+              <td>High severity</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <h4>
+        completion
+      </h4>
+      <blockquote>
+        Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>failed</td>
+              <td>The attempt was not successful</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>succeeded</td>
+              <td>The attempt succeeded</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
+      <h4>
+        type
+      </h4>
+      <blockquote>
+        value is "other".  (See also Section 10.)
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0</td>
+              <td>admin</td>
+              <td>Administrative privileges were attempted or obtained</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>dos</td>
+              <td>A denial of service was attempted or completed</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>file</td>
+              <td>An action on a file was attempted or completed</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>recon</td>
+              <td>A reconnaissance probe was attempted or completed</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>user</td>
+              <td>User privileges were attempted or obtained</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>other</td>
+              <td>Anything not in one of the above categories</td>
+            </tr>
+          </tbody>
+        </table>
+      </blockquote>
     </div>
     <hr>
     <div class='container'>
