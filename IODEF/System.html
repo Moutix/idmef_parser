@@ -194,6 +194,47 @@
       </h4>
       <blockquote>
         Classifies the role the host or network played in the incident.  The possible values are:
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>source</td>
+              <td>The System was the source of the event.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>target</td>
+              <td>The System was the target of the event.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>intermediate</td>
+              <td>The System was an intermediary in the event.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>sensor</td>
+              <td>The System was a sensor monitoring the event.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>infrastructure</td>
+              <td>The System was an infrastructure node of IODEF document exchange.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-category
@@ -215,6 +256,32 @@
       </h4>
       <blockquote>
         An indication of confidence in whether this System was the true target or attacking host.  The permitted values for this attribute are shown below.  The default value is "unknown".
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>unknown</td>
+              <td>The accuracy of the category attribute value is unknown.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>yes</td>
+              <td>The category attribute value is probably incorrect.  In the case of a source, the System is likely a decoy; with a target, the System was likely not the intended victim.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>no</td>
+              <td>The category attribute value is believed to be correct.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
     </div>
     <hr>
