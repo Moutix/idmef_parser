@@ -144,6 +144,37 @@
       </h4>
       <blockquote>
         Describes the type of pattern being specified in the element content.  The default is "regex".
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>regex</td>
+              <td>regular expression, per Appendix F of [3].</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>binary</td>
+              <td>Binhex encoded binary pattern, per the HEXBIN data type.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>xpath</td>
+              <td>XML Path (XPath) [5]</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-type
@@ -165,6 +196,32 @@
       </h4>
       <blockquote>
         Describes the units of the offset attribute. The default is "line".
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>line</td>
+              <td>Offset is a count of lines.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>binary</td>
+              <td>Offset is a count of bytes.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-offsetunit

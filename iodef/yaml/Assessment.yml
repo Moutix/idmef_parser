@@ -40,6 +40,13 @@ attributes:
     type: ENUM
     description: Specifies whether the assessment is describing actual or potential
       outcomes.  The default is "actual" and is assumed if not specified.
+    values:
+    - rank: '1'
+      keyword: actual
+      description: This assessment describes activity that has occurred.
+    - rank: '2'
+      keyword: potential
+      description: This assessment describes potential activity that might occur.
   restriction:
     name: restriction
     multiplicity: Optional

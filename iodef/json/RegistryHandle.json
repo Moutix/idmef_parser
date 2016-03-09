@@ -8,7 +8,49 @@
       "name": "registry",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "The database to which the handle belongs.  The default value is 'local'.  The possible values are:"
+      "description": "The database to which the handle belongs.  The default value is 'local'.  The possible values are:",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "internic",
+          "description": "Internet Network Information Center"
+        },
+        {
+          "rank": "2",
+          "keyword": "apnic",
+          "description": "Asia Pacific Network Information Center"
+        },
+        {
+          "rank": "3",
+          "keyword": "arin",
+          "description": "American Registry for Internet Numbers"
+        },
+        {
+          "rank": "4",
+          "keyword": "lacnic",
+          "description": "Latin-American and Caribbean IP Address Registry"
+        },
+        {
+          "rank": "5",
+          "keyword": "ripe",
+          "description": "Reseaux IP Europeens"
+        },
+        {
+          "rank": "6",
+          "keyword": "afrinic",
+          "description": "African Internet Numbers Registry"
+        },
+        {
+          "rank": "7",
+          "keyword": "local",
+          "description": "A database local to the CSIRT"
+        },
+        {
+          "rank": "8",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-registry": {
       "name": "ext-registry",

@@ -8,7 +8,64 @@
       "name": "category",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "The type of address represented.  The permitted values for this attribute are shown below.  The default value is \"ipv4-addr\"."
+      "description": "The type of address represented.  The permitted values for this attribute are shown below.  The default value is \"ipv4-addr\".",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "asn",
+          "description": "Autonomous System Number"
+        },
+        {
+          "rank": "2",
+          "keyword": "atm",
+          "description": "Asynchronous Transfer Mode (ATM) address"
+        },
+        {
+          "rank": "3",
+          "keyword": "e-mail",
+          "description": "Electronic mail address (RFC 822)"
+        },
+        {
+          "rank": "4",
+          "keyword": "ipv4-addr",
+          "description": "IPv4 host address in dotted-decimal notation (a.b.c.d)"
+        },
+        {
+          "rank": "5",
+          "keyword": "ipv4-net",
+          "description": "IPv4 network address in dotted-decimal notation, slash, significant bits (a.b.c.d/nn)"
+        },
+        {
+          "rank": "6",
+          "keyword": "ipv4-net-mask",
+          "description": "IPv4 network address in dotted-decimal notation, slash, network mask in dotted-decimal notation (a.b.c.d/w.x.y.z)"
+        },
+        {
+          "rank": "7",
+          "keyword": "ipv6-addr",
+          "description": "IPv6 host address"
+        },
+        {
+          "rank": "8",
+          "keyword": "ipv6-net",
+          "description": "IPv6 network address, slash, significant bits"
+        },
+        {
+          "rank": "9",
+          "keyword": "ipv6-net-mask",
+          "description": "IPv6 network address, slash, network mask"
+        },
+        {
+          "rank": "10",
+          "keyword": "mac",
+          "description": "Media Access Control (MAC) address"
+        },
+        {
+          "rank": "11",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-category": {
       "name": "ext-category",

@@ -68,7 +68,39 @@
       "name": "role",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:"
+      "description": "Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "creator",
+          "description": "The entity that generate the document."
+        },
+        {
+          "rank": "2",
+          "keyword": "admin",
+          "description": "An administrative contact for a host or network."
+        },
+        {
+          "rank": "3",
+          "keyword": "tech",
+          "description": "A technical contact for a host or network."
+        },
+        {
+          "rank": "4",
+          "keyword": "irt",
+          "description": "The CSIRT involved in handling the incident."
+        },
+        {
+          "rank": "5",
+          "keyword": "cc",
+          "description": "An entity that is to be kept informed about the handling of the incident."
+        },
+        {
+          "rank": "6",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-role": {
       "name": "ext-role",
@@ -80,7 +112,24 @@
       "name": "type",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "Indicates the type of contact being described. This attribute is defined as an enumerated list:"
+      "description": "Indicates the type of contact being described. This attribute is defined as an enumerated list:",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "person",
+          "description": "The information for this contact references an individual."
+        },
+        {
+          "rank": "2",
+          "keyword": "organization",
+          "description": "The information for this contact references an organization."
+        },
+        {
+          "rank": "3",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-type": {
       "name": "ext-type",

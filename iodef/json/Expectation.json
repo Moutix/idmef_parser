@@ -38,13 +38,112 @@
       "name": "severity",
       "multiplicity": "Optional",
       "type": "ENUM",
-      "description": "Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent."
+      "description": "Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "low",
+          "description": "Low priority"
+        },
+        {
+          "rank": "2",
+          "keyword": "medium",
+          "description": "Medium priority"
+        },
+        {
+          "rank": "3",
+          "keyword": "high",
+          "description": "High priority"
+        }
+      ]
     },
     "action": {
       "name": "action",
       "multiplicity": "Optional",
       "type": "ENUM",
-      "description": "Classifies the type of action requested.  This attribute is an enumerated list with no default value."
+      "description": "Classifies the type of action requested.  This attribute is an enumerated list with no default value.",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "nothing",
+          "description": "No action is requested.  Do nothing with the information."
+        },
+        {
+          "rank": "2",
+          "keyword": "contact-source-site",
+          "description": "Contact the site(s) identified as the source of the activity."
+        },
+        {
+          "rank": "3",
+          "keyword": "contact-target-site",
+          "description": "Contact the site(s) identified as the target of the activity."
+        },
+        {
+          "rank": "4",
+          "keyword": "contact-sender",
+          "description": "Contact the originator of the document."
+        },
+        {
+          "rank": "5",
+          "keyword": "investigate",
+          "description": "Investigate the systems(s) listed in the event."
+        },
+        {
+          "rank": "6",
+          "keyword": "block-host",
+          "description": "Block traffic from the machine(s) listed as sources the event."
+        },
+        {
+          "rank": "7",
+          "keyword": "block-network",
+          "description": "Block traffic from the network(s) lists as sources in the event."
+        },
+        {
+          "rank": "8",
+          "keyword": "block-port",
+          "description": "Block the port listed as sources in the event."
+        },
+        {
+          "rank": "9",
+          "keyword": "rate-limit-host",
+          "description": "Rate-limit the traffic from the machine(s) listed as sources in the event."
+        },
+        {
+          "rank": "10",
+          "keyword": "rate-limit-network",
+          "description": "Rate-limit the traffic from the network(s) lists as sources in the event."
+        },
+        {
+          "rank": "11",
+          "keyword": "rate-limit-port",
+          "description": "Rate-limit the port(s) listed as sources in the event."
+        },
+        {
+          "rank": "12",
+          "keyword": "remediate-other",
+          "description": "Remediate the activity in a way other than by rate limiting or blocking."
+        },
+        {
+          "rank": "13",
+          "keyword": "status-triage",
+          "description": "Conveys receipts and the triaging of an incident."
+        },
+        {
+          "rank": "14",
+          "keyword": "status-new-info",
+          "description": "Conveys that new information was received for this incident."
+        },
+        {
+          "rank": "15",
+          "keyword": "other",
+          "description": "Perform some custom action described in the Description class."
+        },
+        {
+          "rank": "16",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-action": {
       "name": "ext-action",

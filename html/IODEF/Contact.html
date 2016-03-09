@@ -215,6 +215,47 @@
       </h4>
       <blockquote>
         Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>creator</td>
+              <td>The entity that generate the document.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>admin</td>
+              <td>An administrative contact for a host or network.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>tech</td>
+              <td>A technical contact for a host or network.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>irt</td>
+              <td>The CSIRT involved in handling the incident.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>cc</td>
+              <td>An entity that is to be kept informed about the handling of the incident.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-role
@@ -229,6 +270,32 @@
       </h4>
       <blockquote>
         Indicates the type of contact being described. This attribute is defined as an enumerated list:
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>person</td>
+              <td>The information for this contact references an individual.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>organization</td>
+              <td>The information for this contact references an organization.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-type

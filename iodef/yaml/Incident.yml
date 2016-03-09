@@ -85,6 +85,24 @@ attributes:
     description: 'The purpose attribute represents the reason why the IODEF document
       was created.  It is closely related to the Expectation class (Section 3.13).  This
       attribute is defined as an enumerated list:'
+    values:
+    - rank: '1'
+      keyword: traceback
+      description: The document was sent for trace-back purposes.
+    - rank: '2'
+      keyword: mitigation
+      description: The document was sent to request aid in mitigating the described
+        activity.
+    - rank: '3'
+      keyword: reporting
+      description: The document was sent to comply with reporting requirements.
+    - rank: '4'
+      keyword: other
+      description: The document was sent for purposes specified in the Expectation
+        class.
+    - rank: '5'
+      keyword: ext-value
+      description: An escape value used to extend this attribute. See Section 5.1.
   ext-purpose:
     name: ext-purpose
     multiplicity: Optional
@@ -105,3 +123,19 @@ attributes:
       and its children.  This guideline provides no security since there are no specified
       technical means to ensure that the recipient of the document handles the information
       as the sender requested.
+    values:
+    - rank: '1'
+      keyword: public
+      description: There are no restrictions placed in the information.
+    - rank: '2'
+      keyword: need-to-know
+      description: The information may be shared with other parties that are involved
+        in the incident as determined by the recipient of this document (e.g., multiple
+        victim sites can be informed of each other).
+    - rank: '3'
+      keyword: private
+      description: The information may not be shared.
+    - rank: '4'
+      keyword: default
+      description: The information can be shared according to an information disclosure
+        policy pre-arranged by the communicating parties.

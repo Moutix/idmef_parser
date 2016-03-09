@@ -10,12 +10,37 @@ attributes:
     type: ENUM
     description: An estimate of the relative severity of the activity.  The permitted
       values are shown below.  There is no default value.
+    values:
+    - rank: '1'
+      keyword: low
+      description: Low severity
+    - rank: '2'
+      keyword: medium
+      description: Medium severity
+    - rank: '3'
+      keyword: high
+      description: High severity
   metric:
     name: metric
     multiplicity: Required
     type: ENUM
     description: Defines the metric in which the time is expressed.  The permitted
       values are shown below.  There is no default value.
+    values:
+    - rank: '1'
+      keyword: labor
+      description: Total staff-time to recovery from the activity (e.g., 2 employees
+        working 4 hours each would be 8 hours).
+    - rank: '2'
+      keyword: elapsed
+      description: Elapsed time from the beginning of the recovery to its completion
+        (i.e., wall-clock time).
+    - rank: '3'
+      keyword: downtime
+      description: Duration of time for which some provided service(s) was not available.
+    - rank: '4'
+      keyword: ext-value
+      description: An escape value used to extend this attribute. See Section 5.1.
   ext-metric:
     name: ext-metric
     multiplicity: Optional
@@ -28,6 +53,31 @@ attributes:
     description: Defines a unit of time, that when combined with the metric attribute,
       fully describes a metric of impact that will be conveyed in the element content.  The
       permitted values are shown below.  The default value is "hour".
+    values:
+    - rank: '1'
+      keyword: second
+      description: The unit of the element content is seconds.
+    - rank: '2'
+      keyword: minute
+      description: The unit of the element content is minutes.
+    - rank: '3'
+      keyword: hour
+      description: The unit of the element content is hours.
+    - rank: '4'
+      keyword: day
+      description: The unit of the element content is days.
+    - rank: '5'
+      keyword: month
+      description: The unit of the element content is months.
+    - rank: '6'
+      keyword: quarter
+      description: The unit of the element content is quarters.
+    - rank: '7'
+      keyword: year
+      description: The unit of the element content is years.
+    - rank: '8'
+      keyword: ext-value
+      description: An escape value used to extend this attribute. See Section 5.1.
   ext-duration:
     name: ext-duration
     multiplicity: Optional

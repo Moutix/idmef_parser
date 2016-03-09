@@ -50,7 +50,39 @@
       "name": "category",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "Classifies the role the host or network played in the incident.  The possible values are:"
+      "description": "Classifies the role the host or network played in the incident.  The possible values are:",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "source",
+          "description": "The System was the source of the event."
+        },
+        {
+          "rank": "2",
+          "keyword": "target",
+          "description": "The System was the target of the event."
+        },
+        {
+          "rank": "3",
+          "keyword": "intermediate",
+          "description": "The System was an intermediary in the event."
+        },
+        {
+          "rank": "4",
+          "keyword": "sensor",
+          "description": "The System was a sensor monitoring the event."
+        },
+        {
+          "rank": "5",
+          "keyword": "infrastructure",
+          "description": "The System was an infrastructure node of IODEF document exchange."
+        },
+        {
+          "rank": "6",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-category": {
       "name": "ext-category",
@@ -68,7 +100,24 @@
       "name": "spoofed",
       "multiplicity": "Optional",
       "type": "ENUM",
-      "description": "An indication of confidence in whether this System was the true target or attacking host.  The permitted values for this attribute are shown below.  The default value is \"unknown\"."
+      "description": "An indication of confidence in whether this System was the true target or attacking host.  The permitted values for this attribute are shown below.  The default value is \"unknown\".",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "unknown",
+          "description": "The accuracy of the category attribute value is unknown."
+        },
+        {
+          "rank": "2",
+          "keyword": "yes",
+          "description": "The category attribute value is probably incorrect.  In the case of a source, the System is likely a decoy; with a target, the System was likely not the intended victim."
+        },
+        {
+          "rank": "3",
+          "keyword": "no",
+          "description": "The category attribute value is believed to be correct."
+        }
+      ]
     }
   }
 }

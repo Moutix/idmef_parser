@@ -44,9 +44,14 @@ class RfcReader
     current_attr = {}
     state = "start"
     section = 0
+    blankline = false
 
     @rfc.each do |line|
       if line =~ /^(\d+)\..+$/
+        if state == "attribute" && current_attr && current_attr["name"]
+          @classes[current_class]["attributes"][current_attr["name"]] = current_attr
+          current_attr = {}
+        end
         section = $1.to_i
       end
 
@@ -81,6 +86,7 @@ class RfcReader
           next
         elsif detect_attribute == "attr"
           state = "attribute"
+          current_attr = nil
           next
         end
 
@@ -108,21 +114,32 @@ class RfcReader
 
         if state == "attribute" ## State: Aggregate Class
           if line =~ /^\s*$/
-            if current_attr["description"]
-              @classes[current_class]["attributes"][current_attr["name"]] = current_attr
-              current_attr = {}
-            end
+            blankline = true
             next
-          elsif current_attr["name"].nil? && line =~ /^\s+([\w-]+)$/ 
-            current_attr["name"] = $1
+          end
+          if line =~ /^\s+([\w-]+)$/ ## It's the name of a new attr
+            @classes[current_class]["attributes"][current_attr["name"]] = current_attr if current_attr
+            current_attr = {"name" => $1}
+            blankline = false
             next
-          elsif current_attr["name"] && current_attr["multiplicity"].nil? && line =~ /\s+(Optional|Required)?\.?\s+(?:(\S+)\.)?\s*(.+)$/
+          elsif current_attr["name"] && line =~ /\s+(\d+)\.\s+(\S+)\.\s+(.+)$/ ## It's an enumeration
+            current_attr["values"] = [] unless current_attr["values"]
+            current_attr["values"] << {"rank" => $1, "keyword" => $2, "description" => $3}
+            blankline = false
+            next
+         elsif current_attr["name"] && current_attr["multiplicity"].nil? && line =~ /\s+(Optional|Required)?\.?\s+(?:(\S+)\.)?\s*(.+)$/
             current_attr["multiplicity"] = $1
             current_attr["type"] = $2
             current_attr["description"] = $3
+            blankline = false
             next
-          elsif current_attr["name"] && current_attr["description"] && line =~ /^\s+(.+)$/
-            current_attr["description"] += " " + $1
+          elsif current_attr["name"] && current_attr["description"] && line =~ /^\s+(.+)$/ && !blankline
+            if current_attr["values"]
+              current_attr["values"].last["description"] += " " + $1
+            else
+              current_attr["description"] += " " + $1
+            end
+            blankline = false
             next
           end
         end

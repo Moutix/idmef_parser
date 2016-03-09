@@ -8,7 +8,109 @@
       "name": "category",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "Functionality provided by a node."
+      "description": "Functionality provided by a node.",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "client",
+          "description": "Client computer"
+        },
+        {
+          "rank": "2",
+          "keyword": "server-internal",
+          "description": "Server with internal services"
+        },
+        {
+          "rank": "3",
+          "keyword": "server-public",
+          "description": "Server with public services"
+        },
+        {
+          "rank": "4",
+          "keyword": "www",
+          "description": "WWW server"
+        },
+        {
+          "rank": "5",
+          "keyword": "mail",
+          "description": "Mail server"
+        },
+        {
+          "rank": "6",
+          "keyword": "messaging",
+          "description": "Messaging server (e.g., NNTP, IRC, IM)"
+        },
+        {
+          "rank": "7",
+          "keyword": "streaming",
+          "description": "Streaming-media server"
+        },
+        {
+          "rank": "8",
+          "keyword": "voice",
+          "description": "Voice server (e.g., SIP, H.323)"
+        },
+        {
+          "rank": "9",
+          "keyword": "file",
+          "description": "File server (e.g., SMB, CVS, AFS)"
+        },
+        {
+          "rank": "10",
+          "keyword": "ftp",
+          "description": "FTP server"
+        },
+        {
+          "rank": "11",
+          "keyword": "p2p",
+          "description": "Peer-to-peer node"
+        },
+        {
+          "rank": "12",
+          "keyword": "name",
+          "description": "Name server (e.g., DNS, WINS)"
+        },
+        {
+          "rank": "13",
+          "keyword": "directory",
+          "description": "Directory server (e.g., LDAP, finger, whois)"
+        },
+        {
+          "rank": "14",
+          "keyword": "credential",
+          "description": "Credential server (e.g., domain controller, Kerberos)"
+        },
+        {
+          "rank": "15",
+          "keyword": "print",
+          "description": "Print server"
+        },
+        {
+          "rank": "16",
+          "keyword": "application",
+          "description": "Application server"
+        },
+        {
+          "rank": "17",
+          "keyword": "database",
+          "description": "Database server"
+        },
+        {
+          "rank": "18",
+          "keyword": "infra",
+          "description": "Infrastructure server (e.g., router, firewall, DHCP)"
+        },
+        {
+          "rank": "19",
+          "keyword": "log",
+          "description": "Logserver (e.g., syslog)"
+        },
+        {
+          "rank": "20",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-category": {
       "name": "ext-category",

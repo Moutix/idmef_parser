@@ -14,19 +14,105 @@
       "name": "severity",
       "multiplicity": "Optional",
       "type": "ENUM",
-      "description": "An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value."
+      "description": "An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value.",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "low",
+          "description": "Low severity"
+        },
+        {
+          "rank": "2",
+          "keyword": "medium",
+          "description": "Medium severity"
+        },
+        {
+          "rank": "3",
+          "keyword": "high",
+          "description": "High severity"
+        }
+      ]
     },
     "completion": {
       "name": "completion",
       "multiplicity": "Optional",
       "type": "ENUM",
-      "description": "An indication whether the described activity was successful.  The permitted values are shown below.  There is no default value."
+      "description": "An indication whether the described activity was successful.  The permitted values are shown below.  There is no default value.",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "failed",
+          "description": "The attempted activity was not successful."
+        },
+        {
+          "rank": "2",
+          "keyword": "succeeded",
+          "description": "The attempted activity succeeded."
+        }
+      ]
     },
     "type": {
       "name": "type",
       "multiplicity": "Required",
       "type": "ENUM",
-      "description": "Classifies the malicious activity into incident categories.  The permitted values are shown below.  The default value is \"other\"."
+      "description": "Classifies the malicious activity into incident categories.  The permitted values are shown below.  The default value is \"other\".",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "admin",
+          "description": "Administrative privileges were attempted."
+        },
+        {
+          "rank": "2",
+          "keyword": "dos",
+          "description": "A denial of service was attempted."
+        },
+        {
+          "rank": "3",
+          "keyword": "file",
+          "description": "An action that impacts the integrity of a file or database was attempted."
+        },
+        {
+          "rank": "4",
+          "keyword": "info-leak",
+          "description": "An attempt was made to exfiltrate information."
+        },
+        {
+          "rank": "5",
+          "keyword": "misconfiguration",
+          "description": "An attempt was made to exploit a mis- configuration in a system."
+        },
+        {
+          "rank": "6",
+          "keyword": "policy",
+          "description": "Activity violating site's policy was attempted."
+        },
+        {
+          "rank": "7",
+          "keyword": "recon",
+          "description": "Reconnaissance activity was attempted."
+        },
+        {
+          "rank": "8",
+          "keyword": "social-engineering",
+          "description": "A social engineering attack was attempted."
+        },
+        {
+          "rank": "9",
+          "keyword": "user",
+          "description": "User privileges were attempted."
+        },
+        {
+          "rank": "10",
+          "keyword": "unknown",
+          "description": "The classification of this activity is unknown."
+        },
+        {
+          "rank": "11",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
     },
     "ext-type": {
       "name": "ext-type",

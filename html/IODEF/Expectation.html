@@ -180,6 +180,32 @@
       </h4>
       <blockquote>
         Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>low</td>
+              <td>Low priority</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>medium</td>
+              <td>Medium priority</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>high</td>
+              <td>High priority</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         action
@@ -187,6 +213,97 @@
       </h4>
       <blockquote>
         Classifies the type of action requested.  This attribute is an enumerated list with no default value.
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>nothing</td>
+              <td>No action is requested.  Do nothing with the information.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>contact-source-site</td>
+              <td>Contact the site(s) identified as the source of the activity.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>contact-target-site</td>
+              <td>Contact the site(s) identified as the target of the activity.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>contact-sender</td>
+              <td>Contact the originator of the document.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>investigate</td>
+              <td>Investigate the systems(s) listed in the event.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>block-host</td>
+              <td>Block traffic from the machine(s) listed as sources the event.</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>block-network</td>
+              <td>Block traffic from the network(s) lists as sources in the event.</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>block-port</td>
+              <td>Block the port listed as sources in the event.</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>rate-limit-host</td>
+              <td>Rate-limit the traffic from the machine(s) listed as sources in the event.</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>rate-limit-network</td>
+              <td>Rate-limit the traffic from the network(s) lists as sources in the event.</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>rate-limit-port</td>
+              <td>Rate-limit the port(s) listed as sources in the event.</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>remediate-other</td>
+              <td>Remediate the activity in a way other than by rate limiting or blocking.</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>status-triage</td>
+              <td>Conveys receipts and the triaging of an incident.</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>status-new-info</td>
+              <td>Conveys that new information was received for this incident.</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>other</td>
+              <td>Perform some custom action described in the Description class.</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-action

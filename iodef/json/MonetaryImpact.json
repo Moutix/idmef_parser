@@ -8,7 +8,24 @@
       "name": "severity",
       "multiplicity": "Optional",
       "type": "ENUM",
-      "description": "An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value."
+      "description": "An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value.",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "low",
+          "description": "Low severity"
+        },
+        {
+          "rank": "2",
+          "keyword": "medium",
+          "description": "Medium severity"
+        },
+        {
+          "rank": "3",
+          "keyword": "high",
+          "description": "High severity"
+        }
+      ]
     },
     "currency": {
       "name": "currency",

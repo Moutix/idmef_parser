@@ -11,6 +11,19 @@ attributes:
     type: ENUM
     description: Describes the type of pattern being specified in the element content.  The
       default is "regex".
+    values:
+    - rank: '1'
+      keyword: regex
+      description: regular expression, per Appendix F of [3].
+    - rank: '2'
+      keyword: binary
+      description: Binhex encoded binary pattern, per the HEXBIN data type.
+    - rank: '3'
+      keyword: xpath
+      description: XML Path (XPath) [5]
+    - rank: '4'
+      keyword: ext-value
+      description: An escape value used to extend this attribute. See Section 5.1.
   ext-type:
     name: ext-type
     multiplicity: Optional
@@ -27,6 +40,16 @@ attributes:
     multiplicity: Optional
     type: ENUM
     description: Describes the units of the offset attribute. The default is "line".
+    values:
+    - rank: '1'
+      keyword: line
+      description: Offset is a count of lines.
+    - rank: '2'
+      keyword: binary
+      description: Offset is a count of bytes.
+    - rank: '3'
+      keyword: ext-value
+      description: An escape value used to extend this attribute. See Section 5.1.
   ext-offsetunit:
     name: ext-offsetunit
     multiplicity: Optional

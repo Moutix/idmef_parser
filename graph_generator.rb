@@ -143,4 +143,5 @@ class GraphGenerator
   end
 end
 
+GraphGenerator.new('idmef/yaml', "yml").generate_all! "idmef/graph"
 GraphGenerator.new('iodef/yaml', "yml").generate_all! "iodef/graph"

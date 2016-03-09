@@ -151,6 +151,32 @@
       </h4>
       <blockquote>
         An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value.
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>low</td>
+              <td>Low severity</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>medium</td>
+              <td>Medium severity</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>high</td>
+              <td>High severity</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         completion
@@ -158,6 +184,27 @@
       </h4>
       <blockquote>
         An indication whether the described activity was successful.  The permitted values are shown below.  There is no default value.
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>failed</td>
+              <td>The attempted activity was not successful.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>succeeded</td>
+              <td>The attempted activity succeeded.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         type
@@ -165,6 +212,72 @@
       </h4>
       <blockquote>
         Classifies the malicious activity into incident categories.  The permitted values are shown below.  The default value is "other".
+        <table class='table table-striped table-bordered'>
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Keyword</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>admin</td>
+              <td>Administrative privileges were attempted.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>dos</td>
+              <td>A denial of service was attempted.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>file</td>
+              <td>An action that impacts the integrity of a file or database was attempted.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>info-leak</td>
+              <td>An attempt was made to exfiltrate information.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>misconfiguration</td>
+              <td>An attempt was made to exploit a mis- configuration in a system.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>policy</td>
+              <td>Activity violating site's policy was attempted.</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>recon</td>
+              <td>Reconnaissance activity was attempted.</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>social-engineering</td>
+              <td>A social engineering attack was attempted.</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>user</td>
+              <td>User privileges were attempted.</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>unknown</td>
+              <td>The classification of this activity is unknown.</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>ext-value</td>
+              <td>An escape value used to extend this attribute. See Section 5.1.</td>
+            </tr>
+          </tbody>
+        </table>
       </blockquote>
       <h4>
         ext-type
