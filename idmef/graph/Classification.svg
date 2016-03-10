@@ -12,15 +12,17 @@
 <!-- Classification -->
 <g id="node1" class="node"><title>Classification</title>
 <a xlink:href="#" xlink:title="The Classification class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. This name is chosen by the alert provider. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-63 8,-84 144,-84 144,-63 8,-63"/>
+<polygon fill="#5c3d1f" stroke="#5c3d1f" points="8,-63 8,-84 144,-84 144,-63 8,-63"/>
 <polygon fill="none" stroke="black" points="8,-63 8,-84 144,-84 144,-63 8,-63"/>
 <text text-anchor="start" x="31" y="-70.2333" font-family="Times Roman,serif" font-size="14.00">Classification</text>
 </a>
 <a xlink:href="#" xlink:title="A unique identifier for this classification; see Section 3.2.9.">
+<polygon fill="#996633" stroke="#996633" points="8,-43 8,-63 144,-63 144,-43 8,-43"/>
 <polygon fill="none" stroke="black" points="8,-43 8,-63 144,-63 144,-43 8,-43"/>
 <text text-anchor="start" x="11.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[] ident (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A vendor&#45;provided string identifying the Alert message.">
+<polygon fill="#996633" stroke="#996633" points="8,-23 8,-43 144,-43 144,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-43 144,-43 144,-23 8,-23"/>
 <text text-anchor="start" x="14" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[] text (Required) </text>
 </a>
@@ -28,23 +30,27 @@
 <!-- Reference -->
 <g id="node2" class="node"><title>Reference</title>
 <a xlink:href="#" xlink:title="The Reference class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. ">
-<polygon fill="#cecece" stroke="#cecece" points="222,-83 222,-104 406,-104 406,-83 222,-83"/>
+<polygon fill="#5c3d1f" stroke="#5c3d1f" points="222,-83 222,-104 406,-104 406,-83 222,-83"/>
 <polygon fill="none" stroke="black" points="222,-83 222,-104 406,-104 406,-83 222,-83"/>
 <text text-anchor="start" x="279.5" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">Reference</text>
 </a>
 <a xlink:href="#" xlink:title="The name of the alert, from one of the origins listed below.">
+<polygon fill="#996633" stroke="#996633" points="222,-63 222,-83 406,-83 406,-63 222,-63"/>
 <polygon fill="none" stroke="black" points="222,-63 222,-83 406,-83 406,-63 222,-63"/>
 <text text-anchor="start" x="246" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
 <a xlink:href="#" xlink:title="A URL at which the manager (or the human operator of the manager) can find additional information about the alert. &#160;The document pointed to by the URL may include an in&#45;depth description of the attack, appropriate countermeasures, or other information deemed relevant by the vendor.">
+<polygon fill="#996633" stroke="#996633" points="222,-43 222,-63 406,-63 406,-43 222,-43"/>
 <polygon fill="none" stroke="black" points="222,-43 222,-63 406,-63 406,-43 222,-43"/>
 <text text-anchor="start" x="255.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
 </a>
 <a xlink:href="#" xlink:title="The source from which the name of the alert originates. The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<polygon fill="#996633" stroke="#996633" points="222,-23 222,-43 406,-43 406,-23 222,-23"/>
 <polygon fill="none" stroke="black" points="222,-23 222,-43 406,-43 406,-23 222,-23"/>
 <text text-anchor="start" x="225.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] origin (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="The meaning of the reference, as understood by the alert provider. &#160;This field is only valid if the value of the &lt;origin&gt; attribute is set to &quot;vendor&#45;specific&quot; or &quot;user&#45;specific&quot;.">
+<polygon fill="#996633" stroke="#996633" points="222,-3 222,-23 406,-23 406,-3 222,-3"/>
 <polygon fill="none" stroke="black" points="222,-3 222,-23 406,-23 406,-3 222,-3"/>
 <text text-anchor="start" x="237.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[] meaning (Optional) </text>
 </a>

@@ -6,6 +6,7 @@ description: 'Analyzers use Heartbeat messages to indicate their current status 
   to the manager that the analyzer is up and running; lack of a Heartbeat message
   (or more likely, lack of some number of consecutive Heartbeat messages) indicates
   that the analyzer or its network connection has failed. '
+color: "#94C600"
 aggregates:
   Analyzer:
     name: Analyzer

@@ -7,6 +7,7 @@ description: 'The Analyzer class identifies the analyzer from which the Alert or
   systems (where alerts get relayed up the tree), it does not provide any way to record
   the identity of the "relay" analyzers along the path from the originating analyzer
   to the manager that ultimately receives the alert. '
+color: "#FFFF66"
 aggregates:
   Node:
     name: Node

@@ -1,6 +1,7 @@
 {
   "name": "Source",
   "description": "The Source class contains information about the possible source(s) of the event(s) that generated an alert.  An event may have more than one source (e.g., in a distributed denial-of-service attack). ",
+  "color": "#284F9F",
   "aggregates": {
     "Node": {
       "name": "Node",

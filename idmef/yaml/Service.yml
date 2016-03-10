@@ -11,6 +11,7 @@ description: 'The Service class describes network services on sources and target
   in both Source and Target, then information in both locations should be the same.  If
   information is the same in both locations and implementers wish to carry it in only
   one location, they should specify it as an aggregate of the Target class. '
+color: "#FFCCCC"
 childs:
   WebService:
     name: WebService

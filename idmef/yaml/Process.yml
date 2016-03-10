@@ -2,6 +2,7 @@
 name: Process
 description: 'The Process class is used to describe processes being executed on sources,
   targets, and analyzers. '
+color: "#FFCC66"
 aggregates:
   name:
     name: name

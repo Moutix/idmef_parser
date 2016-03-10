@@ -4,6 +4,7 @@ description: 'Generally, every time an analyzer detects an event that it has bee
   configured to look for, it sends an Alert message to its manager(s). Depending on
   the analyzer, an Alert message may correspond to a single detected event or multiple
   detected events.  Alerts occur asynchronously in response to outside events. '
+color: "#94C600"
 childs:
   OverflowAlert:
     name: OverflowAlert

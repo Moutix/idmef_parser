@@ -1,6 +1,7 @@
 {
   "name": "Inode",
   "description": "The Inode class is used to represent the additional information contained in a Unix file system i-node. ",
+  "color": "#FFCC00",
   "aggregates": {
     "change-time": {
       "name": "change-time",

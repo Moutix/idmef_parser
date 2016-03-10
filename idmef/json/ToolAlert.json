@@ -1,6 +1,7 @@
 {
   "name": "ToolAlert",
   "description": "The ToolAlert class carries additional information related to the use of attack tools or malevolent programs such as Trojan horses and can be used by the analyzer when it is able to identify these tools.  It is intended to group one or more previously-sent alerts together, to say \"these alerts were all the result of someone using this tool\". ",
+  "color": "#BFBFBF",
   "aggregates": {
     "name": {
       "name": "name",

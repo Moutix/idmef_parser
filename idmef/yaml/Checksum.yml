@@ -3,6 +3,7 @@ name: Checksum
 description: 'The Checksum class represents checksum information associated with the
   file.  This checksum information can be provided by file integrity checkers, among
   others. '
+color: "#FFCC00"
 aggregates:
   value:
     name: value

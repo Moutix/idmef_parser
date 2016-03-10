@@ -2,6 +2,7 @@
 name: Assessment
 description: 'The Assessment class is used to provide the analyzer''s assessment of
   an event -- its impact, actions taken in response, and confidence. '
+color: "#FF5024"
 aggregates:
   Impact:
     name: Impact

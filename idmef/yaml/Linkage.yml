@@ -6,6 +6,7 @@ description: 'The Linkage class represents file system connections between the f
   should contain the name of the object the link points to.  Further information can
   be provided about the object in the <Linkage> element with another <File> element,
   if appropriate. '
+color: "#FFCC00"
 aggregates:
   name:
     name: name

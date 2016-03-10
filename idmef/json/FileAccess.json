@@ -1,6 +1,7 @@
 {
   "name": "FileAccess",
   "description": "The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems. ",
+  "color": "#FFCC00",
   "aggregates": {
     "UserId": {
       "name": "UserId",

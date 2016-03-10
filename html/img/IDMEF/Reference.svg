@@ -12,23 +12,27 @@
 <!-- Reference -->
 <g id="node1" class="node"><title>Reference</title>
 <a xlink:href="#" xlink:title="The Reference class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-83 8,-104 192,-104 192,-83 8,-83"/>
+<polygon fill="#5c3d1f" stroke="#5c3d1f" points="8,-83 8,-104 192,-104 192,-83 8,-83"/>
 <polygon fill="none" stroke="black" points="8,-83 8,-104 192,-104 192,-83 8,-83"/>
 <text text-anchor="start" x="65.5" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">Reference</text>
 </a>
 <a xlink:href="#" xlink:title="The name of the alert, from one of the origins listed below.">
+<polygon fill="#996633" stroke="#996633" points="8,-63 8,-83 192,-83 192,-63 8,-63"/>
 <polygon fill="none" stroke="black" points="8,-63 8,-83 192,-83 192,-63 8,-63"/>
 <text text-anchor="start" x="32" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
 <a xlink:href="#" xlink:title="A URL at which the manager (or the human operator of the manager) can find additional information about the alert. &#160;The document pointed to by the URL may include an in&#45;depth description of the attack, appropriate countermeasures, or other information deemed relevant by the vendor.">
+<polygon fill="#996633" stroke="#996633" points="8,-43 8,-63 192,-63 192,-43 8,-43"/>
 <polygon fill="none" stroke="black" points="8,-43 8,-63 192,-63 192,-43 8,-43"/>
 <text text-anchor="start" x="41.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
 </a>
 <a xlink:href="#" xlink:title="The source from which the name of the alert originates. The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<polygon fill="#996633" stroke="#996633" points="8,-23 8,-43 192,-43 192,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-43 192,-43 192,-23 8,-23"/>
 <text text-anchor="start" x="11.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] origin (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="The meaning of the reference, as understood by the alert provider. &#160;This field is only valid if the value of the &lt;origin&gt; attribute is set to &quot;vendor&#45;specific&quot; or &quot;user&#45;specific&quot;.">
+<polygon fill="#996633" stroke="#996633" points="8,-3 8,-23 192,-23 192,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 192,-23 192,-3 8,-3"/>
 <text text-anchor="start" x="23.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[] meaning (Optional) </text>
 </a>

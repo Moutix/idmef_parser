@@ -5,6 +5,7 @@ description: 'The ToolAlert class carries additional information related to the 
   the analyzer when it is able to identify these tools.  It is intended to group one
   or more previously-sent alerts together, to say "these alerts were all the result
   of someone using this tool". '
+color: "#BFBFBF"
 aggregates:
   name:
     name: name

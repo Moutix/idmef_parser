@@ -1,6 +1,7 @@
 {
   "name": "Service",
   "description": "The Service class describes network services on sources and targets. It can identify services by name, port, and protocol.  When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is \"attached\" to the Node, Process, and User information also contained in Source.  Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is \"attached\" to the Node, Process, and User information also contained in Target.  If Service occurs in both Source and Target, then information in both locations should be the same.  If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ",
+  "color": "#FFCCCC",
   "childs": {
     "WebService": {
       "name": "WebService"

@@ -3,6 +3,7 @@ name: CorrelationAlert
 description: 'The CorrelationAlert class carries additional information related to
   the correlation of alert information.  It is intended to group one or more previously-sent
   alerts together, to say "these alerts are all related". '
+color: "#BFBFBF"
 aggregates:
   name:
     name: name

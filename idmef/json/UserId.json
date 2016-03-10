@@ -1,6 +1,7 @@
 {
   "name": "UserId",
   "description": "The UserId class provides specific information about a user.  More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user's (or process') privileges. ",
+  "color": "#66CCFF",
   "aggregates": {
     "name": {
       "name": "name",

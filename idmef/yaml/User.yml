@@ -2,6 +2,7 @@
 name: User
 description: 'The User class is used to describe users.  It is primarily used as a
   "container" class for the UserId aggregate class, as shown in Figure 16. '
+color: "#66CCFF"
 aggregates:
   UserId:
     name: UserId

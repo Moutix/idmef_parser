@@ -3,6 +3,7 @@ name: Target
 description: 'The Target class contains information about the possible target(s) of
   the event(s) that generated an alert.  An event may have more than one target (e.g.,
   in the case of a port sweep). '
+color: "#284F9F"
 aggregates:
   Node:
     name: Node

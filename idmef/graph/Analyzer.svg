@@ -12,39 +12,47 @@
 <!-- Analyzer -->
 <g id="node1" class="node"><title>Analyzer</title>
 <a xlink:href="#" xlink:title="The Analyzer class identifies the analyzer from which the Alert or Heartbeat message originates. Only one analyzer may be encoded for each alert or heartbeat, and that MUST be the analyzer at which the alert or heartbeat originated. Although the IDMEF data model does not prevent the use of hierarchical intrusion detection systems (where alerts get relayed up the tree), it does not provide any way to record the identity of the &quot;relay&quot; analyzers along the path from the originating analyzer to the manager that ultimately receives the alert. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-189 8,-210 202,-210 202,-189 8,-189"/>
+<polygon fill="#99993d" stroke="#99993d" points="8,-189 8,-210 202,-210 202,-189 8,-189"/>
 <polygon fill="none" stroke="black" points="8,-189 8,-210 202,-210 202,-189 8,-189"/>
 <text text-anchor="start" x="74" y="-196.233" font-family="Times Roman,serif" font-size="14.00">Analyzer</text>
 </a>
 <a xlink:href="#" xlink:title="(but see below). &#160;A unique identifier for the analyzer; see Section 3.2.9.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-169 8,-189 202,-189 202,-169 8,-169"/>
 <polygon fill="none" stroke="black" points="8,-169 8,-189 202,-189 202,-169 8,-169"/>
 <text text-anchor="start" x="22" y="-175.733" font-family="Times Roman,serif" font-size="14.00">[] analyzerid (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="An explicit name for the analyzer that may be easier to understand than the analyzerid.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-149 8,-169 202,-169 202,-149 8,-149"/>
 <polygon fill="none" stroke="black" points="8,-149 8,-169 202,-169 202,-149 8,-149"/>
 <text text-anchor="start" x="39" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[] name (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The manufacturer of the analyzer software and/or hardware.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-129 8,-149 202,-149 202,-129 8,-129"/>
 <polygon fill="none" stroke="black" points="8,-129 8,-149 202,-149 202,-129 8,-129"/>
 <text text-anchor="start" x="11.5" y="-135.733" font-family="Times Roman,serif" font-size="14.00">[] manufacturer (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The model name/number of the analyzer software and/or hardware.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-109 8,-129 202,-129 202,-109 8,-109"/>
 <polygon fill="none" stroke="black" points="8,-109 8,-129 202,-129 202,-109 8,-109"/>
 <text text-anchor="start" x="37.5" y="-115.733" font-family="Times Roman,serif" font-size="14.00">[] model (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The version number of the analyzer software and/or hardware.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-89 8,-109 202,-109 202,-89 8,-89"/>
 <polygon fill="none" stroke="black" points="8,-89 8,-109 202,-109 202,-89 8,-89"/>
 <text text-anchor="start" x="33" y="-95.7333" font-family="Times Roman,serif" font-size="14.00">[] version (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The class of analyzer software and/or hardware.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-69 8,-89 202,-89 202,-69 8,-69"/>
 <polygon fill="none" stroke="black" points="8,-69 8,-89 202,-89 202,-69 8,-69"/>
 <text text-anchor="start" x="42" y="-75.7333" font-family="Times Roman,serif" font-size="14.00">[] class (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Operating system name. &#160;On POSIX 1003.1 compliant systems, this is the value returned in utsname.sysname by the uname() system call, or the output of the &quot;uname &#45;s&quot; command.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-49 8,-69 202,-69 202,-49 8,-49"/>
 <polygon fill="none" stroke="black" points="8,-49 8,-69 202,-69 202,-49 8,-49"/>
 <text text-anchor="start" x="35.5" y="-55.7333" font-family="Times Roman,serif" font-size="14.00">[] ostype (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Operating system version. &#160;On POSIX 1003.1 compliant systems, this is the value returned in utsname.release by the uname() system call, or the output of the &quot;uname &#45;r&quot; command.">
+<polygon fill="#ffff66" stroke="#ffff66" points="8,-29 8,-49 202,-49 202,-29 8,-29"/>
 <polygon fill="none" stroke="black" points="8,-29 8,-49 202,-49 202,-29 8,-29"/>
 <text text-anchor="start" x="25.5" y="-35.7333" font-family="Times Roman,serif" font-size="14.00">[] osversion (Optional) </text>
 </a>
@@ -58,23 +66,27 @@
 <!-- Node -->
 <g id="node2" class="node"><title>Node</title>
 <a xlink:href="#" xlink:title="The Node class is used to identify hosts and other network devices (routers, switches, etc.). ">
-<polygon fill="#cecece" stroke="#cecece" points="283,-249 283,-270 486,-270 486,-249 283,-249"/>
+<polygon fill="#007a00" stroke="#007a00" points="283,-249 283,-270 486,-270 486,-249 283,-249"/>
 <polygon fill="none" stroke="black" points="283,-249 283,-270 486,-270 486,-249 283,-249"/>
 <text text-anchor="start" x="366.5" y="-256.233" font-family="Times Roman,serif" font-size="14.00">Node</text>
 </a>
 <a xlink:href="#" xlink:title="The location of the equipment.">
+<polygon fill="#00cc00" stroke="#00cc00" points="283,-229 283,-249 486,-249 486,-229 283,-229"/>
 <polygon fill="none" stroke="black" points="283,-229 283,-249 486,-249 486,-229 283,-229"/>
 <text text-anchor="start" x="299.5" y="-235.733" font-family="Times Roman,serif" font-size="14.00">[STRING] location (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The name of the equipment. &#160;This information MUST be provided if no Address information is given.">
+<polygon fill="#00cc00" stroke="#00cc00" points="283,-209 283,-229 486,-229 486,-209 283,-209"/>
 <polygon fill="none" stroke="black" points="283,-209 283,-229 486,-229 486,-209 283,-209"/>
 <text text-anchor="start" x="307.5" y="-215.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="A unique identifier for the node; see Section 3.2.9.">
+<polygon fill="#00cc00" stroke="#00cc00" points="283,-189 283,-209 486,-209 486,-189 283,-189"/>
 <polygon fill="none" stroke="black" points="283,-189 283,-209 486,-209 486,-189 283,-189"/>
 <text text-anchor="start" x="320" y="-195.733" font-family="Times Roman,serif" font-size="14.00">[] ident (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The &quot;domain&quot; from which the name information was obtained, if relevant. &#160;The permitted values for this attribute are shown in the table below. &#160;The default value is &quot;unknown&quot;. (See also Section 10 for extensions to the table.)">
+<polygon fill="#00cc00" stroke="#00cc00" points="283,-169 283,-189 486,-189 486,-169 283,-169"/>
 <polygon fill="none" stroke="black" points="283,-169 283,-189 486,-189 486,-169 283,-169"/>
 <text text-anchor="start" x="286.5" y="-175.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
 </a>
@@ -88,31 +100,37 @@
 <!-- Process -->
 <g id="node6" class="node"><title>Process</title>
 <a xlink:href="#" xlink:title="The Process class is used to describe processes being executed on sources, targets, and analyzers. ">
-<polygon fill="#cecece" stroke="#cecece" points="307,-123 307,-144 462,-144 462,-123 307,-123"/>
+<polygon fill="#997a3d" stroke="#997a3d" points="307,-123 307,-144 462,-144 462,-123 307,-123"/>
 <polygon fill="none" stroke="black" points="307,-123 307,-144 462,-144 462,-123 307,-123"/>
 <text text-anchor="start" x="358.5" y="-130.233" font-family="Times Roman,serif" font-size="14.00">Process</text>
 </a>
 <a xlink:href="#" xlink:title="The name of the program being executed. This is a short name; path and argument information are provided elsewhere.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="307,-103 307,-123 462,-123 462,-103 307,-103"/>
 <polygon fill="none" stroke="black" points="307,-103 307,-123 462,-123 462,-103 307,-103"/>
 <text text-anchor="start" x="316.5" y="-109.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
 <a xlink:href="#" xlink:title="The process identifier of the process.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="307,-83 307,-103 462,-103 462,-83 307,-83"/>
 <polygon fill="none" stroke="black" points="307,-83 307,-103 462,-103 462,-83 307,-83"/>
 <text text-anchor="start" x="312" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[INTEGER] pid (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The full path of the program being executed.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="307,-63 307,-83 462,-83 462,-63 307,-63"/>
 <polygon fill="none" stroke="black" points="307,-63 307,-83 462,-83 462,-63 307,-63"/>
 <text text-anchor="start" x="310.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] path (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="A command&#45;line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="307,-43 307,-63 462,-63 462,-43 307,-43"/>
 <polygon fill="none" stroke="black" points="307,-43 307,-63 462,-63 462,-43 307,-43"/>
 <text text-anchor="start" x="316" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
 </a>
 <a xlink:href="#" xlink:title="An environment string associated with the process; generally of the format &quot;VARIABLE=value&quot;. &#160;Multiple environment strings may be specified with multiple uses of env.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="307,-23 307,-43 462,-43 462,-23 307,-23"/>
 <polygon fill="none" stroke="black" points="307,-23 307,-43 462,-43 462,-23 307,-23"/>
 <text text-anchor="start" x="314.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] env (0..*) </text>
 </a>
 <a xlink:href="#" xlink:title="A unique identifier for the process; see Section 3.2.9.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="307,-3 307,-23 462,-23 462,-3 307,-3"/>
 <polygon fill="none" stroke="black" points="307,-3 307,-23 462,-23 462,-3 307,-3"/>
 <text text-anchor="start" x="320" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[] ident (Optional) </text>
 </a>
@@ -126,31 +144,37 @@
 <!-- Address -->
 <g id="node3" class="node"><title>Address</title>
 <a xlink:href="#" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
-<polygon fill="#cecece" stroke="#cecece" points="565,-269 565,-290 768,-290 768,-269 565,-269"/>
+<polygon fill="#007a00" stroke="#007a00" points="565,-269 565,-290 768,-290 768,-269 565,-269"/>
 <polygon fill="none" stroke="black" points="565,-269 565,-290 768,-290 768,-269 565,-269"/>
 <text text-anchor="start" x="639" y="-276.233" font-family="Times Roman,serif" font-size="14.00">Address</text>
 </a>
 <a xlink:href="#" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
+<polygon fill="#00cc00" stroke="#00cc00" points="565,-249 565,-269 768,-269 768,-249 565,-249"/>
 <polygon fill="none" stroke="black" points="565,-249 565,-269 768,-269 768,-249 565,-249"/>
 <text text-anchor="start" x="591" y="-255.733" font-family="Times Roman,serif" font-size="14.00">[STRING] address (1) </text>
 </a>
 <a xlink:href="#" xlink:title="The network mask for the address, if appropriate.">
+<polygon fill="#00cc00" stroke="#00cc00" points="565,-229 565,-249 768,-249 768,-229 565,-229"/>
 <polygon fill="none" stroke="black" points="565,-229 565,-249 768,-249 768,-229 565,-229"/>
 <text text-anchor="start" x="579" y="-235.733" font-family="Times Roman,serif" font-size="14.00">[STRING] netmask (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="A unique identifier for the address; see Section 3.2.9.">
+<polygon fill="#00cc00" stroke="#00cc00" points="565,-209 565,-229 768,-229 768,-209 565,-209"/>
 <polygon fill="none" stroke="black" points="565,-209 565,-229 768,-229 768,-209 565,-209"/>
 <text text-anchor="start" x="602" y="-215.733" font-family="Times Roman,serif" font-size="14.00">[] ident (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<polygon fill="#00cc00" stroke="#00cc00" points="565,-189 565,-209 768,-209 768,-189 565,-189"/>
 <polygon fill="none" stroke="black" points="565,-189 565,-209 768,-209 768,-189 565,-189"/>
 <text text-anchor="start" x="568.5" y="-195.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The name of the Virtual LAN to which the address belongs.">
+<polygon fill="#00cc00" stroke="#00cc00" points="565,-169 565,-189 768,-189 768,-169 565,-169"/>
 <polygon fill="none" stroke="black" points="565,-169 565,-189 768,-189 768,-169 565,-169"/>
 <text text-anchor="start" x="583.5" y="-175.733" font-family="Times Roman,serif" font-size="14.00">[] vlan&#45;name (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The number of the Virtual LAN to which the address belongs.">
+<polygon fill="#00cc00" stroke="#00cc00" points="565,-149 565,-169 768,-169 768,-149 565,-149"/>
 <polygon fill="none" stroke="black" points="565,-149 565,-169 768,-169 768,-149 565,-149"/>
 <text text-anchor="start" x="587" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[] vlan&#45;num (Optional) </text>
 </a>

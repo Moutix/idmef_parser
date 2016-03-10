@@ -3,6 +3,7 @@ name: OverflowAlert
 description: 'The OverflowAlert carries additional information related to buffer overflow
   attacks.  It is intended to enable an analyzer to provide the details of the overflow
   attack itself. '
+color: "#BFBFBF"
 aggregates:
   program:
     name: program

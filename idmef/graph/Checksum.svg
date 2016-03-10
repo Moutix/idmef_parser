@@ -12,19 +12,22 @@
 <!-- Checksum -->
 <g id="node1" class="node"><title>Checksum</title>
 <a xlink:href="#" xlink:title="The Checksum class represents checksum information associated with the file. This checksum information can be provided by file integrity checkers, among others. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-63 8,-84 158,-84 158,-63 8,-63"/>
+<polygon fill="#997a00" stroke="#997a00" points="8,-63 8,-84 158,-84 158,-63 8,-63"/>
 <polygon fill="none" stroke="black" points="8,-63 8,-84 158,-84 158,-63 8,-63"/>
 <text text-anchor="start" x="47.5" y="-70.2333" font-family="Times Roman,serif" font-size="14.00">Checksum</text>
 </a>
 <a xlink:href="#" xlink:title="The value of the checksum.">
+<polygon fill="#ffcc00" stroke="#ffcc00" points="8,-43 8,-63 158,-63 158,-43 8,-43"/>
 <polygon fill="none" stroke="black" points="8,-43 8,-63 158,-63 158,-43 8,-43"/>
 <text text-anchor="start" x="15" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] value (1) </text>
 </a>
 <a xlink:href="#" xlink:title="The key to the checksum, if appropriate.">
+<polygon fill="#ffcc00" stroke="#ffcc00" points="8,-23 8,-43 158,-43 158,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-43 158,-43 158,-23 8,-23"/>
 <text text-anchor="start" x="13" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] key (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="default value. &#160;(See also Section 10.)">
+<polygon fill="#ffcc00" stroke="#ffcc00" points="8,-3 8,-23 158,-23 158,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 158,-23 158,-3 8,-3"/>
 <text text-anchor="start" x="11.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] algorithm () </text>
 </a>

@@ -28,4 +28,4 @@ class YamlToJson
   end
 end
 
-YamlToJson.new.convert_to_json
+YamlToJson.new("idmef/json", "idmef/yaml").convert_to_json

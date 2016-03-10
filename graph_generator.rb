@@ -4,11 +4,12 @@ require 'graphviz'
 require 'cgi'
 
 class IDMEFGraph
-  def initialize idmef_class, classes, direction="LR"
+  def initialize idmef_class, classes, direction="LR", color=true
     @class = idmef_class
     @classes = classes
     @graph = GraphViz.new @class, type: :digraph
     @graph[:rankdir] = direction
+    @color = color
     @nodes = {}
     add_node(@class)
   end
@@ -27,6 +28,15 @@ class IDMEFGraph
 
   private
 
+  def darken_color(hex_color, amount=0.4)
+    hex_color = hex_color.gsub('#','')
+    rgb = hex_color.scan(/../).map {|color| color.hex}
+    rgb[0] = (rgb[0].to_i * amount).round
+    rgb[1] = (rgb[1].to_i * amount).round
+    rgb[2] = (rgb[2].to_i * amount).round
+    "#%02x%02x%02x" % rgb
+  end
+
   def add_edge(node, name)
     if @nodes.has_key? name
       return @graph.add_edge(node, @nodes[name])
@@ -41,11 +51,13 @@ class IDMEFGraph
     node = @graph.add_nodes(name)
     node[:shape] = "plaintext"
 
+    color = @color ? @classes[name]["color"] : nil
+
     @nodes[node.id] = node
     label = %{
       <<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
       <tr >
-        <td BGCOLOR="#CECECE" HREF="#" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
+        <td BGCOLOR="#{color ? darken_color(color, 0.6) : "#CECECE"}" HREF="#" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
       </tr>"
     %}.gsub(/\s+/, " ").strip
 
@@ -61,12 +73,12 @@ class IDMEFGraph
         edge = add_edge(node, key)
         edge[:label] = value["multiplicity"]
       else
-        label += graph_attr(value)
+        label += graph_attr(value, @color ? (color ? color : value["color"]) : nil)
       end
     end
 
     @classes[name].fetch("attributes", {}).each do |key, value|
-      label += graph_attr(value)
+      label += graph_attr(value, color ? color : value["color"])
     end
 
     label += "</table>>"
@@ -74,8 +86,8 @@ class IDMEFGraph
     return node
   end
 
-  def graph_attr(attr)
-    return  %{<tr><td HREF="#" TITLE="#{CGI.escapeHTML(attr["description"])}">[#{attr["type"]}] #{attr["name"]} (#{attr["multiplicity"]}) </td></tr>%}
+  def graph_attr(attr, color=nil)
+    return  %{<tr><td #{color ? "BGCOLOR=\"#{color}\" " : ""}HREF="#" TITLE="#{CGI.escapeHTML(attr["description"])}">[#{attr["type"]}] #{attr["name"]} (#{attr["multiplicity"]}) </td></tr>%}
   end
 end
 
@@ -93,8 +105,8 @@ class GraphGenerator
     @classes = parse_folder
   end
 
-  def generate_graph! idmef_class, folder="graph"
-    graph = IDMEFGraph.new idmef_class, @classes
+  def generate_graph! idmef_class, folder="graph", direction="LR", color=true
+    graph = IDMEFGraph.new idmef_class, @classes, direction, color
 
     Dir.mkdir(folder) unless File.exists?(folder)
     Dir.chdir(folder) do
@@ -104,9 +116,9 @@ class GraphGenerator
     end
   end
 
-  def generate_all!(folder="graph")
+  def generate_all! folder="graph", direction="LR", color=true
     @classes.each_key do |idmef_class|
-      generate_graph! idmef_class, folder
+      generate_graph! idmef_class, folder, direction, color
     end
   end
 

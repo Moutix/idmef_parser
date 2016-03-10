@@ -1,6 +1,7 @@
 {
   "name": "Confidence",
   "description": "The Confidence class is used to represent the analyzer's best estimate of the validity of its analysis.  It is represented in the IDMEF DTD as follows: ",
+  "color": "#FF5024",
   "aggregates": {
   },
   "attributes": {

@@ -1,6 +1,7 @@
 {
   "name": "File",
   "description": "The File class provides specific information about a file or other file-like object that has been created, deleted, or modified on the target.  The description can provide either the file settings prior to the event or the file settings at the time of the event, as specified using the \"category\" attribute. ",
+  "color": "#FFCC00",
   "aggregates": {
     "name": {
       "name": "name",

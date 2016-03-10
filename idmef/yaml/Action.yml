@@ -2,6 +2,7 @@
 name: Action
 description: 'The Action class is used to describe any actions taken by the analyzer
   in response to the event.  Is is represented in the IDMEF DTD as follows: '
+color: "#FF5024"
 aggregates: {}
 attributes:
   category:

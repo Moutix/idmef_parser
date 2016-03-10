@@ -12,15 +12,17 @@
 <!-- CorrelationAlert -->
 <g id="node1" class="node"><title>CorrelationAlert</title>
 <a xlink:href="#" xlink:title="The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts are all related&quot;. ">
-<polygon fill="#cecece" stroke="#cecece" points="9,-43 9,-64 198,-64 198,-43 9,-43"/>
+<polygon fill="#737373" stroke="#737373" points="9,-43 9,-64 198,-64 198,-43 9,-43"/>
 <polygon fill="none" stroke="black" points="9,-43 9,-64 198,-64 198,-43 9,-43"/>
 <text text-anchor="start" x="47.5" y="-50.2333" font-family="Times Roman,serif" font-size="14.00">CorrelationAlert</text>
 </a>
 <a xlink:href="#" xlink:title="The reason for grouping the alerts together, for example, a particular correlation method.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-23 9,-43 198,-43 198,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-43 198,-43 198,-23 9,-23"/>
 <text text-anchor="start" x="35.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
 <a xlink:href="#" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-3 9,-23 198,-23 198,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 198,-23 198,-3 9,-3"/>
 <text text-anchor="start" x="12.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] alertident (1..*) </text>
 </a>

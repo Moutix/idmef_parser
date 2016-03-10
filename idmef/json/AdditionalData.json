@@ -1,6 +1,7 @@
 {
   "name": "AdditionalData",
   "description": "The AdditionalData class is used to provide information that cannot be represented by the data model.  AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers).  Detailed instructions for extending the data model and the DTD are provided in Section 5. ",
+  "color": "#7030A0",
   "aggregates": {
   },
   "attributes": {
