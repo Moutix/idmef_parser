@@ -106,6 +106,9 @@
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
                 </li>
+                <li class='active'>
+                  <a href='/idmef_parser/IODEF/Method.html'>Method</a>
+                </li>
                 <li class=''>
                   <a href='/idmef_parser/IODEF/Node.html'>Node</a>
                 </li>
@@ -136,6 +139,28 @@
       <p>The Method class describes the methodology used by the intruder to perpetrate the events of the incident.  This class consists of a list of references describing the attack method and a free form description of the technique.</p>
       <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Method.svg'>
       <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        <a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A reference to a vulnerability, malware sample, advisory, or analysis of an attack technique.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form text description of the methodology used by the intruder.
+      </blockquote>
+      <h4>
+        <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+        (0..*)
+      </h4>
+      <blockquote>
+        A mechanism by which to extend the data model.
+      </blockquote>
       <hr>
       <h3>Attributes</h3>
       <h4>

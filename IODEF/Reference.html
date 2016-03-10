@@ -107,6 +107,9 @@
                   <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
                 </li>
                 <li class=''>
+                  <a href='/idmef_parser/IODEF/Method.html'>Method</a>
+                </li>
+                <li class=''>
                   <a href='/idmef_parser/IODEF/Node.html'>Node</a>
                 </li>
                 <li class=''>
@@ -136,6 +139,28 @@
       <p>The Reference class is a reference to a vulnerability, IDS alert, malware sample, advisory, or attack technique.  A reference consists of a name, a URL to this reference, and an optional description.</p>
       <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Reference.svg'>
       <hr>
+      <h3>Aggregates</h3>
+      <h4>
+        ReferenceName
+        (1..1)
+      </h4>
+      <blockquote>
+        Name of the reference.
+      </blockquote>
+      <h4>
+        URL
+        (0..*)
+      </h4>
+      <blockquote>
+        A URL associated with the reference.
+      </blockquote>
+      <h4>
+        Description
+        (0..*)
+      </h4>
+      <blockquote>
+        A free-form text description of this reference.
+      </blockquote>
       <hr>
     </div>
     <hr>
