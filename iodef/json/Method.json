@@ -2,6 +2,24 @@
   "name": "Method",
   "description": "The Method class describes the methodology used by the intruder to perpetrate the events of the incident.  This class consists of a list of references describing the attack method and a free form description of the technique. ",
   "aggregates": {
+    "Reference": {
+      "name": "Reference",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "A reference to a vulnerability, malware sample, advisory, or analysis of an attack technique."
+    },
+    "Description": {
+      "name": "Description",
+      "multiplicity": "0..*",
+      "type": "ML_STRING",
+      "description": "A free-form text description of the methodology used by the intruder."
+    },
+    "AdditionalData": {
+      "name": "AdditionalData",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "A mechanism by which to extend the data model."
+    }
   },
   "attributes": {
     "restriction": {

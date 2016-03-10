@@ -154,7 +154,7 @@ class RfcReader
   end
 
   def detect_attr(line)
-    if line =~ /\s+The\saggregate\sclass(?:es)?\s.+(are|is):$/
+    if line =~ /^.+aggregate(?:s)?\s+class(?:es)?.+$/
       return "aggr"
     elsif line =~ /\s+.+\shas\s\w+\sattribute(?:s)?:/
       return "attr"
