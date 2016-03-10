@@ -12,7 +12,7 @@
 <!-- Assessment -->
 <g id="node1" class="node"><title>Assessment</title>
 <a xlink:href="#" xlink:title="The Assessment class is used to provide the analyzer&#39;s assessment of an event &#45;&#45; its impact, actions taken in response, and confidence. ">
-<polygon fill="#cecece" stroke="#cecece" points="9,-79 9,-100 98,-100 98,-79 9,-79"/>
+<polygon fill="#993016" stroke="#993016" points="9,-79 9,-100 98,-100 98,-79 9,-79"/>
 <polygon fill="none" stroke="black" points="9,-79 9,-100 98,-100 98,-79 9,-79"/>
 <text text-anchor="start" x="12.5" y="-86.2333" font-family="Times Roman,serif" font-size="14.00">Assessment</text>
 </a>
@@ -20,19 +20,22 @@
 <!-- Impact -->
 <g id="node2" class="node"><title>Impact</title>
 <a xlink:href="#" xlink:title="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">
-<polygon fill="#cecece" stroke="#cecece" points="179,-195 179,-216 338,-216 338,-195 179,-195"/>
+<polygon fill="#993016" stroke="#993016" points="179,-195 179,-216 338,-216 338,-195 179,-195"/>
 <polygon fill="none" stroke="black" points="179,-195 179,-216 338,-216 338,-195 179,-195"/>
 <text text-anchor="start" x="235" y="-202.233" font-family="Times Roman,serif" font-size="14.00">Impact</text>
 </a>
 <a xlink:href="#" xlink:title="Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="179,-175 179,-195 338,-195 338,-175 179,-175"/>
 <polygon fill="none" stroke="black" points="179,-175 179,-195 338,-195 338,-175 179,-175"/>
 <text text-anchor="start" x="192" y="-181.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity () </text>
 </a>
 <a xlink:href="#" xlink:title="Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="179,-155 179,-175 338,-175 338,-155 179,-155"/>
 <polygon fill="none" stroke="black" points="179,-155 179,-175 338,-175 338,-155 179,-155"/>
 <text text-anchor="start" x="182.5" y="-161.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] completion () </text>
 </a>
 <a xlink:href="#" xlink:title="value is &quot;other&quot;. &#160;(See also Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="179,-135 179,-155 338,-155 338,-135 179,-135"/>
 <polygon fill="none" stroke="black" points="179,-135 179,-155 338,-155 338,-135 179,-135"/>
 <text text-anchor="start" x="204.5" y="-141.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type () </text>
 </a>
@@ -46,11 +49,12 @@
 <!-- Action -->
 <g id="node4" class="node"><title>Action</title>
 <a xlink:href="#" xlink:title="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">
-<polygon fill="#cecece" stroke="#cecece" points="186,-89 186,-110 330,-110 330,-89 186,-89"/>
+<polygon fill="#993016" stroke="#993016" points="186,-89 186,-110 330,-110 330,-89 186,-89"/>
 <polygon fill="none" stroke="black" points="186,-89 186,-110 330,-110 330,-89 186,-89"/>
 <text text-anchor="start" x="236" y="-96.2333" font-family="Times Roman,serif" font-size="14.00">Action</text>
 </a>
 <a xlink:href="#" xlink:title="The default value is &quot;other&quot;. &#160;(See also Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="186,-69 186,-89 330,-89 330,-69 186,-69"/>
 <polygon fill="none" stroke="black" points="186,-69 186,-89 330,-89 330,-69 186,-69"/>
 <text text-anchor="start" x="189.5" y="-75.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] category () </text>
 </a>
@@ -64,11 +68,12 @@
 <!-- Confidence -->
 <g id="node6" class="node"><title>Confidence</title>
 <a xlink:href="#" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
-<polygon fill="#cecece" stroke="#cecece" points="196,-23 196,-44 321,-44 321,-23 196,-23"/>
+<polygon fill="#993016" stroke="#993016" points="196,-23 196,-44 321,-44 321,-23 196,-23"/>
 <polygon fill="none" stroke="black" points="196,-23 196,-44 321,-44 321,-23 196,-23"/>
 <text text-anchor="start" x="220.5" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">Confidence</text>
 </a>
 <a xlink:href="#" xlink:title="also Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="196,-3 196,-23 321,-23 321,-3 196,-3"/>
 <polygon fill="none" stroke="black" points="196,-3 196,-23 321,-23 321,-3 196,-3"/>
 <text text-anchor="start" x="199.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] rating () </text>
 </a>

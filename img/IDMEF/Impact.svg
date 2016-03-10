@@ -12,19 +12,22 @@
 <!-- Impact -->
 <g id="node1" class="node"><title>Impact</title>
 <a xlink:href="#" xlink:title="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">
-<polygon fill="#cecece" stroke="#cecece" points="9,-63 9,-84 168,-84 168,-63 9,-63"/>
+<polygon fill="#993016" stroke="#993016" points="9,-63 9,-84 168,-84 168,-63 9,-63"/>
 <polygon fill="none" stroke="black" points="9,-63 9,-84 168,-84 168,-63 9,-63"/>
 <text text-anchor="start" x="65" y="-70.2333" font-family="Times Roman,serif" font-size="14.00">Impact</text>
 </a>
 <a xlink:href="#" xlink:title="Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="9,-43 9,-63 168,-63 168,-43 9,-43"/>
 <polygon fill="none" stroke="black" points="9,-43 9,-63 168,-63 168,-43 9,-43"/>
 <text text-anchor="start" x="22" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity () </text>
 </a>
 <a xlink:href="#" xlink:title="Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="9,-23 9,-43 168,-43 168,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-43 168,-43 168,-23 9,-23"/>
 <text text-anchor="start" x="12.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] completion () </text>
 </a>
 <a xlink:href="#" xlink:title="value is &quot;other&quot;. &#160;(See also Section 10.)">
+<polygon fill="#ff5024" stroke="#ff5024" points="9,-3 9,-23 168,-23 168,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 168,-23 168,-3 9,-3"/>
 <text text-anchor="start" x="34.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] type () </text>
 </a>
