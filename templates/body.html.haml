@@ -1,9 +1,34 @@
+- require 'cgi'
+
 .container
   %h1= active_class["name"]
 
   %p= active_class["description"]
 
-  %img.img-responsive.block-center{src: "/#{location}/img/#{generator}/#{active_class["name"]}.svg"}
+
+  %ul.nav.nav-tabs{role: "tablist"}
+    %li.active{role: "presentation"}
+      %a{href: "#svg", "aria-control" => "svg", role: "tab", "data-toggle" => "tab"} SVG
+    %li{role: "presentation"}
+      %a{href: "#png", "aria-control" => "png", role: "tab", "data-toggle" => "tab"} PNG
+    %li{role: "presentation"}
+      %a{href: "#dot", "aria-control" => "dot", role: "tab", "data-toggle" => "tab"} DOT
+
+
+  .tab-content
+    #svg.tab-pane.active{role: "tabpanel"}
+      .img-responsive.block-center
+        - if active_class.fetch("childs", {}).merge(active_class.fetch("aggregates", {})).select{|name, cls| classes.include?(name)}.empty?
+          = graph.to_svg
+        - else
+          = graph.to_svg.gsub(/\d+pt/, "100%")
+
+    #png.tab-pane{role: "tabpanel"}
+      %img.img-responsive.block-center{src: "/#{location}/img/#{generator}/#{active_class["name"]}.png"}
+
+    #dot.tab-pane{role: "tabpanel"}
+      %pre
+        %p= CGI.escapeHTML(graph.to_dot)
 
   %hr
 

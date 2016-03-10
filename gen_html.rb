@@ -12,10 +12,13 @@ class HTMLGenerator
 
   def initialize
     @conf = YAML.load(File.read("conf.yml"))
-    @generators = @conf["generators"].map{|k, g| [k, {
-      generator: GraphGenerator.new(g["classes"], g["type"]),
-      top_class: g["top_class"]
-    }]}.to_h
+    @generators = @conf["generators"].map{|k, g|
+      generator = GraphGenerator.new(g["classes"], g["type"])
+      [k, {
+        top_class: g["top_class"],
+        generator: generator,
+        graphes: generator.classes.map{|cls, values| [cls, generator.generate_graph(cls)]}.to_h
+      }]}.to_h
   end
 
   def gen_site! folder="html"
@@ -31,10 +34,13 @@ class HTMLGenerator
       FileUtils.mkdir "#{folder}/#{name}"
       FileUtils.mkdir "#{folder}/img/#{name}"
 
-      generator[:generator].classes.each_key do |class_|
-        generator[:generator].generate_graph! class_, "#{folder}/img/#{name}"
-        File.open("#{folder}/#{name}/#{class_}.html", "w") do |f|
-          f.write(render_index class_, name)
+      generator[:generator].classes.each_key do |cls|
+        puts "Generate #{name}: #{cls} class"
+
+        generator[:graphes][cls].gen_all! "#{folder}/img/#{name}/#{cls}"
+
+        File.open("#{folder}/#{name}/#{cls}.html", "w") do |f|
+          f.write(render_index cls, name)
         end
       end
 
@@ -74,7 +80,8 @@ class HTMLGenerator
     return render BODY, {active_class: @generators[generator][:generator].classes[active_class],
                          classes: @generators[generator][:generator].classes,
                          location: @conf["location"],
-                         generator: generator}
+                         generator: generator,
+                         graph: @generators[generator][:graphes][active_class]}
   end
 
   def render_index active_class, generator

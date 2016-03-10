@@ -26,6 +26,20 @@ class IDMEFGraph
     @graph.output(dot: file)
   end
 
+  def gen_all! base_name
+    gen_svg! "#{base_name}.svg"
+    gen_png! "#{base_name}.png"
+    gen_dot! "#{base_name}.dot"
+  end
+
+  def to_svg
+    return @graph.output(svg: String)
+  end
+
+  def to_dot
+    return @graph.output(dot: String)
+  end
+
   private
 
   def darken_color(hex_color, amount=0.4)
@@ -105,20 +119,23 @@ class GraphGenerator
     @classes = parse_folder
   end
 
-  def generate_graph! idmef_class, folder="graph", direction="LR", color=true
-    graph = IDMEFGraph.new idmef_class, @classes, direction, color
+  def generate_files! idmef_class, folder="graph", direction="LR", color=true
+    graph = self.generate_graph idmef_class, direction, color
 
     Dir.mkdir(folder) unless File.exists?(folder)
     Dir.chdir(folder) do
-      graph.gen_png! "#{idmef_class}.png"
-      graph.gen_svg! "#{idmef_class}.svg"
-      graph.gen_dot! "#{idmef_class}.dot"
+      graph.gen_all! idmef_class
     end
+
+  end
+
+  def generate_graph idmef_class, direction="LR", color=true
+    return IDMEFGraph.new idmef_class, @classes, direction, color
   end
 
   def generate_all! folder="graph", direction="LR", color=true
     @classes.each_key do |idmef_class|
-      generate_graph! idmef_class, folder, direction, color
+      generate_files! idmef_class, folder, direction, color
     end
   end
 
@@ -155,5 +172,7 @@ class GraphGenerator
   end
 end
 
-GraphGenerator.new('idmef/yaml', "yml").generate_all! "idmef/graph"
-GraphGenerator.new('iodef/yaml', "yml").generate_all! "iodef/graph"
+if __FILE__ == $0
+  GraphGenerator.new('idmef/yaml', "yml").generate_all! "idmef/graph"
+  GraphGenerator.new('iodef/yaml', "yml").generate_all! "iodef/graph"
+end
