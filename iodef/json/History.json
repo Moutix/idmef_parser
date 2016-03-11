@@ -2,6 +2,12 @@
   "name": "History",
   "description": "The History class is a log of the significant events or actions performed by the involved parties during the course of handling the incident. ",
   "aggregates": {
+    "HistoryItem": {
+      "name": "HistoryItem",
+      "multiplicity": "1..*",
+      "type": null,
+      "description": "Entry in the history log of significant events or actions performed by the involved parties."
+    }
   },
   "attributes": {
     "restriction": {
