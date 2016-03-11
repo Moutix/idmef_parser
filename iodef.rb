@@ -158,7 +158,8 @@ class RfcReader
       return "aggr"
     elsif line =~ /^\s+The\s+class\s+that\s+constitutes\s+\w+\s(?:are|is):$/
       return "aggr"
-    elsif line =~ /\s+.+\shas\s\w+\sattribute(?:s)?:/
+    elsif line =~ /\s+.+\shas\s[^n][^o]\w*\sattribute(?:s)?.+/
+      print line
       return "attr"
     elsif line =~ /\w+\s+attribute(?:s)?:/
       return "attr"

@@ -4,4 +4,24 @@ description: 'The Confidence class represents a best estimate of the validity an
   accuracy of the described impact (see Section 3.10) of the incident activity.  This
   estimate can be expressed as a category or a numeric calculation. '
 aggregates: {}
-attributes: {}
+attributes:
+  rating:
+    name: rating
+    multiplicity: Required
+    type: ENUM
+    description: A rating of the analytical validity of the specified Assessment.  The
+      permitted values are shown below. There is no default value.
+    values:
+    - rank: '1'
+      keyword: low
+      description: Low confidence in the validity.
+    - rank: '2'
+      keyword: medium
+      description: Medium confidence in the validity.
+    - rank: '3'
+      keyword: high
+      description: High confidence in the validity.
+    - rank: '4'
+      keyword: numeric
+      description: The element content contains a number that conveys the confidence
+        of the data.  The semantics of this number outside the scope of this specification.
