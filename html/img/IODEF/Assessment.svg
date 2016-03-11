@@ -12,15 +12,17 @@
 <!-- Assessment -->
 <g id="node1" class="node"><title>Assessment</title>
 <a xlink:href="#" xlink:title="The Assessment class describes the technical and non&#45;technical repercussions of the incident on the CSIRT&#39;s constituency. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-328 8,-349 226,-349 226,-328 8,-328"/>
+<polygon fill="#993016" stroke="#993016" points="8,-328 8,-349 226,-349 226,-328 8,-328"/>
 <polygon fill="none" stroke="black" points="8,-328 8,-349 226,-349 226,-328 8,-328"/>
 <text text-anchor="start" x="76" y="-335.233" font-family="Times Roman,serif" font-size="14.00">Assessment</text>
 </a>
 <a xlink:href="#" xlink:title="Specifies whether the assessment is describing actual or potential outcomes. &#160;The default is &quot;actual&quot; and is assumed if not specified.">
+<polygon fill="#ff5024" stroke="#ff5024" points="8,-308 8,-328 226,-328 226,-308 8,-308"/>
 <polygon fill="none" stroke="black" points="8,-308 8,-328 226,-328 226,-308 8,-308"/>
 <text text-anchor="start" x="11.5" y="-314.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] occurrence (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="This attribute is defined in Section 3.2.">
+<polygon fill="#ff5024" stroke="#ff5024" points="8,-288 8,-308 226,-308 226,-288 8,-288"/>
 <polygon fill="none" stroke="black" points="8,-288 8,-308 226,-308 226,-288 8,-288"/>
 <text text-anchor="start" x="14" y="-294.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
 </a>
@@ -28,27 +30,32 @@
 <!-- Impact -->
 <g id="node2" class="node"><title>Impact</title>
 <a xlink:href="#" xlink:title="The Impact class allows for categorizing and describing the technical impact of the incident on the network of an organization. ">
-<polygon fill="#cecece" stroke="#cecece" points="318,-673 318,-694 536,-694 536,-673 318,-673"/>
+<polygon fill="#993016" stroke="#993016" points="318,-673 318,-694 536,-694 536,-673 318,-673"/>
 <polygon fill="none" stroke="black" points="318,-673 318,-694 536,-694 536,-673 318,-673"/>
 <text text-anchor="start" x="403.5" y="-680.233" font-family="Times Roman,serif" font-size="14.00">Impact</text>
 </a>
 <a xlink:href="#" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
+<polygon fill="#ff5024" stroke="#ff5024" points="318,-653 318,-673 536,-673 536,-653 318,-653"/>
 <polygon fill="none" stroke="black" points="318,-653 318,-673 536,-673 536,-653 318,-653"/>
 <text text-anchor="start" x="343.5" y="-659.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] lang (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="An estimate of the relative severity of the activity. &#160;The permitted values are shown below. &#160;There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="318,-633 318,-653 536,-653 536,-633 318,-633"/>
 <polygon fill="none" stroke="black" points="318,-633 318,-653 536,-653 536,-633 318,-633"/>
 <text text-anchor="start" x="331.5" y="-639.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="An indication whether the described activity was successful. &#160;The permitted values are shown below. &#160;There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="318,-613 318,-633 536,-633 536,-613 318,-613"/>
 <polygon fill="none" stroke="black" points="318,-613 318,-633 536,-633 536,-613 318,-613"/>
 <text text-anchor="start" x="321.5" y="-619.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] completion (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Classifies the malicious activity into incident categories. &#160;The permitted values are shown below. &#160;The default value is &quot;other&quot;.">
+<polygon fill="#ff5024" stroke="#ff5024" points="318,-593 318,-613 536,-613 536,-593 318,-593"/>
 <polygon fill="none" stroke="black" points="318,-593 318,-613 536,-613 536,-593 318,-593"/>
 <text text-anchor="start" x="342.5" y="-599.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="318,-573 318,-593 536,-593 536,-573 318,-573"/>
 <polygon fill="none" stroke="black" points="318,-573 318,-593 536,-593 536,-573 318,-573"/>
 <text text-anchor="start" x="324" y="-579.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
 </a>
@@ -62,27 +69,32 @@
 <!-- TimeImpact -->
 <g id="node4" class="node"><title>TimeImpact</title>
 <a xlink:href="#" xlink:title="The TimeImpact class describes the impact of the incident on an organization as a function of time. It provides a way to convey down time and recovery time. ">
-<polygon fill="#cecece" stroke="#cecece" points="307,-527 307,-548 548,-548 548,-527 307,-527"/>
+<polygon fill="#993016" stroke="#993016" points="307,-527 307,-548 548,-548 548,-527 307,-527"/>
 <polygon fill="none" stroke="black" points="307,-527 307,-548 548,-548 548,-527 307,-527"/>
 <text text-anchor="start" x="387.5" y="-534.233" font-family="Times Roman,serif" font-size="14.00">TimeImpact</text>
 </a>
 <a xlink:href="#" xlink:title="An estimate of the relative severity of the activity. &#160;The permitted values are shown below. &#160;There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-507 307,-527 548,-527 548,-507 307,-507"/>
 <polygon fill="none" stroke="black" points="307,-507 307,-527 548,-527 548,-507 307,-507"/>
 <text text-anchor="start" x="332" y="-513.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Defines the metric in which the time is expressed. &#160;The permitted values are shown below. &#160;There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-487 307,-507 548,-507 548,-487 307,-487"/>
 <polygon fill="none" stroke="black" points="307,-487 307,-507 548,-507 548,-487 307,-487"/>
 <text text-anchor="start" x="337" y="-493.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] metric (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the metric attribute. &#160;See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-467 307,-487 548,-487 548,-467 307,-467"/>
 <polygon fill="none" stroke="black" points="307,-467 307,-487 548,-487 548,-467 307,-467"/>
 <text text-anchor="start" x="318" y="-473.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;metric (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Defines a unit of time, that when combined with the metric attribute, fully describes a metric of impact that will be conveyed in the element content. &#160;The permitted values are shown below. &#160;The default value is &quot;hour&quot;.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-447 307,-467 548,-467 548,-447 307,-447"/>
 <polygon fill="none" stroke="black" points="307,-447 307,-467 548,-467 548,-447 307,-447"/>
 <text text-anchor="start" x="329.5" y="-453.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] duration (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the duration attribute. &#160;See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-427 307,-447 548,-447 548,-427 307,-427"/>
 <polygon fill="none" stroke="black" points="307,-427 307,-447 548,-447 548,-427 307,-427"/>
 <text text-anchor="start" x="310.5" y="-433.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;duration (Optional) </text>
 </a>
@@ -96,15 +108,17 @@
 <!-- MonetaryImpact -->
 <g id="node6" class="node"><title>MonetaryImpact</title>
 <a xlink:href="#" xlink:title="The MonetaryImpact class describes the financial impact of the activity on an organization. For example, this impact may consider losses due to the cost of the investigation or recovery, diminished ">
-<polygon fill="#cecece" stroke="#cecece" points="319,-381 319,-402 536,-402 536,-381 319,-381"/>
+<polygon fill="#993016" stroke="#993016" points="319,-381 319,-402 536,-402 536,-381 319,-381"/>
 <polygon fill="none" stroke="black" points="319,-381 319,-402 536,-402 536,-381 319,-381"/>
 <text text-anchor="start" x="371" y="-388.233" font-family="Times Roman,serif" font-size="14.00">MonetaryImpact</text>
 </a>
 <a xlink:href="#" xlink:title="An estimate of the relative severity of the activity. &#160;The permitted values are shown below. &#160;There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="319,-361 319,-381 536,-381 536,-361 319,-361"/>
 <polygon fill="none" stroke="black" points="319,-361 319,-381 536,-381 536,-361 319,-361"/>
 <text text-anchor="start" x="332" y="-367.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Defines the currency in which the monetary impact is expressed. &#160;The permitted values are defined in ISO 4217:2001, Codes for the representation of currencies and funds [14]. &#160;There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="319,-341 319,-361 536,-361 536,-341 319,-341"/>
 <polygon fill="none" stroke="black" points="319,-341 319,-361 536,-361 536,-341 319,-341"/>
 <text text-anchor="start" x="322.5" y="-347.733" font-family="Times Roman,serif" font-size="14.00">[STRING] currency (Required) </text>
 </a>
@@ -118,23 +132,27 @@
 <!-- Counter -->
 <g id="node8" class="node"><title>Counter</title>
 <a xlink:href="#" xlink:title="The Counter class summarize multiple occurrences of some event, or conveys counts or rates on various features (e.g., packets, sessions, events). ">
-<polygon fill="#cecece" stroke="#cecece" points="307,-295 307,-316 548,-316 548,-295 307,-295"/>
+<polygon fill="#993016" stroke="#993016" points="307,-295 307,-316 548,-316 548,-295 307,-295"/>
 <polygon fill="none" stroke="black" points="307,-295 307,-316 548,-316 548,-295 307,-295"/>
 <text text-anchor="start" x="399" y="-302.233" font-family="Times Roman,serif" font-size="14.00">Counter</text>
 </a>
 <a xlink:href="#" xlink:title="Specifies the units of the element content.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-275 307,-295 548,-295 548,-275 307,-275"/>
 <polygon fill="none" stroke="black" points="307,-275 307,-295 548,-295 548,-275 307,-275"/>
 <text text-anchor="start" x="343" y="-281.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-255 307,-275 548,-275 548,-255 307,-255"/>
 <polygon fill="none" stroke="black" points="307,-255 307,-275 548,-275 548,-255 307,-255"/>
 <text text-anchor="start" x="324.5" y="-261.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="If present, the Counter class represents a rate rather than a count over the entire event. &#160;In that case, this attribute specifies the denominator of the rate (where the type attribute specified the nominator). &#160;The possible values of this attribute are defined in Section 3.10.2">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-235 307,-255 548,-255 548,-235 307,-235"/>
 <polygon fill="none" stroke="black" points="307,-235 307,-255 548,-255 548,-235 307,-235"/>
 <text text-anchor="start" x="330.5" y="-241.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] duration (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the duration attribute. &#160;See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="307,-215 307,-235 548,-235 548,-215 307,-215"/>
 <polygon fill="none" stroke="black" points="307,-215 307,-235 548,-235 548,-215 307,-215"/>
 <text text-anchor="start" x="310.5" y="-221.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;duration (Optional) </text>
 </a>
@@ -148,11 +166,12 @@
 <!-- Confidence -->
 <g id="node10" class="node"><title>Confidence</title>
 <a xlink:href="#" xlink:title="The Confidence class represents a best estimate of the validity and accuracy of the described impact (see Section 3.10) of the incident activity. This estimate can be expressed as a category or a numeric calculation. ">
-<polygon fill="#cecece" stroke="#cecece" points="334,-169 334,-190 520,-190 520,-169 334,-169"/>
+<polygon fill="#993016" stroke="#993016" points="334,-169 334,-190 520,-190 520,-169 334,-169"/>
 <polygon fill="none" stroke="black" points="334,-169 334,-190 520,-190 520,-169 334,-169"/>
 <text text-anchor="start" x="389" y="-176.233" font-family="Times Roman,serif" font-size="14.00">Confidence</text>
 </a>
 <a xlink:href="#" xlink:title="A rating of the analytical validity of the specified Assessment. &#160;The permitted values are shown below. There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="334,-149 334,-169 520,-169 520,-149 334,-149"/>
 <polygon fill="none" stroke="black" points="334,-149 334,-169 520,-169 520,-149 334,-149"/>
 <text text-anchor="start" x="337.5" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] rating (Required) </text>
 </a>
@@ -166,27 +185,32 @@
 <!-- AdditionalData -->
 <g id="node12" class="node"><title>AdditionalData</title>
 <a xlink:href="#" xlink:title="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">
-<polygon fill="#cecece" stroke="#cecece" points="317,-103 317,-124 538,-124 538,-103 317,-103"/>
+<polygon fill="#997a3d" stroke="#997a3d" points="317,-103 317,-124 538,-124 538,-103 317,-103"/>
 <polygon fill="none" stroke="black" points="317,-103 317,-124 538,-124 538,-103 317,-103"/>
 <text text-anchor="start" x="376" y="-110.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
 <a xlink:href="#" xlink:title="The data type of the element content. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;string&quot;.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="317,-83 317,-103 538,-103 538,-83 317,-83"/>
 <polygon fill="none" stroke="black" points="317,-83 317,-103 538,-103 538,-83 317,-83"/>
 <text text-anchor="start" x="339" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] dtype (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the dtype attribute. &#160;See Section 5.1.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="317,-63 317,-83 538,-83 538,-63 317,-63"/>
 <polygon fill="none" stroke="black" points="317,-63 317,-83 538,-83 538,-63 317,-63"/>
 <text text-anchor="start" x="320.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;dtype (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of the element content.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="317,-43 317,-63 538,-63 538,-43 317,-43"/>
 <polygon fill="none" stroke="black" points="317,-43 317,-63 538,-63 538,-43 317,-43"/>
 <text text-anchor="start" x="324" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="An identifier referencing the format and semantics of the element content.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="317,-23 317,-43 538,-43 538,-23 317,-23"/>
 <polygon fill="none" stroke="black" points="317,-23 317,-43 538,-43 538,-23 317,-23"/>
 <text text-anchor="start" x="325" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] formatid (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="This attribute has been defined in Section 3.2.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="317,-3 317,-23 538,-23 538,-3 317,-3"/>
 <polygon fill="none" stroke="black" points="317,-3 317,-23 538,-23 538,-3 317,-3"/>
 <text text-anchor="start" x="324.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
 </a>

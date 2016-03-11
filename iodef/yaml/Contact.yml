@@ -4,6 +4,7 @@ description: 'The Contact class describes contact information for organizations 
   personnel involved in the incident.  This class allows for the naming of the involved
   party, specifying contact information for them, and identifying their role in the
   incident. '
+color: "#CCFF66"
 aggregates:
   ContactName:
     name: ContactName

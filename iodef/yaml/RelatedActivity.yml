@@ -4,6 +4,7 @@ description: 'The RelatedActivity class lists either incident tracking numbers o
   incidents or URLs (not both) that refer to activity related to the one described
   in the IODEF document.  These references may be to local incident tracking numbers
   or to those of other CSIRTs. '
+color: "#99CC00"
 aggregates:
   IncidentID:
     name: IncidentID

@@ -48,47 +48,57 @@
 <!-- Contact -->
 <g id="node2" class="node"><title>Contact</title>
 <a xlink:href="#" xlink:title="The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. ">
-<polygon fill="#cecece" stroke="#cecece" points="317,-297 317,-318 562,-318 562,-297 317,-297"/>
+<polygon fill="#7a993d" stroke="#7a993d" points="317,-297 317,-318 562,-318 562,-297 317,-297"/>
 <polygon fill="none" stroke="black" points="317,-297 317,-318 562,-318 562,-297 317,-297"/>
 <text text-anchor="start" x="412" y="-304.233" font-family="Times Roman,serif" font-size="14.00">Contact</text>
 </a>
 <a xlink:href="#" xlink:title="The name of the contact. &#160;The contact may either be an organization or a person. &#160;The type attribute disambiguates the semantics.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-277 317,-297 562,-297 562,-277 317,-277"/>
 <polygon fill="none" stroke="black" points="317,-277 317,-297 562,-297 562,-277 317,-277"/>
 <text text-anchor="start" x="320.5" y="-283.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] ContactName (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of this contact. &#160;In the case of a person, this is often the organizational title of the individual.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-257 317,-277 562,-277 562,-257 317,-257"/>
 <polygon fill="none" stroke="black" points="317,-257 317,-277 562,-277 562,-257 317,-257"/>
 <text text-anchor="start" x="329.5" y="-263.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] Description (0..*) </text>
 </a>
 <a xlink:href="#" xlink:title="The telephone number of the contact.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-237 317,-257 562,-257 562,-237 317,-237"/>
 <polygon fill="none" stroke="black" points="317,-237 317,-257 562,-257 562,-237 317,-237"/>
 <text text-anchor="start" x="374.5" y="-243.733" font-family="Times Roman,serif" font-size="14.00">[] Telephone (0..*) </text>
 </a>
 <a xlink:href="#" xlink:title="The facsimile telephone number of the contact.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-217 317,-237 562,-237 562,-217 317,-217"/>
 <polygon fill="none" stroke="black" points="317,-217 317,-237 562,-237 562,-217 317,-217"/>
 <text text-anchor="start" x="397" y="-223.733" font-family="Times Roman,serif" font-size="14.00">[] Fax (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The timezone in which the contact resides formatted according to Section 2.9.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-197 317,-217 562,-217 562,-197 317,-197"/>
 <polygon fill="none" stroke="black" points="317,-197 317,-217 562,-217 562,-197 317,-197"/>
 <text text-anchor="start" x="337.5" y="-203.733" font-family="Times Roman,serif" font-size="14.00">[TIMEZONE] Timezone (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="Indicates the role the contact fulfills. &#160;This attribute is defined as an enumerated list:">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-177 317,-197 562,-197 562,-177 317,-177"/>
 <polygon fill="none" stroke="black" points="317,-177 317,-197 562,-197 562,-177 317,-177"/>
 <text text-anchor="start" x="357.5" y="-183.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] role (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the role attribute. See Section 5.1.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-157 317,-177 562,-177 562,-157 317,-157"/>
 <polygon fill="none" stroke="black" points="317,-157 317,-177 562,-177 562,-157 317,-157"/>
 <text text-anchor="start" x="338.5" y="-163.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;role (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Indicates the type of contact being described. This attribute is defined as an enumerated list:">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-137 317,-157 562,-157 562,-137 317,-137"/>
 <polygon fill="none" stroke="black" points="317,-137 317,-157 562,-157 562,-137 317,-137"/>
 <text text-anchor="start" x="355" y="-143.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-117 317,-137 562,-137 562,-117 317,-117"/>
 <polygon fill="none" stroke="black" points="317,-117 317,-137 562,-137 562,-117 317,-117"/>
 <text text-anchor="start" x="336.5" y="-123.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="This attribute is defined in Section 3.2.">
+<polygon fill="#ccff66" stroke="#ccff66" points="317,-97 317,-117 562,-117 562,-97 317,-97"/>
 <polygon fill="none" stroke="black" points="317,-97 317,-117 562,-117 562,-97 317,-97"/>
 <text text-anchor="start" x="336.5" y="-103.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
 </a>
@@ -108,15 +118,17 @@
 <!-- RegistryHandle -->
 <g id="node3" class="node"><title>RegistryHandle</title>
 <a xlink:href="#" xlink:title="The RegistryHandle class represents a handle into an Internet registry or community&#45;specific database. The handle is specified in the element content and the type attribute specifies the database. ">
-<polygon fill="#cecece" stroke="#cecece" points="642,-341 642,-362 878,-362 878,-341 642,-341"/>
+<polygon fill="#7a993d" stroke="#7a993d" points="642,-341 642,-362 878,-362 878,-341 642,-341"/>
 <polygon fill="none" stroke="black" points="642,-341 642,-362 878,-362 878,-341 642,-341"/>
 <text text-anchor="start" x="707.5" y="-348.233" font-family="Times Roman,serif" font-size="14.00">RegistryHandle</text>
 </a>
 <a xlink:href="#" xlink:title="The database to which the handle belongs. &#160;The default value is &#39;local&#39;. &#160;The possible values are:">
+<polygon fill="#ccff66" stroke="#ccff66" points="642,-321 642,-341 878,-341 878,-321 642,-321"/>
 <polygon fill="none" stroke="black" points="642,-321 642,-341 878,-341 878,-321 642,-321"/>
 <text text-anchor="start" x="664.5" y="-327.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] registry (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the registry attribute. &#160;See Section 5.1.">
+<polygon fill="#ccff66" stroke="#ccff66" points="642,-301 642,-321 878,-321 878,-301 642,-301"/>
 <polygon fill="none" stroke="black" points="642,-301 642,-321 878,-321 878,-301 642,-301"/>
 <text text-anchor="start" x="645.5" y="-307.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;registry (Optional) </text>
 </a>
@@ -130,15 +142,17 @@
 <!-- PostalAddress -->
 <g id="node5" class="node"><title>PostalAddress</title>
 <a xlink:href="#" xlink:title="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). ">
-<polygon fill="#cecece" stroke="#cecece" points="659,-255 659,-276 861,-276 861,-255 659,-255"/>
+<polygon fill="#7a993d" stroke="#7a993d" points="659,-255 659,-276 861,-276 861,-255 659,-255"/>
 <polygon fill="none" stroke="black" points="659,-255 659,-276 861,-276 861,-255 659,-255"/>
 <text text-anchor="start" x="712" y="-262.233" font-family="Times Roman,serif" font-size="14.00">PostalAddress</text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of the element content.">
+<polygon fill="#ccff66" stroke="#ccff66" points="659,-235 659,-255 861,-255 861,-235 659,-235"/>
 <polygon fill="none" stroke="black" points="659,-235 659,-255 861,-255 861,-235 659,-235"/>
 <text text-anchor="start" x="662.5" y="-241.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
+<polygon fill="#ccff66" stroke="#ccff66" points="659,-215 659,-235 861,-235 861,-215 659,-215"/>
 <polygon fill="none" stroke="black" points="659,-215 659,-235 861,-235 861,-215 659,-215"/>
 <text text-anchor="start" x="676.5" y="-221.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] lang (Required) </text>
 </a>
@@ -152,11 +166,12 @@
 <!-- Email -->
 <g id="node7" class="node"><title>Email</title>
 <a xlink:href="#" xlink:title="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">
-<polygon fill="#cecece" stroke="#cecece" points="659,-169 659,-190 861,-190 861,-169 659,-169"/>
+<polygon fill="#7a993d" stroke="#7a993d" points="659,-169 659,-190 861,-190 861,-169 659,-169"/>
 <polygon fill="none" stroke="black" points="659,-169 659,-190 861,-190 861,-169 659,-169"/>
 <text text-anchor="start" x="741" y="-176.233" font-family="Times Roman,serif" font-size="14.00">Email</text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of the element content (e.g., hours of coverage for a given number).">
+<polygon fill="#ccff66" stroke="#ccff66" points="659,-149 659,-169 861,-169 861,-149 659,-149"/>
 <polygon fill="none" stroke="black" points="659,-149 659,-169 861,-169 861,-149 659,-149"/>
 <text text-anchor="start" x="662.5" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
 </a>
@@ -170,27 +185,32 @@
 <!-- AdditionalData -->
 <g id="node10" class="node"><title>AdditionalData</title>
 <a xlink:href="#" xlink:title="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">
-<polygon fill="#cecece" stroke="#cecece" points="650,-103 650,-124 871,-124 871,-103 650,-103"/>
+<polygon fill="#997a3d" stroke="#997a3d" points="650,-103 650,-124 871,-124 871,-103 650,-103"/>
 <polygon fill="none" stroke="black" points="650,-103 650,-124 871,-124 871,-103 650,-103"/>
 <text text-anchor="start" x="709" y="-110.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
 <a xlink:href="#" xlink:title="The data type of the element content. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;string&quot;.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="650,-83 650,-103 871,-103 871,-83 650,-83"/>
 <polygon fill="none" stroke="black" points="650,-83 650,-103 871,-103 871,-83 650,-83"/>
 <text text-anchor="start" x="672" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] dtype (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the dtype attribute. &#160;See Section 5.1.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="650,-63 650,-83 871,-83 871,-63 650,-63"/>
 <polygon fill="none" stroke="black" points="650,-63 650,-83 871,-83 871,-63 650,-63"/>
 <text text-anchor="start" x="653.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;dtype (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of the element content.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="650,-43 650,-63 871,-63 871,-43 650,-43"/>
 <polygon fill="none" stroke="black" points="650,-43 650,-63 871,-63 871,-43 650,-43"/>
 <text text-anchor="start" x="657" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="An identifier referencing the format and semantics of the element content.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="650,-23 650,-43 871,-43 871,-23 650,-23"/>
 <polygon fill="none" stroke="black" points="650,-23 650,-43 871,-43 871,-23 650,-23"/>
 <text text-anchor="start" x="658" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] formatid (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="This attribute has been defined in Section 3.2.">
+<polygon fill="#ffcc66" stroke="#ffcc66" points="650,-3 650,-23 871,-23 871,-3 650,-3"/>
 <polygon fill="none" stroke="black" points="650,-3 650,-23 871,-23 871,-3 650,-3"/>
 <text text-anchor="start" x="657.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
 </a>

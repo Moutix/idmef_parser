@@ -12,11 +12,12 @@
 <!-- Email -->
 <g id="node1" class="node"><title>Email</title>
 <a xlink:href="#" xlink:title="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-23 8,-44 210,-44 210,-23 8,-23"/>
+<polygon fill="#7a993d" stroke="#7a993d" points="8,-23 8,-44 210,-44 210,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-44 210,-44 210,-23 8,-23"/>
 <text text-anchor="start" x="90" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">Email</text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of the element content (e.g., hours of coverage for a given number).">
+<polygon fill="#ccff66" stroke="#ccff66" points="8,-3 8,-23 210,-23 210,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 210,-23 210,-3 8,-3"/>
 <text text-anchor="start" x="11.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
 </a>

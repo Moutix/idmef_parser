@@ -4,6 +4,7 @@ description: 'The AlternativeID class lists the incident tracking numbers used b
   CSIRTs, other than the one generating the document, to refer to the identical activity
   described the IODEF document.  A tracking number listed as an AlternativeID references
   the same incident detected by '
+color: "#99CC00"
 aggregates:
   IncidentID:
     name: IncidentID

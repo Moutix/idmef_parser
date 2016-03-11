@@ -12,11 +12,12 @@
 <!-- Confidence -->
 <g id="node1" class="node"><title>Confidence</title>
 <a xlink:href="#" xlink:title="The Confidence class represents a best estimate of the validity and accuracy of the described impact (see Section 3.10) of the incident activity. This estimate can be expressed as a category or a numeric calculation. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-23 8,-44 194,-44 194,-23 8,-23"/>
+<polygon fill="#993016" stroke="#993016" points="8,-23 8,-44 194,-44 194,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-44 194,-44 194,-23 8,-23"/>
 <text text-anchor="start" x="63" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">Confidence</text>
 </a>
 <a xlink:href="#" xlink:title="A rating of the analytical validity of the specified Assessment. &#160;The permitted values are shown below. There is no default value.">
+<polygon fill="#ff5024" stroke="#ff5024" points="8,-3 8,-23 194,-23 194,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 194,-23 194,-3 8,-3"/>
 <text text-anchor="start" x="11.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] rating (Required) </text>
 </a>

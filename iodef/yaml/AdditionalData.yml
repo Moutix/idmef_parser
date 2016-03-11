@@ -7,6 +7,7 @@ description: 'The AdditionalData class serves as an extension mechanism for info
   Schema) to support proprietary extensions by encapsulating entire XML documents
   conforming to another Schema (e.g., IDMEF).  A detailed discussion for extending
   the data model and the schema can be found in Section 5. '
+color: "#FFCC66"
 aggregates: {}
 attributes:
   dtype:

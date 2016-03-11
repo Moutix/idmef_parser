@@ -2,6 +2,7 @@
 name: Impact
 description: 'The Impact class allows for categorizing and describing the technical
   impact of the incident on the network of an organization. '
+color: "#FF5024"
 aggregates: {}
 attributes:
   lang:

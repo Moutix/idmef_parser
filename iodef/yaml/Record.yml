@@ -4,6 +4,7 @@ description: 'The Record class is a container class for log and audit data that 
   supportive information about the incident.  The source of this data will often be
   the output of monitoring tools.  These logs should substantiate the activity described
   in the document. '
+color: "#ffcc00"
 aggregates:
   RecordData:
     name: RecordData

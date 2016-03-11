@@ -12,19 +12,22 @@
 <!-- Node -->
 <g id="node1" class="node"><title>Node</title>
 <a xlink:href="#" xlink:title="The Node class names a system (e.g., PC, router) or network. ">
-<polygon fill="#cecece" stroke="#cecece" points="8,-189 8,-210 232,-210 232,-189 8,-189"/>
+<polygon fill="#182f5f" stroke="#182f5f" points="8,-189 8,-210 232,-210 232,-189 8,-189"/>
 <polygon fill="none" stroke="black" points="8,-189 8,-210 232,-210 232,-189 8,-189"/>
 <text text-anchor="start" x="102" y="-196.233" font-family="Times Roman,serif" font-size="14.00">Node</text>
 </a>
 <a xlink:href="#" xlink:title="The name of the Node (e.g., fully qualified domain name). &#160;This information MUST be provided if no Address information is given.">
+<polygon fill="#284f9f" stroke="#284f9f" points="8,-169 8,-189 232,-189 232,-169 8,-169"/>
 <polygon fill="none" stroke="black" points="8,-169 8,-189 232,-189 232,-169 8,-169"/>
 <text text-anchor="start" x="11.5" y="-175.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] NodeName (0..*) </text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;from description of the physical location of the equipment.">
+<polygon fill="#284f9f" stroke="#284f9f" points="8,-149 8,-169 232,-169 232,-149 8,-149"/>
 <polygon fill="none" stroke="black" points="8,-149 8,-169 232,-169 232,-149 8,-149"/>
 <text text-anchor="start" x="19" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] Location (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="A timestamp of when the resolution between the name and address was performed. &#160;This information SHOULD be provided if both an Address and NodeName are specified.">
+<polygon fill="#284f9f" stroke="#284f9f" points="8,-129 8,-149 232,-149 232,-129 8,-129"/>
 <polygon fill="none" stroke="black" points="8,-129 8,-149 232,-149 232,-129 8,-129"/>
 <text text-anchor="start" x="55.5" y="-135.733" font-family="Times Roman,serif" font-size="14.00">[] DateTime (0..1) </text>
 </a>
@@ -32,23 +35,27 @@
 <!-- Address -->
 <g id="node2" class="node"><title>Address</title>
 <a xlink:href="#" xlink:title="The Address class represents a hardware (layer&#45;2), network (layer&#45;3), or application (layer&#45;7) address. ">
-<polygon fill="#cecece" stroke="#cecece" points="310,-315 310,-336 552,-336 552,-315 310,-315"/>
+<polygon fill="#182f5f" stroke="#182f5f" points="310,-315 310,-336 552,-336 552,-315 310,-315"/>
 <polygon fill="none" stroke="black" points="310,-315 310,-336 552,-336 552,-315 310,-315"/>
 <text text-anchor="start" x="403.5" y="-322.233" font-family="Times Roman,serif" font-size="14.00">Address</text>
 </a>
 <a xlink:href="#" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;ipv4&#45;addr&quot;.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-295 310,-315 552,-315 552,-295 310,-295"/>
 <polygon fill="none" stroke="black" points="310,-295 310,-315 552,-315 552,-295 310,-295"/>
 <text text-anchor="start" x="332" y="-301.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the category attribute. &#160;See Section 5.1.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-275 310,-295 552,-295 552,-275 310,-275"/>
 <polygon fill="none" stroke="black" points="310,-275 310,-295 552,-295 552,-275 310,-275"/>
 <text text-anchor="start" x="313.5" y="-281.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;category (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The name of the Virtual LAN to which the address belongs.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-255 310,-275 552,-275 552,-255 310,-255"/>
 <polygon fill="none" stroke="black" points="310,-255 310,-275 552,-275 552,-255 310,-255"/>
 <text text-anchor="start" x="321" y="-261.733" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;name (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The number of the Virtual LAN to which the address belongs.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-235 310,-255 552,-255 552,-235 310,-235"/>
 <polygon fill="none" stroke="black" points="310,-235 310,-255 552,-255 552,-235 310,-235"/>
 <text text-anchor="start" x="324.5" y="-241.733" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;num (Optional) </text>
 </a>
@@ -62,19 +69,22 @@
 <!-- NodeRole -->
 <g id="node4" class="node"><title>NodeRole</title>
 <a xlink:href="#" xlink:title="The NodeRole class describes the intended function performed by a particular host. ">
-<polygon fill="#cecece" stroke="#cecece" points="310,-189 310,-210 552,-210 552,-189 310,-189"/>
+<polygon fill="#182f5f" stroke="#182f5f" points="310,-189 310,-210 552,-210 552,-189 310,-189"/>
 <polygon fill="none" stroke="black" points="310,-189 310,-210 552,-210 552,-189 310,-189"/>
 <text text-anchor="start" x="398.5" y="-196.233" font-family="Times Roman,serif" font-size="14.00">NodeRole</text>
 </a>
 <a xlink:href="#" xlink:title="Functionality provided by a node.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-169 310,-189 552,-189 552,-169 310,-169"/>
 <polygon fill="none" stroke="black" points="310,-169 310,-189 552,-189 552,-169 310,-169"/>
 <text text-anchor="start" x="332" y="-175.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the category attribute. &#160;See Section 5.1.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-149 310,-169 552,-169 552,-149 310,-149"/>
 <polygon fill="none" stroke="black" points="310,-149 310,-169 552,-169 552,-149 310,-149"/>
 <text text-anchor="start" x="313.5" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;category (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
+<polygon fill="#284f9f" stroke="#284f9f" points="310,-129 310,-149 552,-149 552,-129 310,-129"/>
 <polygon fill="none" stroke="black" points="310,-129 310,-149 552,-149 552,-129 310,-129"/>
 <text text-anchor="start" x="347.5" y="-135.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] lang (Required) </text>
 </a>
@@ -88,23 +98,27 @@
 <!-- Counter -->
 <g id="node6" class="node"><title>Counter</title>
 <a xlink:href="#" xlink:title="The Counter class summarize multiple occurrences of some event, or conveys counts or rates on various features (e.g., packets, sessions, events). ">
-<polygon fill="#cecece" stroke="#cecece" points="311,-83 311,-104 552,-104 552,-83 311,-83"/>
+<polygon fill="#993016" stroke="#993016" points="311,-83 311,-104 552,-104 552,-83 311,-83"/>
 <polygon fill="none" stroke="black" points="311,-83 311,-104 552,-104 552,-83 311,-83"/>
 <text text-anchor="start" x="403" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">Counter</text>
 </a>
 <a xlink:href="#" xlink:title="Specifies the units of the element content.">
+<polygon fill="#ff5024" stroke="#ff5024" points="311,-63 311,-83 552,-83 552,-63 311,-63"/>
 <polygon fill="none" stroke="black" points="311,-63 311,-83 552,-83 552,-63 311,-63"/>
 <text text-anchor="start" x="347" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Required) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="311,-43 311,-63 552,-63 552,-43 311,-43"/>
 <polygon fill="none" stroke="black" points="311,-43 311,-63 552,-63 552,-43 311,-43"/>
 <text text-anchor="start" x="328.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="If present, the Counter class represents a rate rather than a count over the entire event. &#160;In that case, this attribute specifies the denominator of the rate (where the type attribute specified the nominator). &#160;The possible values of this attribute are defined in Section 3.10.2">
+<polygon fill="#ff5024" stroke="#ff5024" points="311,-23 311,-43 552,-43 552,-23 311,-23"/>
 <polygon fill="none" stroke="black" points="311,-23 311,-43 552,-43 552,-23 311,-23"/>
 <text text-anchor="start" x="334.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] duration (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the duration attribute. &#160;See Section 5.1.">
+<polygon fill="#ff5024" stroke="#ff5024" points="311,-3 311,-23 552,-23 552,-3 311,-3"/>
 <polygon fill="none" stroke="black" points="311,-3 311,-23 552,-23 552,-3 311,-3"/>
 <text text-anchor="start" x="314.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;duration (Optional) </text>
 </a>

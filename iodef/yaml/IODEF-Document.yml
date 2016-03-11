@@ -2,6 +2,7 @@
 name: IODEF-Document
 description: 'The IODEF-Document class is the top level class in the IODEF data model.  All
   IODEF documents are an instance of this class. '
+color: "#99CC00"
 aggregates:
   Incident:
     name: Incident

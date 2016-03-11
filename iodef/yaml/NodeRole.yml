@@ -2,6 +2,7 @@
 name: NodeRole
 description: 'The NodeRole class describes the intended function performed by a particular
   host. '
+color: "#284f9f"
 aggregates: {}
 attributes:
   category:

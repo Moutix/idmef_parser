@@ -3,6 +3,7 @@ name: RegistryHandle
 description: 'The RegistryHandle class represents a handle into an Internet registry
   or community-specific database.  The handle is specified in the element content
   and the type attribute specifies the database. '
+color: "#CCFF66"
 aggregates: {}
 attributes:
   registry:

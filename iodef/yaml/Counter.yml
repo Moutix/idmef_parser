@@ -2,6 +2,7 @@
 name: Counter
 description: 'The Counter class summarize multiple occurrences of some event, or conveys
   counts or rates on various features (e.g., packets, sessions, events). '
+color: "#FF5024"
 aggregates: {}
 attributes:
   type:

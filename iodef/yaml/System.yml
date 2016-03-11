@@ -9,6 +9,7 @@ description: 'The System class describes a system or network involved in an even
   attribute value of "target" or "intermediary", then the machine or service is the
   one targeted in the activity.  A value of "sensor" dictates that this System was
   part of an instrumentation to monitor the network. '
+color: "#284f9f"
 aggregates:
   Node:
     name: Node

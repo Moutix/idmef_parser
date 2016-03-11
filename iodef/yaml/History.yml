@@ -2,6 +2,7 @@
 name: History
 description: 'The History class is a log of the significant events or actions performed
   by the involved parties during the course of handling the incident. '
+color: "#00B050"
 aggregates:
   HistoryItem:
     name: HistoryItem
