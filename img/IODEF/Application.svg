@@ -12,39 +12,47 @@
 <!-- Application -->
 <g id="node1" class="node"><title>Application</title>
 <a xlink:href="#" xlink:title="The Application class describes an application running on a System providing a Service. ">
-<polygon fill="#cecece" stroke="#cecece" points="9,-163 9,-184 216,-184 216,-163 9,-163"/>
+<polygon fill="#182f5f" stroke="#182f5f" points="9,-163 9,-184 216,-184 216,-163 9,-163"/>
 <polygon fill="none" stroke="black" points="9,-163 9,-184 216,-184 216,-163 9,-163"/>
 <text text-anchor="start" x="74.5" y="-170.233" font-family="Times Roman,serif" font-size="14.00">Application</text>
 </a>
 <a xlink:href="#" xlink:title="A URL describing the application.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-143 9,-163 216,-163 216,-143 9,-143"/>
 <polygon fill="none" stroke="black" points="9,-143 9,-163 216,-163 216,-143 9,-143"/>
 <text text-anchor="start" x="53" y="-149.733" font-family="Times Roman,serif" font-size="14.00">[URL] URL (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="An identifier that can be used to reference this software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-123 9,-143 216,-143 216,-123 9,-123"/>
 <polygon fill="none" stroke="black" points="9,-123 9,-143 216,-143 216,-123 9,-123"/>
 <text text-anchor="start" x="23" y="-129.733" font-family="Times Roman,serif" font-size="14.00">[STRING] swid (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="An identifier that can be used to reference a particular configuration of this software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-103 9,-123 216,-123 216,-103 9,-103"/>
 <polygon fill="none" stroke="black" points="9,-103 9,-123 216,-123 216,-103 9,-103"/>
 <text text-anchor="start" x="12.5" y="-109.733" font-family="Times Roman,serif" font-size="14.00">[STRING] configid (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Vendor name of the software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-83 9,-103 216,-103 216,-83 9,-83"/>
 <polygon fill="none" stroke="black" points="9,-83 9,-103 216,-103 216,-83 9,-83"/>
 <text text-anchor="start" x="14.5" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] vendor (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Family of the software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-63 9,-83 216,-83 216,-63 9,-63"/>
 <polygon fill="none" stroke="black" points="9,-63 9,-83 216,-83 216,-63 9,-63"/>
 <text text-anchor="start" x="18" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] family (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Name of the software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-43 9,-63 216,-63 216,-43 9,-43"/>
 <polygon fill="none" stroke="black" points="9,-43 9,-63 216,-63 216,-43 9,-43"/>
 <text text-anchor="start" x="19.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] name (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Version of the software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-23 9,-43 216,-43 216,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-43 216,-43 216,-23 9,-23"/>
 <text text-anchor="start" x="13.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] version (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Patch or service pack level of the software.">
+<polygon fill="#284f9f" stroke="#284f9f" points="9,-3 9,-23 216,-23 216,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 216,-23 216,-3 9,-3"/>
 <text text-anchor="start" x="19.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] patch (Optional) </text>
 </a>

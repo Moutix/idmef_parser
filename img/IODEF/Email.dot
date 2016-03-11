@@ -2,5 +2,5 @@ digraph Email {
 	graph [rankdir=LR];
 	node [label="\N"];
 	graph [bb="0,0,218,48"];
-	Email [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">Email</td> </tr>" %<tr><td HREF="#" TITLE="A free-form description of the element content (e.g., hours of coverage for a given number).">[ENUM] meaning (Optional) </td></tr>%</table>>, shape=plaintext, pos="109,24", width="3.0278", height="0.68056"];
+	Email [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#7a993d" HREF="#" TITLE="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">Email</td> </tr>" %<tr><td BGCOLOR="#CCFF66" HREF="#" TITLE="A free-form description of the element content (e.g., hours of coverage for a given number).">[ENUM] meaning (Optional) </td></tr>%</table>>, shape=plaintext, pos="109,24", width="3.0278", height="0.68056"];
 }
