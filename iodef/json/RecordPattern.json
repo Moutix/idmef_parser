@@ -1,6 +1,7 @@
 {
   "name": "RecordPattern",
   "description": "The RecordPattern class describes where in the content of the RecordItem relevant information can be found.  It provides a way to reference subsets of information, identified by a pattern, in a large log file, audit trail, or forensic data. ",
+  "color": "#ffcc00",
   "aggregates": {
   },
   "attributes": {

@@ -1,6 +1,7 @@
 {
   "name": "TimeImpact",
   "description": "The TimeImpact class describes the impact of the incident on an organization as a function of time.  It provides a way to convey down time and recovery time. ",
+  "color": "#FF5024",
   "aggregates": {
   },
   "attributes": {

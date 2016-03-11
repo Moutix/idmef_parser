@@ -1,6 +1,7 @@
 {
   "name": "EventData",
   "description": "The EventData class describes a particular event of the incident for a given set of hosts or networks.  This description includes the systems from which the activity originated and those targeted, an assessment of the techniques used by the intruder, the impact of the activity on the organization, and any forensic evidence discovered. ",
+  "color": "#bfbfbf",
   "aggregates": {
     "Description": {
       "name": "Description",

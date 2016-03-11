@@ -1,8 +1,136 @@
 {
   "name": "RecordItem",
   "description": "The RecordItem class provides a way to incorporate relevant logs, audit trails, or forensic data to support the conclusions made during the course of analyzing the incident.  The class supports both the direct encapsulation of the data, as well as, provides primitives to reference data stored elsewhere. ",
+  "color": "#ffcc00",
   "aggregates": {
   },
   "attributes": {
+    "dtype": {
+      "name": "dtype",
+      "multiplicity": "Required",
+      "type": "ENUM",
+      "description": "The data type of the element content.  The permitted values for this attribute are shown below.  The default value is \"string\".",
+      "values": [
+        {
+          "rank": "1",
+          "keyword": "boolean",
+          "description": "The element content is of type BOOLEAN."
+        },
+        {
+          "rank": "2",
+          "keyword": "byte",
+          "description": "The element content is of type BYTE."
+        },
+        {
+          "rank": "3",
+          "keyword": "character",
+          "description": "The element content is of type CHARACTER."
+        },
+        {
+          "rank": "4",
+          "keyword": "date-time",
+          "description": "The element content is of type DATETIME."
+        },
+        {
+          "rank": "5",
+          "keyword": "integer",
+          "description": "The element content is of type INTEGER."
+        },
+        {
+          "rank": "6",
+          "keyword": "portlist",
+          "description": "The element content is of type PORTLIST."
+        },
+        {
+          "rank": "7",
+          "keyword": "real",
+          "description": "The element content is of type REAL."
+        },
+        {
+          "rank": "8",
+          "keyword": "string",
+          "description": "The element content is of type STRING."
+        },
+        {
+          "rank": "9",
+          "keyword": "file",
+          "description": "The element content is a base64 encoded binary file encoded as a BYTE[] type."
+        },
+        {
+          "rank": "10",
+          "keyword": "frame",
+          "description": "The element content is a layer-2 frame encoded as a HEXBIN type."
+        },
+        {
+          "rank": "11",
+          "keyword": "packet",
+          "description": "The element content is a layer-3 packet encoded as a HEXBIN type."
+        },
+        {
+          "rank": "12",
+          "keyword": "ipv4-packet",
+          "description": "The element content is an IPv4 packet encoded as a HEXBIN type."
+        },
+        {
+          "rank": "13",
+          "keyword": "ipv6-packet",
+          "description": "The element content is an IPv6 packet encoded as a HEXBIN type."
+        },
+        {
+          "rank": "14",
+          "keyword": "path",
+          "description": "The element content is a file-system path encoded as a STRING type."
+        },
+        {
+          "rank": "15",
+          "keyword": "url",
+          "description": "The element content is of type URL."
+        },
+        {
+          "rank": "16",
+          "keyword": "csv",
+          "description": "The element content is a common separated value (CSV) list per Section 2 of [20] encoded as a STRING type."
+        },
+        {
+          "rank": "17",
+          "keyword": "winreg",
+          "description": "The element content is a Windows registry key encoded as a STRING type."
+        },
+        {
+          "rank": "18",
+          "keyword": "xml",
+          "description": "The element content is XML (see Section 5)."
+        },
+        {
+          "rank": "19",
+          "keyword": "ext-value",
+          "description": "An escape value used to extend this attribute. See Section 5.1."
+        }
+      ]
+    },
+    "ext-dtype": {
+      "name": "ext-dtype",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A means by which to extend the dtype attribute.  See Section 5.1."
+    },
+    "meaning": {
+      "name": "meaning",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "A free-form description of the element content."
+    },
+    "formatid": {
+      "name": "formatid",
+      "multiplicity": "Optional",
+      "type": "STRING",
+      "description": "An identifier referencing the format and semantics of the element content."
+    },
+    "restriction": {
+      "name": "restriction",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "This attribute has been defined in Section 3.2."
+    }
   }
 }

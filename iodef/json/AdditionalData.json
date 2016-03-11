@@ -1,6 +1,7 @@
 {
   "name": "AdditionalData",
   "description": "The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model.  For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF).  A detailed discussion for extending the data model and the schema can be found in Section 5. ",
+  "color": "#FFCC66",
   "aggregates": {
   },
   "attributes": {

@@ -1,6 +1,7 @@
 {
   "name": "Application",
   "description": "The Application class describes an application running on a System providing a Service. ",
+  "color": "#284f9f",
   "aggregates": {
     "URL": {
       "name": "URL",

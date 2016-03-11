@@ -216,35 +216,42 @@
 <!-- Expectation -->
 <g id="node50" class="node"><title>Expectation</title>
 <a xlink:href="#" xlink:title="The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting. The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. ">
-<polygon fill="#cecece" stroke="#cecece" points="317,-1389 317,-1410 544,-1410 544,-1389 317,-1389"/>
+<polygon fill="#737373" stroke="#737373" points="317,-1389 317,-1410 544,-1410 544,-1389 317,-1389"/>
 <polygon fill="none" stroke="black" points="317,-1389 317,-1410 544,-1410 544,-1389 317,-1389"/>
 <text text-anchor="start" x="389.5" y="-1396.23" font-family="Times Roman,serif" font-size="14.00">Expectation</text>
 </a>
 <a xlink:href="#" xlink:title="A free&#45;form description of the desired action(s).">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1369 317,-1389 544,-1389 544,-1369 317,-1369"/>
 <polygon fill="none" stroke="black" points="317,-1369 317,-1389 544,-1389 544,-1369 317,-1369"/>
 <text text-anchor="start" x="320.5" y="-1375.73" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] Description (0..*) </text>
 </a>
 <a xlink:href="#" xlink:title="The time at which the action should be performed. &#160;A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible. &#160;The absence of this element leaves the execution of the expectation to the discretion of the recipient.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1349 317,-1369 544,-1369 544,-1349 317,-1349"/>
 <polygon fill="none" stroke="black" points="317,-1349 317,-1369 544,-1369 544,-1349 317,-1349"/>
 <text text-anchor="start" x="365.5" y="-1355.73" font-family="Times Roman,serif" font-size="14.00">[] StartTime (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1329 317,-1349 544,-1349 544,-1329 317,-1329"/>
 <polygon fill="none" stroke="black" points="317,-1329 317,-1349 544,-1349 544,-1329 317,-1329"/>
 <text text-anchor="start" x="370" y="-1335.73" font-family="Times Roman,serif" font-size="14.00">[] EndTime (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="This attribute is defined in Section 3.2.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1309 317,-1329 544,-1329 544,-1309 317,-1309"/>
 <polygon fill="none" stroke="black" points="317,-1309 317,-1329 544,-1329 544,-1309 317,-1309"/>
 <text text-anchor="start" x="327.5" y="-1315.73" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1289 317,-1309 544,-1309 544,-1289 317,-1289"/>
 <polygon fill="none" stroke="black" points="317,-1289 317,-1309 544,-1309 544,-1289 317,-1289"/>
 <text text-anchor="start" x="335" y="-1295.73" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="Classifies the type of action requested. &#160;This attribute is an enumerated list with no default value.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1269 317,-1289 544,-1289 544,-1269 317,-1269"/>
 <polygon fill="none" stroke="black" points="317,-1269 317,-1289 544,-1289 544,-1269 317,-1269"/>
 <text text-anchor="start" x="341.5" y="-1275.73" font-family="Times Roman,serif" font-size="14.00">[ENUM] action (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="A means by which to extend the action attribute. &#160;See Section 5.1.">
+<polygon fill="#bfbfbf" stroke="#bfbfbf" points="317,-1249 317,-1269 544,-1269 544,-1249 317,-1249"/>
 <polygon fill="none" stroke="black" points="317,-1249 317,-1269 544,-1269 544,-1249 317,-1249"/>
 <text text-anchor="start" x="322" y="-1255.73" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;action (Optional) </text>
 </a>

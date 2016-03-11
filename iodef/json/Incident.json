@@ -1,6 +1,7 @@
 {
   "name": "Incident",
   "description": "Every incident is represented by an instance of the Incident class. This class provides a standardized representation for commonly exchanged incident data. ",
+  "color": "#99CC00",
   "aggregates": {
     "IncidentID": {
       "name": "IncidentID",

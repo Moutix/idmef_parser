@@ -3,6 +3,7 @@ name: Expectation
 description: 'The Expectation class conveys to the recipient of the IODEF document
   the actions the sender is requesting.  The scope of the requested action is limited
   to purview of the EventData class in which this class is aggregated. '
+color: "#bfbfbf"
 aggregates:
   Description:
     name: Description

@@ -1,6 +1,7 @@
 {
   "name": "Assessment",
   "description": "The Assessment class describes the technical and non-technical repercussions of the incident on the CSIRT's constituency. ",
+  "color": "#FF5024",
   "aggregates": {
     "Impact": {
       "name": "Impact",

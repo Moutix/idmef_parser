@@ -1,6 +1,7 @@
 {
   "name": "Node",
   "description": "The Node class names a system (e.g., PC, router) or network. ",
+  "color": "#284f9f",
   "aggregates": {
     "NodeName": {
       "name": "NodeName",

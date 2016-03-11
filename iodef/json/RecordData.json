@@ -1,6 +1,7 @@
 {
   "name": "RecordData",
   "description": "The RecordData class groups log or audit data from a given sensor (e.g., IDS, firewall log) and provides a way to annotate the output. ",
+  "color": "#ffcc00",
   "aggregates": {
     "DateTime": {
       "name": "DateTime",

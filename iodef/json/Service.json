@@ -1,6 +1,7 @@
 {
   "name": "Service",
   "description": "The Service class describes a network service of a host or network. The service is identified by specific port or list of ports, along with the application listening on that port. ",
+  "color": "#284f9f",
   "aggregates": {
     "Port": {
       "name": "Port",

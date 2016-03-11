@@ -1,6 +1,7 @@
 {
   "name": "HistoryItem",
   "description": "The HistoryItem class is an entry in the History (Section 3.11) log that documents a particular action or event that occurred in the course of handling the incident.  The details of the entry are a free-form description, but each can be categorized with the type attribute. ",
+  "color": "#00B050",
   "aggregates": {
     "DateTime": {
       "name": "DateTime",

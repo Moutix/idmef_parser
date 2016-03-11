@@ -1,6 +1,7 @@
 {
   "name": "System",
   "description": "The System class describes a system or network involved in an event. The systems or networks represented by this class are categorized according to the role they played in the incident through the category attribute.  The value of this category attribute dictates the semantics of the aggregated classes in the System class.  If the category attribute has a value of \"source\", then the aggregated classes denote the machine and service from which the activity is originating.  With a category attribute value of \"target\" or \"intermediary\", then the machine or service is the one targeted in the activity.  A value of \"sensor\" dictates that this System was part of an instrumentation to monitor the network. ",
+  "color": "#284f9f",
   "aggregates": {
     "Node": {
       "name": "Node",

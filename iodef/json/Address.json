@@ -1,6 +1,7 @@
 {
   "name": "Address",
   "description": "The Address class represents a hardware (layer-2), network (layer-3), or application (layer-7) address. ",
+  "color": "#284f9f",
   "aggregates": {
   },
   "attributes": {
