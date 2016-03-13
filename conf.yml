@@ -5,8 +5,10 @@ generators:
     top_class: "IDMEF-Message"
     classes: "idmef/yaml"
     type: "yml"
+    rfc: "rfc4765.txt"
   IODEF:
     top_class: "IODEF-Document"
     classes: "iodef/yaml"
     type: "yml"
+    rfc: "rfc5070.txt"
 

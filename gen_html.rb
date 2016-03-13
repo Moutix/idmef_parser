@@ -16,6 +16,7 @@ class HTMLGenerator
       generator = GraphGenerator.new(g["classes"], g["type"])
       [k, {
         top_class: g["top_class"],
+        rfc: g["rfc"],
         generator: generator,
         graphes: generator.classes.map{|cls, values| [cls, generator.generate_graph(cls)]}.to_h
       }]}.to_h
@@ -24,9 +25,8 @@ class HTMLGenerator
   def gen_site! folder="html"
     FileUtils.rm_r folder if File.exist? folder
     FileUtils.mkdir folder
-    FileUtils.cp_r("#{FOLDER}/css", "#{folder}/css")
-    FileUtils.cp_r("#{FOLDER}/js", "#{folder}/js")
-    FileUtils.mkdir "#{folder}/img"
+    FileUtils.cp_r(Dir.glob("#{FOLDER}/assets/*"), "#{folder}")
+    FileUtils.mkdir "#{folder}/img" unless File.exist? "#{folder}/img"
 
     write_template folder, "index"
 

@@ -22,4 +22,13 @@
               - classes.select{|k, v| k != gen[:top_class] and !v.fetch("aggregates", {}).merge(v.fetch("childs", {})).select{|key, val| classes.include?(key)}.empty?}.keys.sort.each do |class_|
                 %li{class: (class_ == active_class && name == generator) ? "active" : ""}
                   %a{href: "/#{location}/#{name}/#{class_}.html"}= class_
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a.dropdown-toggle{href: "#", "data-toggle" => 'dropdown', role: "button"}
+            RFC
+            %span.caret
+          %ul.dropdown-menu
+            - generators.each_value do |gen|
+              %li
+                %a{href: "/#{location}/#{gen["rfc"]}", target: "_blank"}
 
