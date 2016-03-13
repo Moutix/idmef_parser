@@ -28,7 +28,8 @@
             RFC
             %span.caret
           %ul.dropdown-menu
-            - generators.each_value do |gen|
+            - generators.each do |name, gen|
               %li
-                %a{href: "/#{location}/#{gen["rfc"]}", target: "_blank"}
+                %a{href: "/#{location}/#{gen[:rfc]}", target: "_blank"}
+                  = "#{name} (#{gen[:rfc].sub(".txt", "").sub("rfc", "")})"
 
