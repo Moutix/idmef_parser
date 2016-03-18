@@ -296,20 +296,20 @@
 <!-- AdditionalData -->
 <g id="node67" class="node"><title>AdditionalData</title>
 <a xlink:href="#" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
-<polygon fill="#431d60" stroke="#431d60" points="358,-115 358,-136 518,-136 518,-115 358,-115"/>
-<polygon fill="none" stroke="black" points="358,-115 358,-136 518,-136 518,-115 358,-115"/>
+<polygon fill="#431d60" stroke="#431d60" points="331,-115 331,-136 545,-136 545,-115 331,-115"/>
+<polygon fill="none" stroke="black" points="331,-115 331,-136 545,-136 545,-115 331,-115"/>
 <text text-anchor="start" x="386.5" y="-122.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
 <a xlink:href="#" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
-<polygon fill="#7030a0" stroke="#7030a0" points="358,-95 358,-115 518,-115 518,-95 358,-95"/>
-<polygon fill="none" stroke="black" points="358,-95 358,-115 518,-115 518,-95 358,-95"/>
-<text text-anchor="start" x="361.5" y="-101.733" font-family="Times Roman,serif" font-size="14.00">[] meaning (Optional) </text>
+<polygon fill="#7030a0" stroke="#7030a0" points="331,-95 331,-115 545,-115 545,-95 331,-95"/>
+<polygon fill="none" stroke="black" points="331,-95 331,-115 545,-115 545,-95 331,-95"/>
+<text text-anchor="start" x="334.5" y="-101.733" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
 </a>
 </g>
 <!-- Alert&#45;&gt;AdditionalData -->
 <g id="edge76" class="edge"><title>Alert&#45;&gt;AdditionalData</title>
-<path fill="none" stroke="black" d="M122.558,-612.865C129.026,-533.471 160.75,-278.128 306,-149 315.848,-140.245 327.671,-133.739 340.142,-128.917"/>
-<polygon fill="black" stroke="black" points="341.496,-132.151 349.782,-125.548 339.187,-125.543 341.496,-132.151"/>
+<path fill="none" stroke="black" d="M122.558,-612.865C129.026,-533.471 160.75,-278.128 306,-149 308.64,-146.653 311.422,-144.468 314.32,-142.433"/>
+<polygon fill="black" stroke="black" points="316.191,-145.391 322.774,-137.089 312.451,-139.474 316.191,-145.391"/>
 <text text-anchor="middle" x="274" y="-194.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
 </g>
 <!-- Analyzer&#45;&gt;Analyzer -->
@@ -763,12 +763,12 @@
 <a xlink:href="#" xlink:title="The type of file system the file resides on. &#160;This attribute governs how path names and other attributes are interpreted.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="689,-387 689,-407 913,-407 913,-387 689,-387"/>
 <polygon fill="none" stroke="black" points="689,-387 689,-407 913,-407 913,-387 689,-387"/>
-<text text-anchor="start" x="740" y="-393.733" font-family="Times Roman,serif" font-size="14.00">[] category (0..1) </text>
+<text text-anchor="start" x="719" y="-393.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The type of file, as a mime&#45;type.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="689,-367 689,-387 913,-387 913,-367 689,-367"/>
 <polygon fill="none" stroke="black" points="689,-367 689,-387 913,-387 913,-367 689,-367"/>
-<text text-anchor="start" x="742" y="-373.733" font-family="Times Roman,serif" font-size="14.00">[] file&#45;type (0..1) </text>
+<text text-anchor="start" x="715" y="-373.733" font-family="Times Roman,serif" font-size="14.00">[STRING] file&#45;type (0..1) </text>
 </a>
 </g>
 <!-- Target&#45;&gt;File -->

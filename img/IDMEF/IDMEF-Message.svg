@@ -143,20 +143,20 @@
 <!-- AdditionalData -->
 <g id="node16" class="node"><title>AdditionalData</title>
 <a xlink:href="#" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
-<polygon fill="#431d60" stroke="#431d60" points="558,-907 558,-928 718,-928 718,-907 558,-907"/>
-<polygon fill="none" stroke="black" points="558,-907 558,-928 718,-928 718,-907 558,-907"/>
+<polygon fill="#431d60" stroke="#431d60" points="531,-907 531,-928 745,-928 745,-907 531,-907"/>
+<polygon fill="none" stroke="black" points="531,-907 531,-928 745,-928 745,-907 531,-907"/>
 <text text-anchor="start" x="586.5" y="-914.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
 <a xlink:href="#" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
-<polygon fill="#7030a0" stroke="#7030a0" points="558,-887 558,-907 718,-907 718,-887 558,-887"/>
-<polygon fill="none" stroke="black" points="558,-887 558,-907 718,-907 718,-887 558,-887"/>
-<text text-anchor="start" x="561.5" y="-893.733" font-family="Times Roman,serif" font-size="14.00">[] meaning (Optional) </text>
+<polygon fill="#7030a0" stroke="#7030a0" points="531,-887 531,-907 745,-907 745,-887 531,-887"/>
+<polygon fill="none" stroke="black" points="531,-887 531,-907 745,-907 745,-887 531,-887"/>
+<text text-anchor="start" x="534.5" y="-893.733" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
 </a>
 </g>
 <!-- Heartbeat&#45;&gt;AdditionalData -->
 <g id="edge16" class="edge"><title>Heartbeat&#45;&gt;AdditionalData</title>
-<path fill="none" stroke="black" d="M358.17,-957.826C386.949,-940.928 424.053,-922.218 460,-913 485.247,-906.526 513.17,-903.773 539.269,-902.994"/>
-<polygon fill="black" stroke="black" points="539.629,-906.487 549.555,-902.784 539.486,-899.489 539.629,-906.487"/>
+<path fill="none" stroke="black" d="M358.17,-957.826C386.949,-940.928 424.053,-922.218 460,-913 476.647,-908.731 494.457,-906.08 512.141,-904.546"/>
+<polygon fill="black" stroke="black" points="512.818,-908.005 522.529,-903.768 512.295,-901.025 512.818,-908.005"/>
 <text text-anchor="middle" x="474" y="-917.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
 </g>
 <!-- Analyzer&#45;&gt;Analyzer -->
@@ -307,8 +307,8 @@
 </g>
 <!-- Alert&#45;&gt;AdditionalData -->
 <g id="edge86" class="edge"><title>Alert&#45;&gt;AdditionalData</title>
-<path fill="none" stroke="black" d="M375.967,-760.123C413.267,-775.95 457.601,-799.908 488,-833 501.739,-847.956 490.538,-861.832 506,-875 515.96,-883.482 527.789,-889.839 540.211,-894.593"/>
-<polygon fill="black" stroke="black" points="539.21,-897.95 549.805,-897.924 541.506,-891.338 539.21,-897.95"/>
+<path fill="none" stroke="black" d="M375.967,-760.123C413.267,-775.95 457.601,-799.908 488,-833 501.739,-847.956 490.538,-861.832 506,-875 508.689,-877.29 511.515,-879.425 514.451,-881.416"/>
+<polygon fill="black" stroke="black" points="512.644,-884.414 523,-886.651 516.3,-878.444 512.644,-884.414"/>
 <text text-anchor="middle" x="474" y="-837.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
 </g>
 <!-- OverflowAlert -->
@@ -823,12 +823,12 @@
 <a xlink:href="#" xlink:title="The type of file system the file resides on. &#160;This attribute governs how path names and other attributes are interpreted.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-387 889,-407 1113,-407 1113,-387 889,-387"/>
 <polygon fill="none" stroke="black" points="889,-387 889,-407 1113,-407 1113,-387 889,-387"/>
-<text text-anchor="start" x="940" y="-393.733" font-family="Times Roman,serif" font-size="14.00">[] category (0..1) </text>
+<text text-anchor="start" x="919" y="-393.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The type of file, as a mime&#45;type.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-367 889,-387 1113,-387 1113,-367 889,-367"/>
 <polygon fill="none" stroke="black" points="889,-367 889,-387 1113,-387 1113,-367 889,-367"/>
-<text text-anchor="start" x="942" y="-373.733" font-family="Times Roman,serif" font-size="14.00">[] file&#45;type (0..1) </text>
+<text text-anchor="start" x="915" y="-373.733" font-family="Times Roman,serif" font-size="14.00">[STRING] file&#45;type (0..1) </text>
 </a>
 </g>
 <!-- Target&#45;&gt;File -->

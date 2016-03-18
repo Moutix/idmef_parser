@@ -238,12 +238,12 @@
 <a xlink:href="#" xlink:title="The type of file system the file resides on. &#160;This attribute governs how path names and other attributes are interpreted.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="351,-209 351,-229 575,-229 575,-209 351,-209"/>
 <polygon fill="none" stroke="black" points="351,-209 351,-229 575,-229 575,-209 351,-209"/>
-<text text-anchor="start" x="402" y="-215.733" font-family="Times Roman,serif" font-size="14.00">[] category (0..1) </text>
+<text text-anchor="start" x="381" y="-215.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The type of file, as a mime&#45;type.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="351,-189 351,-209 575,-209 575,-189 351,-189"/>
 <polygon fill="none" stroke="black" points="351,-189 351,-209 575,-209 575,-189 351,-189"/>
-<text text-anchor="start" x="404" y="-195.733" font-family="Times Roman,serif" font-size="14.00">[] file&#45;type (0..1) </text>
+<text text-anchor="start" x="377" y="-195.733" font-family="Times Roman,serif" font-size="14.00">[STRING] file&#45;type (0..1) </text>
 </a>
 </g>
 <!-- Target&#45;&gt;File -->
