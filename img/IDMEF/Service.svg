@@ -39,7 +39,7 @@
 <a xlink:href="#" xlink:title="A unique identifier for the service; see Section 3.2.9.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-146 9,-166 326,-166 326,-146 9,-146"/>
 <polygon fill="none" stroke="black" points="9,-146 9,-166 326,-166 326,-146 9,-146"/>
-<text text-anchor="start" x="103" y="-152.733" font-family="Times Roman,serif" font-size="14.00">[] ident (Optional) </text>
+<text text-anchor="start" x="76" y="-152.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
 <a xlink:href="#" xlink:title="The IP version number.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-126 9,-146 326,-146 326,-126 9,-126"/>
