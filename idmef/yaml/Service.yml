@@ -48,7 +48,7 @@ attributes:
   ident:
     name: ident
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the service; see Section 3.2.9.
   ip_version:
     name: ip_version

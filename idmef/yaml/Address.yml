@@ -19,7 +19,7 @@ attributes:
   ident:
     name: ident
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the address; see Section 3.2.9.
   category:
     name: category
@@ -78,10 +78,10 @@ attributes:
   vlan-name:
     name: vlan-name
     multiplicity: Optional
-    type: 
+    type: STRING
     description: The name of the Virtual LAN to which the address belongs.
   vlan-num:
     name: vlan-num
     multiplicity: Optional
-    type: 
+    type: INTEGER
     description: The number of the Virtual LAN to which the address belongs.

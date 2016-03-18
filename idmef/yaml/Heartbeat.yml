@@ -21,7 +21,7 @@ aggregates:
   HeartbeatInterval:
     name: HeartbeatInterval
     multiplicity: 0..1
-    type: 
+    type: INTEGER
     description: The interval in seconds at which heartbeats are generated.
   AnalyzerTime:
     name: AnalyzerTime
@@ -39,5 +39,5 @@ attributes:
   messageid:
     name: messageid
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the heartbeat; see Section 3.2.9.

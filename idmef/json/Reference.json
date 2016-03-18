@@ -58,7 +58,7 @@
     "meaning": {
       "name": "meaning",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "The meaning of the reference, as understood by the alert provider.  This field is only valid if the value of the <origin> attribute is set to \"vendor-specific\" or \"user-specific\"."
     }
   }

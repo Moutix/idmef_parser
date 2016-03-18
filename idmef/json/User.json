@@ -14,7 +14,7 @@
     "ident": {
       "name": "ident",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "A unique identifier for the user; see Section 3.2.9."
     },
     "category": {

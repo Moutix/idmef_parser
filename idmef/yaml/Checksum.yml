@@ -18,7 +18,7 @@ aggregates:
 attributes:
   algorithm:
     name: algorithm
-    multiplicity: 
+    multiplicity: Required
     type: ENUM
     description: default value.  (See also Section 10.)
     values:

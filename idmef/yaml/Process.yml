@@ -38,5 +38,5 @@ attributes:
   ident:
     name: ident
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the process; see Section 3.2.9.

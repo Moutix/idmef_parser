@@ -25,7 +25,7 @@ attributes:
   ident:
     name: ident
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the node; see Section 3.2.9.
   category:
     name: category

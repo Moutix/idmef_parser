@@ -38,7 +38,7 @@
     "ident": {
       "name": "ident",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "A unique identifier for the process; see Section 3.2.9."
     }
   }

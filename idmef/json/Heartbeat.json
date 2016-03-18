@@ -18,7 +18,7 @@
     "HeartbeatInterval": {
       "name": "HeartbeatInterval",
       "multiplicity": "0..1",
-      "type": null,
+      "type": "INTEGER",
       "description": "The interval in seconds at which heartbeats are generated."
     },
     "AnalyzerTime": {
@@ -38,7 +38,7 @@
     "messageid": {
       "name": "messageid",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "A unique identifier for the heartbeat; see Section 3.2.9."
     }
   }

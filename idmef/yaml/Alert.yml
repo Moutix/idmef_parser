@@ -69,5 +69,5 @@ attributes:
   messageid:
     name: messageid
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the alert; see Section 3.2.9.

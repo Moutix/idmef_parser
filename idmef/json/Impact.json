@@ -7,7 +7,7 @@
   "attributes": {
     "severity": {
       "name": "severity",
-      "multiplicity": null,
+      "multiplicity": "Optional",
       "type": "ENUM",
       "description": "Section 10.)",
       "values": [
@@ -35,7 +35,7 @@
     },
     "completion": {
       "name": "completion",
-      "multiplicity": null,
+      "multiplicity": "Optional",
       "type": "ENUM",
       "description": "Section 10.)",
       "values": [
@@ -53,7 +53,7 @@
     },
     "type": {
       "name": "type",
-      "multiplicity": null,
+      "multiplicity": "Optional",
       "type": "ENUM",
       "description": "value is \"other\".  (See also Section 10.)",
       "values": [

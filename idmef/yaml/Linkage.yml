@@ -29,7 +29,7 @@ aggregates:
 attributes:
   category:
     name: category
-    multiplicity: 
+    multiplicity: Optional
     type: ENUM
     description: Section 10.)
     values:

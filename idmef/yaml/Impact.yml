@@ -7,7 +7,7 @@ aggregates: {}
 attributes:
   severity:
     name: severity
-    multiplicity: 
+    multiplicity: Optional
     type: ENUM
     description: Section 10.)
     values:
@@ -25,7 +25,7 @@ attributes:
       description: High severity
   completion:
     name: completion
-    multiplicity: 
+    multiplicity: Optional
     type: ENUM
     description: Section 10.)
     values:
@@ -37,7 +37,7 @@ attributes:
       description: The attempt succeeded
   type:
     name: type
-    multiplicity: 
+    multiplicity: Optional
     type: ENUM
     description: value is "other".  (See also Section 10.)
     values:

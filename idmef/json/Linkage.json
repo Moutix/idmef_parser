@@ -25,7 +25,7 @@
   "attributes": {
     "category": {
       "name": "category",
-      "multiplicity": null,
+      "multiplicity": "Optional",
       "type": "ENUM",
       "description": "Section 10.)",
       "values": [

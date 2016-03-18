@@ -20,7 +20,7 @@
     "ident": {
       "name": "ident",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "A unique identifier for the address; see Section 3.2.9."
     },
     "category": {
@@ -109,13 +109,13 @@
     "vlan-name": {
       "name": "vlan-name",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "The name of the Virtual LAN to which the address belongs."
     },
     "vlan-num": {
       "name": "vlan-num",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "INTEGER",
       "description": "The number of the Virtual LAN to which the address belongs."
     }
   }

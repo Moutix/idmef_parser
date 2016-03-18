@@ -26,49 +26,49 @@
     "analyzerid": {
       "name": "analyzerid",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "(but see below).  A unique identifier for the analyzer; see Section 3.2.9."
     },
     "name": {
       "name": "name",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "An explicit name for the analyzer that may be easier to understand than the analyzerid."
     },
     "manufacturer": {
       "name": "manufacturer",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "The manufacturer of the analyzer software and/or hardware."
     },
     "model": {
       "name": "model",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "The model name/number of the analyzer software and/or hardware."
     },
     "version": {
       "name": "version",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "The version number of the analyzer software and/or hardware."
     },
     "class": {
       "name": "class",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "The class of analyzer software and/or hardware."
     },
     "ostype": {
       "name": "ostype",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "Operating system name.  On POSIX 1003.1 compliant systems, this is the value returned in utsname.sysname by the uname() system call, or the output of the \"uname -s\" command."
     },
     "osversion": {
       "name": "osversion",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "Operating system version.  On POSIX 1003.1 compliant systems, this is the value returned in utsname.release by the uname() system call, or the output of the \"uname -r\" command."
     }
   }

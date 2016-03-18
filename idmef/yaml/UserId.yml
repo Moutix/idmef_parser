@@ -20,7 +20,7 @@ attributes:
   ident:
     name: ident
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for the user id, see Section 3.2.9.
   type:
     name: type

@@ -15,10 +15,10 @@ attributes:
   ident:
     name: ident
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A unique identifier for this classification; see Section 3.2.9.
   text:
     name: text
     multiplicity: Required
-    type: 
+    type: STRING
     description: A vendor-provided string identifying the Alert message.

@@ -72,7 +72,7 @@
     "ident": {
       "name": "ident",
       "multiplicity": "0..1",
-      "type": null,
+      "type": "STRING",
       "description": "A unique identifier for this file; see Section 3.2.9."
     },
     "category": {

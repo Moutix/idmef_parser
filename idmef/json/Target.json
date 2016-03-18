@@ -38,7 +38,7 @@
     "ident": {
       "name": "ident",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "A unique identifier for this target, see Section 3.2.9."
     },
     "decoy": {
@@ -67,7 +67,7 @@
     "interface": {
       "name": "interface",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "May be used by a network-based analyzer with multiple interfaces to indicate which interface this target was seen on."
     }
   }

@@ -19,7 +19,7 @@
   "attributes": {
     "algorithm": {
       "name": "algorithm",
-      "multiplicity": null,
+      "multiplicity": "Required",
       "type": "ENUM",
       "description": "default value.  (See also Section 10.)",
       "values": [
