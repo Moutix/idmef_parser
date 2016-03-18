@@ -59,12 +59,12 @@
 <a xlink:href="#" xlink:title="The type of file system the file resides on. &#160;This attribute governs how path names and other attributes are interpreted.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="8,-185 8,-205 232,-205 232,-185 8,-185"/>
 <polygon fill="none" stroke="black" points="8,-185 8,-205 232,-205 232,-185 8,-185"/>
-<text text-anchor="start" x="59" y="-191.733" font-family="Times Roman,serif" font-size="14.00">[] category (0..1) </text>
+<text text-anchor="start" x="38" y="-191.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (0..1) </text>
 </a>
 <a xlink:href="#" xlink:title="The type of file, as a mime&#45;type.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="8,-165 8,-185 232,-185 232,-165 8,-165"/>
 <polygon fill="none" stroke="black" points="8,-165 8,-185 232,-185 232,-165 8,-165"/>
-<text text-anchor="start" x="61" y="-171.733" font-family="Times Roman,serif" font-size="14.00">[] file&#45;type (0..1) </text>
+<text text-anchor="start" x="34" y="-171.733" font-family="Times Roman,serif" font-size="14.00">[STRING] file&#45;type (0..1) </text>
 </a>
 </g>
 <!-- FileAccess -->

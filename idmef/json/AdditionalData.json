@@ -8,7 +8,7 @@
     "meaning": {
       "name": "meaning",
       "multiplicity": "Optional",
-      "type": null,
+      "type": "STRING",
       "description": "A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification.  A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list."
     }
   }

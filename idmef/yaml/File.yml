@@ -79,12 +79,19 @@ aggregates:
   category:
     name: category
     multiplicity: 0..1
-    type: 
+    type: ENUM
     description: The type of file system the file resides on.  This attribute governs
       how path names and other attributes are interpreted.
+    values:
+    - rank: '0'
+      keyword: current
+      description: The file information is from after the reported change
+    - rank: '1'
+      keyword: original
+      description: The file information is from before the reported change
   file-type:
     name: file-type
     multiplicity: 0..1
-    type: 
+    type: STRING
     description: The type of file, as a mime-type.
 attributes: {}

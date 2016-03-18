@@ -12,7 +12,7 @@ attributes:
   meaning:
     name: meaning
     multiplicity: Optional
-    type: 
+    type: STRING
     description: A string describing the meaning of the element content. These values
       will be vendor/implementation dependent; the method for ensuring that managers
       understand the strings sent by analyzers is outside the scope of this specification.  A

@@ -112,20 +112,20 @@
 <!-- AdditionalData -->
 <g id="node15" class="node"><title>AdditionalData</title>
 <a xlink:href="#" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
-<polygon fill="#431d60" stroke="#431d60" points="388,-23 388,-44 548,-44 548,-23 388,-23"/>
-<polygon fill="none" stroke="black" points="388,-23 388,-44 548,-44 548,-23 388,-23"/>
+<polygon fill="#431d60" stroke="#431d60" points="361,-23 361,-44 575,-44 575,-23 361,-23"/>
+<polygon fill="none" stroke="black" points="361,-23 361,-44 575,-44 575,-23 361,-23"/>
 <text text-anchor="start" x="416.5" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
 <a xlink:href="#" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
-<polygon fill="#7030a0" stroke="#7030a0" points="388,-3 388,-23 548,-23 548,-3 388,-3"/>
-<polygon fill="none" stroke="black" points="388,-3 388,-23 548,-23 548,-3 388,-3"/>
-<text text-anchor="start" x="391.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[] meaning (Optional) </text>
+<polygon fill="#7030a0" stroke="#7030a0" points="361,-3 361,-23 575,-23 575,-3 361,-3"/>
+<polygon fill="none" stroke="black" points="361,-3 361,-23 575,-23 575,-3 361,-3"/>
+<text text-anchor="start" x="364.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
 </a>
 </g>
 <!-- Heartbeat&#45;&gt;AdditionalData -->
 <g id="edge16" class="edge"><title>Heartbeat&#45;&gt;AdditionalData</title>
-<path fill="none" stroke="black" d="M260.729,-76.9363C285.64,-70.2424 311.634,-63.3346 336,-57 346.963,-54.1499 358.451,-51.2096 369.881,-48.313"/>
-<polygon fill="black" stroke="black" points="371.06,-51.6253 379.897,-45.7821 369.345,-44.8387 371.06,-51.6253"/>
+<path fill="none" stroke="black" d="M260.729,-76.9363C285.64,-70.2424 311.634,-63.3346 336,-57 344.134,-54.8854 352.556,-52.7212 361.03,-50.562"/>
+<polygon fill="black" stroke="black" points="362.157,-53.8871 370.987,-48.0328 360.433,-47.1025 362.157,-53.8871"/>
 <text text-anchor="middle" x="304" y="-73.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
 </g>
 <!-- Analyzer&#45;&gt;Analyzer -->
