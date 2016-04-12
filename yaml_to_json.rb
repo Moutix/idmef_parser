@@ -30,3 +30,4 @@ end
 
 YamlToJson.new("idmef/json", "idmef/yaml").convert_to_json
 YamlToJson.new("iodef/json", "iodef/yaml").convert_to_json
+YamlToJson.new("idmefv2/json", "idmefv2/yaml").convert_to_json

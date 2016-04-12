@@ -1,0 +1,6 @@
+digraph Stream {
+	graph [rankdir=LR];
+	node [label="\N"];
+	graph [bb="0,0,226,88"];
+	Stream [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#CECECE" HREF="#" TITLE="The Stram class contains specific information about the content of a file">Stream</td> </tr>" %<tr><td HREF="#" TITLE="">[ENUM] offsetunit (Optional) </td></tr>%<tr><td HREF="#" TITLE="Amount of units (determined by the offsetunit attribute) to seek into the File">[INTEGER] offset (Optional) </td></tr>%<tr><td HREF="#" TITLE="Content of the file">[DATA] Data (Required) </td></tr>%</table>>, shape=plaintext, pos="113,44", width="3.1111", height="1.2361"];
+}
