@@ -71,6 +71,11 @@ aggregates:
     multiplicity: 0..*
     type: 
     description: Checksum information for this file.
+  Stream:
+    name: Stream
+    multiplicity: 0..1
+    type: Stream
+    description: Stream information for this file.
   ident:
     name: ident
     multiplicity: 0..1
