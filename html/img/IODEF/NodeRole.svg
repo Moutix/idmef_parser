@@ -11,22 +11,22 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-92 263,-92 263,5 -4,5"/>
 <!-- NodeRole -->
 <g id="node1" class="node"><title>NodeRole</title>
-<a xlink:href="#" xlink:title="The NodeRole class describes the intended function performed by a particular host. ">
+<a xlink:href="/idmef_parser/IODEF/NodeRole.html" xlink:title="The NodeRole class describes the intended function performed by a particular host. ">
 <polygon fill="#182f5f" stroke="#182f5f" points="8,-63 8,-84 250,-84 250,-63 8,-63"/>
 <polygon fill="none" stroke="black" points="8,-63 8,-84 250,-84 250,-63 8,-63"/>
 <text text-anchor="start" x="96.5" y="-70.2333" font-family="Times Roman,serif" font-size="14.00">NodeRole</text>
 </a>
-<a xlink:href="#" xlink:title="Functionality provided by a node.">
+<a xlink:href="/idmef_parser/IODEF/NodeRole.html" xlink:title="Functionality provided by a node.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-43 8,-63 250,-63 250,-43 8,-43"/>
 <polygon fill="none" stroke="black" points="8,-43 8,-63 250,-63 250,-43 8,-43"/>
 <text text-anchor="start" x="30" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Required) </text>
 </a>
-<a xlink:href="#" xlink:title="A means by which to extend the category attribute. &#160;See Section 5.1.">
+<a xlink:href="/idmef_parser/IODEF/NodeRole.html" xlink:title="A means by which to extend the category attribute. &#160;See Section 5.1.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-23 8,-43 250,-43 250,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-43 250,-43 250,-23 8,-23"/>
 <text text-anchor="start" x="11.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;category (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
+<a xlink:href="/idmef_parser/IODEF/NodeRole.html" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-3 8,-23 250,-23 250,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 250,-23 250,-3 8,-3"/>
 <text text-anchor="start" x="45.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] lang (Required) </text>

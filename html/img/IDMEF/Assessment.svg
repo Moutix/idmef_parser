@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-224 409,-224 409,5 -4,5"/>
 <!-- Assessment -->
 <g id="node1" class="node"><title>Assessment</title>
-<a xlink:href="#" xlink:title="The Assessment class is used to provide the analyzer&#39;s assessment of an event &#45;&#45; its impact, actions taken in response, and confidence. ">
+<a xlink:href="/idmef_parser/IDMEF/Assessment.html" xlink:title="The Assessment class is used to provide the analyzer&#39;s assessment of an event &#45;&#45; its impact, actions taken in response, and confidence. ">
 <polygon fill="#993016" stroke="#993016" points="9,-79 9,-100 98,-100 98,-79 9,-79"/>
 <polygon fill="none" stroke="black" points="9,-79 9,-100 98,-100 98,-79 9,-79"/>
 <text text-anchor="start" x="12.5" y="-86.2333" font-family="Times Roman,serif" font-size="14.00">Assessment</text>
@@ -19,22 +19,22 @@
 </g>
 <!-- Impact -->
 <g id="node2" class="node"><title>Impact</title>
-<a xlink:href="#" xlink:title="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="178,-195 178,-216 396,-216 396,-195 178,-195"/>
 <polygon fill="none" stroke="black" points="178,-195 178,-216 396,-216 396,-195 178,-195"/>
 <text text-anchor="start" x="263.5" y="-202.233" font-family="Times Roman,serif" font-size="14.00">Impact</text>
 </a>
-<a xlink:href="#" xlink:title="Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="178,-175 178,-195 396,-195 396,-175 178,-175"/>
 <polygon fill="none" stroke="black" points="178,-175 178,-195 396,-195 396,-175 178,-175"/>
 <text text-anchor="start" x="191.5" y="-181.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="178,-155 178,-175 396,-175 396,-155 178,-155"/>
 <polygon fill="none" stroke="black" points="178,-155 178,-175 396,-175 396,-155 178,-155"/>
 <text text-anchor="start" x="181.5" y="-161.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] completion (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="value is &quot;other&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="value is &quot;other&quot;. &#160;(See also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="178,-135 178,-155 396,-155 396,-135 178,-135"/>
 <polygon fill="none" stroke="black" points="178,-135 178,-155 396,-155 396,-135 178,-135"/>
 <text text-anchor="start" x="204" y="-141.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Optional) </text>
@@ -48,12 +48,12 @@
 </g>
 <!-- Action -->
 <g id="node4" class="node"><title>Action</title>
-<a xlink:href="#" xlink:title="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Action.html" xlink:title="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="215,-89 215,-110 359,-110 359,-89 215,-89"/>
 <polygon fill="none" stroke="black" points="215,-89 215,-110 359,-110 359,-89 215,-89"/>
 <text text-anchor="start" x="265" y="-96.2333" font-family="Times Roman,serif" font-size="14.00">Action</text>
 </a>
-<a xlink:href="#" xlink:title="The default value is &quot;other&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Action.html" xlink:title="The default value is &quot;other&quot;. &#160;(See also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="215,-69 215,-89 359,-89 359,-69 215,-69"/>
 <polygon fill="none" stroke="black" points="215,-69 215,-89 359,-89 359,-69 215,-69"/>
 <text text-anchor="start" x="218.5" y="-75.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] category () </text>
@@ -67,12 +67,12 @@
 </g>
 <!-- Confidence -->
 <g id="node6" class="node"><title>Confidence</title>
-<a xlink:href="#" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Confidence.html" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="225,-23 225,-44 350,-44 350,-23 225,-23"/>
 <polygon fill="none" stroke="black" points="225,-23 225,-44 350,-44 350,-23 225,-23"/>
 <text text-anchor="start" x="249.5" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">Confidence</text>
 </a>
-<a xlink:href="#" xlink:title="also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Confidence.html" xlink:title="also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="225,-3 225,-23 350,-23 350,-3 225,-3"/>
 <polygon fill="none" stroke="black" points="225,-3 225,-23 350,-23 350,-3 225,-3"/>
 <text text-anchor="start" x="228.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] rating () </text>

@@ -11,27 +11,27 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-112 263,-112 263,5 -4,5"/>
 <!-- Counter -->
 <g id="node1" class="node"><title>Counter</title>
-<a xlink:href="#" xlink:title="The Counter class summarize multiple occurrences of some event, or conveys counts or rates on various features (e.g., packets, sessions, events). ">
+<a xlink:href="/idmef_parser/IODEF/Counter.html" xlink:title="The Counter class summarize multiple occurrences of some event, or conveys counts or rates on various features (e.g., packets, sessions, events). ">
 <polygon fill="#993016" stroke="#993016" points="9,-83 9,-104 250,-104 250,-83 9,-83"/>
 <polygon fill="none" stroke="black" points="9,-83 9,-104 250,-104 250,-83 9,-83"/>
 <text text-anchor="start" x="101" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">Counter</text>
 </a>
-<a xlink:href="#" xlink:title="Specifies the units of the element content.">
+<a xlink:href="/idmef_parser/IODEF/Counter.html" xlink:title="Specifies the units of the element content.">
 <polygon fill="#ff5024" stroke="#ff5024" points="9,-63 9,-83 250,-83 250,-63 9,-63"/>
 <polygon fill="none" stroke="black" points="9,-63 9,-83 250,-83 250,-63 9,-63"/>
 <text text-anchor="start" x="45" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Required) </text>
 </a>
-<a xlink:href="#" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
+<a xlink:href="/idmef_parser/IODEF/Counter.html" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
 <polygon fill="#ff5024" stroke="#ff5024" points="9,-43 9,-63 250,-63 250,-43 9,-43"/>
 <polygon fill="none" stroke="black" points="9,-43 9,-63 250,-63 250,-43 9,-43"/>
 <text text-anchor="start" x="26.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="If present, the Counter class represents a rate rather than a count over the entire event. &#160;In that case, this attribute specifies the denominator of the rate (where the type attribute specified the nominator). &#160;The possible values of this attribute are defined in Section 3.10.2">
+<a xlink:href="/idmef_parser/IODEF/Counter.html" xlink:title="If present, the Counter class represents a rate rather than a count over the entire event. &#160;In that case, this attribute specifies the denominator of the rate (where the type attribute specified the nominator). &#160;The possible values of this attribute are defined in Section 3.10.2">
 <polygon fill="#ff5024" stroke="#ff5024" points="9,-23 9,-43 250,-43 250,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-43 250,-43 250,-23 9,-23"/>
 <text text-anchor="start" x="32.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] duration (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="A means by which to extend the duration attribute. &#160;See Section 5.1.">
+<a xlink:href="/idmef_parser/IODEF/Counter.html" xlink:title="A means by which to extend the duration attribute. &#160;See Section 5.1.">
 <polygon fill="#ff5024" stroke="#ff5024" points="9,-3 9,-23 250,-23 250,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 250,-23 250,-3 9,-3"/>
 <text text-anchor="start" x="12.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;duration (Optional) </text>

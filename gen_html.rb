@@ -13,12 +13,16 @@ class HTMLGenerator
   def initialize
     @conf = YAML.load(File.read("conf.yml"))
     @generators = @conf["generators"].map{|k, g|
-      generator = GraphGenerator.new(g["classes"], g["type"])
+      generator = GraphGenerator.new(
+        g['classes'],
+        g['type']
+      )
+
       [k, {
         top_class: g["top_class"],
         rfc: g["rfc"],
         generator: generator,
-        graphes: generator.classes.map{|cls, values| [cls, generator.generate_graph(cls)]}.to_h
+        graphes: generator.classes.map { |cls, _| [cls, generator.generate_graph(cls, "/#{@conf['location']}/#{k}")] }.to_h
       }]}.to_h
   end
 
@@ -73,6 +77,7 @@ class HTMLGenerator
                          generators: @generators,
                          active_class: active_class,
                          location: @conf["location"],
+                         links: @conf["links"],
                          generator: generator}
   end
 

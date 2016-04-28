@@ -4,13 +4,14 @@ require 'graphviz'
 require 'cgi'
 
 class IDMEFGraph
-  def initialize idmef_class, classes, direction="LR", color=true
+  def initialize(idmef_class, classes, link = nil, direction = 'LR', color = true)
     @class = idmef_class
     @classes = classes
     @graph = GraphViz.new @class, type: :digraph
     @graph[:rankdir] = direction
     @color = color
     @nodes = {}
+    @link = link
     add_node(@class)
   end
 
@@ -71,7 +72,7 @@ class IDMEFGraph
     label = %{
       <<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
       <tr >
-        <td BGCOLOR="#{color ? darken_color(color, 0.6) : "#CECECE"}" HREF="#" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
+        <td BGCOLOR="#{color ? darken_color(color, 0.6) : "#CECECE"}" HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
       </tr>"
     %}.gsub(/\s+/, " ").strip
 
@@ -87,12 +88,12 @@ class IDMEFGraph
         edge = add_edge(node, key)
         edge[:label] = value["multiplicity"]
       else
-        label += graph_attr(value, @color ? (color ? color : value["color"]) : nil)
+        label += graph_attr(name, value, @color ? (color ? color : value["color"]) : nil)
       end
     end
 
     @classes[name].fetch("attributes", {}).each do |key, value|
-      label += graph_attr(value, color ? color : value["color"])
+      label += graph_attr(name, value, color ? color : value["color"])
     end
 
     label += "</table>>"
@@ -100,8 +101,8 @@ class IDMEFGraph
     return node
   end
 
-  def graph_attr(attr, color=nil)
-    return  %{<tr><td #{color ? "BGCOLOR=\"#{color}\" " : ""}HREF="#" TITLE="#{CGI.escapeHTML(attr["description"])}">[#{attr["type"]}] #{attr["name"]} (#{attr["multiplicity"]}) </td></tr>%}
+  def graph_attr(name, attr, color = nil)
+    return  %{<tr><td #{color ? "BGCOLOR=\"#{color}\" " : ''} HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(attr["description"])}">[#{attr["type"]}] #{attr["name"]} (#{attr["multiplicity"]}) </td></tr>%}
   end
 end
 
@@ -119,8 +120,8 @@ class GraphGenerator
     @classes = parse_folder
   end
 
-  def generate_files! idmef_class, folder="graph", direction="LR", color=true
-    graph = self.generate_graph idmef_class, direction, color
+  def generate_files! idmef_class, folder="graph", link=nil, direction="LR", color=true
+    graph = self.generate_graph idmef_class, link, direction, color
 
     Dir.mkdir(folder) unless File.exists?(folder)
     Dir.chdir(folder) do
@@ -129,13 +130,13 @@ class GraphGenerator
 
   end
 
-  def generate_graph idmef_class, direction="LR", color=true
-    return IDMEFGraph.new idmef_class, @classes, direction, color
+  def generate_graph idmef_class, link=nil, direction="LR", color=true
+    return IDMEFGraph.new idmef_class, @classes, link, direction, color
   end
 
-  def generate_all! folder="graph", direction="LR", color=true
+  def generate_all! folder="graph", link=nil, direction="LR", color=true
     @classes.each_key do |idmef_class|
-      generate_files! idmef_class, folder, direction, color
+      generate_files! idmef_class, folder, link, direction, color
     end
   end
 

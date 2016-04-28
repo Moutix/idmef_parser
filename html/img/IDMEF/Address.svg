@@ -11,37 +11,37 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-152 251,-152 251,5 -4,5"/>
 <!-- Address -->
 <g id="node1" class="node"><title>Address</title>
-<a xlink:href="#" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
 <polygon fill="#007a00" stroke="#007a00" points="9,-123 9,-144 238,-144 238,-123 9,-123"/>
 <polygon fill="none" stroke="black" points="9,-123 9,-144 238,-144 238,-123 9,-123"/>
 <text text-anchor="start" x="96" y="-130.233" font-family="Times Roman,serif" font-size="14.00">Address</text>
 </a>
-<a xlink:href="#" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
 <polygon fill="#00cc00" stroke="#00cc00" points="9,-103 9,-123 238,-123 238,-103 9,-103"/>
 <polygon fill="none" stroke="black" points="9,-103 9,-123 238,-123 238,-103 9,-103"/>
 <text text-anchor="start" x="48" y="-109.733" font-family="Times Roman,serif" font-size="14.00">[STRING] address (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The network mask for the address, if appropriate.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The network mask for the address, if appropriate.">
 <polygon fill="#00cc00" stroke="#00cc00" points="9,-83 9,-103 238,-103 238,-83 9,-83"/>
 <polygon fill="none" stroke="black" points="9,-83 9,-103 238,-103 238,-83 9,-83"/>
 <text text-anchor="start" x="36" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] netmask (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the address; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="A unique identifier for the address; see Section 3.2.9.">
 <polygon fill="#00cc00" stroke="#00cc00" points="9,-63 9,-83 238,-83 238,-63 9,-63"/>
 <polygon fill="none" stroke="black" points="9,-63 9,-83 238,-83 238,-63 9,-63"/>
 <text text-anchor="start" x="32" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
 <polygon fill="#00cc00" stroke="#00cc00" points="9,-43 9,-63 238,-63 238,-43 9,-43"/>
 <polygon fill="none" stroke="black" points="9,-43 9,-63 238,-63 238,-43 9,-43"/>
 <text text-anchor="start" x="25.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The name of the Virtual LAN to which the address belongs.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The name of the Virtual LAN to which the address belongs.">
 <polygon fill="#00cc00" stroke="#00cc00" points="9,-23 9,-43 238,-43 238,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-43 238,-43 238,-23 9,-23"/>
 <text text-anchor="start" x="13.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;name (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The number of the Virtual LAN to which the address belongs.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The number of the Virtual LAN to which the address belongs.">
 <polygon fill="#00cc00" stroke="#00cc00" points="9,-3 9,-23 238,-23 238,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 238,-23 238,-3 9,-3"/>
 <text text-anchor="start" x="12.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[INTEGER] vlan&#45;num (Optional) </text>

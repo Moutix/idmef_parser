@@ -1,5 +1,6 @@
 title: IDMEF and IODEF
 location: "idmef_parser"
+links: {}
 generators:
   IDMEF:
     top_class: "IDMEF-Message"
@@ -11,10 +12,4 @@ generators:
     classes: "iodef/yaml"
     type: "yml"
     rfc: "rfc5070.txt"
-  IDMEFv2:
-    top_class: "IDMEF-Message"
-    classes: "idmefv2/yaml"
-    type: "yml"
-    rfc: "rfc4765.txt"
- 
 

@@ -32,4 +32,8 @@
               %li
                 %a{href: "/#{location}/#{gen[:rfc]}", target: "_blank"}
                   = "#{name} (#{gen[:rfc].sub(".txt", "").sub("rfc", "")})"
+        - links.each do |name, link|
+          %li
+            %a{href: link}
+              = name
 
