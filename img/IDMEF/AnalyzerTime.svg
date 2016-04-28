@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-40 123,-40 123,5 -4,5"/>
 <!-- AnalyzerTime -->
 <g id="node1" class="node"><title>AnalyzerTime</title>
-<a xlink:href="#" xlink:title="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. ">
+<a xlink:href="/idmef_parser/IDMEF/AnalyzerTime.html" xlink:title="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. ">
 <polygon fill="#5c5c99" stroke="#5c5c99" points="8,-7 8,-28 110,-28 110,-7 8,-7"/>
 <polygon fill="none" stroke="black" points="8,-7 8,-28 110,-28 110,-7 8,-7"/>
 <text text-anchor="start" x="11.5" y="-14.2333" font-family="Times Roman,serif" font-size="14.00">AnalyzerTime</text>

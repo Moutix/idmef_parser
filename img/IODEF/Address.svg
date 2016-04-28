@@ -11,27 +11,27 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-112 263,-112 263,5 -4,5"/>
 <!-- Address -->
 <g id="node1" class="node"><title>Address</title>
-<a xlink:href="#" xlink:title="The Address class represents a hardware (layer&#45;2), network (layer&#45;3), or application (layer&#45;7) address. ">
+<a xlink:href="/idmef_parser/IODEF/Address.html" xlink:title="The Address class represents a hardware (layer&#45;2), network (layer&#45;3), or application (layer&#45;7) address. ">
 <polygon fill="#182f5f" stroke="#182f5f" points="8,-83 8,-104 250,-104 250,-83 8,-83"/>
 <polygon fill="none" stroke="black" points="8,-83 8,-104 250,-104 250,-83 8,-83"/>
 <text text-anchor="start" x="101.5" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">Address</text>
 </a>
-<a xlink:href="#" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;ipv4&#45;addr&quot;.">
+<a xlink:href="/idmef_parser/IODEF/Address.html" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;ipv4&#45;addr&quot;.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-63 8,-83 250,-83 250,-63 8,-63"/>
 <polygon fill="none" stroke="black" points="8,-63 8,-83 250,-83 250,-63 8,-63"/>
 <text text-anchor="start" x="30" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Required) </text>
 </a>
-<a xlink:href="#" xlink:title="A means by which to extend the category attribute. &#160;See Section 5.1.">
+<a xlink:href="/idmef_parser/IODEF/Address.html" xlink:title="A means by which to extend the category attribute. &#160;See Section 5.1.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-43 8,-63 250,-63 250,-43 8,-43"/>
 <polygon fill="none" stroke="black" points="8,-43 8,-63 250,-63 250,-43 8,-43"/>
 <text text-anchor="start" x="11.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;category (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The name of the Virtual LAN to which the address belongs.">
+<a xlink:href="/idmef_parser/IODEF/Address.html" xlink:title="The name of the Virtual LAN to which the address belongs.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-23 8,-43 250,-43 250,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-43 250,-43 250,-23 8,-23"/>
 <text text-anchor="start" x="19" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;name (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The number of the Virtual LAN to which the address belongs.">
+<a xlink:href="/idmef_parser/IODEF/Address.html" xlink:title="The number of the Virtual LAN to which the address belongs.">
 <polygon fill="#284f9f" stroke="#284f9f" points="8,-3 8,-23 250,-23 250,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 250,-23 250,-3 8,-3"/>
 <text text-anchor="start" x="22.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;num (Optional) </text>

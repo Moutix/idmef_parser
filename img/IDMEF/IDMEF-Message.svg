@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-1285 1811,-1285 1811,5 -4,5"/>
 <!-- IDMEF&#45;Message -->
 <g id="node1" class="node"><title>IDMEF&#45;Message</title>
-<a xlink:href="#" xlink:title="All IDMEF messages are instances of the IDMEF&#45;Message class; it is the top&#45;level class of the IDMEF data model, as well as the IDMEF DTD. There are currently two types (subclasses) of IDMEF&#45;Message: Alert and Heartbeat. ">
+<a xlink:href="/idmef_parser/IDMEF/IDMEF-Message.html" xlink:title="All IDMEF messages are instances of the IDMEF&#45;Message class; it is the top&#45;level class of the IDMEF data model, as well as the IDMEF DTD. There are currently two types (subclasses) of IDMEF&#45;Message: Alert and Heartbeat. ">
 <polygon fill="#597700" stroke="#597700" points="8,-879 8,-900 124,-900 124,-879 8,-879"/>
 <polygon fill="none" stroke="black" points="8,-879 8,-900 124,-900 124,-879 8,-879"/>
 <text text-anchor="start" x="11.5" y="-886.233" font-family="Times Roman,serif" font-size="14.00">IDMEF&#45;Message</text>
@@ -19,17 +19,17 @@
 </g>
 <!-- Heartbeat -->
 <g id="node2" class="node"><title>Heartbeat</title>
-<a xlink:href="#" xlink:title="Analyzers use Heartbeat messages to indicate their current status to managers. Heartbeats are intended to be sent in a regular period, say, every ten minutes or every hour. The receipt of a Heartbeat message from an analyzer indicates to the manager that the analyzer is up and running; lack of a Heartbeat message (or more likely, lack of some number of consecutive Heartbeat messages) indicates that the analyzer or its network connection has failed. ">
+<a xlink:href="/idmef_parser/IDMEF/Heartbeat.html" xlink:title="Analyzers use Heartbeat messages to indicate their current status to managers. Heartbeats are intended to be sent in a regular period, say, every ten minutes or every hour. The receipt of a Heartbeat message from an analyzer indicates to the manager that the analyzer is up and running; lack of a Heartbeat message (or more likely, lack of some number of consecutive Heartbeat messages) indicates that the analyzer or its network connection has failed. ">
 <polygon fill="#597700" stroke="#597700" points="178,-1001 178,-1022 434,-1022 434,-1001 178,-1001"/>
 <polygon fill="none" stroke="black" points="178,-1001 178,-1022 434,-1022 434,-1001 178,-1001"/>
 <text text-anchor="start" x="271" y="-1008.23" font-family="Times Roman,serif" font-size="14.00">Heartbeat</text>
 </a>
-<a xlink:href="#" xlink:title="The interval in seconds at which heartbeats are generated.">
+<a xlink:href="/idmef_parser/IDMEF/Heartbeat.html" xlink:title="The interval in seconds at which heartbeats are generated.">
 <polygon fill="#94c600" stroke="#94c600" points="178,-981 178,-1001 434,-1001 434,-981 178,-981"/>
 <polygon fill="none" stroke="black" points="178,-981 178,-1001 434,-1001 434,-981 178,-981"/>
 <text text-anchor="start" x="181.5" y="-987.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] HeartbeatInterval (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the heartbeat; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Heartbeat.html" xlink:title="A unique identifier for the heartbeat; see Section 3.2.9.">
 <polygon fill="#94c600" stroke="#94c600" points="178,-961 178,-981 434,-981 434,-961 178,-961"/>
 <polygon fill="none" stroke="black" points="178,-961 178,-981 434,-981 434,-961 178,-961"/>
 <text text-anchor="start" x="196.5" y="-967.733" font-family="Times Roman,serif" font-size="14.00">[STRING] messageid (Optional) </text>
@@ -42,12 +42,12 @@
 </g>
 <!-- Alert -->
 <g id="node19" class="node"><title>Alert</title>
-<a xlink:href="#" xlink:title="Generally, every time an analyzer detects an event that it has been configured to look for, it sends an Alert message to its manager(s). Depending on the analyzer, an Alert message may correspond to a single detected event or multiple detected events. Alerts occur asynchronously in response to outside events. ">
+<a xlink:href="/idmef_parser/IDMEF/Alert.html" xlink:title="Generally, every time an analyzer detects an event that it has been configured to look for, it sends an Alert message to its manager(s). Depending on the analyzer, an Alert message may correspond to a single detected event or multiple detected events. Alerts occur asynchronously in response to outside events. ">
 <polygon fill="#597700" stroke="#597700" points="193,-735 193,-756 419,-756 419,-735 193,-735"/>
 <polygon fill="none" stroke="black" points="193,-735 193,-756 419,-756 419,-735 193,-735"/>
 <text text-anchor="start" x="289" y="-742.233" font-family="Times Roman,serif" font-size="14.00">Alert</text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the alert; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Alert.html" xlink:title="A unique identifier for the alert; see Section 3.2.9.">
 <polygon fill="#94c600" stroke="#94c600" points="193,-715 193,-735 419,-735 419,-715 193,-715"/>
 <polygon fill="none" stroke="black" points="193,-715 193,-735 419,-735 419,-715 193,-715"/>
 <text text-anchor="start" x="196.5" y="-721.733" font-family="Times Roman,serif" font-size="14.00">[STRING] messageid (Optional) </text>
@@ -60,47 +60,47 @@
 </g>
 <!-- Analyzer -->
 <g id="node3" class="node"><title>Analyzer</title>
-<a xlink:href="#" xlink:title="The Analyzer class identifies the analyzer from which the Alert or Heartbeat message originates. Only one analyzer may be encoded for each alert or heartbeat, and that MUST be the analyzer at which the alert or heartbeat originated. Although the IDMEF data model does not prevent the use of hierarchical intrusion detection systems (where alerts get relayed up the tree), it does not provide any way to record the identity of the &quot;relay&quot; analyzers along the path from the originating analyzer to the manager that ultimately receives the alert. ">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="The Analyzer class identifies the analyzer from which the Alert or Heartbeat message originates. Only one analyzer may be encoded for each alert or heartbeat, and that MUST be the analyzer at which the alert or heartbeat originated. Although the IDMEF data model does not prevent the use of hierarchical intrusion detection systems (where alerts get relayed up the tree), it does not provide any way to record the identity of the &quot;relay&quot; analyzers along the path from the originating analyzer to the manager that ultimately receives the alert. ">
 <polygon fill="#99993d" stroke="#99993d" points="514,-1167 514,-1188 762,-1188 762,-1167 514,-1167"/>
 <polygon fill="none" stroke="black" points="514,-1167 514,-1188 762,-1188 762,-1167 514,-1167"/>
 <text text-anchor="start" x="607" y="-1174.23" font-family="Times Roman,serif" font-size="14.00">Analyzer</text>
 </a>
-<a xlink:href="#" xlink:title="(but see below). &#160;A unique identifier for the analyzer; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="(but see below). &#160;A unique identifier for the analyzer; see Section 3.2.9.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1147 514,-1167 762,-1167 762,-1147 514,-1147"/>
 <polygon fill="none" stroke="black" points="514,-1147 514,-1167 762,-1167 762,-1147 514,-1147"/>
 <text text-anchor="start" x="528" y="-1153.73" font-family="Times Roman,serif" font-size="14.00">[STRING] analyzerid (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="An explicit name for the analyzer that may be easier to understand than the analyzerid.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="An explicit name for the analyzer that may be easier to understand than the analyzerid.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1127 514,-1147 762,-1147 762,-1127 514,-1127"/>
 <polygon fill="none" stroke="black" points="514,-1127 514,-1147 762,-1147 762,-1127 514,-1127"/>
 <text text-anchor="start" x="545" y="-1133.73" font-family="Times Roman,serif" font-size="14.00">[STRING] name (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The manufacturer of the analyzer software and/or hardware.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="The manufacturer of the analyzer software and/or hardware.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1107 514,-1127 762,-1127 762,-1107 514,-1107"/>
 <polygon fill="none" stroke="black" points="514,-1107 514,-1127 762,-1127 762,-1107 514,-1107"/>
 <text text-anchor="start" x="517.5" y="-1113.73" font-family="Times Roman,serif" font-size="14.00">[STRING] manufacturer (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The model name/number of the analyzer software and/or hardware.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="The model name/number of the analyzer software and/or hardware.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1087 514,-1107 762,-1107 762,-1087 514,-1087"/>
 <polygon fill="none" stroke="black" points="514,-1087 514,-1107 762,-1107 762,-1087 514,-1087"/>
 <text text-anchor="start" x="543.5" y="-1093.73" font-family="Times Roman,serif" font-size="14.00">[STRING] model (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The version number of the analyzer software and/or hardware.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="The version number of the analyzer software and/or hardware.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1067 514,-1087 762,-1087 762,-1067 514,-1067"/>
 <polygon fill="none" stroke="black" points="514,-1067 514,-1087 762,-1087 762,-1067 514,-1067"/>
 <text text-anchor="start" x="539" y="-1073.73" font-family="Times Roman,serif" font-size="14.00">[STRING] version (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The class of analyzer software and/or hardware.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="The class of analyzer software and/or hardware.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1047 514,-1067 762,-1067 762,-1047 514,-1047"/>
 <polygon fill="none" stroke="black" points="514,-1047 514,-1067 762,-1067 762,-1047 514,-1047"/>
 <text text-anchor="start" x="548" y="-1053.73" font-family="Times Roman,serif" font-size="14.00">[STRING] class (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="Operating system name. &#160;On POSIX 1003.1 compliant systems, this is the value returned in utsname.sysname by the uname() system call, or the output of the &quot;uname &#45;s&quot; command.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="Operating system name. &#160;On POSIX 1003.1 compliant systems, this is the value returned in utsname.sysname by the uname() system call, or the output of the &quot;uname &#45;s&quot; command.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1027 514,-1047 762,-1047 762,-1027 514,-1027"/>
 <polygon fill="none" stroke="black" points="514,-1027 514,-1047 762,-1047 762,-1027 514,-1027"/>
 <text text-anchor="start" x="541.5" y="-1033.73" font-family="Times Roman,serif" font-size="14.00">[STRING] ostype (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="Operating system version. &#160;On POSIX 1003.1 compliant systems, this is the value returned in utsname.release by the uname() system call, or the output of the &quot;uname &#45;r&quot; command.">
+<a xlink:href="/idmef_parser/IDMEF/Analyzer.html" xlink:title="Operating system version. &#160;On POSIX 1003.1 compliant systems, this is the value returned in utsname.release by the uname() system call, or the output of the &quot;uname &#45;r&quot; command.">
 <polygon fill="#ffff66" stroke="#ffff66" points="514,-1007 514,-1027 762,-1027 762,-1007 514,-1007"/>
 <polygon fill="none" stroke="black" points="514,-1007 514,-1027 762,-1027 762,-1007 514,-1007"/>
 <text text-anchor="start" x="531.5" y="-1013.73" font-family="Times Roman,serif" font-size="14.00">[STRING] osversion (Optional) </text>
@@ -114,7 +114,7 @@
 </g>
 <!-- CreateTime -->
 <g id="node12" class="node"><title>CreateTime</title>
-<a xlink:href="#" xlink:title="The CreateTime class is used to indicate the date and time the alert or heartbeat was created by the analyzer. ">
+<a xlink:href="/idmef_parser/IDMEF/CreateTime.html" xlink:title="The CreateTime class is used to indicate the date and time the alert or heartbeat was created by the analyzer. ">
 <polygon fill="#5c5c99" stroke="#5c5c99" points="595,-1252 595,-1273 682,-1273 682,-1252 595,-1252"/>
 <polygon fill="none" stroke="black" points="595,-1252 595,-1273 682,-1273 682,-1252 595,-1252"/>
 <text text-anchor="start" x="598.5" y="-1259.23" font-family="Times Roman,serif" font-size="14.00">CreateTime</text>
@@ -128,7 +128,7 @@
 </g>
 <!-- AnalyzerTime -->
 <g id="node14" class="node"><title>AnalyzerTime</title>
-<a xlink:href="#" xlink:title="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. ">
+<a xlink:href="/idmef_parser/IDMEF/AnalyzerTime.html" xlink:title="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. ">
 <polygon fill="#5c5c99" stroke="#5c5c99" points="587,-957 587,-978 689,-978 689,-957 587,-957"/>
 <polygon fill="none" stroke="black" points="587,-957 587,-978 689,-978 689,-957 587,-957"/>
 <text text-anchor="start" x="590.5" y="-964.233" font-family="Times Roman,serif" font-size="14.00">AnalyzerTime</text>
@@ -142,12 +142,12 @@
 </g>
 <!-- AdditionalData -->
 <g id="node16" class="node"><title>AdditionalData</title>
-<a xlink:href="#" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
+<a xlink:href="/idmef_parser/IDMEF/AdditionalData.html" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
 <polygon fill="#431d60" stroke="#431d60" points="531,-907 531,-928 745,-928 745,-907 531,-907"/>
 <polygon fill="none" stroke="black" points="531,-907 531,-928 745,-928 745,-907 531,-907"/>
 <text text-anchor="start" x="586.5" y="-914.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
-<a xlink:href="#" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
+<a xlink:href="/idmef_parser/IDMEF/AdditionalData.html" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
 <polygon fill="#7030a0" stroke="#7030a0" points="531,-887 531,-907 745,-907 745,-887 531,-887"/>
 <polygon fill="none" stroke="black" points="531,-887 531,-907 745,-907 745,-887 531,-887"/>
 <text text-anchor="start" x="534.5" y="-893.733" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
@@ -167,27 +167,27 @@
 </g>
 <!-- Node -->
 <g id="node4" class="node"><title>Node</title>
-<a xlink:href="#" xlink:title="The Node class is used to identify hosts and other network devices (routers, switches, etc.). ">
+<a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The Node class is used to identify hosts and other network devices (routers, switches, etc.). ">
 <polygon fill="#007a00" stroke="#007a00" points="900,-1151 900,-1172 1103,-1172 1103,-1151 900,-1151"/>
 <polygon fill="none" stroke="black" points="900,-1151 900,-1172 1103,-1172 1103,-1151 900,-1151"/>
 <text text-anchor="start" x="983.5" y="-1158.23" font-family="Times Roman,serif" font-size="14.00">Node</text>
 </a>
-<a xlink:href="#" xlink:title="The location of the equipment.">
+<a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The location of the equipment.">
 <polygon fill="#00cc00" stroke="#00cc00" points="900,-1131 900,-1151 1103,-1151 1103,-1131 900,-1131"/>
 <polygon fill="none" stroke="black" points="900,-1131 900,-1151 1103,-1151 1103,-1131 900,-1131"/>
 <text text-anchor="start" x="916.5" y="-1137.73" font-family="Times Roman,serif" font-size="14.00">[STRING] location (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The name of the equipment. &#160;This information MUST be provided if no Address information is given.">
+<a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The name of the equipment. &#160;This information MUST be provided if no Address information is given.">
 <polygon fill="#00cc00" stroke="#00cc00" points="900,-1111 900,-1131 1103,-1131 1103,-1111 900,-1111"/>
 <polygon fill="none" stroke="black" points="900,-1111 900,-1131 1103,-1131 1103,-1111 900,-1111"/>
 <text text-anchor="start" x="924.5" y="-1117.73" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the node; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="A unique identifier for the node; see Section 3.2.9.">
 <polygon fill="#00cc00" stroke="#00cc00" points="900,-1091 900,-1111 1103,-1111 1103,-1091 900,-1091"/>
 <polygon fill="none" stroke="black" points="900,-1091 900,-1111 1103,-1111 1103,-1091 900,-1091"/>
 <text text-anchor="start" x="910" y="-1097.73" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The &quot;domain&quot; from which the name information was obtained, if relevant. &#160;The permitted values for this attribute are shown in the table below. &#160;The default value is &quot;unknown&quot;. (See also Section 10 for extensions to the table.)">
+<a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The &quot;domain&quot; from which the name information was obtained, if relevant. &#160;The permitted values for this attribute are shown in the table below. &#160;The default value is &quot;unknown&quot;. (See also Section 10 for extensions to the table.)">
 <polygon fill="#00cc00" stroke="#00cc00" points="900,-1071 900,-1091 1103,-1091 1103,-1071 900,-1071"/>
 <polygon fill="none" stroke="black" points="900,-1071 900,-1091 1103,-1091 1103,-1071 900,-1071"/>
 <text text-anchor="start" x="903.5" y="-1077.73" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
@@ -201,37 +201,37 @@
 </g>
 <!-- Process -->
 <g id="node8" class="node"><title>Process</title>
-<a xlink:href="#" xlink:title="The Process class is used to describe processes being executed on sources, targets, and analyzers. ">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The Process class is used to describe processes being executed on sources, targets, and analyzers. ">
 <polygon fill="#997a3d" stroke="#997a3d" points="906,-1025 906,-1046 1096,-1046 1096,-1025 906,-1025"/>
 <polygon fill="none" stroke="black" points="906,-1025 906,-1046 1096,-1046 1096,-1025 906,-1025"/>
 <text text-anchor="start" x="975" y="-1032.23" font-family="Times Roman,serif" font-size="14.00">Process</text>
 </a>
-<a xlink:href="#" xlink:title="The name of the program being executed. This is a short name; path and argument information are provided elsewhere.">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The name of the program being executed. This is a short name; path and argument information are provided elsewhere.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="906,-1005 906,-1025 1096,-1025 1096,-1005 906,-1005"/>
 <polygon fill="none" stroke="black" points="906,-1005 906,-1025 1096,-1025 1096,-1005 906,-1005"/>
 <text text-anchor="start" x="933" y="-1011.73" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The process identifier of the process.">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The process identifier of the process.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="906,-985 906,-1005 1096,-1005 1096,-985 906,-985"/>
 <polygon fill="none" stroke="black" points="906,-985 906,-1005 1096,-1005 1096,-985 906,-985"/>
 <text text-anchor="start" x="928.5" y="-991.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] pid (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The full path of the program being executed.">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The full path of the program being executed.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="906,-965 906,-985 1096,-985 1096,-965 906,-965"/>
 <polygon fill="none" stroke="black" points="906,-965 906,-985 1096,-985 1096,-965 906,-965"/>
 <text text-anchor="start" x="927" y="-971.733" font-family="Times Roman,serif" font-size="14.00">[STRING] path (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A command&#45;line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="A command&#45;line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="906,-945 906,-965 1096,-965 1096,-945 906,-945"/>
 <polygon fill="none" stroke="black" points="906,-945 906,-965 1096,-965 1096,-945 906,-945"/>
 <text text-anchor="start" x="932.5" y="-951.733" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
 </a>
-<a xlink:href="#" xlink:title="An environment string associated with the process; generally of the format &quot;VARIABLE=value&quot;. &#160;Multiple environment strings may be specified with multiple uses of env.">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="An environment string associated with the process; generally of the format &quot;VARIABLE=value&quot;. &#160;Multiple environment strings may be specified with multiple uses of env.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="906,-925 906,-945 1096,-945 1096,-925 906,-925"/>
 <polygon fill="none" stroke="black" points="906,-925 906,-945 1096,-945 1096,-925 906,-925"/>
 <text text-anchor="start" x="931" y="-931.733" font-family="Times Roman,serif" font-size="14.00">[STRING] env (0..*) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the process; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="A unique identifier for the process; see Section 3.2.9.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="906,-905 906,-925 1096,-925 1096,-905 906,-905"/>
 <polygon fill="none" stroke="black" points="906,-905 906,-925 1096,-925 1096,-905 906,-905"/>
 <text text-anchor="start" x="909.5" y="-911.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
@@ -245,37 +245,37 @@
 </g>
 <!-- Address -->
 <g id="node5" class="node"><title>Address</title>
-<a xlink:href="#" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
 <polygon fill="#007a00" stroke="#007a00" points="1279,-1171 1279,-1192 1508,-1192 1508,-1171 1279,-1171"/>
 <polygon fill="none" stroke="black" points="1279,-1171 1279,-1192 1508,-1192 1508,-1171 1279,-1171"/>
 <text text-anchor="start" x="1366" y="-1178.23" font-family="Times Roman,serif" font-size="14.00">Address</text>
 </a>
-<a xlink:href="#" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
 <polygon fill="#00cc00" stroke="#00cc00" points="1279,-1151 1279,-1171 1508,-1171 1508,-1151 1279,-1151"/>
 <polygon fill="none" stroke="black" points="1279,-1151 1279,-1171 1508,-1171 1508,-1151 1279,-1151"/>
 <text text-anchor="start" x="1318" y="-1157.73" font-family="Times Roman,serif" font-size="14.00">[STRING] address (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The network mask for the address, if appropriate.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The network mask for the address, if appropriate.">
 <polygon fill="#00cc00" stroke="#00cc00" points="1279,-1131 1279,-1151 1508,-1151 1508,-1131 1279,-1131"/>
 <polygon fill="none" stroke="black" points="1279,-1131 1279,-1151 1508,-1151 1508,-1131 1279,-1131"/>
 <text text-anchor="start" x="1306" y="-1137.73" font-family="Times Roman,serif" font-size="14.00">[STRING] netmask (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the address; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="A unique identifier for the address; see Section 3.2.9.">
 <polygon fill="#00cc00" stroke="#00cc00" points="1279,-1111 1279,-1131 1508,-1131 1508,-1111 1279,-1111"/>
 <polygon fill="none" stroke="black" points="1279,-1111 1279,-1131 1508,-1131 1508,-1111 1279,-1111"/>
 <text text-anchor="start" x="1302" y="-1117.73" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
 <polygon fill="#00cc00" stroke="#00cc00" points="1279,-1091 1279,-1111 1508,-1111 1508,-1091 1279,-1091"/>
 <polygon fill="none" stroke="black" points="1279,-1091 1279,-1111 1508,-1111 1508,-1091 1279,-1091"/>
 <text text-anchor="start" x="1295.5" y="-1097.73" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The name of the Virtual LAN to which the address belongs.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The name of the Virtual LAN to which the address belongs.">
 <polygon fill="#00cc00" stroke="#00cc00" points="1279,-1071 1279,-1091 1508,-1091 1508,-1071 1279,-1071"/>
 <polygon fill="none" stroke="black" points="1279,-1071 1279,-1091 1508,-1091 1508,-1071 1279,-1071"/>
 <text text-anchor="start" x="1283.5" y="-1077.73" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;name (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The number of the Virtual LAN to which the address belongs.">
+<a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The number of the Virtual LAN to which the address belongs.">
 <polygon fill="#00cc00" stroke="#00cc00" points="1279,-1051 1279,-1071 1508,-1071 1508,-1051 1279,-1051"/>
 <polygon fill="none" stroke="black" points="1279,-1051 1279,-1071 1508,-1071 1508,-1051 1279,-1051"/>
 <text text-anchor="start" x="1282.5" y="-1057.73" font-family="Times Roman,serif" font-size="14.00">[INTEGER] vlan&#45;num (Optional) </text>
@@ -313,22 +313,22 @@
 </g>
 <!-- OverflowAlert -->
 <g id="node20" class="node"><title>OverflowAlert</title>
-<a xlink:href="#" xlink:title="The OverflowAlert carries additional information related to buffer overflow attacks. It is intended to enable an analyzer to provide the details of the overflow attack itself. ">
+<a xlink:href="/idmef_parser/IDMEF/OverflowAlert.html" xlink:title="The OverflowAlert carries additional information related to buffer overflow attacks. It is intended to enable an analyzer to provide the details of the overflow attack itself. ">
 <polygon fill="#737373" stroke="#737373" points="557,-349 557,-370 720,-370 720,-349 557,-349"/>
 <polygon fill="none" stroke="black" points="557,-349 557,-370 720,-370 720,-349 557,-349"/>
 <text text-anchor="start" x="589.5" y="-356.233" font-family="Times Roman,serif" font-size="14.00">OverflowAlert</text>
 </a>
-<a xlink:href="#" xlink:title="The program that the overflow attack attempted to run (NOTE: this is not the program that was attacked).">
+<a xlink:href="/idmef_parser/IDMEF/OverflowAlert.html" xlink:title="The program that the overflow attack attempted to run (NOTE: this is not the program that was attacked).">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="557,-329 557,-349 720,-349 720,-329 557,-329"/>
 <polygon fill="none" stroke="black" points="557,-329 557,-349 720,-349 720,-329 557,-329"/>
 <text text-anchor="start" x="560.5" y="-335.733" font-family="Times Roman,serif" font-size="14.00">[STRING] program (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The size, in bytes, of the overflow (i.e., the number of bytes the attacker sent).">
+<a xlink:href="/idmef_parser/IDMEF/OverflowAlert.html" xlink:title="The size, in bytes, of the overflow (i.e., the number of bytes the attacker sent).">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="557,-309 557,-329 720,-329 720,-309 557,-309"/>
 <polygon fill="none" stroke="black" points="557,-309 557,-329 720,-329 720,-309 557,-309"/>
 <text text-anchor="start" x="562.5" y="-315.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] size (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="Some or all of the overflow data itself (dependent on how much the analyzer can capture).">
+<a xlink:href="/idmef_parser/IDMEF/OverflowAlert.html" xlink:title="Some or all of the overflow data itself (dependent on how much the analyzer can capture).">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="557,-289 557,-309 720,-309 720,-289 557,-289"/>
 <polygon fill="none" stroke="black" points="557,-289 557,-309 720,-309 720,-289 557,-289"/>
 <text text-anchor="start" x="563.5" y="-295.733" font-family="Times Roman,serif" font-size="14.00">[BYTE[]] buffer (0..1) </text>
@@ -341,22 +341,22 @@
 </g>
 <!-- ToolAlert -->
 <g id="node22" class="node"><title>ToolAlert</title>
-<a xlink:href="#" xlink:title="The ToolAlert class carries additional information related to the use of attack tools or malevolent programs such as Trojan horses and can be used by the analyzer when it is able to identify these tools. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts were all the result of someone using this tool&quot;. ">
+<a xlink:href="/idmef_parser/IDMEF/ToolAlert.html" xlink:title="The ToolAlert class carries additional information related to the use of attack tools or malevolent programs such as Trojan horses and can be used by the analyzer when it is able to identify these tools. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts were all the result of someone using this tool&quot;. ">
 <polygon fill="#737373" stroke="#737373" points="544,-243 544,-264 733,-264 733,-243 544,-243"/>
 <polygon fill="none" stroke="black" points="544,-243 544,-264 733,-264 733,-243 544,-243"/>
 <text text-anchor="start" x="608" y="-250.233" font-family="Times Roman,serif" font-size="14.00">ToolAlert</text>
 </a>
-<a xlink:href="#" xlink:title="The reason for grouping the alerts together, for example, the name of a particular tool.">
+<a xlink:href="/idmef_parser/IDMEF/ToolAlert.html" xlink:title="The reason for grouping the alerts together, for example, the name of a particular tool.">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="544,-223 544,-243 733,-243 733,-223 544,-223"/>
 <polygon fill="none" stroke="black" points="544,-223 544,-243 733,-243 733,-223 544,-223"/>
 <text text-anchor="start" x="570.5" y="-229.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The command or operation that the tool was asked to perform, for example, a BackOrifice ping.">
+<a xlink:href="/idmef_parser/IDMEF/ToolAlert.html" xlink:title="The command or operation that the tool was asked to perform, for example, a BackOrifice ping.">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="544,-203 544,-223 733,-223 733,-203 544,-203"/>
 <polygon fill="none" stroke="black" points="544,-203 544,-223 733,-223 733,-203 544,-203"/>
 <text text-anchor="start" x="547.5" y="-209.733" font-family="Times Roman,serif" font-size="14.00">[STRING] command (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the ToolAlert.">
+<a xlink:href="/idmef_parser/IDMEF/ToolAlert.html" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the ToolAlert.">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="544,-183 544,-203 733,-203 733,-183 544,-183"/>
 <polygon fill="none" stroke="black" points="544,-183 544,-203 733,-203 733,-183 544,-183"/>
 <text text-anchor="start" x="547.5" y="-189.733" font-family="Times Roman,serif" font-size="14.00">[STRING] alertident (1..*) </text>
@@ -369,17 +369,17 @@
 </g>
 <!-- CorrelationAlert -->
 <g id="node24" class="node"><title>CorrelationAlert</title>
-<a xlink:href="#" xlink:title="The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts are all related&quot;. ">
+<a xlink:href="/idmef_parser/IDMEF/CorrelationAlert.html" xlink:title="The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts are all related&quot;. ">
 <polygon fill="#737373" stroke="#737373" points="544,-841 544,-862 733,-862 733,-841 544,-841"/>
 <polygon fill="none" stroke="black" points="544,-841 544,-862 733,-862 733,-841 544,-841"/>
 <text text-anchor="start" x="582.5" y="-848.233" font-family="Times Roman,serif" font-size="14.00">CorrelationAlert</text>
 </a>
-<a xlink:href="#" xlink:title="The reason for grouping the alerts together, for example, a particular correlation method.">
+<a xlink:href="/idmef_parser/IDMEF/CorrelationAlert.html" xlink:title="The reason for grouping the alerts together, for example, a particular correlation method.">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="544,-821 544,-841 733,-841 733,-821 544,-821"/>
 <polygon fill="none" stroke="black" points="544,-821 544,-841 733,-841 733,-821 544,-821"/>
 <text text-anchor="start" x="570.5" y="-827.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.">
+<a xlink:href="/idmef_parser/IDMEF/CorrelationAlert.html" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.">
 <polygon fill="#bfbfbf" stroke="#bfbfbf" points="544,-801 544,-821 733,-821 733,-801 544,-801"/>
 <polygon fill="none" stroke="black" points="544,-801 544,-821 733,-821 733,-801 544,-801"/>
 <text text-anchor="start" x="547.5" y="-807.733" font-family="Times Roman,serif" font-size="14.00">[STRING] alertident (1..*) </text>
@@ -392,17 +392,17 @@
 </g>
 <!-- Classification -->
 <g id="node28" class="node"><title>Classification</title>
-<a xlink:href="#" xlink:title="The Classification class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. This name is chosen by the alert provider. ">
+<a xlink:href="/idmef_parser/IDMEF/Classification.html" xlink:title="The Classification class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. This name is chosen by the alert provider. ">
 <polygon fill="#5c3d1f" stroke="#5c3d1f" points="543,-489 543,-510 733,-510 733,-489 543,-489"/>
 <polygon fill="none" stroke="black" points="543,-489 543,-510 733,-510 733,-489 543,-489"/>
 <text text-anchor="start" x="593" y="-496.233" font-family="Times Roman,serif" font-size="14.00">Classification</text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for this classification; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Classification.html" xlink:title="A unique identifier for this classification; see Section 3.2.9.">
 <polygon fill="#996633" stroke="#996633" points="543,-469 543,-489 733,-489 733,-469 543,-469"/>
 <polygon fill="none" stroke="black" points="543,-469 543,-489 733,-489 733,-469 543,-469"/>
 <text text-anchor="start" x="546.5" y="-475.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="A vendor&#45;provided string identifying the Alert message.">
+<a xlink:href="/idmef_parser/IDMEF/Classification.html" xlink:title="A vendor&#45;provided string identifying the Alert message.">
 <polygon fill="#996633" stroke="#996633" points="543,-449 543,-469 733,-469 733,-449 543,-449"/>
 <polygon fill="none" stroke="black" points="543,-449 543,-469 733,-469 733,-449 543,-449"/>
 <text text-anchor="start" x="549" y="-455.733" font-family="Times Roman,serif" font-size="14.00">[STRING] text (Required) </text>
@@ -416,7 +416,7 @@
 </g>
 <!-- DetectTime -->
 <g id="node32" class="node"><title>DetectTime</title>
-<a xlink:href="#" xlink:title="The DetectTime class is used to indicate the date and time that the event(s) producing an alert was detected by the analyzer. In the case of more than one event, it is the time that the first event was detected. (This may or may not be the same time as CreateTime; analyzers are not required to send alerts immediately upon detection). ">
+<a xlink:href="/idmef_parser/IDMEF/DetectTime.html" xlink:title="The DetectTime class is used to indicate the date and time that the event(s) producing an alert was detected by the analyzer. In the case of more than one event, it is the time that the first event was detected. (This may or may not be the same time as CreateTime; analyzers are not required to send alerts immediately upon detection). ">
 <polygon fill="#5c5c99" stroke="#5c5c99" points="595,-399 595,-420 682,-420 682,-399 595,-399"/>
 <polygon fill="none" stroke="black" points="595,-399 595,-420 682,-420 682,-399 595,-399"/>
 <text text-anchor="start" x="598.5" y="-406.233" font-family="Times Roman,serif" font-size="14.00">DetectTime</text>
@@ -430,22 +430,22 @@
 </g>
 <!-- Source -->
 <g id="node35" class="node"><title>Source</title>
-<a xlink:href="#" xlink:title="The Source class contains information about the possible source(s) of the event(s) that generated an alert. An event may have more than one source (e.g., in a distributed denial&#45;of&#45;service attack). ">
+<a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="The Source class contains information about the possible source(s) of the event(s) that generated an alert. An event may have more than one source (e.g., in a distributed denial&#45;of&#45;service attack). ">
 <polygon fill="#182f5f" stroke="#182f5f" points="531,-755 531,-776 746,-776 746,-755 531,-755"/>
 <polygon fill="none" stroke="black" points="531,-755 531,-776 746,-776 746,-755 531,-755"/>
 <text text-anchor="start" x="614.5" y="-762.233" font-family="Times Roman,serif" font-size="14.00">Source</text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for this source; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="A unique identifier for this source; see Section 3.2.9.">
 <polygon fill="#284f9f" stroke="#284f9f" points="531,-735 531,-755 746,-755 746,-735 531,-735"/>
 <polygon fill="none" stroke="black" points="531,-735 531,-755 746,-755 746,-735 531,-735"/>
 <text text-anchor="start" x="547" y="-741.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
 <polygon fill="#284f9f" stroke="#284f9f" points="531,-715 531,-735 746,-735 746,-715 531,-715"/>
 <polygon fill="none" stroke="black" points="531,-715 531,-735 746,-735 746,-715 531,-715"/>
 <text text-anchor="start" x="544.5" y="-721.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] spoofed (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="May be used by a network&#45;based analyzer with multiple interfaces to indicate which interface this source was seen on.">
+<a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="May be used by a network&#45;based analyzer with multiple interfaces to indicate which interface this source was seen on.">
 <polygon fill="#284f9f" stroke="#284f9f" points="531,-695 531,-715 746,-715 746,-695 531,-695"/>
 <polygon fill="none" stroke="black" points="531,-695 531,-715 746,-715 746,-695 531,-695"/>
 <text text-anchor="start" x="534.5" y="-701.733" font-family="Times Roman,serif" font-size="14.00">[STRING] interface (Optional) </text>
@@ -459,22 +459,22 @@
 </g>
 <!-- Target -->
 <g id="node49" class="node"><title>Target</title>
-<a xlink:href="#" xlink:title="The Target class contains information about the possible target(s) of the event(s) that generated an alert. An event may have more than one target (e.g., in the case of a port sweep). ">
+<a xlink:href="/idmef_parser/IDMEF/Target.html" xlink:title="The Target class contains information about the possible target(s) of the event(s) that generated an alert. An event may have more than one target (e.g., in the case of a port sweep). ">
 <polygon fill="#182f5f" stroke="#182f5f" points="531,-649 531,-670 746,-670 746,-649 531,-649"/>
 <polygon fill="none" stroke="black" points="531,-649 531,-670 746,-670 746,-649 531,-649"/>
 <text text-anchor="start" x="616.5" y="-656.233" font-family="Times Roman,serif" font-size="14.00">Target</text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for this target, see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Target.html" xlink:title="A unique identifier for this target, see Section 3.2.9.">
 <polygon fill="#284f9f" stroke="#284f9f" points="531,-629 531,-649 746,-649 746,-629 531,-629"/>
 <polygon fill="none" stroke="black" points="531,-629 531,-649 746,-649 746,-629 531,-629"/>
 <text text-anchor="start" x="547" y="-635.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="An indication of whether the target is, as far as the analyzer can determine, a decoy. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Target.html" xlink:title="An indication of whether the target is, as far as the analyzer can determine, a decoy. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
 <polygon fill="#284f9f" stroke="#284f9f" points="531,-609 531,-629 746,-629 746,-609 531,-609"/>
 <polygon fill="none" stroke="black" points="531,-609 531,-629 746,-629 746,-609 531,-609"/>
 <text text-anchor="start" x="551" y="-615.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] decoy (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="May be used by a network&#45;based analyzer with multiple interfaces to indicate which interface this target was seen on.">
+<a xlink:href="/idmef_parser/IDMEF/Target.html" xlink:title="May be used by a network&#45;based analyzer with multiple interfaces to indicate which interface this target was seen on.">
 <polygon fill="#284f9f" stroke="#284f9f" points="531,-589 531,-609 746,-609 746,-589 531,-589"/>
 <polygon fill="none" stroke="black" points="531,-589 531,-609 746,-609 746,-589 531,-589"/>
 <text text-anchor="start" x="534.5" y="-595.733" font-family="Times Roman,serif" font-size="14.00">[STRING] interface (Optional) </text>
@@ -488,7 +488,7 @@
 </g>
 <!-- Assessment -->
 <g id="node67" class="node"><title>Assessment</title>
-<a xlink:href="#" xlink:title="The Assessment class is used to provide the analyzer&#39;s assessment of an event &#45;&#45; its impact, actions taken in response, and confidence. ">
+<a xlink:href="/idmef_parser/IDMEF/Assessment.html" xlink:title="The Assessment class is used to provide the analyzer&#39;s assessment of an event &#45;&#45; its impact, actions taken in response, and confidence. ">
 <polygon fill="#993016" stroke="#993016" points="594,-539 594,-560 683,-560 683,-539 594,-539"/>
 <polygon fill="none" stroke="black" points="594,-539 594,-560 683,-560 683,-539 594,-539"/>
 <text text-anchor="start" x="597.5" y="-546.233" font-family="Times Roman,serif" font-size="14.00">Assessment</text>
@@ -502,27 +502,27 @@
 </g>
 <!-- Reference -->
 <g id="node29" class="node"><title>Reference</title>
-<a xlink:href="#" xlink:title="The Reference class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. ">
+<a xlink:href="/idmef_parser/IDMEF/Reference.html" xlink:title="The Reference class provides the &quot;name&quot; of an alert, or other information allowing the manager to determine what it is. ">
 <polygon fill="#5c3d1f" stroke="#5c3d1f" points="894,-83 894,-104 1108,-104 1108,-83 894,-83"/>
 <polygon fill="none" stroke="black" points="894,-83 894,-104 1108,-104 1108,-83 894,-83"/>
 <text text-anchor="start" x="966.5" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">Reference</text>
 </a>
-<a xlink:href="#" xlink:title="The name of the alert, from one of the origins listed below.">
+<a xlink:href="/idmef_parser/IDMEF/Reference.html" xlink:title="The name of the alert, from one of the origins listed below.">
 <polygon fill="#996633" stroke="#996633" points="894,-63 894,-83 1108,-83 1108,-63 894,-63"/>
 <polygon fill="none" stroke="black" points="894,-63 894,-83 1108,-83 1108,-63 894,-63"/>
 <text text-anchor="start" x="933" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
-<a xlink:href="#" xlink:title="A URL at which the manager (or the human operator of the manager) can find additional information about the alert. &#160;The document pointed to by the URL may include an in&#45;depth description of the attack, appropriate countermeasures, or other information deemed relevant by the vendor.">
+<a xlink:href="/idmef_parser/IDMEF/Reference.html" xlink:title="A URL at which the manager (or the human operator of the manager) can find additional information about the alert. &#160;The document pointed to by the URL may include an in&#45;depth description of the attack, appropriate countermeasures, or other information deemed relevant by the vendor.">
 <polygon fill="#996633" stroke="#996633" points="894,-43 894,-63 1108,-63 1108,-43 894,-43"/>
 <polygon fill="none" stroke="black" points="894,-43 894,-63 1108,-63 1108,-43 894,-43"/>
 <text text-anchor="start" x="942.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The source from which the name of the alert originates. The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Reference.html" xlink:title="The source from which the name of the alert originates. The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
 <polygon fill="#996633" stroke="#996633" points="894,-23 894,-43 1108,-43 1108,-23 894,-23"/>
 <polygon fill="none" stroke="black" points="894,-23 894,-43 1108,-43 1108,-23 894,-23"/>
 <text text-anchor="start" x="912.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] origin (Required) </text>
 </a>
-<a xlink:href="#" xlink:title="The meaning of the reference, as understood by the alert provider. &#160;This field is only valid if the value of the &lt;origin&gt; attribute is set to &quot;vendor&#45;specific&quot; or &quot;user&#45;specific&quot;.">
+<a xlink:href="/idmef_parser/IDMEF/Reference.html" xlink:title="The meaning of the reference, as understood by the alert provider. &#160;This field is only valid if the value of the &lt;origin&gt; attribute is set to &quot;vendor&#45;specific&quot; or &quot;user&#45;specific&quot;.">
 <polygon fill="#996633" stroke="#996633" points="894,-3 894,-23 1108,-23 1108,-3 894,-3"/>
 <polygon fill="none" stroke="black" points="894,-3 894,-23 1108,-23 1108,-3 894,-3"/>
 <text text-anchor="start" x="897.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
@@ -548,17 +548,17 @@
 </g>
 <!-- User -->
 <g id="node37" class="node"><title>User</title>
-<a xlink:href="#" xlink:title="The User class is used to describe users. It is primarily used as a &quot;container&quot; class for the UserId aggregate class, as shown in Figure 16. ">
+<a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="The User class is used to describe users. It is primarily used as a &quot;container&quot; class for the UserId aggregate class, as shown in Figure 16. ">
 <polygon fill="#3d7a99" stroke="#3d7a99" points="900,-653 900,-674 1103,-674 1103,-653 900,-653"/>
 <polygon fill="none" stroke="black" points="900,-653 900,-674 1103,-674 1103,-653 900,-653"/>
 <text text-anchor="start" x="985.5" y="-660.233" font-family="Times Roman,serif" font-size="14.00">User</text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the user; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="A unique identifier for the user; see Section 3.2.9.">
 <polygon fill="#66ccff" stroke="#66ccff" points="900,-633 900,-653 1103,-653 1103,-633 900,-633"/>
 <polygon fill="none" stroke="black" points="900,-633 900,-653 1103,-653 1103,-633 900,-633"/>
 <text text-anchor="start" x="910" y="-639.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The type of user represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. (See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="The type of user represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. (See also Section 10.)">
 <polygon fill="#66ccff" stroke="#66ccff" points="900,-613 900,-633 1103,-633 1103,-613 900,-613"/>
 <polygon fill="none" stroke="black" points="900,-613 900,-633 1103,-633 1103,-613 900,-613"/>
 <text text-anchor="start" x="903.5" y="-619.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
@@ -572,47 +572,47 @@
 </g>
 <!-- Service -->
 <g id="node42" class="node"><title>Service</title>
-<a xlink:href="#" xlink:title="The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ">
 <polygon fill="#997a7a" stroke="#997a7a" points="843,-859 843,-880 1160,-880 1160,-859 843,-859"/>
 <polygon fill="none" stroke="black" points="843,-859 843,-880 1160,-880 1160,-859 843,-859"/>
 <text text-anchor="start" x="976" y="-866.233" font-family="Times Roman,serif" font-size="14.00">Service</text>
 </a>
-<a xlink:href="#" xlink:title="The name of the service. &#160;Whenever possible, the name from the IANA list of well&#45;known ports SHOULD be used.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The name of the service. &#160;Whenever possible, the name from the IANA list of well&#45;known ports SHOULD be used.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-839 843,-859 1160,-859 1160,-839 843,-839"/>
 <polygon fill="none" stroke="black" points="843,-839 843,-859 1160,-859 1160,-839 843,-839"/>
 <text text-anchor="start" x="924.5" y="-845.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The port number being used.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The port number being used.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-819 843,-839 1160,-839 1160,-819 843,-819"/>
 <polygon fill="none" stroke="black" points="843,-819 843,-839 1160,-839 1160,-819 843,-819"/>
 <text text-anchor="start" x="924.5" y="-825.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] port (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A list of port numbers being used; see Section 3.2.8 for formatting rules. &#160;If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A list of port numbers being used; see Section 3.2.8 for formatting rules. &#160;If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-799 843,-819 1160,-819 1160,-799 843,-799"/>
 <polygon fill="none" stroke="black" points="843,-799 843,-819 1160,-819 1160,-799 843,-799"/>
 <text text-anchor="start" x="911.5" y="-805.733" font-family="Times Roman,serif" font-size="14.00">[PORTLIST] portlist (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="Additional information about the protocol being used. &#160;The intent of the protocol field is to carry additional information related to the protocol being used when the &lt;Service&gt; attributes iana_protocol_number or/and iana_protocol_name are filed.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="Additional information about the protocol being used. &#160;The intent of the protocol field is to carry additional information related to the protocol being used when the &lt;Service&gt; attributes iana_protocol_number or/and iana_protocol_name are filed.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-779 843,-799 1160,-799 1160,-779 843,-779"/>
 <polygon fill="none" stroke="black" points="843,-779 843,-799 1160,-799 1160,-779 843,-779"/>
 <text text-anchor="start" x="915.5" y="-785.733" font-family="Times Roman,serif" font-size="14.00">[STRING] protocol (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the service; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A unique identifier for the service; see Section 3.2.9.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-759 843,-779 1160,-779 1160,-759 843,-759"/>
 <polygon fill="none" stroke="black" points="843,-759 843,-779 1160,-779 1160,-759 843,-759"/>
 <text text-anchor="start" x="910" y="-765.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The IP version number.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IP version number.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-739 843,-759 1160,-759 1160,-739 843,-739"/>
 <polygon fill="none" stroke="black" points="843,-739 843,-759 1160,-759 1160,-739 843,-739"/>
 <text text-anchor="start" x="888.5" y="-745.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] ip_version (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The IANA protocol number.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol number.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-719 843,-739 1160,-739 1160,-719 843,-719"/>
 <polygon fill="none" stroke="black" points="843,-719 843,-739 1160,-739 1160,-719 843,-719"/>
 <text text-anchor="start" x="846.5" y="-725.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] iana_protocol_number (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The IANA protocol name.">
+<a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol name.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="843,-699 843,-719 1160,-719 1160,-699 843,-699"/>
 <polygon fill="none" stroke="black" points="843,-699 843,-719 1160,-719 1160,-699 843,-699"/>
 <text text-anchor="start" x="858.5" y="-705.733" font-family="Times Roman,serif" font-size="14.00">[STRING] iana_protocol_name (Optional) </text>
@@ -626,32 +626,32 @@
 </g>
 <!-- UserId -->
 <g id="node38" class="node"><title>UserId</title>
-<a xlink:href="#" xlink:title="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. ">
+<a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. ">
 <polygon fill="#3d7a99" stroke="#3d7a99" points="1608,-665 1608,-686 1798,-686 1798,-665 1608,-665"/>
 <polygon fill="none" stroke="black" points="1608,-665 1608,-686 1798,-686 1798,-665 1608,-665"/>
 <text text-anchor="start" x="1680.5" y="-672.233" font-family="Times Roman,serif" font-size="14.00">UserId</text>
 </a>
-<a xlink:href="#" xlink:title="A user or group name.">
+<a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A user or group name.">
 <polygon fill="#66ccff" stroke="#66ccff" points="1608,-645 1608,-665 1798,-665 1798,-645 1608,-645"/>
 <polygon fill="none" stroke="black" points="1608,-645 1608,-665 1798,-665 1798,-645 1608,-645"/>
 <text text-anchor="start" x="1626" y="-651.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A user or group number.">
+<a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A user or group number.">
 <polygon fill="#66ccff" stroke="#66ccff" points="1608,-625 1608,-645 1798,-645 1798,-625 1608,-625"/>
 <polygon fill="none" stroke="black" points="1608,-625 1608,-645 1798,-645 1798,-625 1608,-625"/>
 <text text-anchor="start" x="1614" y="-631.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] number (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for the user id, see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A unique identifier for the user id, see Section 3.2.9.">
 <polygon fill="#66ccff" stroke="#66ccff" points="1608,-605 1608,-625 1798,-625 1798,-605 1608,-605"/>
 <polygon fill="none" stroke="black" points="1608,-605 1608,-625 1798,-625 1798,-605 1608,-605"/>
 <text text-anchor="start" x="1611.5" y="-611.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The type of user information represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;original&#45;user&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The type of user information represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;original&#45;user&quot;. &#160;(See also Section 10.)">
 <polygon fill="#66ccff" stroke="#66ccff" points="1608,-585 1608,-605 1798,-605 1798,-585 1608,-585"/>
 <polygon fill="none" stroke="black" points="1608,-585 1608,-605 1798,-605 1798,-585 1608,-585"/>
 <text text-anchor="start" x="1620" y="-591.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="The tty the user is using.">
+<a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The tty the user is using.">
 <polygon fill="#66ccff" stroke="#66ccff" points="1608,-565 1608,-585 1798,-585 1798,-565 1608,-565"/>
 <polygon fill="none" stroke="black" points="1608,-565 1608,-585 1798,-585 1798,-565 1608,-565"/>
 <text text-anchor="start" x="1619" y="-571.733" font-family="Times Roman,serif" font-size="14.00">[STRING] tty (Optional) </text>
@@ -665,27 +665,27 @@
 </g>
 <!-- WebService -->
 <g id="node43" class="node"><title>WebService</title>
-<a xlink:href="#" xlink:title="The WebService class carries additional information related to web traffic. ">
+<a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The WebService class carries additional information related to web traffic. ">
 <polygon fill="#997a7a" stroke="#997a7a" points="1288,-786 1288,-807 1498,-807 1498,-786 1288,-786"/>
 <polygon fill="none" stroke="black" points="1288,-786 1288,-807 1498,-807 1498,-786 1288,-786"/>
 <text text-anchor="start" x="1352" y="-793.233" font-family="Times Roman,serif" font-size="14.00">WebService</text>
 </a>
-<a xlink:href="#" xlink:title="The URL in the request.">
+<a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The URL in the request.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1288,-766 1288,-786 1498,-786 1498,-766 1288,-766"/>
 <polygon fill="none" stroke="black" points="1288,-766 1288,-786 1498,-786 1498,-766 1288,-766"/>
 <text text-anchor="start" x="1334.5" y="-772.733" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The CGI script in the request, without arguments.">
+<a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The CGI script in the request, without arguments.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1288,-746 1288,-766 1498,-766 1498,-746 1288,-746"/>
 <polygon fill="none" stroke="black" points="1288,-746 1288,-766 1498,-766 1498,-746 1288,-746"/>
 <text text-anchor="start" x="1325.5" y="-752.733" font-family="Times Roman,serif" font-size="14.00">[STRING] cgi (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The HTTP method (PUT, GET) used in the request.">
+<a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The HTTP method (PUT, GET) used in the request.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1288,-726 1288,-746 1498,-746 1498,-726 1288,-726"/>
 <polygon fill="none" stroke="black" points="1288,-726 1288,-746 1498,-746 1498,-726 1288,-726"/>
 <text text-anchor="start" x="1291.5" y="-732.733" font-family="Times Roman,serif" font-size="14.00">[STRING] http&#45;method (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The arguments to the CGI script.">
+<a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The arguments to the CGI script.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1288,-706 1288,-726 1498,-726 1498,-706 1288,-706"/>
 <polygon fill="none" stroke="black" points="1288,-706 1288,-726 1498,-726 1498,-706 1288,-706"/>
 <text text-anchor="start" x="1324.5" y="-712.733" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
@@ -698,47 +698,47 @@
 </g>
 <!-- SNMPService -->
 <g id="node45" class="node"><title>SNMPService</title>
-<a xlink:href="#" xlink:title="The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. ">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. ">
 <polygon fill="#997a7a" stroke="#997a7a" points="1241,-992 1241,-1013 1546,-1013 1546,-992 1241,-992"/>
 <polygon fill="none" stroke="black" points="1241,-992 1241,-1013 1546,-1013 1546,-992 1241,-992"/>
 <text text-anchor="start" x="1348" y="-999.233" font-family="Times Roman,serif" font-size="14.00">SNMPService</text>
 </a>
-<a xlink:href="#" xlink:title="The object identifier in the request.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object identifier in the request.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-972 1241,-992 1546,-992 1546,-972 1241,-972"/>
 <polygon fill="none" stroke="black" points="1241,-972 1241,-992 1546,-992 1546,-972 1241,-972"/>
 <text text-anchor="start" x="1325.5" y="-978.733" font-family="Times Roman,serif" font-size="14.00">[STRING] oid (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-952 1241,-972 1546,-972 1546,-952 1241,-952"/>
 <polygon fill="none" stroke="black" points="1241,-952 1241,-972 1546,-972 1546,-952 1241,-952"/>
 <text text-anchor="start" x="1244.5" y="-958.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] messageProcessingModel (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-932 1241,-952 1546,-952 1546,-932 1241,-932"/>
 <polygon fill="none" stroke="black" points="1241,-932 1241,-952 1546,-952 1546,-932 1241,-932"/>
 <text text-anchor="start" x="1283.5" y="-938.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] securityModel (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The object&#39;s security name; see RFC 3411 [15] Section 3.2.2.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s security name; see RFC 3411 [15] Section 3.2.2.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-912 1241,-932 1546,-932 1546,-912 1241,-912"/>
 <polygon fill="none" stroke="black" points="1241,-912 1241,-932 1546,-932 1546,-912 1241,-912"/>
 <text text-anchor="start" x="1288" y="-918.733" font-family="Times Roman,serif" font-size="14.00">[STRING] securityName (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-892 1241,-912 1546,-912 1546,-892 1241,-892"/>
 <polygon fill="none" stroke="black" points="1241,-892 1241,-912 1546,-912 1546,-892 1241,-892"/>
 <text text-anchor="start" x="1285" y="-898.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] securityLevel (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The object&#39;s context name; see RFC 3411 [15] Section 3.3.3.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context name; see RFC 3411 [15] Section 3.3.3.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-872 1241,-892 1546,-892 1546,-872 1241,-872"/>
 <polygon fill="none" stroke="black" points="1241,-872 1241,-892 1546,-892 1546,-872 1241,-872"/>
 <text text-anchor="start" x="1289.5" y="-878.733" font-family="Times Roman,serif" font-size="14.00">[STRING] contextName (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The object&#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-852 1241,-872 1546,-872 1546,-852 1241,-852"/>
 <polygon fill="none" stroke="black" points="1241,-852 1241,-872 1546,-872 1546,-852 1241,-852"/>
 <text text-anchor="start" x="1277.5" y="-858.733" font-family="Times Roman,serif" font-size="14.00">[STRING] contextEngineID (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The command sent to the SNMP server (GET, SET, etc.).">
+<a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The command sent to the SNMP server (GET, SET, etc.).">
 <polygon fill="#ffcccc" stroke="#ffcccc" points="1241,-832 1241,-852 1546,-852 1546,-832 1241,-832"/>
 <polygon fill="none" stroke="black" points="1241,-832 1241,-852 1546,-852 1546,-832 1241,-832"/>
 <text text-anchor="start" x="1302.5" y="-838.733" font-family="Times Roman,serif" font-size="14.00">[STRING] command (0..1) </text>
@@ -775,57 +775,57 @@
 </g>
 <!-- File -->
 <g id="node54" class="node"><title>File</title>
-<a xlink:href="#" xlink:title="The File class provides specific information about a file or other file&#45;like object that has been created, deleted, or modified on the target. The description can provide either the file settings prior to the event or the file settings at the time of the event, as specified using the &quot;category&quot; attribute. ">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The File class provides specific information about a file or other file&#45;like object that has been created, deleted, or modified on the target. The description can provide either the file settings prior to the event or the file settings at the time of the event, as specified using the &quot;category&quot; attribute. ">
 <polygon fill="#997a00" stroke="#997a00" points="889,-567 889,-588 1113,-588 1113,-567 889,-567"/>
 <polygon fill="none" stroke="black" points="889,-567 889,-588 1113,-588 1113,-567 889,-567"/>
 <text text-anchor="start" x="989" y="-574.233" font-family="Times Roman,serif" font-size="14.00">File</text>
 </a>
-<a xlink:href="#" xlink:title="The name of the file to which the alert applies, not including the path to the file.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The name of the file to which the alert applies, not including the path to the file.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-547 889,-567 1113,-567 1113,-547 889,-547"/>
 <polygon fill="none" stroke="black" points="889,-547 889,-567 1113,-567 1113,-547 889,-547"/>
 <text text-anchor="start" x="933" y="-553.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The full path to the file, including the name. &#160;The path name should be represented in as &quot;universal&quot; a manner as possible, to facilitate processing of the alert.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The full path to the file, including the name. &#160;The path name should be represented in as &quot;universal&quot; a manner as possible, to facilitate processing of the alert.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-527 889,-547 1113,-547 1113,-527 889,-527"/>
 <polygon fill="none" stroke="black" points="889,-527 889,-547 1113,-547 1113,-527 889,-527"/>
 <text text-anchor="start" x="936" y="-533.733" font-family="Times Roman,serif" font-size="14.00">[STRING] path (1) </text>
 </a>
-<a xlink:href="#" xlink:title="Time the file was created. &#160;Note that this is *not* the Unix &quot;st_ctime&quot; file attribute (which is not file creation time). &#160;The Unix &quot;st_ctime&quot; attribute is contained in the &quot;Inode&quot; class.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="Time the file was created. &#160;Note that this is *not* the Unix &quot;st_ctime&quot; file attribute (which is not file creation time). &#160;The Unix &quot;st_ctime&quot; attribute is contained in the &quot;Inode&quot; class.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-507 889,-527 1113,-527 1113,-507 889,-507"/>
 <polygon fill="none" stroke="black" points="889,-507 889,-527 1113,-527 1113,-507 889,-507"/>
 <text text-anchor="start" x="894" y="-513.733" font-family="Times Roman,serif" font-size="14.00">[DATETIME] create&#45;time (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="Time the file was last modified.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="Time the file was last modified.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-487 889,-507 1113,-507 1113,-487 889,-487"/>
 <polygon fill="none" stroke="black" points="889,-487 889,-507 1113,-507 1113,-487 889,-487"/>
 <text text-anchor="start" x="892.5" y="-493.733" font-family="Times Roman,serif" font-size="14.00">[DATETIME] modify&#45;time (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="Time the file was last accessed.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="Time the file was last accessed.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-467 889,-487 1113,-487 1113,-467 889,-467"/>
 <polygon fill="none" stroke="black" points="889,-467 889,-487 1113,-487 1113,-467 889,-467"/>
 <text text-anchor="start" x="894" y="-473.733" font-family="Times Roman,serif" font-size="14.00">[DATETIME] access&#45;time (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The size of the data, in bytes. &#160;Typically what is meant when referring to file size. &#160;On Unix UFS file systems, this value corresponds to stat.st_size. &#160;On Windows NTFS, this value corresponds to Valid Data Length (VDL).">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The size of the data, in bytes. &#160;Typically what is meant when referring to file size. &#160;On Unix UFS file systems, this value corresponds to stat.st_size. &#160;On Windows NTFS, this value corresponds to Valid Data Length (VDL).">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-447 889,-467 1113,-467 1113,-447 889,-447"/>
 <polygon fill="none" stroke="black" points="889,-447 889,-467 1113,-467 1113,-447 889,-447"/>
 <text text-anchor="start" x="907" y="-453.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] data&#45;size (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The physical space on disk consumed by the file, in bytes. &#160;On Unix UFS file systems, this value corresponds to 512 * stat.st_blocks. &#160;On Windows NTFS, this value corresponds to End of File (EOF).">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The physical space on disk consumed by the file, in bytes. &#160;On Unix UFS file systems, this value corresponds to 512 * stat.st_blocks. &#160;On Windows NTFS, this value corresponds to End of File (EOF).">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-427 889,-447 1113,-447 1113,-427 889,-427"/>
 <polygon fill="none" stroke="black" points="889,-427 889,-447 1113,-447 1113,-427 889,-427"/>
 <text text-anchor="start" x="909" y="-433.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] disk&#45;size (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="A unique identifier for this file; see Section 3.2.9.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="A unique identifier for this file; see Section 3.2.9.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-407 889,-427 1113,-427 1113,-407 889,-407"/>
 <polygon fill="none" stroke="black" points="889,-407 889,-427 1113,-427 1113,-407 889,-407"/>
 <text text-anchor="start" x="925.5" y="-413.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The type of file system the file resides on. &#160;This attribute governs how path names and other attributes are interpreted.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The type of file system the file resides on. &#160;This attribute governs how path names and other attributes are interpreted.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-387 889,-407 1113,-407 1113,-387 889,-387"/>
 <polygon fill="none" stroke="black" points="889,-387 889,-407 1113,-407 1113,-387 889,-387"/>
 <text text-anchor="start" x="919" y="-393.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The type of file, as a mime&#45;type.">
+<a xlink:href="/idmef_parser/IDMEF/File.html" xlink:title="The type of file, as a mime&#45;type.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="889,-367 889,-387 1113,-387 1113,-367 889,-367"/>
 <polygon fill="none" stroke="black" points="889,-367 889,-387 1113,-387 1113,-367 889,-367"/>
 <text text-anchor="start" x="915" y="-373.733" font-family="Times Roman,serif" font-size="14.00">[STRING] file&#45;type (0..1) </text>
@@ -839,12 +839,12 @@
 </g>
 <!-- FileAccess -->
 <g id="node55" class="node"><title>FileAccess</title>
-<a xlink:href="#" xlink:title="The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems. ">
+<a xlink:href="/idmef_parser/IDMEF/FileAccess.html" xlink:title="The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems. ">
 <polygon fill="#997a00" stroke="#997a00" points="1302,-588 1302,-609 1485,-609 1485,-588 1302,-588"/>
 <polygon fill="none" stroke="black" points="1302,-588 1302,-609 1485,-609 1485,-588 1302,-588"/>
 <text text-anchor="start" x="1359" y="-595.233" font-family="Times Roman,serif" font-size="14.00">FileAccess</text>
 </a>
-<a xlink:href="#" xlink:title="Level of access allowed. &#160;The permitted values are shown below. &#160;There is no default value. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/FileAccess.html" xlink:title="Level of access allowed. &#160;The permitted values are shown below. &#160;There is no default value. &#160;(See also Section 10.)">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1302,-568 1302,-588 1485,-588 1485,-568 1302,-568"/>
 <polygon fill="none" stroke="black" points="1302,-568 1302,-588 1485,-588 1485,-568 1302,-568"/>
 <text text-anchor="start" x="1305.5" y="-574.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] Permission (1..*) </text>
@@ -858,22 +858,22 @@
 </g>
 <!-- Linkage -->
 <g id="node58" class="node"><title>Linkage</title>
-<a xlink:href="#" xlink:title="The Linkage class represents file system connections between the file described in the &lt;File&gt; element and other objects in the file system. For example, if the &lt;File&gt; element is a symbolic link or shortcut, then the &lt;Linkage&gt; element should contain the name of the object the link points to. Further information can be provided about the object in the &lt;Linkage&gt; element with another &lt;File&gt; element, if appropriate. ">
+<a xlink:href="/idmef_parser/IDMEF/Linkage.html" xlink:title="The Linkage class represents file system connections between the file described in the &lt;File&gt; element and other objects in the file system. For example, if the &lt;File&gt; element is a symbolic link or shortcut, then the &lt;Linkage&gt; element should contain the name of the object the link points to. Further information can be provided about the object in the &lt;Linkage&gt; element with another &lt;File&gt; element, if appropriate. ">
 <polygon fill="#997a00" stroke="#997a00" points="1292,-522 1292,-543 1495,-543 1495,-522 1292,-522"/>
 <polygon fill="none" stroke="black" points="1292,-522 1292,-543 1495,-543 1495,-522 1292,-522"/>
 <text text-anchor="start" x="1366" y="-529.233" font-family="Times Roman,serif" font-size="14.00">Linkage</text>
 </a>
-<a xlink:href="#" xlink:title="The name of the file system object, not including the path.">
+<a xlink:href="/idmef_parser/IDMEF/Linkage.html" xlink:title="The name of the file system object, not including the path.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1292,-502 1292,-522 1495,-522 1495,-502 1292,-502"/>
 <polygon fill="none" stroke="black" points="1292,-502 1292,-522 1495,-522 1495,-502 1292,-502"/>
 <text text-anchor="start" x="1325.5" y="-508.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The full path to the file system object, including the name. &#160;The path name should be represented in as &quot;universal&quot; a manner as possible, to facilitate processing of the alert.">
+<a xlink:href="/idmef_parser/IDMEF/Linkage.html" xlink:title="The full path to the file system object, including the name. &#160;The path name should be represented in as &quot;universal&quot; a manner as possible, to facilitate processing of the alert.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1292,-482 1292,-502 1495,-502 1495,-482 1292,-482"/>
 <polygon fill="none" stroke="black" points="1292,-482 1292,-502 1495,-502 1495,-482 1292,-482"/>
 <text text-anchor="start" x="1328.5" y="-488.733" font-family="Times Roman,serif" font-size="14.00">[STRING] path (1) </text>
 </a>
-<a xlink:href="#" xlink:title="Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Linkage.html" xlink:title="Section 10.)">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1292,-462 1292,-482 1495,-482 1495,-462 1292,-462"/>
 <polygon fill="none" stroke="black" points="1292,-462 1292,-482 1495,-482 1495,-462 1292,-462"/>
 <text text-anchor="start" x="1295.5" y="-468.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
@@ -887,37 +887,37 @@
 </g>
 <!-- Inode -->
 <g id="node61" class="node"><title>Inode</title>
-<a xlink:href="#" xlink:title="The Inode class is used to represent the additional information contained in a Unix file system i&#45;node. ">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The Inode class is used to represent the additional information contained in a Unix file system i&#45;node. ">
 <polygon fill="#997a00" stroke="#997a00" points="1277,-416 1277,-437 1509,-437 1509,-416 1277,-416"/>
 <polygon fill="none" stroke="black" points="1277,-416 1277,-437 1509,-437 1509,-416 1277,-416"/>
 <text text-anchor="start" x="1373.5" y="-423.233" font-family="Times Roman,serif" font-size="14.00">Inode</text>
 </a>
-<a xlink:href="#" xlink:title="The time of the last inode change, given by the st_ctime element of &quot;struct stat&quot;.">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The time of the last inode change, given by the st_ctime element of &quot;struct stat&quot;.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1277,-396 1277,-416 1509,-416 1509,-396 1277,-396"/>
 <polygon fill="none" stroke="black" points="1277,-396 1277,-416 1509,-416 1509,-396 1277,-396"/>
 <text text-anchor="start" x="1283" y="-402.733" font-family="Times Roman,serif" font-size="14.00">[DATETIME] change&#45;time (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The inode number.">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The inode number.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1277,-376 1277,-396 1509,-396 1509,-376 1277,-376"/>
 <polygon fill="none" stroke="black" points="1277,-376 1277,-396 1509,-396 1509,-376 1277,-376"/>
 <text text-anchor="start" x="1304" y="-382.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] number (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The major device number of the device the file resides on.">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The major device number of the device the file resides on.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1277,-356 1277,-376 1509,-376 1509,-356 1277,-356"/>
 <polygon fill="none" stroke="black" points="1277,-356 1277,-376 1509,-376 1509,-356 1277,-356"/>
 <text text-anchor="start" x="1287" y="-362.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] major&#45;device (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The minor device number of the device the file resides on.">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The minor device number of the device the file resides on.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1277,-336 1277,-356 1509,-356 1509,-336 1277,-336"/>
 <polygon fill="none" stroke="black" points="1277,-336 1277,-356 1509,-356 1509,-336 1277,-336"/>
 <text text-anchor="start" x="1286.5" y="-342.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] minor&#45;device (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The major device of the file itself, if it is a character special device.">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The major device of the file itself, if it is a character special device.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1277,-316 1277,-336 1509,-336 1509,-316 1277,-316"/>
 <polygon fill="none" stroke="black" points="1277,-316 1277,-336 1509,-336 1509,-316 1277,-316"/>
 <text text-anchor="start" x="1281" y="-322.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] c&#45;major&#45;device (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="The minor device of the file itself, if it is a character special device.">
+<a xlink:href="/idmef_parser/IDMEF/Inode.html" xlink:title="The minor device of the file itself, if it is a character special device.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1277,-296 1277,-316 1509,-316 1509,-296 1277,-296"/>
 <polygon fill="none" stroke="black" points="1277,-296 1277,-316 1509,-316 1509,-296 1277,-296"/>
 <text text-anchor="start" x="1280.5" y="-302.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] c&#45;minor&#45;device (0..1) </text>
@@ -931,22 +931,22 @@
 </g>
 <!-- Checksum -->
 <g id="node63" class="node"><title>Checksum</title>
-<a xlink:href="#" xlink:title="The Checksum class represents checksum information associated with the file. This checksum information can be provided by file integrity checkers, among others. ">
+<a xlink:href="/idmef_parser/IDMEF/Checksum.html" xlink:title="The Checksum class represents checksum information associated with the file. This checksum information can be provided by file integrity checkers, among others. ">
 <polygon fill="#997a00" stroke="#997a00" points="1288,-250 1288,-271 1499,-271 1499,-250 1288,-250"/>
 <polygon fill="none" stroke="black" points="1288,-250 1288,-271 1499,-271 1499,-250 1288,-250"/>
 <text text-anchor="start" x="1358" y="-257.233" font-family="Times Roman,serif" font-size="14.00">Checksum</text>
 </a>
-<a xlink:href="#" xlink:title="The value of the checksum.">
+<a xlink:href="/idmef_parser/IDMEF/Checksum.html" xlink:title="The value of the checksum.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1288,-230 1288,-250 1499,-250 1499,-230 1288,-230"/>
 <polygon fill="none" stroke="black" points="1288,-230 1288,-250 1499,-250 1499,-230 1288,-230"/>
 <text text-anchor="start" x="1325.5" y="-236.733" font-family="Times Roman,serif" font-size="14.00">[STRING] value (1) </text>
 </a>
-<a xlink:href="#" xlink:title="The key to the checksum, if appropriate.">
+<a xlink:href="/idmef_parser/IDMEF/Checksum.html" xlink:title="The key to the checksum, if appropriate.">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1288,-210 1288,-230 1499,-230 1499,-210 1288,-210"/>
 <polygon fill="none" stroke="black" points="1288,-210 1288,-230 1499,-230 1499,-210 1288,-210"/>
 <text text-anchor="start" x="1323.5" y="-216.733" font-family="Times Roman,serif" font-size="14.00">[STRING] key (0..1) </text>
 </a>
-<a xlink:href="#" xlink:title="default value. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Checksum.html" xlink:title="default value. &#160;(See also Section 10.)">
 <polygon fill="#ffcc00" stroke="#ffcc00" points="1288,-190 1288,-210 1499,-210 1499,-190 1288,-190"/>
 <polygon fill="none" stroke="black" points="1288,-190 1288,-210 1499,-210 1499,-190 1288,-190"/>
 <text text-anchor="start" x="1291.5" y="-196.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] algorithm (Required) </text>
@@ -972,22 +972,22 @@
 </g>
 <!-- Impact -->
 <g id="node68" class="node"><title>Impact</title>
-<a xlink:href="#" xlink:title="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="892,-321 892,-342 1110,-342 1110,-321 892,-321"/>
 <polygon fill="none" stroke="black" points="892,-321 892,-342 1110,-342 1110,-321 892,-321"/>
 <text text-anchor="start" x="977.5" y="-328.233" font-family="Times Roman,serif" font-size="14.00">Impact</text>
 </a>
-<a xlink:href="#" xlink:title="Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="892,-301 892,-321 1110,-321 1110,-301 892,-301"/>
 <polygon fill="none" stroke="black" points="892,-301 892,-321 1110,-321 1110,-301 892,-301"/>
 <text text-anchor="start" x="905.5" y="-307.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="892,-281 892,-301 1110,-301 1110,-281 892,-281"/>
 <polygon fill="none" stroke="black" points="892,-281 892,-301 1110,-301 1110,-281 892,-281"/>
 <text text-anchor="start" x="895.5" y="-287.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] completion (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="value is &quot;other&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Impact.html" xlink:title="value is &quot;other&quot;. &#160;(See also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="892,-261 892,-281 1110,-281 1110,-261 892,-261"/>
 <polygon fill="none" stroke="black" points="892,-261 892,-281 1110,-281 1110,-261 892,-261"/>
 <text text-anchor="start" x="918" y="-267.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Optional) </text>
@@ -1001,12 +1001,12 @@
 </g>
 <!-- Action -->
 <g id="node70" class="node"><title>Action</title>
-<a xlink:href="#" xlink:title="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Action.html" xlink:title="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="929,-215 929,-236 1073,-236 1073,-215 929,-215"/>
 <polygon fill="none" stroke="black" points="929,-215 929,-236 1073,-236 1073,-215 929,-215"/>
 <text text-anchor="start" x="979" y="-222.233" font-family="Times Roman,serif" font-size="14.00">Action</text>
 </a>
-<a xlink:href="#" xlink:title="The default value is &quot;other&quot;. &#160;(See also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Action.html" xlink:title="The default value is &quot;other&quot;. &#160;(See also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="929,-195 929,-215 1073,-215 1073,-195 929,-195"/>
 <polygon fill="none" stroke="black" points="929,-195 929,-215 1073,-215 1073,-195 929,-195"/>
 <text text-anchor="start" x="932.5" y="-201.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category () </text>
@@ -1020,12 +1020,12 @@
 </g>
 <!-- Confidence -->
 <g id="node72" class="node"><title>Confidence</title>
-<a xlink:href="#" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Confidence.html" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="939,-149 939,-170 1064,-170 1064,-149 939,-149"/>
 <polygon fill="none" stroke="black" points="939,-149 939,-170 1064,-170 1064,-149 939,-149"/>
 <text text-anchor="start" x="963.5" y="-156.233" font-family="Times Roman,serif" font-size="14.00">Confidence</text>
 </a>
-<a xlink:href="#" xlink:title="also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Confidence.html" xlink:title="also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="939,-129 939,-149 1064,-149 1064,-129 939,-129"/>
 <polygon fill="none" stroke="black" points="939,-129 939,-149 1064,-149 1064,-129 939,-129"/>
 <text text-anchor="start" x="942.5" y="-135.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] rating () </text>

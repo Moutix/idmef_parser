@@ -11,12 +11,12 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-52 147,-52 147,5 -4,5"/>
 <!-- Confidence -->
 <g id="node1" class="node"><title>Confidence</title>
-<a xlink:href="#" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
+<a xlink:href="/idmef_parser/IDMEF/Confidence.html" xlink:title="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">
 <polygon fill="#993016" stroke="#993016" points="9,-23 9,-44 134,-44 134,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-44 134,-44 134,-23 9,-23"/>
 <text text-anchor="start" x="33.5" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">Confidence</text>
 </a>
-<a xlink:href="#" xlink:title="also Section 10.)">
+<a xlink:href="/idmef_parser/IDMEF/Confidence.html" xlink:title="also Section 10.)">
 <polygon fill="#ff5024" stroke="#ff5024" points="9,-3 9,-23 134,-23 134,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 134,-23 134,-3 9,-3"/>
 <text text-anchor="start" x="12.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] rating () </text>

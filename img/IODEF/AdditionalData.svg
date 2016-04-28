@@ -11,32 +11,32 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-132 243,-132 243,5 -4,5"/>
 <!-- AdditionalData -->
 <g id="node1" class="node"><title>AdditionalData</title>
-<a xlink:href="#" xlink:title="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">
+<a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">
 <polygon fill="#997a3d" stroke="#997a3d" points="9,-103 9,-124 230,-124 230,-103 9,-103"/>
 <polygon fill="none" stroke="black" points="9,-103 9,-124 230,-124 230,-103 9,-103"/>
 <text text-anchor="start" x="68" y="-110.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
-<a xlink:href="#" xlink:title="The data type of the element content. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;string&quot;.">
+<a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="The data type of the element content. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;string&quot;.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="9,-83 9,-103 230,-103 230,-83 9,-83"/>
 <polygon fill="none" stroke="black" points="9,-83 9,-103 230,-103 230,-83 9,-83"/>
 <text text-anchor="start" x="31" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] dtype (Required) </text>
 </a>
-<a xlink:href="#" xlink:title="A means by which to extend the dtype attribute. &#160;See Section 5.1.">
+<a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="A means by which to extend the dtype attribute. &#160;See Section 5.1.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="9,-63 9,-83 230,-83 230,-63 9,-63"/>
 <polygon fill="none" stroke="black" points="9,-63 9,-83 230,-83 230,-63 9,-63"/>
 <text text-anchor="start" x="12.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;dtype (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="A free&#45;form description of the element content.">
+<a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="A free&#45;form description of the element content.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="9,-43 9,-63 230,-63 230,-43 9,-43"/>
 <polygon fill="none" stroke="black" points="9,-43 9,-63 230,-63 230,-43 9,-43"/>
 <text text-anchor="start" x="16" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="An identifier referencing the format and semantics of the element content.">
+<a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="An identifier referencing the format and semantics of the element content.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="9,-23 9,-43 230,-43 230,-23 9,-23"/>
 <polygon fill="none" stroke="black" points="9,-23 9,-43 230,-43 230,-23 9,-23"/>
 <text text-anchor="start" x="17" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] formatid (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="This attribute has been defined in Section 3.2.">
+<a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="This attribute has been defined in Section 3.2.">
 <polygon fill="#ffcc66" stroke="#ffcc66" points="9,-3 9,-23 230,-23 230,-3 9,-3"/>
 <polygon fill="none" stroke="black" points="9,-3 9,-23 230,-23 230,-3 9,-3"/>
 <text text-anchor="start" x="16.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>

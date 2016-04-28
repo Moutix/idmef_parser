@@ -11,17 +11,17 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-72 223,-72 223,5 -4,5"/>
 <!-- PostalAddress -->
 <g id="node1" class="node"><title>PostalAddress</title>
-<a xlink:href="#" xlink:title="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). ">
+<a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). ">
 <polygon fill="#7a993d" stroke="#7a993d" points="8,-43 8,-64 210,-64 210,-43 8,-43"/>
 <polygon fill="none" stroke="black" points="8,-43 8,-64 210,-64 210,-43 8,-43"/>
 <text text-anchor="start" x="61" y="-50.2333" font-family="Times Roman,serif" font-size="14.00">PostalAddress</text>
 </a>
-<a xlink:href="#" xlink:title="A free&#45;form description of the element content.">
+<a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="A free&#45;form description of the element content.">
 <polygon fill="#ccff66" stroke="#ccff66" points="8,-23 8,-43 210,-43 210,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-43 210,-43 210,-23 8,-23"/>
 <text text-anchor="start" x="11.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
 </a>
-<a xlink:href="#" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
+<a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
 <polygon fill="#ccff66" stroke="#ccff66" points="8,-3 8,-23 210,-23 210,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 210,-23 210,-3 8,-3"/>
 <text text-anchor="start" x="25.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] lang (Required) </text>

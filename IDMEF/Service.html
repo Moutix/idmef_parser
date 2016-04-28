@@ -132,60 +132,6 @@
                 </li>
               </ul>
             </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IDMEFv2
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2'>IDMEF-Message</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Alert.html'>Alert</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Analyzer.html'>Analyzer</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Classification.html'>Classification</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/File.html'>File</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/FileAccess.html'>FileAccess</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Heartbeat.html'>Heartbeat</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Linkage.html'>Linkage</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Source.html'>Source</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Target.html'>Target</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Transaction.html'>Transaction</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/User.html'>User</a>
-                </li>
-              </ul>
-            </li>
           </ul>
           <ul class='nav navbar-nav navbar-right'>
             <li class='dropdown'>
@@ -202,11 +148,6 @@
                 <li>
                   <a href='/idmef_parser/rfc5070.txt' target='_blank'>
                     IODEF (5070)
-                  </a>
-                </li>
-                <li>
-                  <a href='/idmef_parser/rfc4765.txt' target='_blank'>
-                    IDMEFv2 (4765)
                   </a>
                 </li>
               </ul>
@@ -246,47 +187,47 @@
             <polygon fill="white" stroke="white" points="-4,5 -4,-318 697,-318 697,5 -4,5"/>
             <!-- Service -->
             <g id="node1" class="node"><title>Service</title>
-            <a xlink:href="#" xlink:title="The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ">
             <polygon fill="#997a7a" stroke="#997a7a" points="9,-246 9,-267 326,-267 326,-246 9,-246"/>
             <polygon fill="none" stroke="black" points="9,-246 9,-267 326,-267 326,-246 9,-246"/>
             <text text-anchor="start" x="142" y="-253.233" font-family="Times Roman,serif" font-size="14.00">Service</text>
             </a>
-            <a xlink:href="#" xlink:title="The name of the service. &#160;Whenever possible, the name from the IANA list of well&#45;known ports SHOULD be used.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The name of the service. &#160;Whenever possible, the name from the IANA list of well&#45;known ports SHOULD be used.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-226 9,-246 326,-246 326,-226 9,-226"/>
             <polygon fill="none" stroke="black" points="9,-226 9,-246 326,-246 326,-226 9,-226"/>
             <text text-anchor="start" x="90.5" y="-232.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The port number being used.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The port number being used.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-206 9,-226 326,-226 326,-206 9,-206"/>
             <polygon fill="none" stroke="black" points="9,-206 9,-226 326,-226 326,-206 9,-206"/>
             <text text-anchor="start" x="90.5" y="-212.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] port (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="A list of port numbers being used; see Section 3.2.8 for formatting rules. &#160;If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A list of port numbers being used; see Section 3.2.8 for formatting rules. &#160;If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-186 9,-206 326,-206 326,-186 9,-186"/>
             <polygon fill="none" stroke="black" points="9,-186 9,-206 326,-206 326,-186 9,-186"/>
             <text text-anchor="start" x="77.5" y="-192.733" font-family="Times Roman,serif" font-size="14.00">[PORTLIST] portlist (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="Additional information about the protocol being used. &#160;The intent of the protocol field is to carry additional information related to the protocol being used when the &lt;Service&gt; attributes iana_protocol_number or/and iana_protocol_name are filed.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="Additional information about the protocol being used. &#160;The intent of the protocol field is to carry additional information related to the protocol being used when the &lt;Service&gt; attributes iana_protocol_number or/and iana_protocol_name are filed.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-166 9,-186 326,-186 326,-166 9,-166"/>
             <polygon fill="none" stroke="black" points="9,-166 9,-186 326,-186 326,-166 9,-166"/>
             <text text-anchor="start" x="81.5" y="-172.733" font-family="Times Roman,serif" font-size="14.00">[STRING] protocol (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="A unique identifier for the service; see Section 3.2.9.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A unique identifier for the service; see Section 3.2.9.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-146 9,-166 326,-166 326,-146 9,-146"/>
             <polygon fill="none" stroke="black" points="9,-146 9,-166 326,-166 326,-146 9,-146"/>
             <text text-anchor="start" x="76" y="-152.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
             </a>
-            <a xlink:href="#" xlink:title="The IP version number.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IP version number.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-126 9,-146 326,-146 326,-126 9,-126"/>
             <polygon fill="none" stroke="black" points="9,-126 9,-146 326,-146 326,-126 9,-126"/>
             <text text-anchor="start" x="54.5" y="-132.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] ip_version (Optional) </text>
             </a>
-            <a xlink:href="#" xlink:title="The IANA protocol number.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol number.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-106 9,-126 326,-126 326,-106 9,-106"/>
             <polygon fill="none" stroke="black" points="9,-106 9,-126 326,-126 326,-106 9,-106"/>
             <text text-anchor="start" x="12.5" y="-112.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] iana_protocol_number (Optional) </text>
             </a>
-            <a xlink:href="#" xlink:title="The IANA protocol name.">
+            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol name.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="9,-86 9,-106 326,-106 326,-86 9,-86"/>
             <polygon fill="none" stroke="black" points="9,-86 9,-106 326,-106 326,-86 9,-86"/>
             <text text-anchor="start" x="24.5" y="-92.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] iana_protocol_name (Optional) </text>
@@ -294,27 +235,27 @@
             </g>
             <!-- WebService -->
             <g id="node2" class="node"><title>WebService</title>
-            <a xlink:href="#" xlink:title="The WebService class carries additional information related to web traffic. ">
+            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The WebService class carries additional information related to web traffic. ">
             <polygon fill="#997a7a" stroke="#997a7a" points="426,-289 426,-310 636,-310 636,-289 426,-289"/>
             <polygon fill="none" stroke="black" points="426,-289 426,-310 636,-310 636,-289 426,-289"/>
             <text text-anchor="start" x="490" y="-296.233" font-family="Times Roman,serif" font-size="14.00">WebService</text>
             </a>
-            <a xlink:href="#" xlink:title="The URL in the request.">
+            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The URL in the request.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="426,-269 426,-289 636,-289 636,-269 426,-269"/>
             <polygon fill="none" stroke="black" points="426,-269 426,-289 636,-289 636,-269 426,-269"/>
             <text text-anchor="start" x="472.5" y="-275.733" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The CGI script in the request, without arguments.">
+            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The CGI script in the request, without arguments.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="426,-249 426,-269 636,-269 636,-249 426,-249"/>
             <polygon fill="none" stroke="black" points="426,-249 426,-269 636,-269 636,-249 426,-249"/>
             <text text-anchor="start" x="463.5" y="-255.733" font-family="Times Roman,serif" font-size="14.00">[STRING] cgi (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The HTTP method (PUT, GET) used in the request.">
+            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The HTTP method (PUT, GET) used in the request.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="426,-229 426,-249 636,-249 636,-229 426,-229"/>
             <polygon fill="none" stroke="black" points="426,-229 426,-249 636,-249 636,-229 426,-229"/>
             <text text-anchor="start" x="429.5" y="-235.733" font-family="Times Roman,serif" font-size="14.00">[STRING] http&#45;method (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The arguments to the CGI script.">
+            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The arguments to the CGI script.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="426,-209 426,-229 636,-229 636,-209 426,-209"/>
             <polygon fill="none" stroke="black" points="426,-209 426,-229 636,-229 636,-209 426,-209"/>
             <text text-anchor="start" x="462.5" y="-215.733" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
@@ -327,47 +268,47 @@
             </g>
             <!-- SNMPService -->
             <g id="node4" class="node"><title>SNMPService</title>
-            <a xlink:href="#" xlink:title="The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. ">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. ">
             <polygon fill="#997a7a" stroke="#997a7a" points="379,-163 379,-184 684,-184 684,-163 379,-163"/>
             <polygon fill="none" stroke="black" points="379,-163 379,-184 684,-184 684,-163 379,-163"/>
             <text text-anchor="start" x="486" y="-170.233" font-family="Times Roman,serif" font-size="14.00">SNMPService</text>
             </a>
-            <a xlink:href="#" xlink:title="The object identifier in the request.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object identifier in the request.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-143 379,-163 684,-163 684,-143 379,-143"/>
             <polygon fill="none" stroke="black" points="379,-143 379,-163 684,-163 684,-143 379,-143"/>
             <text text-anchor="start" x="463.5" y="-149.733" font-family="Times Roman,serif" font-size="14.00">[STRING] oid (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-123 379,-143 684,-143 684,-123 379,-123"/>
             <polygon fill="none" stroke="black" points="379,-123 379,-143 684,-143 684,-123 379,-123"/>
             <text text-anchor="start" x="382.5" y="-129.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] messageProcessingModel (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-103 379,-123 684,-123 684,-103 379,-103"/>
             <polygon fill="none" stroke="black" points="379,-103 379,-123 684,-123 684,-103 379,-103"/>
             <text text-anchor="start" x="421.5" y="-109.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] securityModel (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The object&#39;s security name; see RFC 3411 [15] Section 3.2.2.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s security name; see RFC 3411 [15] Section 3.2.2.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-83 379,-103 684,-103 684,-83 379,-83"/>
             <polygon fill="none" stroke="black" points="379,-83 379,-103 684,-103 684,-83 379,-83"/>
             <text text-anchor="start" x="426" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] securityName (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-63 379,-83 684,-83 684,-63 379,-63"/>
             <polygon fill="none" stroke="black" points="379,-63 379,-83 684,-83 684,-63 379,-63"/>
             <text text-anchor="start" x="423" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[INTEGER] securityLevel (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The object&#39;s context name; see RFC 3411 [15] Section 3.3.3.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context name; see RFC 3411 [15] Section 3.3.3.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-43 379,-63 684,-63 684,-43 379,-43"/>
             <polygon fill="none" stroke="black" points="379,-43 379,-63 684,-63 684,-43 379,-43"/>
             <text text-anchor="start" x="427.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] contextName (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The object&#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-23 379,-43 684,-43 684,-23 379,-23"/>
             <polygon fill="none" stroke="black" points="379,-23 379,-43 684,-43 684,-23 379,-23"/>
             <text text-anchor="start" x="415.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] contextEngineID (0..1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The command sent to the SNMP server (GET, SET, etc.).">
+            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The command sent to the SNMP server (GET, SET, etc.).">
             <polygon fill="#ffcccc" stroke="#ffcccc" points="379,-3 379,-23 684,-23 684,-3 379,-3"/>
             <polygon fill="none" stroke="black" points="379,-3 379,-23 684,-23 684,-3 379,-3"/>
             <text text-anchor="start" x="440.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] command (0..1) </text>
@@ -391,9 +332,9 @@
             	graph [rankdir=LR];
             	node [label=&quot;\N&quot;];
             	graph [bb=&quot;0,0,692,314&quot;];
-            	Service [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;#&quot; TITLE=&quot;The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. &quot;&gt;Service&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The name of the service.  Whenever possible, the name from the IANA list of well-known ports SHOULD be used.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The port number being used.&quot;&gt;[INTEGER] port (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;A list of port numbers being used; see Section 3.2.8 for formatting rules.  If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.&quot;&gt;[PORTLIST] portlist (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;Additional information about the protocol being used.  The intent of the protocol field is to carry additional information related to the protocol being used when the &amp;lt;Service&amp;gt; attributes iana_protocol_number or/and iana_protocol_name are filed.&quot;&gt;[STRING] protocol (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;A unique identifier for the service; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The IP version number.&quot;&gt;[INTEGER] ip_version (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The IANA protocol number.&quot;&gt;[INTEGER] iana_protocol_number (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The IANA protocol name.&quot;&gt;[STRING] iana_protocol_name (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;167,177&quot;, width=&quot;4.6111&quot;, height=&quot;2.625&quot;];
-            	WebService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;#&quot; TITLE=&quot;The WebService class carries additional information related to web traffic. &quot;&gt;WebService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The URL in the request.&quot;&gt;[STRING] url (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The CGI script in the request, without arguments.&quot;&gt;[STRING] cgi (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The HTTP method (PUT, GET) used in the request.&quot;&gt;[STRING] http-method (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The arguments to the CGI script.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;531,260&quot;, width=&quot;3.1389&quot;, height=&quot;1.5139&quot;];
-            	SNMPService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;#&quot; TITLE=&quot;The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. &quot;&gt;SNMPService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The object identifier in the request.&quot;&gt;[STRING] oid (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] messageProcessingModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] securityModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The object&amp;#39;s security name; see RFC 3411 [15] Section 3.2.2.&quot;&gt;[STRING] securityName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.&quot;&gt;[INTEGER] securityLevel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The object&amp;#39;s context name; see RFC 3411 [15] Section 3.3.3.&quot;&gt;[STRING] contextName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The object&amp;#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.&quot;&gt;[STRING] contextEngineID (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot; HREF=&quot;#&quot; TITLE=&quot;The command sent to the SNMP server (GET, SET, etc.).&quot;&gt;[STRING] command (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;531,94&quot;, width=&quot;4.4444&quot;, height=&quot;2.625&quot;];
+            	Service [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. &quot;&gt;Service&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The name of the service.  Whenever possible, the name from the IANA list of well-known ports SHOULD be used.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The port number being used.&quot;&gt;[INTEGER] port (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;A list of port numbers being used; see Section 3.2.8 for formatting rules.  If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.&quot;&gt;[PORTLIST] portlist (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;Additional information about the protocol being used.  The intent of the protocol field is to carry additional information related to the protocol being used when the &amp;lt;Service&amp;gt; attributes iana_protocol_number or/and iana_protocol_name are filed.&quot;&gt;[STRING] protocol (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;A unique identifier for the service; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IP version number.&quot;&gt;[INTEGER] ip_version (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IANA protocol number.&quot;&gt;[INTEGER] iana_protocol_number (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IANA protocol name.&quot;&gt;[STRING] iana_protocol_name (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;167,177&quot;, width=&quot;4.6111&quot;, height=&quot;2.625&quot;];
+            	WebService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The WebService class carries additional information related to web traffic. &quot;&gt;WebService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The URL in the request.&quot;&gt;[STRING] url (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The CGI script in the request, without arguments.&quot;&gt;[STRING] cgi (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The HTTP method (PUT, GET) used in the request.&quot;&gt;[STRING] http-method (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The arguments to the CGI script.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;531,260&quot;, width=&quot;3.1389&quot;, height=&quot;1.5139&quot;];
+            	SNMPService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. &quot;&gt;SNMPService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object identifier in the request.&quot;&gt;[STRING] oid (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] messageProcessingModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] securityModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s security name; see RFC 3411 [15] Section 3.2.2.&quot;&gt;[STRING] securityName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.&quot;&gt;[INTEGER] securityLevel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s context name; see RFC 3411 [15] Section 3.3.3.&quot;&gt;[STRING] contextName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.&quot;&gt;[STRING] contextEngineID (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The command sent to the SNMP server (GET, SET, etc.).&quot;&gt;[STRING] command (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;531,94&quot;, width=&quot;4.4444&quot;, height=&quot;2.625&quot;];
             	Service -&gt; WebService [dir=back, arrowtail=invempty, pos=&quot;s,333.55,214.98 343.61,217.27 368.88,223.03 394.29,228.83 417.89,234.21&quot;];
             	Service -&gt; SNMPService [dir=back, arrowtail=invempty, pos=&quot;s,333.55,139.02 343.34,136.79 352.37,134.73 361.42,132.67 370.4,130.62&quot;];
             }
@@ -704,128 +645,6 @@
             </li>
             <li>
               <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <h4>IDMEFv2</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Action.html'>Action</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Alert.html'>Alert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Analyzer.html'>Analyzer</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/AnalyzerTime.html'>AnalyzerTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Checksum.html'>Checksum</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Classification.html'>Classification</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/CorrelationAlert.html'>CorrelationAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/CreateTime.html'>CreateTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/DetectTime.html'>DetectTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/File.html'>File</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/FileAccess.html'>FileAccess</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Heartbeat.html'>Heartbeat</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/IDMEF-Message.html'>IDMEF-Message</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Impact.html'>Impact</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Inode.html'>Inode</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Linkage.html'>Linkage</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/OverflowAlert.html'>OverflowAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Process.html'>Process</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Reference.html'>Reference</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/SNMPService.html'>SNMPService</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Source.html'>Source</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Stream.html'>Stream</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Target.html'>Target</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/ToolAlert.html'>ToolAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Transaction.html'>Transaction</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/User.html'>User</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/UserId.html'>UserId</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/WebService.html'>WebService</a>
             </li>
           </ul>
         </div>

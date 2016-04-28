@@ -11,12 +11,12 @@
 <polygon fill="white" stroke="white" points="-4,5 -4,-52 235,-52 235,5 -4,5"/>
 <!-- AdditionalData -->
 <g id="node1" class="node"><title>AdditionalData</title>
-<a xlink:href="#" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
+<a xlink:href="/idmef_parser/IDMEF/AdditionalData.html" xlink:title="The AdditionalData class is used to provide information that cannot be represented by the data model. AdditionalData can be used to provide atomic data (integers, strings, etc.) in cases where only small amounts of additional information need to be sent; it can also be used to extend the data model and the DTD to support the transmission of complex data (such as packet headers). Detailed instructions for extending the data model and the DTD are provided in Section 5. ">
 <polygon fill="#431d60" stroke="#431d60" points="8,-23 8,-44 222,-44 222,-23 8,-23"/>
 <polygon fill="none" stroke="black" points="8,-23 8,-44 222,-44 222,-23 8,-23"/>
 <text text-anchor="start" x="63.5" y="-30.2333" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
 </a>
-<a xlink:href="#" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
+<a xlink:href="/idmef_parser/IDMEF/AdditionalData.html" xlink:title="A string describing the meaning of the element content. These values will be vendor/implementation dependent; the method for ensuring that managers understand the strings sent by analyzers is outside the scope of this specification. &#160;A list of acceptable meaning keywords is not within the scope of the document, although later versions may undertake to establish such a list.">
 <polygon fill="#7030a0" stroke="#7030a0" points="8,-3 8,-23 222,-23 222,-3 8,-3"/>
 <polygon fill="none" stroke="black" points="8,-3 8,-23 222,-23 222,-3 8,-3"/>
 <text text-anchor="start" x="11.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>

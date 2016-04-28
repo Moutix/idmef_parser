@@ -132,60 +132,6 @@
                 </li>
               </ul>
             </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IDMEFv2
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2'>IDMEF-Message</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Alert.html'>Alert</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Analyzer.html'>Analyzer</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Classification.html'>Classification</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/File.html'>File</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/FileAccess.html'>FileAccess</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Heartbeat.html'>Heartbeat</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Linkage.html'>Linkage</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Source.html'>Source</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Target.html'>Target</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/Transaction.html'>Transaction</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEFv2/User.html'>User</a>
-                </li>
-              </ul>
-            </li>
           </ul>
           <ul class='nav navbar-nav navbar-right'>
             <li class='dropdown'>
@@ -202,11 +148,6 @@
                 <li>
                   <a href='/idmef_parser/rfc5070.txt' target='_blank'>
                     IODEF (5070)
-                  </a>
-                </li>
-                <li>
-                  <a href='/idmef_parser/rfc4765.txt' target='_blank'>
-                    IDMEFv2 (4765)
                   </a>
                 </li>
               </ul>
@@ -246,17 +187,17 @@
             <polygon fill="white" stroke="white" points="-4,5 -4,-72 211,-72 211,5 -4,5"/>
             <!-- CorrelationAlert -->
             <g id="node1" class="node"><title>CorrelationAlert</title>
-            <a xlink:href="#" xlink:title="The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts are all related&quot;. ">
+            <a xlink:href="/idmef_parser/IDMEF/CorrelationAlert.html" xlink:title="The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously&#45;sent alerts together, to say &quot;these alerts are all related&quot;. ">
             <polygon fill="#737373" stroke="#737373" points="9,-43 9,-64 198,-64 198,-43 9,-43"/>
             <polygon fill="none" stroke="black" points="9,-43 9,-64 198,-64 198,-43 9,-43"/>
             <text text-anchor="start" x="47.5" y="-50.2333" font-family="Times Roman,serif" font-size="14.00">CorrelationAlert</text>
             </a>
-            <a xlink:href="#" xlink:title="The reason for grouping the alerts together, for example, a particular correlation method.">
+            <a xlink:href="/idmef_parser/IDMEF/CorrelationAlert.html" xlink:title="The reason for grouping the alerts together, for example, a particular correlation method.">
             <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-23 9,-43 198,-43 198,-23 9,-23"/>
             <polygon fill="none" stroke="black" points="9,-23 9,-43 198,-43 198,-23 9,-23"/>
             <text text-anchor="start" x="35.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
             </a>
-            <a xlink:href="#" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.">
+            <a xlink:href="/idmef_parser/IDMEF/CorrelationAlert.html" xlink:title="The list of alert identifiers that are related to this alert. &#160;Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from. &#160;If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.">
             <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-3 9,-23 198,-23 198,-3 9,-3"/>
             <polygon fill="none" stroke="black" points="9,-3 9,-23 198,-23 198,-3 9,-3"/>
             <text text-anchor="start" x="12.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] alertident (1..*) </text>
@@ -275,7 +216,7 @@
             	graph [rankdir=LR];
             	node [label=&quot;\N&quot;];
             	graph [bb=&quot;0,0,206,68&quot;];
-            	CorrelationAlert [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#737373&quot; HREF=&quot;#&quot; TITLE=&quot;The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously-sent alerts together, to say &amp;quot;these alerts are all related&amp;quot;. &quot;&gt;CorrelationAlert&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#BFBFBF&quot; HREF=&quot;#&quot; TITLE=&quot;The reason for grouping the alerts together, for example, a particular correlation method.&quot;&gt;[STRING] name (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#BFBFBF&quot; HREF=&quot;#&quot; TITLE=&quot;The list of alert identifiers that are related to this alert.  Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &amp;quot;analyzerid&amp;quot; attribute of &amp;quot;alertident&amp;quot; should be used to identify the analyzer that a particular alert came from.  If the &amp;quot;analyzerid&amp;quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.&quot;&gt;[STRING] alertident (1..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;103,34&quot;, width=&quot;2.8333&quot;, height=&quot;0.95833&quot;];
+            	CorrelationAlert [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#737373&quot; HREF=&quot;/idmef_parser/IDMEF/CorrelationAlert.html&quot; TITLE=&quot;The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously-sent alerts together, to say &amp;quot;these alerts are all related&amp;quot;. &quot;&gt;CorrelationAlert&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#BFBFBF&quot;  HREF=&quot;/idmef_parser/IDMEF/CorrelationAlert.html&quot; TITLE=&quot;The reason for grouping the alerts together, for example, a particular correlation method.&quot;&gt;[STRING] name (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#BFBFBF&quot;  HREF=&quot;/idmef_parser/IDMEF/CorrelationAlert.html&quot; TITLE=&quot;The list of alert identifiers that are related to this alert.  Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &amp;quot;analyzerid&amp;quot; attribute of &amp;quot;alertident&amp;quot; should be used to identify the analyzer that a particular alert came from.  If the &amp;quot;analyzerid&amp;quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.&quot;&gt;[STRING] alertident (1..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;103,34&quot;, width=&quot;2.8333&quot;, height=&quot;0.95833&quot;];
             }
           </p></pre>
         </div>
@@ -534,128 +475,6 @@
             </li>
             <li>
               <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <h4>IDMEFv2</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Action.html'>Action</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Alert.html'>Alert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Analyzer.html'>Analyzer</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/AnalyzerTime.html'>AnalyzerTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Checksum.html'>Checksum</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Classification.html'>Classification</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/CorrelationAlert.html'>CorrelationAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/CreateTime.html'>CreateTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/DetectTime.html'>DetectTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/File.html'>File</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/FileAccess.html'>FileAccess</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Heartbeat.html'>Heartbeat</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/IDMEF-Message.html'>IDMEF-Message</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Impact.html'>Impact</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Inode.html'>Inode</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Linkage.html'>Linkage</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/OverflowAlert.html'>OverflowAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Process.html'>Process</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Reference.html'>Reference</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/SNMPService.html'>SNMPService</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Source.html'>Source</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Stream.html'>Stream</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Target.html'>Target</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/ToolAlert.html'>ToolAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/Transaction.html'>Transaction</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/User.html'>User</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/UserId.html'>UserId</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEFv2/WebService.html'>WebService</a>
             </li>
           </ul>
         </div>
