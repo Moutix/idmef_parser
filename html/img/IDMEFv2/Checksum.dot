@@ -1,6 +1,0 @@
-digraph Checksum {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,228,88"];
-	Checksum [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a00" HREF="#" TITLE="The Checksum class represents checksum information associated with the file. This checksum information can be provided by file integrity checkers, among others. ">Checksum</td> </tr>" %<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The value of the checksum.">[STRING] value (1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The key to the checksum, if appropriate.">[STRING] key (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="default value.  (See also Section 10.)">[ENUM] algorithm (Required) </td></tr>%</table>>, shape=plaintext, pos="114,44", width="3.1389", height="1.2361"];
-}

@@ -1,6 +1,0 @@
-digraph Confidence {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,142,48"];
-	Confidence [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="#" TITLE="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">Confidence</td> </tr>" %<tr><td BGCOLOR="#FF5024" HREF="#" TITLE="also Section 10.)">[ENUM] rating () </td></tr>%</table>>, shape=plaintext, pos="71,24", width="1.9444", height="0.68056"];
-}

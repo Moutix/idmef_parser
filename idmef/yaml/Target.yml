@@ -28,7 +28,7 @@ aggregates:
     description: Information about the network service involved in the event(s).
   File:
     name: File
-    multiplicity: 0..1
+    multiplicity: 0..*
     type: 
     description: Information about file(s) involved in the event(s).
 attributes:

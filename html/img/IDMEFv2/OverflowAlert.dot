@@ -1,6 +1,0 @@
-digraph OverflowAlert {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,180,88"];
-	OverflowAlert [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#737373" HREF="#" TITLE="The OverflowAlert carries additional information related to buffer overflow attacks. It is intended to enable an analyzer to provide the details of the overflow attack itself. ">OverflowAlert</td> </tr>" %<tr><td BGCOLOR="#BFBFBF" HREF="#" TITLE="The program that the overflow attack attempted to run (NOTE: this is not the program that was attacked).">[STRING] program (1) </td></tr>%<tr><td BGCOLOR="#BFBFBF" HREF="#" TITLE="The size, in bytes, of the overflow (i.e., the number of bytes the attacker sent).">[INTEGER] size (0..1) </td></tr>%<tr><td BGCOLOR="#BFBFBF" HREF="#" TITLE="Some or all of the overflow data itself (dependent on how much the analyzer can capture).">[BYTE[]] buffer (0..1) </td></tr>%</table>>, shape=plaintext, pos="90,44", width="2.4722", height="1.2361"];
-}

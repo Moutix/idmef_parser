@@ -1,6 +1,0 @@
-digraph CorrelationAlert {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,206,68"];
-	CorrelationAlert [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#737373" HREF="#" TITLE="The CorrelationAlert class carries additional information related to the correlation of alert information. It is intended to group one or more previously-sent alerts together, to say &quot;these alerts are all related&quot;. ">CorrelationAlert</td> </tr>" %<tr><td BGCOLOR="#BFBFBF" HREF="#" TITLE="The reason for grouping the alerts together, for example, a particular correlation method.">[STRING] name (1) </td></tr>%<tr><td BGCOLOR="#BFBFBF" HREF="#" TITLE="The list of alert identifiers that are related to this alert.  Because alert identifiers are only unique across the alerts sent by a single analyzer, the optional &quot;analyzerid&quot; attribute of &quot;alertident&quot; should be used to identify the analyzer that a particular alert came from.  If the &quot;analyzerid&quot; is not provided, the alert is assumed to have come from the same analyzer that is sending the CorrelationAlert.">[STRING] alertident (1..*) </td></tr>%</table>>, shape=plaintext, pos="103,34", width="2.8333", height="0.95833"];
-}

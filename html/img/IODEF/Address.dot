@@ -1,6 +1,11 @@
 digraph Address {
-	graph [rankdir=LR];
+	graph [bb="0,0,215,113",
+		rankdir=LR
+	];
 	node [label="\N"];
-	graph [bb="0,0,258,108"];
-	Address [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#182f5f" HREF="/idmef_parser/IODEF/Address.html" TITLE="The Address class represents a hardware (layer-2), network (layer-3), or application (layer-7) address. ">Address</td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The type of address represented.  The permitted values for this attribute are shown below.  The default value is &quot;ipv4-addr&quot;.">[ENUM] category (Required) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="A means by which to extend the category attribute.  See Section 5.1.">[STRING] ext-category (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The name of the Virtual LAN to which the address belongs.">[STRING] vlan-name (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The number of the Virtual LAN to which the address belongs.">[STRING] vlan-num (Optional) </td></tr>%</table>>, shape=plaintext, pos="129,54", width="3.5833", height="1.5139"];
+	Address	 [height=1.5694,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#182f5f" HREF="/idmef_parser/IODEF/Address.html" TITLE="The Address class represents a hardware (layer-2), network (layer-3), or application (layer-7) address. ">Address</td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The type of address represented.  The permitted values for this attribute are shown below.  The default value is &quot;ipv4-addr&quot;.">[ENUM] category (Required) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="A means by which to extend the category attribute.  See Section 5.1.">[STRING] ext-category (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The name of the Virtual LAN to which the address belongs.">[STRING] vlan-name (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The number of the Virtual LAN to which the address belongs.">[STRING] vlan-num (Optional) </td></tr>%</table>>,
+		pos="107.5,56.5",
+		shape=plaintext,
+		width=2.9861];
 }

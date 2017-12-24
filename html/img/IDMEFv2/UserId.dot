@@ -1,6 +1,0 @@
-digraph UserId {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,206,128"];
-	UserId [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#3d7a99" HREF="#" TITLE="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. ">UserId</td> </tr>" %<tr><td BGCOLOR="#66CCFF" HREF="#" TITLE="A user or group name.">[STRING] name (0..1) </td></tr>%<tr><td BGCOLOR="#66CCFF" HREF="#" TITLE="A user or group number.">[INTEGER] number (0..1) </td></tr>%<tr><td BGCOLOR="#66CCFF" HREF="#" TITLE="A unique identifier for the user id, see Section 3.2.9.">[STRING] ident (Optional) </td></tr>%<tr><td BGCOLOR="#66CCFF" HREF="#" TITLE="The type of user information represented.  The permitted values for this attribute are shown below.  The default value is &quot;original-user&quot;.  (See also Section 10.)">[ENUM] type (Optional) </td></tr>%<tr><td BGCOLOR="#66CCFF" HREF="#" TITLE="The tty the user is using.">[STRING] tty (Optional) </td></tr>%</table>>, shape=plaintext, pos="103,64", width="2.8611", height="1.7917"];
-}

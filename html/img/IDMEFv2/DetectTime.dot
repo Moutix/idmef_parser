@@ -1,6 +1,0 @@
-digraph DetectTime {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,104,36"];
-	DetectTime [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c5c99" HREF="#" TITLE="The DetectTime class is used to indicate the date and time that the event(s) producing an alert was detected by the analyzer. In the case of more than one event, it is the time that the first event was detected. (This may or may not be the same time as CreateTime; analyzers are not required to send alerts immediately upon detection). ">DetectTime</td> </tr>" %</table>>, shape=plaintext, pos="52,18", width="1.4167", height="0.5"];
-}

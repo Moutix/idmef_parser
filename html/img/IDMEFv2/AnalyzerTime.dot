@@ -1,6 +1,0 @@
-digraph AnalyzerTime {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,118,36"];
-	AnalyzerTime [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c5c99" HREF="#" TITLE="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. ">AnalyzerTime</td> </tr>" %</table>>, shape=plaintext, pos="59,18", width="1.6389", height="0.5"];
-}

@@ -1,6 +1,0 @@
-digraph Address {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,246,148"];
-	Address [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#007a00" HREF="#" TITLE="The Address class is used to represent network, hardware, and application addresses. ">Address</td> </tr>" %<tr><td BGCOLOR="#00CC00" HREF="#" TITLE="The address information.  The format of this data is governed by the category attribute.">[STRING] address (1) </td></tr>%<tr><td BGCOLOR="#00CC00" HREF="#" TITLE="The network mask for the address, if appropriate.">[STRING] netmask (0..1) </td></tr>%<tr><td BGCOLOR="#00CC00" HREF="#" TITLE="A unique identifier for the address; see Section 3.2.9.">[STRING] ident (Optional) </td></tr>%<tr><td BGCOLOR="#00CC00" HREF="#" TITLE="The type of address represented.  The permitted values for this attribute are shown below.  The default value is &quot;unknown&quot;.  (See also Section 10.)">[ENUM] category (Optional) </td></tr>%<tr><td BGCOLOR="#00CC00" HREF="#" TITLE="The name of the Virtual LAN to which the address belongs.">[STRING] vlan-name (Optional) </td></tr>%<tr><td BGCOLOR="#00CC00" HREF="#" TITLE="The number of the Virtual LAN to which the address belongs.">[INTEGER] vlan-num (Optional) </td></tr>%</table>>, shape=plaintext, pos="123,74", width="3.3889", height="2.0694"];
-}

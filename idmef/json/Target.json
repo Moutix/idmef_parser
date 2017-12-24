@@ -29,7 +29,7 @@
     },
     "File": {
       "name": "File",
-      "multiplicity": "0..1",
+      "multiplicity": "0..*",
       "type": null,
       "description": "Information about file(s) involved in the event(s)."
     }

@@ -1,856 +1,929 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='UTF-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>IDMEF and IODEF</title>
-    <link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
-    <script src='/idmef_parser/js/jquery.min.js'></script>
-    <script src='/idmef_parser/js/bootstrap.min.js'></script>
-  </head>
-  <body>
-    <div class='navbar navbar-default navbar-inverse' role='navigation'>
-      <div class='container'>
-        <div class='navbar-header'>
-          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </button>
-          <a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
-        </div>
-        <div class='collapse navbar-collapse'>
-          <ul class='nav navbar-nav'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IDMEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/File.html'>File</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/User.html'>User</a>
-                </li>
-              </ul>
-            </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IODEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF'>IODEF-Document</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-                </li>
-                <li class='active'>
-                  <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/History.html'>History</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/System.html'>System</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class='nav navbar-nav navbar-right'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                RFC
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li>
-                  <a href='/idmef_parser/rfc4765.txt' target='_blank'>
-                    IDMEF (4765)
-                  </a>
-                </li>
-                <li>
-                  <a href='/idmef_parser/rfc5070.txt' target='_blank'>
-                    IODEF (5070)
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class='container'>
-      <h1>Expectation</h1>
-      <p>The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting.  The scope of the requested action is limited to purview of the EventData class in which this class is aggregated.</p>
-      <ul class='nav nav-tabs' role='tablist'>
-        <li class='active' role='presentation'>
-          <a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
-        </li>
-      </ul>
-      <div class='tab-content'>
-        <div class='tab-pane active' id='svg' role='tabpanel'>
-          <div class='img-responsive block-center'>
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-             "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <!-- Generated by graphviz version 2.26.3 (20100126.1600)
-             -->
-            <!-- Title: Expectation Pages: 1 -->
-            <svg width="100%" height="100%"
-             viewBox="0.00 0.00 894.00 374.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 370)">
-            <title>Expectation</title>
-            <polygon fill="white" stroke="white" points="-4,5 -4,-370 891,-370 891,5 -4,5"/>
-            <!-- Expectation -->
-            <g id="node1" class="node"><title>Expectation</title>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting. The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. ">
-            <polygon fill="#737373" stroke="#737373" points="9,-267 9,-288 236,-288 236,-267 9,-267"/>
-            <polygon fill="none" stroke="black" points="9,-267 9,-288 236,-288 236,-267 9,-267"/>
-            <text text-anchor="start" x="81.5" y="-274.233" font-family="Times Roman,serif" font-size="14.00">Expectation</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="A free&#45;form description of the desired action(s).">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-247 9,-267 236,-267 236,-247 9,-247"/>
-            <polygon fill="none" stroke="black" points="9,-247 9,-267 236,-267 236,-247 9,-247"/>
-            <text text-anchor="start" x="12.5" y="-253.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] Description (0..*) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="The time at which the action should be performed. &#160;A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible. &#160;The absence of this element leaves the execution of the expectation to the discretion of the recipient.">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-227 9,-247 236,-247 236,-227 9,-227"/>
-            <polygon fill="none" stroke="black" points="9,-227 9,-247 236,-247 236,-227 9,-227"/>
-            <text text-anchor="start" x="57.5" y="-233.733" font-family="Times Roman,serif" font-size="14.00">[] StartTime (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-207 9,-227 236,-227 236,-207 9,-207"/>
-            <polygon fill="none" stroke="black" points="9,-207 9,-227 236,-227 236,-207 9,-207"/>
-            <text text-anchor="start" x="62" y="-213.733" font-family="Times Roman,serif" font-size="14.00">[] EndTime (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="This attribute is defined in Section 3.2.">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-187 9,-207 236,-207 236,-187 9,-187"/>
-            <polygon fill="none" stroke="black" points="9,-187 9,-207 236,-207 236,-187 9,-187"/>
-            <text text-anchor="start" x="19.5" y="-193.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-167 9,-187 236,-187 236,-167 9,-167"/>
-            <polygon fill="none" stroke="black" points="9,-167 9,-187 236,-187 236,-167 9,-167"/>
-            <text text-anchor="start" x="27" y="-173.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] severity (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="Classifies the type of action requested. &#160;This attribute is an enumerated list with no default value.">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-147 9,-167 236,-167 236,-147 9,-147"/>
-            <polygon fill="none" stroke="black" points="9,-147 9,-167 236,-167 236,-147 9,-147"/>
-            <text text-anchor="start" x="33.5" y="-153.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] action (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="A means by which to extend the action attribute. &#160;See Section 5.1.">
-            <polygon fill="#bfbfbf" stroke="#bfbfbf" points="9,-127 9,-147 236,-147 236,-127 9,-127"/>
-            <polygon fill="none" stroke="black" points="9,-127 9,-147 236,-147 236,-127 9,-127"/>
-            <text text-anchor="start" x="14" y="-133.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;action (Optional) </text>
-            </a>
-            </g>
-            <!-- Contact -->
-            <g id="node2" class="node"><title>Contact</title>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. ">
-            <polygon fill="#7a993d" stroke="#7a993d" points="317,-297 317,-318 562,-318 562,-297 317,-297"/>
-            <polygon fill="none" stroke="black" points="317,-297 317,-318 562,-318 562,-297 317,-297"/>
-            <text text-anchor="start" x="412" y="-304.233" font-family="Times Roman,serif" font-size="14.00">Contact</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The name of the contact. &#160;The contact may either be an organization or a person. &#160;The type attribute disambiguates the semantics.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-277 317,-297 562,-297 562,-277 317,-277"/>
-            <polygon fill="none" stroke="black" points="317,-277 317,-297 562,-297 562,-277 317,-277"/>
-            <text text-anchor="start" x="320.5" y="-283.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] ContactName (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="A free&#45;form description of this contact. &#160;In the case of a person, this is often the organizational title of the individual.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-257 317,-277 562,-277 562,-257 317,-257"/>
-            <polygon fill="none" stroke="black" points="317,-257 317,-277 562,-277 562,-257 317,-257"/>
-            <text text-anchor="start" x="329.5" y="-263.733" font-family="Times Roman,serif" font-size="14.00">[ML_STRING] Description (0..*) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The telephone number of the contact.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-237 317,-257 562,-257 562,-237 317,-237"/>
-            <polygon fill="none" stroke="black" points="317,-237 317,-257 562,-257 562,-237 317,-237"/>
-            <text text-anchor="start" x="374.5" y="-243.733" font-family="Times Roman,serif" font-size="14.00">[] Telephone (0..*) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The facsimile telephone number of the contact.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-217 317,-237 562,-237 562,-217 317,-217"/>
-            <polygon fill="none" stroke="black" points="317,-217 317,-237 562,-237 562,-217 317,-217"/>
-            <text text-anchor="start" x="397" y="-223.733" font-family="Times Roman,serif" font-size="14.00">[] Fax (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The timezone in which the contact resides formatted according to Section 2.9.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-197 317,-217 562,-217 562,-197 317,-197"/>
-            <polygon fill="none" stroke="black" points="317,-197 317,-217 562,-217 562,-197 317,-197"/>
-            <text text-anchor="start" x="337.5" y="-203.733" font-family="Times Roman,serif" font-size="14.00">[TIMEZONE] Timezone (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="Indicates the role the contact fulfills. &#160;This attribute is defined as an enumerated list:">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-177 317,-197 562,-197 562,-177 317,-177"/>
-            <polygon fill="none" stroke="black" points="317,-177 317,-197 562,-197 562,-177 317,-177"/>
-            <text text-anchor="start" x="357.5" y="-183.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] role (Required) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="A means by which to extend the role attribute. See Section 5.1.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-157 317,-177 562,-177 562,-157 317,-157"/>
-            <polygon fill="none" stroke="black" points="317,-157 317,-177 562,-177 562,-157 317,-157"/>
-            <text text-anchor="start" x="338.5" y="-163.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;role (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="Indicates the type of contact being described. This attribute is defined as an enumerated list:">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-137 317,-157 562,-157 562,-137 317,-137"/>
-            <polygon fill="none" stroke="black" points="317,-137 317,-157 562,-157 562,-137 317,-137"/>
-            <text text-anchor="start" x="355" y="-143.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Required) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-117 317,-137 562,-137 562,-117 317,-117"/>
-            <polygon fill="none" stroke="black" points="317,-117 317,-137 562,-137 562,-117 317,-117"/>
-            <text text-anchor="start" x="336.5" y="-123.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="This attribute is defined in Section 3.2.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="317,-97 317,-117 562,-117 562,-97 317,-97"/>
-            <polygon fill="none" stroke="black" points="317,-97 317,-117 562,-117 562,-97 317,-97"/>
-            <text text-anchor="start" x="336.5" y="-103.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
-            </a>
-            </g>
-            <!-- Expectation&#45;&gt;Contact -->
-            <g id="edge12" class="edge"><title>Expectation&#45;&gt;Contact</title>
-            <path fill="none" stroke="black" d="M243.654,-208C261.553,-208 280.116,-208 298.36,-208"/>
-            <polygon fill="black" stroke="black" points="298.456,-211.5 308.456,-208 298.456,-204.5 298.456,-211.5"/>
-            <text text-anchor="middle" x="276" y="-212.4" font-family="Times Roman,serif" font-size="14.00">0..1</text>
-            </g>
-            <!-- Contact&#45;&gt;Contact -->
-            <g id="edge8" class="edge"><title>Contact&#45;&gt;Contact</title>
-            <path fill="none" stroke="black" d="M414.439,-322.054C419.422,-333.039 427.609,-340 439,-340 447.009,-340 453.434,-336.559 458.276,-330.697"/>
-            <polygon fill="black" stroke="black" points="461.33,-332.411 463.561,-322.054 455.358,-328.759 461.33,-332.411"/>
-            <text text-anchor="middle" x="439" y="-344.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
-            </g>
-            <!-- RegistryHandle -->
-            <g id="node3" class="node"><title>RegistryHandle</title>
-            <a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The RegistryHandle class represents a handle into an Internet registry or community&#45;specific database. The handle is specified in the element content and the type attribute specifies the database. ">
-            <polygon fill="#7a993d" stroke="#7a993d" points="642,-341 642,-362 878,-362 878,-341 642,-341"/>
-            <polygon fill="none" stroke="black" points="642,-341 642,-362 878,-362 878,-341 642,-341"/>
-            <text text-anchor="start" x="707.5" y="-348.233" font-family="Times Roman,serif" font-size="14.00">RegistryHandle</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The database to which the handle belongs. &#160;The default value is &#39;local&#39;. &#160;The possible values are:">
-            <polygon fill="#ccff66" stroke="#ccff66" points="642,-321 642,-341 878,-341 878,-321 642,-321"/>
-            <polygon fill="none" stroke="black" points="642,-321 642,-341 878,-341 878,-321 642,-321"/>
-            <text text-anchor="start" x="664.5" y="-327.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] registry (Required) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="A means by which to extend the registry attribute. &#160;See Section 5.1.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="642,-301 642,-321 878,-321 878,-301 642,-301"/>
-            <polygon fill="none" stroke="black" points="642,-301 642,-321 878,-321 878,-301 642,-301"/>
-            <text text-anchor="start" x="645.5" y="-307.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;registry (Optional) </text>
-            </a>
-            </g>
-            <!-- Contact&#45;&gt;RegistryHandle -->
-            <g id="edge2" class="edge"><title>Contact&#45;&gt;RegistryHandle</title>
-            <path fill="none" stroke="black" d="M569.65,-263.636C591.061,-272.359 613.082,-281.096 634,-289 638.809,-290.817 643.734,-292.643 648.717,-294.463"/>
-            <polygon fill="black" stroke="black" points="647.765,-297.84 658.359,-297.95 650.146,-291.258 647.765,-297.84"/>
-            <text text-anchor="middle" x="602" y="-284.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
-            </g>
-            <!-- PostalAddress -->
-            <g id="node5" class="node"><title>PostalAddress</title>
-            <a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). ">
-            <polygon fill="#7a993d" stroke="#7a993d" points="659,-255 659,-276 861,-276 861,-255 659,-255"/>
-            <polygon fill="none" stroke="black" points="659,-255 659,-276 861,-276 861,-255 659,-255"/>
-            <text text-anchor="start" x="712" y="-262.233" font-family="Times Roman,serif" font-size="14.00">PostalAddress</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="A free&#45;form description of the element content.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="659,-235 659,-255 861,-255 861,-235 659,-235"/>
-            <polygon fill="none" stroke="black" points="659,-235 659,-255 861,-255 861,-235 659,-235"/>
-            <text text-anchor="start" x="662.5" y="-241.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="659,-215 659,-235 861,-235 861,-215 659,-215"/>
-            <polygon fill="none" stroke="black" points="659,-215 659,-235 861,-235 861,-215 659,-215"/>
-            <text text-anchor="start" x="676.5" y="-221.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] lang (Required) </text>
-            </a>
-            </g>
-            <!-- Contact&#45;&gt;PostalAddress -->
-            <g id="edge4" class="edge"><title>Contact&#45;&gt;PostalAddress</title>
-            <path fill="none" stroke="black" d="M569.563,-223.456C593.075,-226.239 617.475,-229.128 640.648,-231.871"/>
-            <polygon fill="black" stroke="black" points="640.506,-235.379 650.848,-233.079 641.329,-228.427 640.506,-235.379"/>
-            <text text-anchor="middle" x="602" y="-232.4" font-family="Times Roman,serif" font-size="14.00">0..1</text>
-            </g>
-            <!-- Email -->
-            <g id="node7" class="node"><title>Email</title>
-            <a xlink:href="/idmef_parser/IODEF/Email.html" xlink:title="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">
-            <polygon fill="#7a993d" stroke="#7a993d" points="659,-169 659,-190 861,-190 861,-169 659,-169"/>
-            <polygon fill="none" stroke="black" points="659,-169 659,-190 861,-190 861,-169 659,-169"/>
-            <text text-anchor="start" x="741" y="-176.233" font-family="Times Roman,serif" font-size="14.00">Email</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/Email.html" xlink:title="A free&#45;form description of the element content (e.g., hours of coverage for a given number).">
-            <polygon fill="#ccff66" stroke="#ccff66" points="659,-149 659,-169 861,-169 861,-149 659,-149"/>
-            <polygon fill="none" stroke="black" points="659,-149 659,-169 861,-169 861,-149 659,-149"/>
-            <text text-anchor="start" x="662.5" y="-155.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
-            </a>
-            </g>
-            <!-- Contact&#45;&gt;Email -->
-            <g id="edge6" class="edge"><title>Contact&#45;&gt;Email</title>
-            <path fill="none" stroke="black" d="M569.563,-192.544C593.075,-189.761 617.475,-186.872 640.648,-184.129"/>
-            <polygon fill="black" stroke="black" points="641.329,-187.573 650.848,-182.921 640.506,-180.621 641.329,-187.573"/>
-            <text text-anchor="middle" x="602" y="-194.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
-            </g>
-            <!-- AdditionalData -->
-            <g id="node10" class="node"><title>AdditionalData</title>
-            <a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">
-            <polygon fill="#997a3d" stroke="#997a3d" points="650,-103 650,-124 871,-124 871,-103 650,-103"/>
-            <polygon fill="none" stroke="black" points="650,-103 650,-124 871,-124 871,-103 650,-103"/>
-            <text text-anchor="start" x="709" y="-110.233" font-family="Times Roman,serif" font-size="14.00">AdditionalData</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="The data type of the element content. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;string&quot;.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="650,-83 650,-103 871,-103 871,-83 650,-83"/>
-            <polygon fill="none" stroke="black" points="650,-83 650,-103 871,-103 871,-83 650,-83"/>
-            <text text-anchor="start" x="672" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] dtype (Required) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="A means by which to extend the dtype attribute. &#160;See Section 5.1.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="650,-63 650,-83 871,-83 871,-63 650,-63"/>
-            <polygon fill="none" stroke="black" points="650,-63 650,-83 871,-83 871,-63 650,-63"/>
-            <text text-anchor="start" x="653.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;dtype (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="A free&#45;form description of the element content.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="650,-43 650,-63 871,-63 871,-43 650,-43"/>
-            <polygon fill="none" stroke="black" points="650,-43 650,-63 871,-63 871,-43 650,-43"/>
-            <text text-anchor="start" x="657" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] meaning (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="An identifier referencing the format and semantics of the element content.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="650,-23 650,-43 871,-43 871,-23 650,-23"/>
-            <polygon fill="none" stroke="black" points="650,-23 650,-43 871,-43 871,-23 650,-23"/>
-            <text text-anchor="start" x="658" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] formatid (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="This attribute has been defined in Section 3.2.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="650,-3 650,-23 871,-23 871,-3 650,-3"/>
-            <polygon fill="none" stroke="black" points="650,-3 650,-23 871,-23 871,-3 650,-3"/>
-            <text text-anchor="start" x="657.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
-            </a>
-            </g>
-            <!-- Contact&#45;&gt;AdditionalData -->
-            <g id="edge10" class="edge"><title>Contact&#45;&gt;AdditionalData</title>
-            <path fill="none" stroke="black" d="M569.563,-149.43C590.185,-140.179 611.49,-130.621 632.051,-121.398"/>
-            <polygon fill="black" stroke="black" points="633.749,-124.472 641.44,-117.186 630.884,-118.085 633.749,-124.472"/>
-            <text text-anchor="middle" x="602" y="-144.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
-            </g>
-            </g>
-            </svg>
-          </div>
-        </div>
-        <div class='tab-pane' id='png' role='tabpanel'>
-          <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Expectation.png'>
-        </div>
-        <div class='tab-pane' id='dot' role='tabpanel'>
-          <pre><p>
-            digraph Expectation {
-            	graph [rankdir=LR];
-            	node [label=&quot;\N&quot;];
-            	graph [bb=&quot;0,0,886,366&quot;];
-            	Expectation [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#737373&quot; HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting. The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. &quot;&gt;Expectation&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;A free-form description of the desired action(s).&quot;&gt;[ML_STRING] Description (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;The time at which the action should be performed.  A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible.  The absence of this element leaves the execution of the expectation to the discretion of the recipient.&quot;&gt;[] StartTime (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.&quot;&gt;[] EndTime (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;This attribute is defined in Section 3.2.&quot;&gt;[ENUM] restriction (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.&quot;&gt;[ENUM] severity (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;Classifies the type of action requested.  This attribute is an enumerated list with no default value.&quot;&gt;[ENUM] action (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;A means by which to extend the action attribute.  See Section 5.1.&quot;&gt;[STRING] ext-action (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;122,208&quot;, width=&quot;3.3611&quot;, height=&quot;2.3472&quot;];
-            	Contact [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. &quot;&gt;Contact&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The name of the contact.  The contact may either be an organization or a person.  The type attribute disambiguates the semantics.&quot;&gt;[ML_STRING] ContactName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;A free-form description of this contact.  In the case of a person, this is often the organizational title of the individual.&quot;&gt;[ML_STRING] Description (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The telephone number of the contact.&quot;&gt;[] Telephone (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The facsimile telephone number of the contact.&quot;&gt;[] Fax (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The timezone in which the contact resides formatted according to Section 2.9.&quot;&gt;[TIMEZONE] Timezone (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:&quot;&gt;[ENUM] role (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;A means by which to extend the role attribute. See Section 5.1.&quot;&gt;[STRING] ext-role (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;Indicates the type of contact being described. This attribute is defined as an enumerated list:&quot;&gt;[ENUM] type (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;A means by which to extend the type attribute. See Section 5.1.&quot;&gt;[STRING] ext-type (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;This attribute is defined in Section 3.2.&quot;&gt;[ENUM] restriction (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;439,208&quot;, width=&quot;3.6111&quot;, height=&quot;3.1806&quot;];
-            	RegistryHandle [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The RegistryHandle class represents a handle into an Internet registry or community-specific database. The handle is specified in the element content and the type attribute specifies the database. &quot;&gt;RegistryHandle&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The database to which the handle belongs.  The default value is &amp;#39;local&amp;#39;.  The possible values are:&quot;&gt;[ENUM] registry (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;A means by which to extend the registry attribute.  See Section 5.1.&quot;&gt;[STRING] ext-registry (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;760,332&quot;, width=&quot;3.5&quot;, height=&quot;0.95833&quot;];
-            	PostalAddress [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/PostalAddress.html&quot; TITLE=&quot;The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). &quot;&gt;PostalAddress&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/PostalAddress.html&quot; TITLE=&quot;A free-form description of the element content.&quot;&gt;[ENUM] meaning (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/PostalAddress.html&quot; TITLE=&quot;A valid language code per RFC 4646 [7] constrained by the definition of &amp;quot;xs:language&amp;quot;.  The interpretation of this code is described in Section 6.&quot;&gt;[ENUM] lang (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;760,246&quot;, width=&quot;3.0278&quot;, height=&quot;0.95833&quot;];
-            	Email [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/Email.html&quot; TITLE=&quot;The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). &quot;&gt;Email&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Email.html&quot; TITLE=&quot;A free-form description of the element content (e.g., hours of coverage for a given number).&quot;&gt;[ENUM] meaning (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;760,170&quot;, width=&quot;3.0278&quot;, height=&quot;0.68056&quot;];
-            	AdditionalData [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a3d&quot; HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. &quot;&gt;AdditionalData&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;The data type of the element content.  The permitted values for this attribute are shown below.  The default value is &amp;quot;string&amp;quot;.&quot;&gt;[ENUM] dtype (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;A means by which to extend the dtype attribute.  See Section 5.1.&quot;&gt;[STRING] ext-dtype (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;A free-form description of the element content.&quot;&gt;[STRING] meaning (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;An identifier referencing the format and semantics of the element content.&quot;&gt;[STRING] formatid (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;This attribute has been defined in Section 3.2.&quot;&gt;[ENUM] restriction (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;760,64&quot;, width=&quot;3.2778&quot;, height=&quot;1.7917&quot;];
-            	Contact -&gt; RegistryHandle [label=&quot;0..*&quot;, pos=&quot;e,658.36,297.95 569.65,263.64 591.06,272.36 613.08,281.1 634,289 638.81,290.82 643.73,292.64 648.72,294.46&quot;, lp=&quot;602,288.5&quot;];
-            	Contact -&gt; PostalAddress [label=&quot;0..1&quot;, pos=&quot;e,650.85,233.08 569.56,223.46 593.07,226.24 617.47,229.13 640.65,231.87&quot;, lp=&quot;602,236.5&quot;];
-            	Contact -&gt; Email [label=&quot;0..*&quot;, pos=&quot;e,650.85,182.92 569.56,192.54 593.07,189.76 617.47,186.87 640.65,184.13&quot;, lp=&quot;602,198.5&quot;];
-            	Contact -&gt; Contact [label=&quot;0..*&quot;, pos=&quot;e,463.56,322.05 414.44,322.05 419.42,333.04 427.61,340 439,340 447.01,340 453.43,336.56 458.28,330.7&quot;, lp=&quot;439,348.5&quot;];
-            	Contact -&gt; AdditionalData [label=&quot;0..*&quot;, pos=&quot;e,641.44,117.19 569.56,149.43 590.18,140.18 611.49,130.62 632.05,121.4&quot;, lp=&quot;602,148.5&quot;];
-            	Expectation -&gt; Contact [label=&quot;0..1&quot;, pos=&quot;e,308.46,208 243.65,208 261.55,208 280.12,208 298.36,208&quot;, lp=&quot;276,216.5&quot;];
-            }
-          </p></pre>
-        </div>
-      </div>
-      <hr>
-      <h3>Aggregates</h3>
-      <h4>
-        Description
-        (0..*)
-      </h4>
-      <blockquote>
-        A free-form description of the desired action(s).
-      </blockquote>
-      <h4>
-        StartTime
-        (0..1)
-      </h4>
-      <blockquote>
-        The time at which the action should be performed.  A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible.  The absence of this element leaves the execution of the expectation to the discretion of the recipient.
-      </blockquote>
-      <h4>
-        EndTime
-        (0..1)
-      </h4>
-      <blockquote>
-        The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.
-      </blockquote>
-      <h4>
-        <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-        (0..1)
-      </h4>
-      <blockquote>
-        The expected actor for the action.
-      </blockquote>
-      <hr>
-      <h3>Attributes</h3>
-      <h4>
-        restriction
-        (Optional)
-      </h4>
-      <blockquote>
-        This attribute is defined in Section 3.2.
-      </blockquote>
-      <h4>
-        severity
-        (Optional)
-      </h4>
-      <blockquote>
-        Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.
-        <table class='table table-striped table-bordered'>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Keyword</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>low</td>
-              <td>Low priority</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>medium</td>
-              <td>Medium priority</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>high</td>
-              <td>High priority</td>
-            </tr>
-          </tbody>
-        </table>
-      </blockquote>
-      <h4>
-        action
-        (Optional)
-      </h4>
-      <blockquote>
-        Classifies the type of action requested.  This attribute is an enumerated list with no default value.
-        <table class='table table-striped table-bordered'>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Keyword</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>nothing</td>
-              <td>No action is requested.  Do nothing with the information.</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>contact-source-site</td>
-              <td>Contact the site(s) identified as the source of the activity.</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>contact-target-site</td>
-              <td>Contact the site(s) identified as the target of the activity.</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>contact-sender</td>
-              <td>Contact the originator of the document.</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>investigate</td>
-              <td>Investigate the systems(s) listed in the event.</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>block-host</td>
-              <td>Block traffic from the machine(s) listed as sources the event.</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>block-network</td>
-              <td>Block traffic from the network(s) lists as sources in the event.</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>block-port</td>
-              <td>Block the port listed as sources in the event.</td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td>rate-limit-host</td>
-              <td>Rate-limit the traffic from the machine(s) listed as sources in the event.</td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td>rate-limit-network</td>
-              <td>Rate-limit the traffic from the network(s) lists as sources in the event.</td>
-            </tr>
-            <tr>
-              <td>11</td>
-              <td>rate-limit-port</td>
-              <td>Rate-limit the port(s) listed as sources in the event.</td>
-            </tr>
-            <tr>
-              <td>12</td>
-              <td>remediate-other</td>
-              <td>Remediate the activity in a way other than by rate limiting or blocking.</td>
-            </tr>
-            <tr>
-              <td>13</td>
-              <td>status-triage</td>
-              <td>Conveys receipts and the triaging of an incident.</td>
-            </tr>
-            <tr>
-              <td>14</td>
-              <td>status-new-info</td>
-              <td>Conveys that new information was received for this incident.</td>
-            </tr>
-            <tr>
-              <td>15</td>
-              <td>other</td>
-              <td>Perform some custom action described in the Description class.</td>
-            </tr>
-            <tr>
-              <td>16</td>
-              <td>ext-value</td>
-              <td>An escape value used to extend this attribute. See Section 5.1.</td>
-            </tr>
-          </tbody>
-        </table>
-      </blockquote>
-      <h4>
-        ext-action
-        (Optional)
-      </h4>
-      <blockquote>
-        A means by which to extend the action attribute.  See Section 5.1.
-      </blockquote>
-    </div>
-    <hr>
-    <div class='container'>
-      <hr>
-      <h4>IDMEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Action.html'>Action</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/File.html'>File</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/User.html'>User</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <h4>IODEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Application.html'>Application</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Email.html'>Email</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/History.html'>History</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/System.html'>System</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset='UTF-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<title>IDMEF and IODEF</title>
+<link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
+<script src='/idmef_parser/js/jquery.min.js'></script>
+<script src='/idmef_parser/js/bootstrap.min.js'></script>
+</head>
+<body>
+<div class='navbar navbar-default navbar-inverse' role='navigation'>
+<div class='container'>
+<div class='navbar-header'>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
+</div>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IDMEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IODEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IODEF'>IODEF-Document</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li class='active'>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+RFC
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='/idmef_parser/rfc4765.txt' target='_blank'>
+IDMEF (4765)
+</a>
+</li>
+<li>
+<a href='/idmef_parser/rfc5070.txt' target='_blank'>
+IODEF (5070)
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<hr>
+<div class='container'>
+<h1>Expectation</h1>
+<p>The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting.  The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. </p>
+<ul class='nav nav-tabs' role='tablist'>
+<li class='active' role='presentation'>
+<a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
+</li>
+<li role='presentation'>
+<a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
+</li>
+<li role='presentation'>
+<a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active' id='svg' role='tabpanel'>
+<div class='img-responsive block-center'>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Expectation Pages: 1 -->
+<svg width="100%" height="100%"
+ viewBox="0.00 0.00 770.00 388.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 384.5)">
+<title>Expectation</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-384.5 766,-384.5 766,4 -4,4"/>
+<!-- Expectation -->
+<g id="node1" class="node"><title>Expectation</title>
+<g id="a_node1_0"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting. The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. ">
+<polygon fill="#737373" stroke="none" points="8,-279 8,-300 204,-300 204,-279 8,-279"/>
+<polygon fill="none" stroke="black" points="8,-279 8,-300 204,-300 204,-279 8,-279"/>
+<text text-anchor="start" x="73.5" y="-285.8" font-family="Times,serif" font-size="14.00">Expectation</text>
+</a>
+</g>
+<g id="a_node1_1"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="A free&#45;form description of the desired action(s).">
+<polygon fill="#bfbfbf" stroke="none" points="8,-258 8,-279 204,-279 204,-258 8,-258"/>
+<polygon fill="none" stroke="black" points="8,-258 8,-279 204,-279 204,-258 8,-258"/>
+<text text-anchor="start" x="11" y="-264.8" font-family="Times,serif" font-size="14.00">[ML_STRING] Description (0..*) </text>
+</a>
+</g>
+<g id="a_node1_2"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="The time at which the action should be performed. &#160;A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible. &#160;The absence of this element leaves the execution of the expectation to the discretion of the recipient.">
+<polygon fill="#bfbfbf" stroke="none" points="8,-237 8,-258 204,-258 204,-237 8,-237"/>
+<polygon fill="none" stroke="black" points="8,-237 8,-258 204,-258 204,-237 8,-237"/>
+<text text-anchor="start" x="53" y="-243.8" font-family="Times,serif" font-size="14.00">[] StartTime (0..1) </text>
+</a>
+</g>
+<g id="a_node1_3"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.">
+<polygon fill="#bfbfbf" stroke="none" points="8,-216 8,-237 204,-237 204,-216 8,-216"/>
+<polygon fill="none" stroke="black" points="8,-216 8,-237 204,-237 204,-216 8,-216"/>
+<text text-anchor="start" x="55" y="-222.8" font-family="Times,serif" font-size="14.00">[] EndTime (0..1) </text>
+</a>
+</g>
+<g id="a_node1_4"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="This attribute is defined in Section 3.2.">
+<polygon fill="#bfbfbf" stroke="none" points="8,-195 8,-216 204,-216 204,-195 8,-195"/>
+<polygon fill="none" stroke="black" points="8,-195 8,-216 204,-216 204,-195 8,-195"/>
+<text text-anchor="start" x="20" y="-201.8" font-family="Times,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
+</a>
+</g>
+<g id="a_node1_5"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.">
+<polygon fill="#bfbfbf" stroke="none" points="8,-174 8,-195 204,-195 204,-174 8,-174"/>
+<polygon fill="none" stroke="black" points="8,-174 8,-195 204,-195 204,-174 8,-174"/>
+<text text-anchor="start" x="26" y="-180.8" font-family="Times,serif" font-size="14.00">[ENUM] severity (Optional) </text>
+</a>
+</g>
+<g id="a_node1_6"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="Classifies the type of action requested. &#160;This attribute is an enumerated list with no default value.">
+<polygon fill="#bfbfbf" stroke="none" points="8,-153 8,-174 204,-174 204,-153 8,-153"/>
+<polygon fill="none" stroke="black" points="8,-153 8,-174 204,-174 204,-153 8,-153"/>
+<text text-anchor="start" x="30.5" y="-159.8" font-family="Times,serif" font-size="14.00">[ENUM] action (Optional) </text>
+</a>
+</g>
+<g id="a_node1_7"><a xlink:href="/idmef_parser/IODEF/Expectation.html" xlink:title="A means by which to extend the action attribute. &#160;See Section 5.1.">
+<polygon fill="#bfbfbf" stroke="none" points="8,-132 8,-153 204,-153 204,-132 8,-132"/>
+<polygon fill="none" stroke="black" points="8,-132 8,-153 204,-153 204,-132 8,-132"/>
+<text text-anchor="start" x="16" y="-138.8" font-family="Times,serif" font-size="14.00">[STRING] ext&#45;action (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Contact -->
+<g id="node2" class="node"><title>Contact</title>
+<g id="a_node2_8"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. ">
+<polygon fill="#7a993d" stroke="none" points="278,-310 278,-331 486,-331 486,-310 278,-310"/>
+<polygon fill="none" stroke="black" points="278,-310 278,-331 486,-331 486,-310 278,-310"/>
+<text text-anchor="start" x="360.5" y="-316.8" font-family="Times,serif" font-size="14.00">Contact</text>
+</a>
+</g>
+<g id="a_node2_9"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The name of the contact. &#160;The contact may either be an organization or a person. &#160;The type attribute disambiguates the semantics.">
+<polygon fill="#ccff66" stroke="none" points="278,-289 278,-310 486,-310 486,-289 278,-289"/>
+<polygon fill="none" stroke="black" points="278,-289 278,-310 486,-310 486,-289 278,-289"/>
+<text text-anchor="start" x="281" y="-295.8" font-family="Times,serif" font-size="14.00">[ML_STRING] ContactName (0..1) </text>
+</a>
+</g>
+<g id="a_node2_10"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="A free&#45;form description of this contact. &#160;In the case of a person, this is often the organizational title of the individual.">
+<polygon fill="#ccff66" stroke="none" points="278,-268 278,-289 486,-289 486,-268 278,-268"/>
+<polygon fill="none" stroke="black" points="278,-268 278,-289 486,-289 486,-268 278,-268"/>
+<text text-anchor="start" x="287" y="-274.8" font-family="Times,serif" font-size="14.00">[ML_STRING] Description (0..*) </text>
+</a>
+</g>
+<g id="a_node2_11"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The telephone number of the contact.">
+<polygon fill="#ccff66" stroke="none" points="278,-247 278,-268 486,-268 486,-247 278,-247"/>
+<polygon fill="none" stroke="black" points="278,-247 278,-268 486,-268 486,-247 278,-247"/>
+<text text-anchor="start" x="328" y="-253.8" font-family="Times,serif" font-size="14.00">[] Telephone (0..*) </text>
+</a>
+</g>
+<g id="a_node2_12"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The facsimile telephone number of the contact.">
+<polygon fill="#ccff66" stroke="none" points="278,-226 278,-247 486,-247 486,-226 278,-226"/>
+<polygon fill="none" stroke="black" points="278,-226 278,-247 486,-247 486,-226 278,-226"/>
+<text text-anchor="start" x="346.5" y="-232.8" font-family="Times,serif" font-size="14.00">[] Fax (0..1) </text>
+</a>
+</g>
+<g id="a_node2_13"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="The timezone in which the contact resides formatted according to Section 2.9.">
+<polygon fill="#ccff66" stroke="none" points="278,-205 278,-226 486,-226 486,-205 278,-205"/>
+<polygon fill="none" stroke="black" points="278,-205 278,-226 486,-226 486,-205 278,-205"/>
+<text text-anchor="start" x="294.5" y="-211.8" font-family="Times,serif" font-size="14.00">[TIMEZONE] Timezone (0..1) </text>
+</a>
+</g>
+<g id="a_node2_14"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="Indicates the role the contact fulfills. &#160;This attribute is defined as an enumerated list:">
+<polygon fill="#ccff66" stroke="none" points="278,-184 278,-205 486,-205 486,-184 278,-184"/>
+<polygon fill="none" stroke="black" points="278,-184 278,-205 486,-205 486,-184 278,-184"/>
+<text text-anchor="start" x="311.5" y="-190.8" font-family="Times,serif" font-size="14.00">[ENUM] role (Required) </text>
+</a>
+</g>
+<g id="a_node2_15"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="A means by which to extend the role attribute. See Section 5.1.">
+<polygon fill="#ccff66" stroke="none" points="278,-163 278,-184 486,-184 486,-163 278,-163"/>
+<polygon fill="none" stroke="black" points="278,-163 278,-184 486,-184 486,-163 278,-163"/>
+<text text-anchor="start" x="298" y="-169.8" font-family="Times,serif" font-size="14.00">[STRING] ext&#45;role (Optional) </text>
+</a>
+</g>
+<g id="a_node2_16"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="Indicates the type of contact being described. This attribute is defined as an enumerated list:">
+<polygon fill="#ccff66" stroke="none" points="278,-142 278,-163 486,-163 486,-142 278,-142"/>
+<polygon fill="none" stroke="black" points="278,-142 278,-163 486,-163 486,-142 278,-142"/>
+<text text-anchor="start" x="310.5" y="-148.8" font-family="Times,serif" font-size="14.00">[ENUM] type (Required) </text>
+</a>
+</g>
+<g id="a_node2_17"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="A means by which to extend the type attribute. See Section 5.1.">
+<polygon fill="#ccff66" stroke="none" points="278,-121 278,-142 486,-142 486,-121 278,-121"/>
+<polygon fill="none" stroke="black" points="278,-121 278,-142 486,-142 486,-121 278,-121"/>
+<text text-anchor="start" x="297" y="-127.8" font-family="Times,serif" font-size="14.00">[STRING] ext&#45;type (Optional) </text>
+</a>
+</g>
+<g id="a_node2_18"><a xlink:href="/idmef_parser/IODEF/Contact.html" xlink:title="This attribute is defined in Section 3.2.">
+<polygon fill="#ccff66" stroke="none" points="278,-100 278,-121 486,-121 486,-100 278,-100"/>
+<polygon fill="none" stroke="black" points="278,-100 278,-121 486,-121 486,-100 278,-100"/>
+<text text-anchor="start" x="296" y="-106.8" font-family="Times,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Expectation&#45;&gt;Contact -->
+<g id="edge6" class="edge"><title>Expectation&#45;&gt;Contact</title>
+<path fill="none" stroke="black" d="M212.152,-216C227.627,-216 243.676,-216 259.448,-216"/>
+<polygon fill="black" stroke="black" points="259.764,-219.5 269.764,-216 259.764,-212.5 259.764,-219.5"/>
+<text text-anchor="middle" x="241" y="-219.8" font-family="Times,serif" font-size="14.00">0..1</text>
+</g>
+<!-- Contact&#45;&gt;Contact -->
+<g id="edge4" class="edge"><title>Contact&#45;&gt;Contact</title>
+<path fill="none" stroke="black" d="M361.14,-335.75C365.476,-346.646 372.43,-353.5 382,-353.5 388.58,-353.5 393.922,-350.261 398.028,-344.695"/>
+<polygon fill="black" stroke="black" points="401.187,-346.212 402.86,-335.75 395.028,-342.885 401.187,-346.212"/>
+<text text-anchor="middle" x="382" y="-357.3" font-family="Times,serif" font-size="14.00">0..*</text>
+</g>
+<!-- RegistryHandle -->
+<g id="node3" class="node"><title>RegistryHandle</title>
+<g id="a_node3_19"><a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The RegistryHandle class represents a handle into an Internet registry or community&#45;specific database. The handle is specified in the element content and the type attribute specifies the database. ">
+<polygon fill="#7a993d" stroke="none" points="560,-355 560,-376 754,-376 754,-355 560,-355"/>
+<polygon fill="none" stroke="black" points="560,-355 560,-376 754,-376 754,-355 560,-355"/>
+<text text-anchor="start" x="614.5" y="-361.8" font-family="Times,serif" font-size="14.00">RegistryHandle</text>
+</a>
+</g>
+<g id="a_node3_20"><a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The database to which the handle belongs. &#160;The default value is &#39;local&#39;. &#160;The possible values are:">
+<polygon fill="#ccff66" stroke="none" points="560,-334 560,-355 754,-355 754,-334 560,-334"/>
+<polygon fill="none" stroke="black" points="560,-334 560,-355 754,-355 754,-334 560,-334"/>
+<text text-anchor="start" x="576.5" y="-340.8" font-family="Times,serif" font-size="14.00">[ENUM] registry (Required) </text>
+</a>
+</g>
+<g id="a_node3_21"><a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="A means by which to extend the registry attribute. &#160;See Section 5.1.">
+<polygon fill="#ccff66" stroke="none" points="560,-313 560,-334 754,-334 754,-313 560,-313"/>
+<polygon fill="none" stroke="black" points="560,-313 560,-334 754,-334 754,-313 560,-313"/>
+<text text-anchor="start" x="563" y="-319.8" font-family="Times,serif" font-size="14.00">[STRING] ext&#45;registry (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Contact&#45;&gt;RegistryHandle -->
+<g id="edge1" class="edge"><title>Contact&#45;&gt;RegistryHandle</title>
+<path fill="none" stroke="black" d="M494.31,-273.283C513.448,-282.758 533.22,-292.316 552,-301 555.12,-302.443 558.3,-303.894 561.517,-305.346"/>
+<polygon fill="black" stroke="black" points="560.108,-308.55 570.666,-309.434 562.964,-302.159 560.108,-308.55"/>
+<text text-anchor="middle" x="523" y="-295.8" font-family="Times,serif" font-size="14.00">0..*</text>
+</g>
+<!-- PostalAddress -->
+<g id="node4" class="node"><title>PostalAddress</title>
+<g id="a_node4_22"><a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). ">
+<polygon fill="#7a993d" stroke="none" points="572,-266 572,-287 743,-287 743,-266 572,-266"/>
+<polygon fill="none" stroke="black" points="572,-266 572,-287 743,-287 743,-266 572,-266"/>
+<text text-anchor="start" x="618.5" y="-272.8" font-family="Times,serif" font-size="14.00">PostalAddress</text>
+</a>
+</g>
+<g id="a_node4_23"><a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="A free&#45;form description of the element content.">
+<polygon fill="#ccff66" stroke="none" points="572,-245 572,-266 743,-266 743,-245 572,-245"/>
+<polygon fill="none" stroke="black" points="572,-245 572,-266 743,-266 743,-245 572,-245"/>
+<text text-anchor="start" x="575" y="-251.8" font-family="Times,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
+</a>
+</g>
+<g id="a_node4_24"><a xlink:href="/idmef_parser/IODEF/PostalAddress.html" xlink:title="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;. &#160;The interpretation of this code is described in Section 6.">
+<polygon fill="#ccff66" stroke="none" points="572,-224 572,-245 743,-245 743,-224 572,-224"/>
+<polygon fill="none" stroke="black" points="572,-224 572,-245 743,-245 743,-224 572,-224"/>
+<text text-anchor="start" x="586" y="-230.8" font-family="Times,serif" font-size="14.00">[ENUM] lang (Required) </text>
+</a>
+</g>
+</g>
+<!-- Contact&#45;&gt;PostalAddress -->
+<g id="edge2" class="edge"><title>Contact&#45;&gt;PostalAddress</title>
+<path fill="none" stroke="black" d="M494.04,-232.27C513.65,-235.143 533.987,-238.123 553.354,-240.96"/>
+<polygon fill="black" stroke="black" points="552.982,-244.443 563.384,-242.43 553.997,-237.517 552.982,-244.443"/>
+<text text-anchor="middle" x="523" y="-240.8" font-family="Times,serif" font-size="14.00">0..1</text>
+</g>
+<!-- Email -->
+<g id="node5" class="node"><title>Email</title>
+<g id="a_node5_25"><a xlink:href="/idmef_parser/IODEF/Email.html" xlink:title="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">
+<polygon fill="#7a993d" stroke="none" points="572,-177 572,-198 743,-198 743,-177 572,-177"/>
+<polygon fill="none" stroke="black" points="572,-177 572,-198 743,-198 743,-177 572,-177"/>
+<text text-anchor="start" x="640.5" y="-183.8" font-family="Times,serif" font-size="14.00">Email</text>
+</a>
+</g>
+<g id="a_node5_26"><a xlink:href="/idmef_parser/IODEF/Email.html" xlink:title="A free&#45;form description of the element content (e.g., hours of coverage for a given number).">
+<polygon fill="#ccff66" stroke="none" points="572,-156 572,-177 743,-177 743,-156 572,-156"/>
+<polygon fill="none" stroke="black" points="572,-156 572,-177 743,-177 743,-156 572,-156"/>
+<text text-anchor="start" x="575" y="-162.8" font-family="Times,serif" font-size="14.00">[ENUM] meaning (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Contact&#45;&gt;Email -->
+<g id="edge3" class="edge"><title>Contact&#45;&gt;Email</title>
+<path fill="none" stroke="black" d="M494.04,-200.137C513.65,-197.336 533.987,-194.43 553.354,-191.664"/>
+<polygon fill="black" stroke="black" points="553.98,-195.11 563.384,-190.231 552.99,-188.18 553.98,-195.11"/>
+<text text-anchor="middle" x="523" y="-199.8" font-family="Times,serif" font-size="14.00">0..*</text>
+</g>
+<!-- AdditionalData -->
+<g id="node6" class="node"><title>AdditionalData</title>
+<g id="a_node6_27"><a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">
+<polygon fill="#997a3d" stroke="none" points="566,-109 566,-130 749,-130 749,-109 566,-109"/>
+<polygon fill="none" stroke="black" points="566,-109 566,-130 749,-130 749,-109 566,-109"/>
+<text text-anchor="start" x="615.5" y="-115.8" font-family="Times,serif" font-size="14.00">AdditionalData</text>
+</a>
+</g>
+<g id="a_node6_28"><a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="The data type of the element content. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;string&quot;.">
+<polygon fill="#ffcc66" stroke="none" points="566,-88 566,-109 749,-109 749,-88 566,-88"/>
+<polygon fill="none" stroke="black" points="566,-88 566,-109 749,-109 749,-88 566,-88"/>
+<text text-anchor="start" x="582.5" y="-94.8" font-family="Times,serif" font-size="14.00">[ENUM] dtype (Required) </text>
+</a>
+</g>
+<g id="a_node6_29"><a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="A means by which to extend the dtype attribute. &#160;See Section 5.1.">
+<polygon fill="#ffcc66" stroke="none" points="566,-67 566,-88 749,-88 749,-67 566,-67"/>
+<polygon fill="none" stroke="black" points="566,-67 566,-88 749,-88 749,-67 566,-67"/>
+<text text-anchor="start" x="569" y="-73.8" font-family="Times,serif" font-size="14.00">[STRING] ext&#45;dtype (Optional) </text>
+</a>
+</g>
+<g id="a_node6_30"><a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="A free&#45;form description of the element content.">
+<polygon fill="#ffcc66" stroke="none" points="566,-46 566,-67 749,-67 749,-46 566,-46"/>
+<polygon fill="none" stroke="black" points="566,-46 566,-67 749,-67 749,-46 566,-46"/>
+<text text-anchor="start" x="571" y="-52.8" font-family="Times,serif" font-size="14.00">[STRING] meaning (Optional) </text>
+</a>
+</g>
+<g id="a_node6_31"><a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="An identifier referencing the format and semantics of the element content.">
+<polygon fill="#ffcc66" stroke="none" points="566,-25 566,-46 749,-46 749,-25 566,-25"/>
+<polygon fill="none" stroke="black" points="566,-25 566,-46 749,-46 749,-25 566,-25"/>
+<text text-anchor="start" x="571" y="-31.8" font-family="Times,serif" font-size="14.00">[STRING] formatid (Optional) </text>
+</a>
+</g>
+<g id="a_node6_32"><a xlink:href="/idmef_parser/IODEF/AdditionalData.html" xlink:title="This attribute has been defined in Section 3.2.">
+<polygon fill="#ffcc66" stroke="none" points="566,-4 566,-25 749,-25 749,-4 566,-4"/>
+<polygon fill="none" stroke="black" points="566,-4 566,-25 749,-25 749,-4 566,-4"/>
+<text text-anchor="start" x="571.5" y="-10.8" font-family="Times,serif" font-size="14.00">[ENUM] restriction (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Contact&#45;&gt;AdditionalData -->
+<g id="edge5" class="edge"><title>Contact&#45;&gt;AdditionalData</title>
+<path fill="none" stroke="black" d="M494.04,-155.396C511.89,-145.653 530.343,-135.582 548.118,-125.881"/>
+<polygon fill="black" stroke="black" points="550.243,-128.708 557.344,-120.845 546.89,-122.564 550.243,-128.708"/>
+<text text-anchor="middle" x="523" y="-145.8" font-family="Times,serif" font-size="14.00">0..*</text>
+</g>
+</g>
+</svg>
+
+</div>
+</div>
+<div class='tab-pane' id='png' role='tabpanel'>
+<img class='img-responsive block-center' src='/idmef_parser/img/IODEF/Expectation.png'>
+</div>
+<div class='tab-pane' id='dot' role='tabpanel'>
+<pre><p>digraph Expectation {
+	graph [bb=&quot;0,0,762,380.5&quot;,
+		rankdir=LR
+	];
+	node [label=&quot;\N&quot;];
+	Expectation	 [height=2.4444,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#737373&quot; HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;The Expectation class conveys to the recipient of the IODEF document the actions the sender is requesting. The scope of the requested action is limited to purview of the EventData class in which this class is aggregated. &quot;&gt;Expectation&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;A free-form description of the desired action(s).&quot;&gt;[ML_STRING] Description (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;The time at which the action should be performed.  A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible.  The absence of this element leaves the execution of the expectation to the discretion of the recipient.&quot;&gt;[] StartTime (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.&quot;&gt;[] EndTime (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;This attribute is defined in Section 3.2.&quot;&gt;[ENUM] restriction (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.&quot;&gt;[ENUM] severity (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;Classifies the type of action requested.  This attribute is an enumerated list with no default value.&quot;&gt;[ENUM] action (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#bfbfbf&quot;  HREF=&quot;/idmef_parser/IODEF/Expectation.html&quot; TITLE=&quot;A means by which to extend the action attribute.  See Section 5.1.&quot;&gt;[STRING] ext-action (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;106,216&quot;,
+		shape=plaintext,
+		width=2.9444];
+	Contact	 [height=3.3194,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. &quot;&gt;Contact&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The name of the contact.  The contact may either be an organization or a person.  The type attribute disambiguates the semantics.&quot;&gt;[ML_STRING] ContactName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;A free-form description of this contact.  In the case of a person, this is often the organizational title of the individual.&quot;&gt;[ML_STRING] Description (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The telephone number of the contact.&quot;&gt;[] Telephone (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The facsimile telephone number of the contact.&quot;&gt;[] Fax (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;The timezone in which the contact resides formatted according to Section 2.9.&quot;&gt;[TIMEZONE] Timezone (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:&quot;&gt;[ENUM] role (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;A means by which to extend the role attribute. See Section 5.1.&quot;&gt;[STRING] ext-role (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;Indicates the type of contact being described. This attribute is defined as an enumerated list:&quot;&gt;[ENUM] type (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;A means by which to extend the type attribute. See Section 5.1.&quot;&gt;[STRING] ext-type (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Contact.html&quot; TITLE=&quot;This attribute is defined in Section 3.2.&quot;&gt;[ENUM] restriction (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;382,216&quot;,
+		shape=plaintext,
+		width=3.1111];
+	Expectation -&gt; Contact	 [label=&quot;0..1&quot;,
+		lp=&quot;241,223.5&quot;,
+		pos=&quot;e,269.76,216 212.15,216 227.63,216 243.68,216 259.45,216&quot;];
+	Contact -&gt; Contact	 [label=&quot;0..*&quot;,
+		lp=&quot;382,361&quot;,
+		pos=&quot;e,402.86,335.75 361.14,335.75 365.48,346.65 372.43,353.5 382,353.5 388.58,353.5 393.92,350.26 398.03,344.7&quot;];
+	RegistryHandle	 [height=0.98611,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The RegistryHandle class represents a handle into an Internet registry or community-specific database. The handle is specified in the element content and the type attribute specifies the database. &quot;&gt;RegistryHandle&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The database to which the handle belongs.  The default value is &amp;#39;local&amp;#39;.  The possible values are:&quot;&gt;[ENUM] registry (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;A means by which to extend the registry attribute.  See Section 5.1.&quot;&gt;[STRING] ext-registry (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;657,345&quot;,
+		shape=plaintext,
+		width=2.9167];
+	Contact -&gt; RegistryHandle	 [label=&quot;0..*&quot;,
+		lp=&quot;523,299.5&quot;,
+		pos=&quot;e,570.67,309.43 494.31,273.28 513.45,282.76 533.22,292.32 552,301 555.12,302.44 558.3,303.89 561.52,305.35&quot;];
+	PostalAddress	 [height=0.98611,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/PostalAddress.html&quot; TITLE=&quot;The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). &quot;&gt;PostalAddress&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/PostalAddress.html&quot; TITLE=&quot;A free-form description of the element content.&quot;&gt;[ENUM] meaning (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/PostalAddress.html&quot; TITLE=&quot;A valid language code per RFC 4646 [7] constrained by the definition of &amp;quot;xs:language&amp;quot;.  The interpretation of this code is described in Section 6.&quot;&gt;[ENUM] lang (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;657,256&quot;,
+		shape=plaintext,
+		width=2.5972];
+	Contact -&gt; PostalAddress	 [label=&quot;0..1&quot;,
+		lp=&quot;523,244.5&quot;,
+		pos=&quot;e,563.38,242.43 494.04,232.27 513.65,235.14 533.99,238.12 553.35,240.96&quot;];
+	Email	 [height=0.69444,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/Email.html&quot; TITLE=&quot;The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). &quot;&gt;Email&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/Email.html&quot; TITLE=&quot;A free-form description of the element content (e.g., hours of coverage for a given number).&quot;&gt;[ENUM] meaning (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;657,177&quot;,
+		shape=plaintext,
+		width=2.5972];
+	Contact -&gt; Email	 [label=&quot;0..*&quot;,
+		lp=&quot;523,203.5&quot;,
+		pos=&quot;e,563.38,190.23 494.04,200.14 513.65,197.34 533.99,194.43 553.35,191.66&quot;];
+	AdditionalData	 [height=1.8611,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a3d&quot; HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. &quot;&gt;AdditionalData&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;The data type of the element content.  The permitted values for this attribute are shown below.  The default value is &amp;quot;string&amp;quot;.&quot;&gt;[ENUM] dtype (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;A means by which to extend the dtype attribute.  See Section 5.1.&quot;&gt;[STRING] ext-dtype (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;A free-form description of the element content.&quot;&gt;[STRING] meaning (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;An identifier referencing the format and semantics of the element content.&quot;&gt;[STRING] formatid (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IODEF/AdditionalData.html&quot; TITLE=&quot;This attribute has been defined in Section 3.2.&quot;&gt;[ENUM] restriction (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;657,67&quot;,
+		shape=plaintext,
+		width=2.7639];
+	Contact -&gt; AdditionalData	 [label=&quot;0..*&quot;,
+		lp=&quot;523,149.5&quot;,
+		pos=&quot;e,557.34,120.85 494.04,155.4 511.89,145.65 530.34,135.58 548.12,125.88&quot;];
+}
+</p></pre>
+</div>
+</div>
+<hr>
+<h3>Aggregates</h3>
+<h4>
+Description
+(0..*)
+</h4>
+<blockquote>
+A free-form description of the desired action(s).
+</blockquote>
+<h4>
+StartTime
+(0..1)
+</h4>
+<blockquote>
+The time at which the action should be performed.  A timestamp that is earlier than the ReportTime specified in the Incident class denotes that the expectation should be fulfilled as soon as possible.  The absence of this element leaves the execution of the expectation to the discretion of the recipient.
+</blockquote>
+<h4>
+EndTime
+(0..1)
+</h4>
+<blockquote>
+The time by which the action should be completed. If the action is not carried out by this time, it should no longer be performed.
+</blockquote>
+<h4>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+(0..1)
+</h4>
+<blockquote>
+The expected actor for the action.
+</blockquote>
+<hr>
+<h3>Attributes</h3>
+<h4>
+restriction
+(Optional)
+</h4>
+<blockquote>
+This attribute is defined in Section 3.2.
+</blockquote>
+<h4>
+severity
+(Optional)
+</h4>
+<blockquote>
+Indicates the desired priority of the action. This attribute is an enumerated list with no default value, and the semantics of these relative measures are context dependent.
+<table class='table table-striped table-bordered'>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Keyword</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>low</td>
+<td>Low priority</td>
+</tr>
+<tr>
+<td>2</td>
+<td>medium</td>
+<td>Medium priority</td>
+</tr>
+<tr>
+<td>3</td>
+<td>high</td>
+<td>High priority</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4>
+action
+(Optional)
+</h4>
+<blockquote>
+Classifies the type of action requested.  This attribute is an enumerated list with no default value.
+<table class='table table-striped table-bordered'>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Keyword</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>nothing</td>
+<td>No action is requested.  Do nothing with the information.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>contact-source-site</td>
+<td>Contact the site(s) identified as the source of the activity.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>contact-target-site</td>
+<td>Contact the site(s) identified as the target of the activity.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>contact-sender</td>
+<td>Contact the originator of the document.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>investigate</td>
+<td>Investigate the systems(s) listed in the event.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>block-host</td>
+<td>Block traffic from the machine(s) listed as sources the event.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>block-network</td>
+<td>Block traffic from the network(s) lists as sources in the event.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>block-port</td>
+<td>Block the port listed as sources in the event.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>rate-limit-host</td>
+<td>Rate-limit the traffic from the machine(s) listed as sources in the event.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>rate-limit-network</td>
+<td>Rate-limit the traffic from the network(s) lists as sources in the event.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>rate-limit-port</td>
+<td>Rate-limit the port(s) listed as sources in the event.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>remediate-other</td>
+<td>Remediate the activity in a way other than by rate limiting or blocking.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>status-triage</td>
+<td>Conveys receipts and the triaging of an incident.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>status-new-info</td>
+<td>Conveys that new information was received for this incident.</td>
+</tr>
+<tr>
+<td>15</td>
+<td>other</td>
+<td>Perform some custom action described in the Description class.</td>
+</tr>
+<tr>
+<td>16</td>
+<td>ext-value</td>
+<td>An escape value used to extend this attribute. See Section 5.1.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4>
+ext-action
+(Optional)
+</h4>
+<blockquote>
+A means by which to extend the action attribute.  See Section 5.1.
+</blockquote>
+</div>
+
+<hr>
+<div class='container'>
+<hr>
+<h4>IDMEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Action.html'>Action</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<h4>IODEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Application.html'>Application</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Email.html'>Email</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</body>
 </html>

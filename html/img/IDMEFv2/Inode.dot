@@ -1,6 +1,0 @@
-digraph Inode {
-	graph [rankdir=LR];
-	node [label="\N"];
-	graph [bb="0,0,248,148"];
-	Inode [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a00" HREF="#" TITLE="The Inode class is used to represent the additional information contained in a Unix file system i-node. ">Inode</td> </tr>" %<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The time of the last inode change, given by the st_ctime element of &quot;struct stat&quot;.">[DATETIME] change-time (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The inode number.">[INTEGER] number (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The major device number of the device the file resides on.">[INTEGER] major-device (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The minor device number of the device the file resides on.">[INTEGER] minor-device (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The major device of the file itself, if it is a character special device.">[INTEGER] c-major-device (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00" HREF="#" TITLE="The minor device of the file itself, if it is a character special device.">[INTEGER] c-minor-device (0..1) </td></tr>%</table>>, shape=plaintext, pos="124,74", width="3.4444", height="2.0694"];
-}
