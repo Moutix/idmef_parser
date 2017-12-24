@@ -1,508 +1,521 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='UTF-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>IDMEF and IODEF</title>
-    <link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
-    <script src='/idmef_parser/js/jquery.min.js'></script>
-    <script src='/idmef_parser/js/bootstrap.min.js'></script>
-  </head>
-  <body>
-    <div class='navbar navbar-default navbar-inverse' role='navigation'>
-      <div class='container'>
-        <div class='navbar-header'>
-          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </button>
-          <a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
-        </div>
-        <div class='collapse navbar-collapse'>
-          <ul class='nav navbar-nav'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IDMEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/File.html'>File</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/User.html'>User</a>
-                </li>
-              </ul>
-            </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IODEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF'>IODEF-Document</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/History.html'>History</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/System.html'>System</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class='nav navbar-nav navbar-right'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                RFC
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li>
-                  <a href='/idmef_parser/rfc4765.txt' target='_blank'>
-                    IDMEF (4765)
-                  </a>
-                </li>
-                <li>
-                  <a href='/idmef_parser/rfc5070.txt' target='_blank'>
-                    IODEF (5070)
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class='container'>
-      <h1>WebService</h1>
-      <p>The WebService class carries additional information related to web traffic.</p>
-      <ul class='nav nav-tabs' role='tablist'>
-        <li class='active' role='presentation'>
-          <a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
-        </li>
-      </ul>
-      <div class='tab-content'>
-        <div class='tab-pane active' id='svg' role='tabpanel'>
-          <div class='img-responsive block-center'>
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-             "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <!-- Generated by graphviz version 2.26.3 (20100126.1600)
-             -->
-            <!-- Title: WebService Pages: 1 -->
-            <svg width="234pt" height="116pt"
-             viewBox="0.00 0.00 234.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
-            <title>WebService</title>
-            <polygon fill="white" stroke="white" points="-4,5 -4,-112 231,-112 231,5 -4,5"/>
-            <!-- WebService -->
-            <g id="node1" class="node"><title>WebService</title>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The WebService class carries additional information related to web traffic. ">
-            <polygon fill="#997a7a" stroke="#997a7a" points="8,-83 8,-104 218,-104 218,-83 8,-83"/>
-            <polygon fill="none" stroke="black" points="8,-83 8,-104 218,-104 218,-83 8,-83"/>
-            <text text-anchor="start" x="72" y="-90.2333" font-family="Times Roman,serif" font-size="14.00">WebService</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The URL in the request.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="8,-63 8,-83 218,-83 218,-63 8,-63"/>
-            <polygon fill="none" stroke="black" points="8,-63 8,-83 218,-83 218,-63 8,-63"/>
-            <text text-anchor="start" x="54.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The CGI script in the request, without arguments.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="8,-43 8,-63 218,-63 218,-43 8,-43"/>
-            <polygon fill="none" stroke="black" points="8,-43 8,-63 218,-63 218,-43 8,-43"/>
-            <text text-anchor="start" x="45.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] cgi (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The HTTP method (PUT, GET) used in the request.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="8,-23 8,-43 218,-43 218,-23 8,-23"/>
-            <polygon fill="none" stroke="black" points="8,-23 8,-43 218,-43 218,-23 8,-23"/>
-            <text text-anchor="start" x="11.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] http&#45;method (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The arguments to the CGI script.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="8,-3 8,-23 218,-23 218,-3 8,-3"/>
-            <polygon fill="none" stroke="black" points="8,-3 8,-23 218,-23 218,-3 8,-3"/>
-            <text text-anchor="start" x="44.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
-            </a>
-            </g>
-            </g>
-            </svg>
-          </div>
-        </div>
-        <div class='tab-pane' id='png' role='tabpanel'>
-          <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/WebService.png'>
-        </div>
-        <div class='tab-pane' id='dot' role='tabpanel'>
-          <pre><p>
-            digraph WebService {
-            	graph [rankdir=LR];
-            	node [label=&quot;\N&quot;];
-            	graph [bb=&quot;0,0,226,108&quot;];
-            	WebService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The WebService class carries additional information related to web traffic. &quot;&gt;WebService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The URL in the request.&quot;&gt;[STRING] url (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The CGI script in the request, without arguments.&quot;&gt;[STRING] cgi (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The HTTP method (PUT, GET) used in the request.&quot;&gt;[STRING] http-method (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The arguments to the CGI script.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;113,54&quot;, width=&quot;3.1389&quot;, height=&quot;1.5139&quot;];
-            }
-          </p></pre>
-        </div>
-      </div>
-      <hr>
-      <h3>Aggregates</h3>
-      <h4>
-        url
-        (1)
-      </h4>
-      <blockquote>
-        The URL in the request.
-      </blockquote>
-      <h4>
-        cgi
-        (0..1)
-      </h4>
-      <blockquote>
-        The CGI script in the request, without arguments.
-      </blockquote>
-      <h4>
-        http-method
-        (0..1)
-      </h4>
-      <blockquote>
-        The HTTP method (PUT, GET) used in the request.
-      </blockquote>
-      <h4>
-        arg
-        (0..*)
-      </h4>
-      <blockquote>
-        The arguments to the CGI script.
-      </blockquote>
-      <hr>
-    </div>
-    <hr>
-    <div class='container'>
-      <hr>
-      <h4>IDMEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Action.html'>Action</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/File.html'>File</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/User.html'>User</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <h4>IODEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Application.html'>Application</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Email.html'>Email</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/History.html'>History</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/System.html'>System</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset='UTF-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<title>IDMEF and IODEF</title>
+<link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
+<script src='/idmef_parser/js/jquery.min.js'></script>
+<script src='/idmef_parser/js/bootstrap.min.js'></script>
+</head>
+<body>
+<div class='navbar navbar-default navbar-inverse' role='navigation'>
+<div class='container'>
+<div class='navbar-header'>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
+</div>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IDMEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IODEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IODEF'>IODEF-Document</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+RFC
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='/idmef_parser/rfc4765.txt' target='_blank'>
+IDMEF (4765)
+</a>
+</li>
+<li>
+<a href='/idmef_parser/rfc5070.txt' target='_blank'>
+IODEF (5070)
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<hr>
+<div class='container'>
+<h1>WebService</h1>
+<p>The WebService class carries additional information related to web traffic. </p>
+<ul class='nav nav-tabs' role='tablist'>
+<li class='active' role='presentation'>
+<a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
+</li>
+<li role='presentation'>
+<a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
+</li>
+<li role='presentation'>
+<a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active' id='svg' role='tabpanel'>
+<div class='img-responsive block-center'>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: WebService Pages: 1 -->
+<svg width="196pt" height="121pt"
+ viewBox="0.00 0.00 196.00 121.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 117)">
+<title>WebService</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-117 192,-117 192,4 -4,4"/>
+<!-- WebService -->
+<g id="node1" class="node"><title>WebService</title>
+<g id="a_node1_0"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The WebService class carries additional information related to web traffic. ">
+<polygon fill="#997a7a" stroke="none" points="8,-87.5 8,-108.5 180,-108.5 180,-87.5 8,-87.5"/>
+<polygon fill="none" stroke="black" points="8,-87.5 8,-108.5 180,-108.5 180,-87.5 8,-87.5"/>
+<text text-anchor="start" x="60.5" y="-94.3" font-family="Times,serif" font-size="14.00">WebService</text>
+</a>
+</g>
+<g id="a_node1_1"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The URL in the request.">
+<polygon fill="#ffcccc" stroke="none" points="8,-66.5 8,-87.5 180,-87.5 180,-66.5 8,-66.5"/>
+<polygon fill="none" stroke="black" points="8,-66.5 8,-87.5 180,-87.5 180,-66.5 8,-66.5"/>
+<text text-anchor="start" x="44" y="-73.3" font-family="Times,serif" font-size="14.00">[STRING] url (1) </text>
+</a>
+</g>
+<g id="a_node1_2"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The CGI script in the request, without arguments.">
+<polygon fill="#ffcccc" stroke="none" points="8,-45.5 8,-66.5 180,-66.5 180,-45.5 8,-45.5"/>
+<polygon fill="none" stroke="black" points="8,-45.5 8,-66.5 180,-66.5 180,-45.5 8,-45.5"/>
+<text text-anchor="start" x="36" y="-52.3" font-family="Times,serif" font-size="14.00">[STRING] cgi (0..1) </text>
+</a>
+</g>
+<g id="a_node1_3"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The HTTP method (PUT, GET) used in the request.">
+<polygon fill="#ffcccc" stroke="none" points="8,-24.5 8,-45.5 180,-45.5 180,-24.5 8,-24.5"/>
+<polygon fill="none" stroke="black" points="8,-24.5 8,-45.5 180,-45.5 180,-24.5 8,-24.5"/>
+<text text-anchor="start" x="11" y="-31.3" font-family="Times,serif" font-size="14.00">[STRING] http&#45;method (0..1) </text>
+</a>
+</g>
+<g id="a_node1_4"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The arguments to the CGI script.">
+<polygon fill="#ffcccc" stroke="none" points="8,-3.5 8,-24.5 180,-24.5 180,-3.5 8,-3.5"/>
+<polygon fill="none" stroke="black" points="8,-3.5 8,-24.5 180,-24.5 180,-3.5 8,-3.5"/>
+<text text-anchor="start" x="35.5" y="-10.3" font-family="Times,serif" font-size="14.00">[STRING] arg (0..*) </text>
+</a>
+</g>
+</g>
+</g>
+</svg>
+
+</div>
+</div>
+<div class='tab-pane' id='png' role='tabpanel'>
+<img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/WebService.png'>
+</div>
+<div class='tab-pane' id='dot' role='tabpanel'>
+<pre><p>digraph WebService {
+	graph [bb=&quot;0,0,188,113&quot;,
+		rankdir=LR
+	];
+	node [label=&quot;\N&quot;];
+	WebService	 [height=1.5694,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The WebService class carries additional information related to web traffic. &quot;&gt;WebService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The URL in the request.&quot;&gt;[STRING] url (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The CGI script in the request, without arguments.&quot;&gt;[STRING] cgi (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The HTTP method (PUT, GET) used in the request.&quot;&gt;[STRING] http-method (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The arguments to the CGI script.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;94,56.5&quot;,
+		shape=plaintext,
+		width=2.6111];
+}
+</p></pre>
+</div>
+</div>
+<hr>
+<h3>Aggregates</h3>
+<h4>
+url
+(1)
+</h4>
+<blockquote>
+The URL in the request.
+</blockquote>
+<h4>
+cgi
+(0..1)
+</h4>
+<blockquote>
+The CGI script in the request, without arguments.
+</blockquote>
+<h4>
+http-method
+(0..1)
+</h4>
+<blockquote>
+The HTTP method (PUT, GET) used in the request.
+</blockquote>
+<h4>
+arg
+(0..*)
+</h4>
+<blockquote>
+The arguments to the CGI script.
+</blockquote>
+<hr>
+</div>
+
+<hr>
+<div class='container'>
+<hr>
+<h4>IDMEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Action.html'>Action</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<h4>IODEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Application.html'>Application</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Email.html'>Email</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</body>
 </html>

@@ -1,12 +1,35 @@
 digraph Assessment {
-	graph [rankdir=LR];
+	graph [bb="0,0,346,228",
+		rankdir=LR
+	];
 	node [label="\N"];
-	graph [bb="0,0,404,220"];
-	Assessment [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Assessment.html" TITLE="The Assessment class is used to provide the analyzer&#39;s assessment of an event -- its impact, actions taken in response, and confidence. ">Assessment</td> </tr>" %</table>>, shape=plaintext, pos="53,90", width="1.4444", height="0.5"];
-	Impact [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Impact.html" TITLE="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">Impact</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Impact.html" TITLE="Section 10.)">[ENUM] severity (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Impact.html" TITLE="Section 10.)">[ENUM] completion (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Impact.html" TITLE="value is &quot;other&quot;.  (See also Section 10.)">[ENUM] type (Optional) </td></tr>%</table>>, shape=plaintext, pos="287,176", width="3.25", height="1.2361"];
-	Action [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Action.html" TITLE="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">Action</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Action.html" TITLE="The default value is &quot;other&quot;.  (See also Section 10.)">[ENUM] category () </td></tr>%</table>>, shape=plaintext, pos="287,90", width="2.2222", height="0.68056"];
-	Confidence [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Confidence.html" TITLE="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">Confidence</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Confidence.html" TITLE="also Section 10.)">[ENUM] rating () </td></tr>%</table>>, shape=plaintext, pos="287,24", width="1.9444", height="0.68056"];
-	Assessment -> Impact [label="0..1", pos="e,169.56,132.84 102.05,108.03 119.25,114.35 139.45,121.77 160.06,129.35", lp="138,133.5"];
-	Assessment -> Action [label="0..*", pos="e,206.62,90 105.51,90 132.27,90 165.57,90 196.31,90", lp="138,98.5"];
-	Assessment -> Confidence [label="0..1", pos="e,216.32,43.212 105.7,74.297 111.86,72.494 118.07,70.696 124,69 150.78,61.343 180.1,53.181 206.4,45.939", lp="138,77.5"];
+	Assessment	 [height=0.5,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Assessment.html" TITLE="The Assessment class is used to provide the analyzer&#39;s assessment of an event -- its impact, actions taken in response, and confidence. ">Assessment</td> </tr>" %</table>>,
+		pos="43.5,93",
+		shape=plaintext,
+		width=1.2083];
+	Impact	 [height=1.2778,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Impact.html" TITLE="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">Impact</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Impact.html" TITLE="Section 10.)">[ENUM] severity (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Impact.html" TITLE="Section 10.)">[ENUM] completion (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Impact.html" TITLE="value is &quot;other&quot;.  (See also Section 10.)">[ENUM] type (Optional) </td></tr>%</table>>,
+		pos="245.5,182",
+		shape=plaintext,
+		width=2.7917];
+	Assessment -> Impact	 [label="0..1",
+		lp="116,136.5",
+		pos="e,144.95,137.7 84.973,111.01 99.844,117.63 117.48,125.47 135.5,133.5"];
+	Action	 [height=0.69444,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Action.html" TITLE="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">Action</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Action.html" TITLE="The default value is &quot;other&quot;.  (See also Section 10.)">[ENUM] category () </td></tr>%</table>>,
+		pos="245.5,93",
+		shape=plaintext,
+		width=1.9306];
+	Assessment -> Action	 [label="0..*",
+		lp="116,100.5",
+		pos="e,175.71,93 87.405,93 110.2,93 138.95,93 165.61,93"];
+	Confidence	 [height=0.69444,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IDMEF/Confidence.html" TITLE="The Confidence class is used to represent the analyzer&#39;s best estimate of the validity of its analysis. It is represented in the IDMEF DTD as follows: ">Confidence</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IDMEF/Confidence.html" TITLE="also Section 10.)">[ENUM] rating () </td></tr>%</table>>,
+		pos="245.5,25",
+		shape=plaintext,
+		width=1.7222];
+	Assessment -> Confidence	 [label="0..1",
+		lp="116,78.5",
+		pos="e,183.45,45.756 87.405,78.412 112.57,69.857 144.98,58.837 173.82,49.03"];
 }

@@ -1,535 +1,546 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='UTF-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>IDMEF and IODEF</title>
-    <link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
-    <script src='/idmef_parser/js/jquery.min.js'></script>
-    <script src='/idmef_parser/js/bootstrap.min.js'></script>
-  </head>
-  <body>
-    <div class='navbar navbar-default navbar-inverse' role='navigation'>
-      <div class='container'>
-        <div class='navbar-header'>
-          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </button>
-          <a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
-        </div>
-        <div class='collapse navbar-collapse'>
-          <ul class='nav navbar-nav'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IDMEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/File.html'>File</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/User.html'>User</a>
-                </li>
-              </ul>
-            </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IODEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF'>IODEF-Document</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/History.html'>History</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/System.html'>System</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class='nav navbar-nav navbar-right'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                RFC
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li>
-                  <a href='/idmef_parser/rfc4765.txt' target='_blank'>
-                    IDMEF (4765)
-                  </a>
-                </li>
-                <li>
-                  <a href='/idmef_parser/rfc5070.txt' target='_blank'>
-                    IODEF (5070)
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class='container'>
-      <h1>RegistryHandle</h1>
-      <p>The RegistryHandle class represents a handle into an Internet registry or community-specific database.  The handle is specified in the element content and the type attribute specifies the database.</p>
-      <ul class='nav nav-tabs' role='tablist'>
-        <li class='active' role='presentation'>
-          <a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
-        </li>
-      </ul>
-      <div class='tab-content'>
-        <div class='tab-pane active' id='svg' role='tabpanel'>
-          <div class='img-responsive block-center'>
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-             "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <!-- Generated by graphviz version 2.26.3 (20100126.1600)
-             -->
-            <!-- Title: RegistryHandle Pages: 1 -->
-            <svg width="260pt" height="76pt"
-             viewBox="0.00 0.00 260.00 76.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 72)">
-            <title>RegistryHandle</title>
-            <polygon fill="white" stroke="white" points="-4,5 -4,-72 257,-72 257,5 -4,5"/>
-            <!-- RegistryHandle -->
-            <g id="node1" class="node"><title>RegistryHandle</title>
-            <a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The RegistryHandle class represents a handle into an Internet registry or community&#45;specific database. The handle is specified in the element content and the type attribute specifies the database. ">
-            <polygon fill="#7a993d" stroke="#7a993d" points="8,-43 8,-64 244,-64 244,-43 8,-43"/>
-            <polygon fill="none" stroke="black" points="8,-43 8,-64 244,-64 244,-43 8,-43"/>
-            <text text-anchor="start" x="73.5" y="-50.2333" font-family="Times Roman,serif" font-size="14.00">RegistryHandle</text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The database to which the handle belongs. &#160;The default value is &#39;local&#39;. &#160;The possible values are:">
-            <polygon fill="#ccff66" stroke="#ccff66" points="8,-23 8,-43 244,-43 244,-23 8,-23"/>
-            <polygon fill="none" stroke="black" points="8,-23 8,-43 244,-43 244,-23 8,-23"/>
-            <text text-anchor="start" x="30.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[ENUM] registry (Required) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="A means by which to extend the registry attribute. &#160;See Section 5.1.">
-            <polygon fill="#ccff66" stroke="#ccff66" points="8,-3 8,-23 244,-23 244,-3 8,-3"/>
-            <polygon fill="none" stroke="black" points="8,-3 8,-23 244,-23 244,-3 8,-3"/>
-            <text text-anchor="start" x="11.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] ext&#45;registry (Optional) </text>
-            </a>
-            </g>
-            </g>
-            </svg>
-          </div>
-        </div>
-        <div class='tab-pane' id='png' role='tabpanel'>
-          <img class='img-responsive block-center' src='/idmef_parser/img/IODEF/RegistryHandle.png'>
-        </div>
-        <div class='tab-pane' id='dot' role='tabpanel'>
-          <pre><p>
-            digraph RegistryHandle {
-            	graph [rankdir=LR];
-            	node [label=&quot;\N&quot;];
-            	graph [bb=&quot;0,0,252,68&quot;];
-            	RegistryHandle [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The RegistryHandle class represents a handle into an Internet registry or community-specific database. The handle is specified in the element content and the type attribute specifies the database. &quot;&gt;RegistryHandle&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The database to which the handle belongs.  The default value is &amp;#39;local&amp;#39;.  The possible values are:&quot;&gt;[ENUM] registry (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;A means by which to extend the registry attribute.  See Section 5.1.&quot;&gt;[STRING] ext-registry (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;126,34&quot;, width=&quot;3.5&quot;, height=&quot;0.95833&quot;];
-            }
-          </p></pre>
-        </div>
-      </div>
-      <hr>
-      <hr>
-      <h3>Attributes</h3>
-      <h4>
-        registry
-        (Required)
-      </h4>
-      <blockquote>
-        The database to which the handle belongs.  The default value is 'local'.  The possible values are:
-        <table class='table table-striped table-bordered'>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Keyword</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>internic</td>
-              <td>Internet Network Information Center</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>apnic</td>
-              <td>Asia Pacific Network Information Center</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>arin</td>
-              <td>American Registry for Internet Numbers</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>lacnic</td>
-              <td>Latin-American and Caribbean IP Address Registry</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>ripe</td>
-              <td>Reseaux IP Europeens</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>afrinic</td>
-              <td>African Internet Numbers Registry</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>local</td>
-              <td>A database local to the CSIRT</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>ext-value</td>
-              <td>An escape value used to extend this attribute. See Section 5.1.</td>
-            </tr>
-          </tbody>
-        </table>
-      </blockquote>
-      <h4>
-        ext-registry
-        (Optional)
-      </h4>
-      <blockquote>
-        A means by which to extend the registry attribute.  See Section 5.1.
-      </blockquote>
-    </div>
-    <hr>
-    <div class='container'>
-      <hr>
-      <h4>IDMEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Action.html'>Action</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/File.html'>File</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/User.html'>User</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <h4>IODEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Application.html'>Application</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Email.html'>Email</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/History.html'>History</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/System.html'>System</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset='UTF-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<title>IDMEF and IODEF</title>
+<link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
+<script src='/idmef_parser/js/jquery.min.js'></script>
+<script src='/idmef_parser/js/bootstrap.min.js'></script>
+</head>
+<body>
+<div class='navbar navbar-default navbar-inverse' role='navigation'>
+<div class='container'>
+<div class='navbar-header'>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
+</div>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IDMEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IODEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IODEF'>IODEF-Document</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+RFC
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='/idmef_parser/rfc4765.txt' target='_blank'>
+IDMEF (4765)
+</a>
+</li>
+<li>
+<a href='/idmef_parser/rfc5070.txt' target='_blank'>
+IODEF (5070)
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<hr>
+<div class='container'>
+<h1>RegistryHandle</h1>
+<p>The RegistryHandle class represents a handle into an Internet registry or community-specific database.  The handle is specified in the element content and the type attribute specifies the database. </p>
+<ul class='nav nav-tabs' role='tablist'>
+<li class='active' role='presentation'>
+<a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
+</li>
+<li role='presentation'>
+<a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
+</li>
+<li role='presentation'>
+<a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active' id='svg' role='tabpanel'>
+<div class='img-responsive block-center'>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: RegistryHandle Pages: 1 -->
+<svg width="218pt" height="79pt"
+ viewBox="0.00 0.00 218.00 79.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 75)">
+<title>RegistryHandle</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-75 214,-75 214,4 -4,4"/>
+<!-- RegistryHandle -->
+<g id="node1" class="node"><title>RegistryHandle</title>
+<g id="a_node1_0"><a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The RegistryHandle class represents a handle into an Internet registry or community&#45;specific database. The handle is specified in the element content and the type attribute specifies the database. ">
+<polygon fill="#7a993d" stroke="none" points="8,-45.5 8,-66.5 202,-66.5 202,-45.5 8,-45.5"/>
+<polygon fill="none" stroke="black" points="8,-45.5 8,-66.5 202,-66.5 202,-45.5 8,-45.5"/>
+<text text-anchor="start" x="62.5" y="-52.3" font-family="Times,serif" font-size="14.00">RegistryHandle</text>
+</a>
+</g>
+<g id="a_node1_1"><a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="The database to which the handle belongs. &#160;The default value is &#39;local&#39;. &#160;The possible values are:">
+<polygon fill="#ccff66" stroke="none" points="8,-24.5 8,-45.5 202,-45.5 202,-24.5 8,-24.5"/>
+<polygon fill="none" stroke="black" points="8,-24.5 8,-45.5 202,-45.5 202,-24.5 8,-24.5"/>
+<text text-anchor="start" x="24.5" y="-31.3" font-family="Times,serif" font-size="14.00">[ENUM] registry (Required) </text>
+</a>
+</g>
+<g id="a_node1_2"><a xlink:href="/idmef_parser/IODEF/RegistryHandle.html" xlink:title="A means by which to extend the registry attribute. &#160;See Section 5.1.">
+<polygon fill="#ccff66" stroke="none" points="8,-3.5 8,-24.5 202,-24.5 202,-3.5 8,-3.5"/>
+<polygon fill="none" stroke="black" points="8,-3.5 8,-24.5 202,-24.5 202,-3.5 8,-3.5"/>
+<text text-anchor="start" x="11" y="-10.3" font-family="Times,serif" font-size="14.00">[STRING] ext&#45;registry (Optional) </text>
+</a>
+</g>
+</g>
+</g>
+</svg>
+
+</div>
+</div>
+<div class='tab-pane' id='png' role='tabpanel'>
+<img class='img-responsive block-center' src='/idmef_parser/img/IODEF/RegistryHandle.png'>
+</div>
+<div class='tab-pane' id='dot' role='tabpanel'>
+<pre><p>digraph RegistryHandle {
+	graph [bb=&quot;0,0,210,71&quot;,
+		rankdir=LR
+	];
+	node [label=&quot;\N&quot;];
+	RegistryHandle	 [height=0.98611,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#7a993d&quot; HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The RegistryHandle class represents a handle into an Internet registry or community-specific database. The handle is specified in the element content and the type attribute specifies the database. &quot;&gt;RegistryHandle&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;The database to which the handle belongs.  The default value is &amp;#39;local&amp;#39;.  The possible values are:&quot;&gt;[ENUM] registry (Required) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#CCFF66&quot;  HREF=&quot;/idmef_parser/IODEF/RegistryHandle.html&quot; TITLE=&quot;A means by which to extend the registry attribute.  See Section 5.1.&quot;&gt;[STRING] ext-registry (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;105,35.5&quot;,
+		shape=plaintext,
+		width=2.9167];
+}
+</p></pre>
+</div>
+</div>
+<hr>
+<hr>
+<h3>Attributes</h3>
+<h4>
+registry
+(Required)
+</h4>
+<blockquote>
+The database to which the handle belongs.  The default value is 'local'.  The possible values are:
+<table class='table table-striped table-bordered'>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Keyword</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>internic</td>
+<td>Internet Network Information Center</td>
+</tr>
+<tr>
+<td>2</td>
+<td>apnic</td>
+<td>Asia Pacific Network Information Center</td>
+</tr>
+<tr>
+<td>3</td>
+<td>arin</td>
+<td>American Registry for Internet Numbers</td>
+</tr>
+<tr>
+<td>4</td>
+<td>lacnic</td>
+<td>Latin-American and Caribbean IP Address Registry</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ripe</td>
+<td>Reseaux IP Europeens</td>
+</tr>
+<tr>
+<td>6</td>
+<td>afrinic</td>
+<td>African Internet Numbers Registry</td>
+</tr>
+<tr>
+<td>7</td>
+<td>local</td>
+<td>A database local to the CSIRT</td>
+</tr>
+<tr>
+<td>8</td>
+<td>ext-value</td>
+<td>An escape value used to extend this attribute. See Section 5.1.</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4>
+ext-registry
+(Optional)
+</h4>
+<blockquote>
+A means by which to extend the registry attribute.  See Section 5.1.
+</blockquote>
+</div>
+
+<hr>
+<div class='container'>
+<hr>
+<h4>IDMEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Action.html'>Action</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<h4>IODEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Application.html'>Application</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Email.html'>Email</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</body>
 </html>

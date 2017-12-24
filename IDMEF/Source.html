@@ -1,892 +1,1003 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='UTF-8'>
-    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
-    <title>IDMEF and IODEF</title>
-    <link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
-    <script src='/idmef_parser/js/jquery.min.js'></script>
-    <script src='/idmef_parser/js/bootstrap.min.js'></script>
-  </head>
-  <body>
-    <div class='navbar navbar-default navbar-inverse' role='navigation'>
-      <div class='container'>
-        <div class='navbar-header'>
-          <button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-            <span class='icon-bar'></span>
-          </button>
-          <a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
-        </div>
-        <div class='collapse navbar-collapse'>
-          <ul class='nav navbar-nav'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IDMEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/File.html'>File</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-                </li>
-                <li class='active'>
-                  <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IDMEF/User.html'>User</a>
-                </li>
-              </ul>
-            </li>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                IODEF
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF'>IODEF-Document</a>
-                </li>
-                <li class='divider'></li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/History.html'>History</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-                </li>
-                <li class=''>
-                  <a href='/idmef_parser/IODEF/System.html'>System</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class='nav navbar-nav navbar-right'>
-            <li class='dropdown'>
-              <a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
-                RFC
-                <span class='caret'></span>
-              </a>
-              <ul class='dropdown-menu'>
-                <li>
-                  <a href='/idmef_parser/rfc4765.txt' target='_blank'>
-                    IDMEF (4765)
-                  </a>
-                </li>
-                <li>
-                  <a href='/idmef_parser/rfc5070.txt' target='_blank'>
-                    IODEF (5070)
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class='container'>
-      <h1>Source</h1>
-      <p>The Source class contains information about the possible source(s) of the event(s) that generated an alert.  An event may have more than one source (e.g., in a distributed denial-of-service attack).</p>
-      <ul class='nav nav-tabs' role='tablist'>
-        <li class='active' role='presentation'>
-          <a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
-        </li>
-        <li role='presentation'>
-          <a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
-        </li>
-      </ul>
-      <div class='tab-content'>
-        <div class='tab-pane active' id='svg' role='tabpanel'>
-          <div class='img-responsive block-center'>
-            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-             "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-            <!-- Generated by graphviz version 2.26.3 (20100126.1600)
-             -->
-            <!-- Title: Source Pages: 1 -->
-            <svg width="100%" height="100%"
-             viewBox="0.00 0.00 1022.00 649.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="graph1" class="graph" transform="scale(1 1) rotate(0) translate(4 645)">
-            <title>Source</title>
-            <polygon fill="white" stroke="white" points="-4,5 -4,-645 1019,-645 1019,5 -4,5"/>
-            <!-- Source -->
-            <g id="node1" class="node"><title>Source</title>
-            <a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="The Source class contains information about the possible source(s) of the event(s) that generated an alert. An event may have more than one source (e.g., in a distributed denial&#45;of&#45;service attack). ">
-            <polygon fill="#182f5f" stroke="#182f5f" points="9,-360 9,-381 224,-381 224,-360 9,-360"/>
-            <polygon fill="none" stroke="black" points="9,-360 9,-381 224,-381 224,-360 9,-360"/>
-            <text text-anchor="start" x="92.5" y="-367.233" font-family="Times Roman,serif" font-size="14.00">Source</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="A unique identifier for this source; see Section 3.2.9.">
-            <polygon fill="#284f9f" stroke="#284f9f" points="9,-340 9,-360 224,-360 224,-340 9,-340"/>
-            <polygon fill="none" stroke="black" points="9,-340 9,-360 224,-360 224,-340 9,-340"/>
-            <text text-anchor="start" x="25" y="-346.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
-            <polygon fill="#284f9f" stroke="#284f9f" points="9,-320 9,-340 224,-340 224,-320 9,-320"/>
-            <polygon fill="none" stroke="black" points="9,-320 9,-340 224,-340 224,-320 9,-320"/>
-            <text text-anchor="start" x="22.5" y="-326.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] spoofed (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="May be used by a network&#45;based analyzer with multiple interfaces to indicate which interface this source was seen on.">
-            <polygon fill="#284f9f" stroke="#284f9f" points="9,-300 9,-320 224,-320 224,-300 9,-300"/>
-            <polygon fill="none" stroke="black" points="9,-300 9,-320 224,-320 224,-300 9,-300"/>
-            <text text-anchor="start" x="12.5" y="-306.733" font-family="Times Roman,serif" font-size="14.00">[STRING] interface (Optional) </text>
-            </a>
-            </g>
-            <!-- Node -->
-            <g id="node2" class="node"><title>Node</title>
-            <a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The Node class is used to identify hosts and other network devices (routers, switches, etc.). ">
-            <polygon fill="#007a00" stroke="#007a00" points="362,-571 362,-592 565,-592 565,-571 362,-571"/>
-            <polygon fill="none" stroke="black" points="362,-571 362,-592 565,-592 565,-571 362,-571"/>
-            <text text-anchor="start" x="445.5" y="-578.233" font-family="Times Roman,serif" font-size="14.00">Node</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The location of the equipment.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="362,-551 362,-571 565,-571 565,-551 362,-551"/>
-            <polygon fill="none" stroke="black" points="362,-551 362,-571 565,-571 565,-551 362,-551"/>
-            <text text-anchor="start" x="378.5" y="-557.733" font-family="Times Roman,serif" font-size="14.00">[STRING] location (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The name of the equipment. &#160;This information MUST be provided if no Address information is given.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="362,-531 362,-551 565,-551 565,-531 362,-531"/>
-            <polygon fill="none" stroke="black" points="362,-531 362,-551 565,-551 565,-531 362,-531"/>
-            <text text-anchor="start" x="386.5" y="-537.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="A unique identifier for the node; see Section 3.2.9.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="362,-511 362,-531 565,-531 565,-511 362,-511"/>
-            <polygon fill="none" stroke="black" points="362,-511 362,-531 565,-531 565,-511 362,-511"/>
-            <text text-anchor="start" x="372" y="-517.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The &quot;domain&quot; from which the name information was obtained, if relevant. &#160;The permitted values for this attribute are shown in the table below. &#160;The default value is &quot;unknown&quot;. (See also Section 10 for extensions to the table.)">
-            <polygon fill="#00cc00" stroke="#00cc00" points="362,-491 362,-511 565,-511 565,-491 362,-491"/>
-            <polygon fill="none" stroke="black" points="362,-491 362,-511 565,-511 565,-491 362,-491"/>
-            <text text-anchor="start" x="365.5" y="-497.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
-            </a>
-            </g>
-            <!-- Source&#45;&gt;Node -->
-            <g id="edge4" class="edge"><title>Source&#45;&gt;Node</title>
-            <path fill="none" stroke="black" d="M171.57,-385.05C206.176,-411.316 252.286,-444.253 296,-469 311.218,-477.615 327.648,-485.912 344.058,-493.628"/>
-            <polygon fill="black" stroke="black" points="342.621,-496.819 353.165,-497.853 345.567,-490.469 342.621,-496.819"/>
-            <text text-anchor="middle" x="264" y="-460.4" font-family="Times Roman,serif" font-size="14.00">0..1</text>
-            </g>
-            <!-- User -->
-            <g id="node6" class="node"><title>User</title>
-            <a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="The User class is used to describe users. It is primarily used as a &quot;container&quot; class for the UserId aggregate class, as shown in Figure 16. ">
-            <polygon fill="#3d7a99" stroke="#3d7a99" points="362,-435 362,-456 565,-456 565,-435 362,-435"/>
-            <polygon fill="none" stroke="black" points="362,-435 362,-456 565,-456 565,-435 362,-435"/>
-            <text text-anchor="start" x="447.5" y="-442.233" font-family="Times Roman,serif" font-size="14.00">User</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="A unique identifier for the user; see Section 3.2.9.">
-            <polygon fill="#66ccff" stroke="#66ccff" points="362,-415 362,-435 565,-435 565,-415 362,-415"/>
-            <polygon fill="none" stroke="black" points="362,-415 362,-435 565,-435 565,-415 362,-415"/>
-            <text text-anchor="start" x="372" y="-421.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="The type of user represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. (See also Section 10.)">
-            <polygon fill="#66ccff" stroke="#66ccff" points="362,-395 362,-415 565,-415 565,-395 362,-395"/>
-            <polygon fill="none" stroke="black" points="362,-395 362,-415 565,-415 565,-395 362,-395"/>
-            <text text-anchor="start" x="365.5" y="-401.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
-            </a>
-            </g>
-            <!-- Source&#45;&gt;User -->
-            <g id="edge8" class="edge"><title>Source&#45;&gt;User</title>
-            <path fill="none" stroke="black" d="M231.546,-369.304C267.408,-378.088 307.002,-387.787 343.15,-396.642"/>
-            <polygon fill="black" stroke="black" points="342.702,-400.136 353.248,-399.115 344.368,-393.337 342.702,-400.136"/>
-            <text text-anchor="middle" x="264" y="-382.4" font-family="Times Roman,serif" font-size="14.00">0..1</text>
-            </g>
-            <!-- Process -->
-            <g id="node10" class="node"><title>Process</title>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The Process class is used to describe processes being executed on sources, targets, and analyzers. ">
-            <polygon fill="#997a3d" stroke="#997a3d" points="368,-349 368,-370 558,-370 558,-349 368,-349"/>
-            <polygon fill="none" stroke="black" points="368,-349 368,-370 558,-370 558,-349 368,-349"/>
-            <text text-anchor="start" x="437" y="-356.233" font-family="Times Roman,serif" font-size="14.00">Process</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The name of the program being executed. This is a short name; path and argument information are provided elsewhere.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="368,-329 368,-349 558,-349 558,-329 368,-329"/>
-            <polygon fill="none" stroke="black" points="368,-329 368,-349 558,-349 558,-329 368,-329"/>
-            <text text-anchor="start" x="395" y="-335.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The process identifier of the process.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="368,-309 368,-329 558,-329 558,-309 368,-309"/>
-            <polygon fill="none" stroke="black" points="368,-309 368,-329 558,-329 558,-309 368,-309"/>
-            <text text-anchor="start" x="390.5" y="-315.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] pid (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The full path of the program being executed.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="368,-289 368,-309 558,-309 558,-289 368,-289"/>
-            <polygon fill="none" stroke="black" points="368,-289 368,-309 558,-309 558,-289 368,-289"/>
-            <text text-anchor="start" x="389" y="-295.733" font-family="Times Roman,serif" font-size="14.00">[STRING] path (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="A command&#45;line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="368,-269 368,-289 558,-289 558,-269 368,-269"/>
-            <polygon fill="none" stroke="black" points="368,-269 368,-289 558,-289 558,-269 368,-269"/>
-            <text text-anchor="start" x="394.5" y="-275.733" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="An environment string associated with the process; generally of the format &quot;VARIABLE=value&quot;. &#160;Multiple environment strings may be specified with multiple uses of env.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="368,-249 368,-269 558,-269 558,-249 368,-249"/>
-            <polygon fill="none" stroke="black" points="368,-249 368,-269 558,-269 558,-249 368,-249"/>
-            <text text-anchor="start" x="393" y="-255.733" font-family="Times Roman,serif" font-size="14.00">[STRING] env (0..*) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="A unique identifier for the process; see Section 3.2.9.">
-            <polygon fill="#ffcc66" stroke="#ffcc66" points="368,-229 368,-249 558,-249 558,-229 368,-229"/>
-            <polygon fill="none" stroke="black" points="368,-229 368,-249 558,-249 558,-229 368,-229"/>
-            <text text-anchor="start" x="371.5" y="-235.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            </g>
-            <!-- Source&#45;&gt;Process -->
-            <g id="edge10" class="edge"><title>Source&#45;&gt;Process</title>
-            <path fill="none" stroke="black" d="M231.546,-327.348C269.642,-322.846 311.951,-317.847 349.865,-313.368"/>
-            <polygon fill="black" stroke="black" points="350.398,-316.829 359.918,-312.18 349.576,-309.877 350.398,-316.829"/>
-            <text text-anchor="middle" x="264" y="-328.4" font-family="Times Roman,serif" font-size="14.00">0..1</text>
-            </g>
-            <!-- Service -->
-            <g id="node12" class="node"><title>Service</title>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ">
-            <polygon fill="#997a7a" stroke="#997a7a" points="305,-183 305,-204 622,-204 622,-183 305,-183"/>
-            <polygon fill="none" stroke="black" points="305,-183 305,-204 622,-204 622,-183 305,-183"/>
-            <text text-anchor="start" x="438" y="-190.233" font-family="Times Roman,serif" font-size="14.00">Service</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The name of the service. &#160;Whenever possible, the name from the IANA list of well&#45;known ports SHOULD be used.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-163 305,-183 622,-183 622,-163 305,-163"/>
-            <polygon fill="none" stroke="black" points="305,-163 305,-183 622,-183 622,-163 305,-163"/>
-            <text text-anchor="start" x="386.5" y="-169.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The port number being used.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-143 305,-163 622,-163 622,-143 305,-143"/>
-            <polygon fill="none" stroke="black" points="305,-143 305,-163 622,-163 622,-143 305,-143"/>
-            <text text-anchor="start" x="386.5" y="-149.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] port (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A list of port numbers being used; see Section 3.2.8 for formatting rules. &#160;If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-123 305,-143 622,-143 622,-123 305,-123"/>
-            <polygon fill="none" stroke="black" points="305,-123 305,-143 622,-143 622,-123 305,-123"/>
-            <text text-anchor="start" x="373.5" y="-129.733" font-family="Times Roman,serif" font-size="14.00">[PORTLIST] portlist (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="Additional information about the protocol being used. &#160;The intent of the protocol field is to carry additional information related to the protocol being used when the &lt;Service&gt; attributes iana_protocol_number or/and iana_protocol_name are filed.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-103 305,-123 622,-123 622,-103 305,-103"/>
-            <polygon fill="none" stroke="black" points="305,-103 305,-123 622,-123 622,-103 305,-103"/>
-            <text text-anchor="start" x="377.5" y="-109.733" font-family="Times Roman,serif" font-size="14.00">[STRING] protocol (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A unique identifier for the service; see Section 3.2.9.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-83 305,-103 622,-103 622,-83 305,-83"/>
-            <polygon fill="none" stroke="black" points="305,-83 305,-103 622,-103 622,-83 305,-83"/>
-            <text text-anchor="start" x="372" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IP version number.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-63 305,-83 622,-83 622,-63 305,-63"/>
-            <polygon fill="none" stroke="black" points="305,-63 305,-83 622,-83 622,-63 305,-63"/>
-            <text text-anchor="start" x="350.5" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[INTEGER] ip_version (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol number.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-43 305,-63 622,-63 622,-43 305,-43"/>
-            <polygon fill="none" stroke="black" points="305,-43 305,-63 622,-63 622,-43 305,-43"/>
-            <text text-anchor="start" x="308.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[INTEGER] iana_protocol_number (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol name.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="305,-23 305,-43 622,-43 622,-23 305,-23"/>
-            <polygon fill="none" stroke="black" points="305,-23 305,-43 622,-43 622,-23 305,-23"/>
-            <text text-anchor="start" x="320.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] iana_protocol_name (Optional) </text>
-            </a>
-            </g>
-            <!-- Source&#45;&gt;Service -->
-            <g id="edge16" class="edge"><title>Source&#45;&gt;Service</title>
-            <path fill="none" stroke="black" d="M178.367,-296.888C212.774,-272.843 256.429,-242.81 296,-217 297.658,-215.918 299.328,-214.833 301.006,-213.744"/>
-            <polygon fill="black" stroke="black" points="302.971,-216.642 309.472,-208.276 299.173,-210.762 302.971,-216.642"/>
-            <text text-anchor="middle" x="264" y="-250.4" font-family="Times Roman,serif" font-size="14.00">0..1</text>
-            </g>
-            <!-- Address -->
-            <g id="node3" class="node"><title>Address</title>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
-            <polygon fill="#007a00" stroke="#007a00" points="739,-616 739,-637 968,-637 968,-616 739,-616"/>
-            <polygon fill="none" stroke="black" points="739,-616 739,-637 968,-637 968,-616 739,-616"/>
-            <text text-anchor="start" x="826" y="-623.233" font-family="Times Roman,serif" font-size="14.00">Address</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="739,-596 739,-616 968,-616 968,-596 739,-596"/>
-            <polygon fill="none" stroke="black" points="739,-596 739,-616 968,-616 968,-596 739,-596"/>
-            <text text-anchor="start" x="778" y="-602.733" font-family="Times Roman,serif" font-size="14.00">[STRING] address (1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The network mask for the address, if appropriate.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="739,-576 739,-596 968,-596 968,-576 739,-576"/>
-            <polygon fill="none" stroke="black" points="739,-576 739,-596 968,-596 968,-576 739,-576"/>
-            <text text-anchor="start" x="766" y="-582.733" font-family="Times Roman,serif" font-size="14.00">[STRING] netmask (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="A unique identifier for the address; see Section 3.2.9.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="739,-556 739,-576 968,-576 968,-556 739,-556"/>
-            <polygon fill="none" stroke="black" points="739,-556 739,-576 968,-576 968,-556 739,-556"/>
-            <text text-anchor="start" x="762" y="-562.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
-            <polygon fill="#00cc00" stroke="#00cc00" points="739,-536 739,-556 968,-556 968,-536 739,-536"/>
-            <polygon fill="none" stroke="black" points="739,-536 739,-556 968,-556 968,-536 739,-536"/>
-            <text text-anchor="start" x="755.5" y="-542.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] category (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The name of the Virtual LAN to which the address belongs.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="739,-516 739,-536 968,-536 968,-516 739,-516"/>
-            <polygon fill="none" stroke="black" points="739,-516 739,-536 968,-536 968,-516 739,-516"/>
-            <text text-anchor="start" x="743.5" y="-522.733" font-family="Times Roman,serif" font-size="14.00">[STRING] vlan&#45;name (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The number of the Virtual LAN to which the address belongs.">
-            <polygon fill="#00cc00" stroke="#00cc00" points="739,-496 739,-516 968,-516 968,-496 739,-496"/>
-            <polygon fill="none" stroke="black" points="739,-496 739,-516 968,-516 968,-496 739,-496"/>
-            <text text-anchor="start" x="742.5" y="-502.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] vlan&#45;num (Optional) </text>
-            </a>
-            </g>
-            <!-- Node&#45;&gt;Address -->
-            <g id="edge2" class="edge"><title>Node&#45;&gt;Address</title>
-            <path fill="none" stroke="black" d="M572.675,-549.03C618.528,-551.97 672.222,-555.412 720.278,-558.492"/>
-            <polygon fill="black" stroke="black" points="720.238,-561.997 730.442,-559.144 720.686,-555.011 720.238,-561.997"/>
-            <text text-anchor="middle" x="661" y="-559.4" font-family="Times Roman,serif" font-size="14.00">0..*</text>
-            </g>
-            <!-- UserId -->
-            <g id="node7" class="node"><title>UserId</title>
-            <a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. ">
-            <polygon fill="#3d7a99" stroke="#3d7a99" points="758,-450 758,-471 948,-471 948,-450 758,-450"/>
-            <polygon fill="none" stroke="black" points="758,-450 758,-471 948,-471 948,-450 758,-450"/>
-            <text text-anchor="start" x="830.5" y="-457.233" font-family="Times Roman,serif" font-size="14.00">UserId</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A user or group name.">
-            <polygon fill="#66ccff" stroke="#66ccff" points="758,-430 758,-450 948,-450 948,-430 758,-430"/>
-            <polygon fill="none" stroke="black" points="758,-430 758,-450 948,-450 948,-430 758,-430"/>
-            <text text-anchor="start" x="776" y="-436.733" font-family="Times Roman,serif" font-size="14.00">[STRING] name (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A user or group number.">
-            <polygon fill="#66ccff" stroke="#66ccff" points="758,-410 758,-430 948,-430 948,-410 758,-410"/>
-            <polygon fill="none" stroke="black" points="758,-410 758,-430 948,-430 948,-410 758,-410"/>
-            <text text-anchor="start" x="764" y="-416.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] number (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A unique identifier for the user id, see Section 3.2.9.">
-            <polygon fill="#66ccff" stroke="#66ccff" points="758,-390 758,-410 948,-410 948,-390 758,-390"/>
-            <polygon fill="none" stroke="black" points="758,-390 758,-410 948,-410 948,-390 758,-390"/>
-            <text text-anchor="start" x="761.5" y="-396.733" font-family="Times Roman,serif" font-size="14.00">[STRING] ident (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The type of user information represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;original&#45;user&quot;. &#160;(See also Section 10.)">
-            <polygon fill="#66ccff" stroke="#66ccff" points="758,-370 758,-390 948,-390 948,-370 758,-370"/>
-            <polygon fill="none" stroke="black" points="758,-370 758,-390 948,-390 948,-370 758,-370"/>
-            <text text-anchor="start" x="770" y="-376.733" font-family="Times Roman,serif" font-size="14.00">[ENUM] type (Optional) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The tty the user is using.">
-            <polygon fill="#66ccff" stroke="#66ccff" points="758,-350 758,-370 948,-370 948,-350 758,-350"/>
-            <polygon fill="none" stroke="black" points="758,-350 758,-370 948,-370 948,-350 758,-350"/>
-            <text text-anchor="start" x="769" y="-356.733" font-family="Times Roman,serif" font-size="14.00">[STRING] tty (Optional) </text>
-            </a>
-            </g>
-            <!-- User&#45;&gt;UserId -->
-            <g id="edge6" class="edge"><title>User&#45;&gt;UserId</title>
-            <path fill="none" stroke="black" d="M572.675,-421.782C624.848,-419.775 687.172,-417.378 739.792,-415.354"/>
-            <polygon fill="black" stroke="black" points="739.981,-418.85 749.839,-414.968 739.712,-411.855 739.981,-418.85"/>
-            <text text-anchor="middle" x="661" y="-422.4" font-family="Times Roman,serif" font-size="14.00">1..*</text>
-            </g>
-            <!-- WebService -->
-            <g id="node13" class="node"><title>WebService</title>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The WebService class carries additional information related to web traffic. ">
-            <polygon fill="#997a7a" stroke="#997a7a" points="748,-289 748,-310 958,-310 958,-289 748,-289"/>
-            <polygon fill="none" stroke="black" points="748,-289 748,-310 958,-310 958,-289 748,-289"/>
-            <text text-anchor="start" x="812" y="-296.233" font-family="Times Roman,serif" font-size="14.00">WebService</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The URL in the request.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="748,-269 748,-289 958,-289 958,-269 748,-269"/>
-            <polygon fill="none" stroke="black" points="748,-269 748,-289 958,-289 958,-269 748,-269"/>
-            <text text-anchor="start" x="794.5" y="-275.733" font-family="Times Roman,serif" font-size="14.00">[STRING] url (1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The CGI script in the request, without arguments.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="748,-249 748,-269 958,-269 958,-249 748,-249"/>
-            <polygon fill="none" stroke="black" points="748,-249 748,-269 958,-269 958,-249 748,-249"/>
-            <text text-anchor="start" x="785.5" y="-255.733" font-family="Times Roman,serif" font-size="14.00">[STRING] cgi (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The HTTP method (PUT, GET) used in the request.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="748,-229 748,-249 958,-249 958,-229 748,-229"/>
-            <polygon fill="none" stroke="black" points="748,-229 748,-249 958,-249 958,-229 748,-229"/>
-            <text text-anchor="start" x="751.5" y="-235.733" font-family="Times Roman,serif" font-size="14.00">[STRING] http&#45;method (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The arguments to the CGI script.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="748,-209 748,-229 958,-229 958,-209 748,-209"/>
-            <polygon fill="none" stroke="black" points="748,-209 748,-229 958,-229 958,-209 748,-209"/>
-            <text text-anchor="start" x="784.5" y="-215.733" font-family="Times Roman,serif" font-size="14.00">[STRING] arg (0..*) </text>
-            </a>
-            </g>
-            <!-- Service&#45;&gt;WebService -->
-            <g id="edge12" class="edge"><title>Service&#45;&gt;WebService</title>
-            <path fill="none" stroke="black" d="M639.162,-179.948C673.41,-192.769 708.441,-205.883 739.975,-217.688"/>
-            <polygon fill="none" stroke="black" points="630.753,-173.063 638.892,-179.847 628.299,-179.618 630.753,-173.063"/>
-            </g>
-            <!-- SNMPService -->
-            <g id="node15" class="node"><title>SNMPService</title>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. ">
-            <polygon fill="#997a7a" stroke="#997a7a" points="701,-163 701,-184 1006,-184 1006,-163 701,-163"/>
-            <polygon fill="none" stroke="black" points="701,-163 701,-184 1006,-184 1006,-163 701,-163"/>
-            <text text-anchor="start" x="808" y="-170.233" font-family="Times Roman,serif" font-size="14.00">SNMPService</text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object identifier in the request.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-143 701,-163 1006,-163 1006,-143 701,-143"/>
-            <polygon fill="none" stroke="black" points="701,-143 701,-163 1006,-163 1006,-143 701,-143"/>
-            <text text-anchor="start" x="785.5" y="-149.733" font-family="Times Roman,serif" font-size="14.00">[STRING] oid (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-123 701,-143 1006,-143 1006,-123 701,-123"/>
-            <polygon fill="none" stroke="black" points="701,-123 701,-143 1006,-143 1006,-123 701,-123"/>
-            <text text-anchor="start" x="704.5" y="-129.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] messageProcessingModel (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-103 701,-123 1006,-123 1006,-103 701,-103"/>
-            <polygon fill="none" stroke="black" points="701,-103 701,-123 1006,-123 1006,-103 701,-103"/>
-            <text text-anchor="start" x="743.5" y="-109.733" font-family="Times Roman,serif" font-size="14.00">[INTEGER] securityModel (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s security name; see RFC 3411 [15] Section 3.2.2.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-83 701,-103 1006,-103 1006,-83 701,-83"/>
-            <polygon fill="none" stroke="black" points="701,-83 701,-103 1006,-103 1006,-83 701,-83"/>
-            <text text-anchor="start" x="748" y="-89.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] securityName (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-63 701,-83 1006,-83 1006,-63 701,-63"/>
-            <polygon fill="none" stroke="black" points="701,-63 701,-83 1006,-83 1006,-63 701,-63"/>
-            <text text-anchor="start" x="745" y="-69.7333" font-family="Times Roman,serif" font-size="14.00">[INTEGER] securityLevel (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context name; see RFC 3411 [15] Section 3.3.3.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-43 701,-63 1006,-63 1006,-43 701,-43"/>
-            <polygon fill="none" stroke="black" points="701,-43 701,-63 1006,-63 1006,-43 701,-43"/>
-            <text text-anchor="start" x="749.5" y="-49.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] contextName (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-23 701,-43 1006,-43 1006,-23 701,-23"/>
-            <polygon fill="none" stroke="black" points="701,-23 701,-43 1006,-43 1006,-23 701,-23"/>
-            <text text-anchor="start" x="737.5" y="-29.7333" font-family="Times Roman,serif" font-size="14.00">[STRING] contextEngineID (0..1) </text>
-            </a>
-            <a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The command sent to the SNMP server (GET, SET, etc.).">
-            <polygon fill="#ffcccc" stroke="#ffcccc" points="701,-3 701,-23 1006,-23 1006,-3 701,-3"/>
-            <polygon fill="none" stroke="black" points="701,-3 701,-23 1006,-23 1006,-3 701,-3"/>
-            <text text-anchor="start" x="762.5" y="-9.73333" font-family="Times Roman,serif" font-size="14.00">[STRING] command (0..1) </text>
-            </a>
-            </g>
-            <!-- Service&#45;&gt;SNMPService -->
-            <g id="edge14" class="edge"><title>Service&#45;&gt;SNMPService</title>
-            <path fill="none" stroke="black" d="M639.799,-104.933C657.291,-104.036 674.981,-103.129 692.298,-102.241"/>
-            <polygon fill="none" stroke="black" points="629.347,-101.965 639.513,-104.948 629.706,-108.956 629.347,-101.965"/>
-            </g>
-            </g>
-            </svg>
-          </div>
-        </div>
-        <div class='tab-pane' id='png' role='tabpanel'>
-          <img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Source.png'>
-        </div>
-        <div class='tab-pane' id='dot' role='tabpanel'>
-          <pre><p>
-            digraph Source {
-            	graph [rankdir=LR];
-            	node [label=&quot;\N&quot;];
-            	graph [bb=&quot;0,0,1014,641&quot;];
-            	Source [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#182f5f&quot; HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;The Source class contains information about the possible source(s) of the event(s) that generated an alert. An event may have more than one source (e.g., in a distributed denial-of-service attack). &quot;&gt;Source&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#284F9F&quot;  HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;A unique identifier for this source; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#284F9F&quot;  HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack.  The permitted values for this attribute are shown below.  The default value is &amp;quot;unknown&amp;quot;.  (See also Section 10.)&quot;&gt;[ENUM] spoofed (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#284F9F&quot;  HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;May be used by a network-based analyzer with multiple interfaces to indicate which interface this source was seen on.&quot;&gt;[STRING] interface (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;116,341&quot;, width=&quot;3.1944&quot;, height=&quot;1.2361&quot;];
-            	&quot;Node&quot; [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#007a00&quot; HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The Node class is used to identify hosts and other network devices (routers, switches, etc.). &quot;&gt;Node&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The location of the equipment.&quot;&gt;[STRING] location (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The name of the equipment.  This information MUST be provided if no Address information is given.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;A unique identifier for the node; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The &amp;quot;domain&amp;quot; from which the name information was obtained, if relevant.  The permitted values for this attribute are shown in the table below.  The default value is &amp;quot;unknown&amp;quot;. (See also Section 10 for extensions to the table.)&quot;&gt;[ENUM] category (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;463,542&quot;, width=&quot;3.0278&quot;, height=&quot;1.5139&quot;];
-            	Address [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#007a00&quot; HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The Address class is used to represent network, hardware, and application addresses. &quot;&gt;Address&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The address information.  The format of this data is governed by the category attribute.&quot;&gt;[STRING] address (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The network mask for the address, if appropriate.&quot;&gt;[STRING] netmask (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;A unique identifier for the address; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The type of address represented.  The permitted values for this attribute are shown below.  The default value is &amp;quot;unknown&amp;quot;.  (See also Section 10.)&quot;&gt;[ENUM] category (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The name of the Virtual LAN to which the address belongs.&quot;&gt;[STRING] vlan-name (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The number of the Virtual LAN to which the address belongs.&quot;&gt;[INTEGER] vlan-num (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;853,567&quot;, width=&quot;3.3889&quot;, height=&quot;2.0694&quot;];
-            	User [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#3d7a99&quot; HREF=&quot;/idmef_parser/IDMEF/User.html&quot; TITLE=&quot;The User class is used to describe users. It is primarily used as a &amp;quot;container&amp;quot; class for the UserId aggregate class, as shown in Figure 16. &quot;&gt;User&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/User.html&quot; TITLE=&quot;A unique identifier for the user; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/User.html&quot; TITLE=&quot;The type of user represented.  The permitted values for this attribute are shown below.  The default value is &amp;quot;unknown&amp;quot;. (See also Section 10.)&quot;&gt;[ENUM] category (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;463,426&quot;, width=&quot;3.0278&quot;, height=&quot;0.95833&quot;];
-            	UserId [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#3d7a99&quot; HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&amp;#39;s (or process&amp;#39;) privileges. &quot;&gt;UserId&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;A user or group name.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;A user or group number.&quot;&gt;[INTEGER] number (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;A unique identifier for the user id, see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;The type of user information represented.  The permitted values for this attribute are shown below.  The default value is &amp;quot;original-user&amp;quot;.  (See also Section 10.)&quot;&gt;[ENUM] type (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;The tty the user is using.&quot;&gt;[STRING] tty (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;853,411&quot;, width=&quot;2.8611&quot;, height=&quot;1.7917&quot;];
-            	Process [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a3d&quot; HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The Process class is used to describe processes being executed on sources, targets, and analyzers. &quot;&gt;Process&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The name of the program being executed. This is a short name; path and argument information are provided elsewhere.&quot;&gt;[STRING] name (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The process identifier of the process.&quot;&gt;[INTEGER] pid (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The full path of the program being executed.&quot;&gt;[STRING] path (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;A command-line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;An environment string associated with the process; generally of the format &amp;quot;VARIABLE=value&amp;quot;.  Multiple environment strings may be specified with multiple uses of env.&quot;&gt;[STRING] env (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;A unique identifier for the process; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;463,300&quot;, width=&quot;2.8611&quot;, height=&quot;2.0694&quot;];
-            	Service [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. &quot;&gt;Service&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The name of the service.  Whenever possible, the name from the IANA list of well-known ports SHOULD be used.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The port number being used.&quot;&gt;[INTEGER] port (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;A list of port numbers being used; see Section 3.2.8 for formatting rules.  If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.&quot;&gt;[PORTLIST] portlist (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;Additional information about the protocol being used.  The intent of the protocol field is to carry additional information related to the protocol being used when the &amp;lt;Service&amp;gt; attributes iana_protocol_number or/and iana_protocol_name are filed.&quot;&gt;[STRING] protocol (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;A unique identifier for the service; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IP version number.&quot;&gt;[INTEGER] ip_version (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IANA protocol number.&quot;&gt;[INTEGER] iana_protocol_number (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IANA protocol name.&quot;&gt;[STRING] iana_protocol_name (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;463,114&quot;, width=&quot;4.6111&quot;, height=&quot;2.625&quot;];
-            	WebService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The WebService class carries additional information related to web traffic. &quot;&gt;WebService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The URL in the request.&quot;&gt;[STRING] url (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The CGI script in the request, without arguments.&quot;&gt;[STRING] cgi (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The HTTP method (PUT, GET) used in the request.&quot;&gt;[STRING] http-method (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The arguments to the CGI script.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;853,260&quot;, width=&quot;3.1389&quot;, height=&quot;1.5139&quot;];
-            	SNMPService [label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. &quot;&gt;SNMPService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object identifier in the request.&quot;&gt;[STRING] oid (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] messageProcessingModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] securityModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s security name; see RFC 3411 [15] Section 3.2.2.&quot;&gt;[STRING] securityName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.&quot;&gt;[INTEGER] securityLevel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s context name; see RFC 3411 [15] Section 3.3.3.&quot;&gt;[STRING] contextName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.&quot;&gt;[STRING] contextEngineID (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The command sent to the SNMP server (GET, SET, etc.).&quot;&gt;[STRING] command (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;, shape=plaintext, pos=&quot;853,94&quot;, width=&quot;4.4444&quot;, height=&quot;2.625&quot;];
-            	&quot;Node&quot; -&gt; Address [label=&quot;0..*&quot;, pos=&quot;e,730.44,559.14 572.67,549.03 618.53,551.97 672.22,555.41 720.28,558.49&quot;, lp=&quot;661,563.5&quot;];
-            	Source -&gt; &quot;Node&quot; [label=&quot;0..1&quot;, pos=&quot;e,353.17,497.85 171.57,385.05 206.18,411.32 252.29,444.25 296,469 311.22,477.61 327.65,485.91 344.06,493.63&quot;, lp=&quot;264,464.5&quot;];
-            	User -&gt; UserId [label=&quot;1..*&quot;, pos=&quot;e,749.84,414.97 572.67,421.78 624.85,419.78 687.17,417.38 739.79,415.35&quot;, lp=&quot;661,426.5&quot;];
-            	Source -&gt; User [label=&quot;0..1&quot;, pos=&quot;e,353.25,399.12 231.55,369.3 267.41,378.09 307,387.79 343.15,396.64&quot;, lp=&quot;264,386.5&quot;];
-            	Source -&gt; Process [label=&quot;0..1&quot;, pos=&quot;e,359.92,312.18 231.55,327.35 269.64,322.85 311.95,317.85 349.86,313.37&quot;, lp=&quot;264,332.5&quot;];
-            	Service -&gt; WebService [dir=back, arrowtail=invempty, pos=&quot;s,629.53,176.34 639.16,179.95 673.41,192.77 708.44,205.88 739.97,217.69&quot;];
-            	Service -&gt; SNMPService [dir=back, arrowtail=invempty, pos=&quot;s,629.53,105.46 639.8,104.93 657.29,104.04 674.98,103.13 692.3,102.24&quot;];
-            	Source -&gt; Service [label=&quot;0..1&quot;, pos=&quot;e,309.47,208.28 178.37,296.89 212.77,272.84 256.43,242.81 296,217 297.66,215.92 299.33,214.83 301.01,213.74&quot;, lp=&quot;264,254.5&quot;];
-            }
-          </p></pre>
-        </div>
-      </div>
-      <hr>
-      <h3>Aggregates</h3>
-      <h4>
-        <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-        (0..1)
-      </h4>
-      <blockquote>
-        Information about the host or device that appears to be causing the events (network address, network name, etc.).
-      </blockquote>
-      <h4>
-        <a href='/idmef_parser/IDMEF/User.html'>User</a>
-        (0..1)
-      </h4>
-      <blockquote>
-        Information about the user that appears to be causing the event(s).
-      </blockquote>
-      <h4>
-        <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
-        (0..1)
-      </h4>
-      <blockquote>
-        Information about the process that appears to be causing the event(s).
-      </blockquote>
-      <h4>
-        <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-        (0..1)
-      </h4>
-      <blockquote>
-        Information about the network service involved in the event(s).
-      </blockquote>
-      <hr>
-      <h3>Attributes</h3>
-      <h4>
-        ident
-        (Optional)
-      </h4>
-      <blockquote>
-        A unique identifier for this source; see Section 3.2.9.
-      </blockquote>
-      <h4>
-        spoofed
-        (Optional)
-      </h4>
-      <blockquote>
-        An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack.  The permitted values for this attribute are shown below.  The default value is "unknown".  (See also Section 10.)
-        <table class='table table-striped table-bordered'>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Keyword</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0</td>
-              <td>unknown</td>
-              <td>Accuracy of source information unknown</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>yes</td>
-              <td>Source is believed to be a decoy</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>no</td>
-              <td>Source is believed to be "real"</td>
-            </tr>
-          </tbody>
-        </table>
-      </blockquote>
-      <h4>
-        interface
-        (Optional)
-      </h4>
-      <blockquote>
-        May be used by a network-based analyzer with multiple interfaces to indicate which interface this source was seen on.
-      </blockquote>
-    </div>
-    <hr>
-    <div class='container'>
-      <hr>
-      <h4>IDMEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Action.html'>Action</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/File.html'>File</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Process.html'>Process</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Source.html'>Source</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/Target.html'>Target</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/User.html'>User</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <h4>IODEF</h4>
-      <div class='row'>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Address.html'>Address</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Application.html'>Application</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Email.html'>Email</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/History.html'>History</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/Method.html'>Method</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Node.html'>Node</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Record.html'>Record</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
-            </li>
-          </ul>
-        </div>
-        <div class='col-md-3'>
-          <ul>
-            <li>
-              <a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/Service.html'>Service</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/System.html'>System</a>
-            </li>
-            <li>
-              <a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset='UTF-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<title>IDMEF and IODEF</title>
+<link href='/idmef_parser/css/bootstrap.min.css' rel='stylesheet'>
+<script src='/idmef_parser/js/jquery.min.js'></script>
+<script src='/idmef_parser/js/bootstrap.min.js'></script>
+</head>
+<body>
+<div class='navbar navbar-default navbar-inverse' role='navigation'>
+<div class='container'>
+<div class='navbar-header'>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<a class='navbar-brand' href='/idmef_parser' title='IDMEF and IODEF'>IDMEF and IODEF</a>
+</div>
+<div class='collapse navbar-collapse'>
+<ul class='nav navbar-nav'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IDMEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IDMEF'>IDMEF-Message</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li class='active'>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+</ul>
+</li>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+IODEF
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li class=''>
+<a href='/idmef_parser/IODEF'>IODEF-Document</a>
+</li>
+<li class='divider'></li>
+<li class=''>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li class=''>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='nav navbar-nav navbar-right'>
+<li class='dropdown'>
+<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>
+RFC
+<span class='caret'></span>
+</a>
+<ul class='dropdown-menu'>
+<li>
+<a href='/idmef_parser/rfc4765.txt' target='_blank'>
+IDMEF (4765)
+</a>
+</li>
+<li>
+<a href='/idmef_parser/rfc5070.txt' target='_blank'>
+IODEF (5070)
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<hr>
+<div class='container'>
+<h1>Source</h1>
+<p>The Source class contains information about the possible source(s) of the event(s) that generated an alert.  An event may have more than one source (e.g., in a distributed denial-of-service attack). </p>
+<ul class='nav nav-tabs' role='tablist'>
+<li class='active' role='presentation'>
+<a aria-control='svg' data-toggle='tab' href='#svg' role='tab'>SVG</a>
+</li>
+<li role='presentation'>
+<a aria-control='png' data-toggle='tab' href='#png' role='tab'>PNG</a>
+</li>
+<li role='presentation'>
+<a aria-control='dot' data-toggle='tab' href='#dot' role='tab'>DOT</a>
+</li>
+</ul>
+<div class='tab-content'>
+<div class='tab-pane active' id='svg' role='tabpanel'>
+<div class='img-responsive block-center'>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.38.0 (20140413.2041)
+ -->
+<!-- Title: Source Pages: 1 -->
+<svg width="100%" height="100%"
+ viewBox="0.00 0.00 871.00 677.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 673)">
+<title>Source</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-673 867,-673 867,4 -4,4"/>
+<!-- Source -->
+<g id="node1" class="node"><title>Source</title>
+<g id="a_node1_0"><a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="The Source class contains information about the possible source(s) of the event(s) that generated an alert. An event may have more than one source (e.g., in a distributed denial&#45;of&#45;service attack). ">
+<polygon fill="#182f5f" stroke="none" points="8.5,-376.5 8.5,-397.5 187.5,-397.5 187.5,-376.5 8.5,-376.5"/>
+<polygon fill="none" stroke="black" points="8.5,-376.5 8.5,-397.5 187.5,-397.5 187.5,-376.5 8.5,-376.5"/>
+<text text-anchor="start" x="79" y="-383.3" font-family="Times,serif" font-size="14.00">Source</text>
+</a>
+</g>
+<g id="a_node1_1"><a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="A unique identifier for this source; see Section 3.2.9.">
+<polygon fill="#284f9f" stroke="none" points="8.5,-355.5 8.5,-376.5 187.5,-376.5 187.5,-355.5 8.5,-355.5"/>
+<polygon fill="none" stroke="black" points="8.5,-355.5 8.5,-376.5 187.5,-376.5 187.5,-355.5 8.5,-355.5"/>
+<text text-anchor="start" x="21.5" y="-362.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+<g id="a_node1_2"><a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<polygon fill="#284f9f" stroke="none" points="8.5,-334.5 8.5,-355.5 187.5,-355.5 187.5,-334.5 8.5,-334.5"/>
+<polygon fill="none" stroke="black" points="8.5,-334.5 8.5,-355.5 187.5,-355.5 187.5,-334.5 8.5,-334.5"/>
+<text text-anchor="start" x="18" y="-341.3" font-family="Times,serif" font-size="14.00">[ENUM] spoofed (Optional) </text>
+</a>
+</g>
+<g id="a_node1_3"><a xlink:href="/idmef_parser/IDMEF/Source.html" xlink:title="May be used by a network&#45;based analyzer with multiple interfaces to indicate which interface this source was seen on.">
+<polygon fill="#284f9f" stroke="none" points="8.5,-313.5 8.5,-334.5 187.5,-334.5 187.5,-313.5 8.5,-313.5"/>
+<polygon fill="none" stroke="black" points="8.5,-313.5 8.5,-334.5 187.5,-334.5 187.5,-313.5 8.5,-313.5"/>
+<text text-anchor="start" x="11.5" y="-320.3" font-family="Times,serif" font-size="14.00">[STRING] interface (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Node -->
+<g id="node2" class="node"><title>Node</title>
+<g id="a_node2_4"><a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The Node class is used to identify hosts and other network devices (routers, switches, etc.). ">
+<polygon fill="#007a00" stroke="none" points="308,-596.5 308,-617.5 478,-617.5 478,-596.5 308,-596.5"/>
+<polygon fill="none" stroke="black" points="308,-596.5 308,-617.5 478,-617.5 478,-596.5 308,-596.5"/>
+<text text-anchor="start" x="378" y="-603.3" font-family="Times,serif" font-size="14.00">Node</text>
+</a>
+</g>
+<g id="a_node2_5"><a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The location of the equipment.">
+<polygon fill="#00cc00" stroke="none" points="308,-575.5 308,-596.5 478,-596.5 478,-575.5 308,-575.5"/>
+<polygon fill="none" stroke="black" points="308,-575.5 308,-596.5 478,-596.5 478,-575.5 308,-575.5"/>
+<text text-anchor="start" x="321.5" y="-582.3" font-family="Times,serif" font-size="14.00">[STRING] location (0..1) </text>
+</a>
+</g>
+<g id="a_node2_6"><a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The name of the equipment. &#160;This information MUST be provided if no Address information is given.">
+<polygon fill="#00cc00" stroke="none" points="308,-554.5 308,-575.5 478,-575.5 478,-554.5 308,-554.5"/>
+<polygon fill="none" stroke="black" points="308,-554.5 308,-575.5 478,-575.5 478,-554.5 308,-554.5"/>
+<text text-anchor="start" x="328" y="-561.3" font-family="Times,serif" font-size="14.00">[STRING] name (0..1) </text>
+</a>
+</g>
+<g id="a_node2_7"><a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="A unique identifier for the node; see Section 3.2.9.">
+<polygon fill="#00cc00" stroke="none" points="308,-533.5 308,-554.5 478,-554.5 478,-533.5 308,-533.5"/>
+<polygon fill="none" stroke="black" points="308,-533.5 308,-554.5 478,-554.5 478,-533.5 308,-533.5"/>
+<text text-anchor="start" x="316.5" y="-540.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+<g id="a_node2_8"><a xlink:href="/idmef_parser/IDMEF/Node.html" xlink:title="The &quot;domain&quot; from which the name information was obtained, if relevant. &#160;The permitted values for this attribute are shown in the table below. &#160;The default value is &quot;unknown&quot;. (See also Section 10 for extensions to the table.)">
+<polygon fill="#00cc00" stroke="none" points="308,-512.5 308,-533.5 478,-533.5 478,-512.5 308,-512.5"/>
+<polygon fill="none" stroke="black" points="308,-512.5 308,-533.5 478,-533.5 478,-512.5 308,-512.5"/>
+<text text-anchor="start" x="311" y="-519.3" font-family="Times,serif" font-size="14.00">[ENUM] category (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Source&#45;&gt;Node -->
+<g id="edge2" class="edge"><title>Source&#45;&gt;Node</title>
+<path fill="none" stroke="black" d="M146.395,-401.784C175.849,-429.012 215.098,-463.156 253,-489.5 264.927,-497.79 277.849,-505.894 290.847,-513.536"/>
+<polygon fill="black" stroke="black" points="289.44,-516.766 299.847,-518.75 292.949,-510.709 289.44,-516.766"/>
+<text text-anchor="middle" x="224" y="-476.3" font-family="Times,serif" font-size="14.00">0..1</text>
+</g>
+<!-- User -->
+<g id="node4" class="node"><title>User</title>
+<g id="a_node4_9"><a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="The User class is used to describe users. It is primarily used as a &quot;container&quot; class for the UserId aggregate class, as shown in Figure 16. ">
+<polygon fill="#3d7a99" stroke="none" points="308,-454.5 308,-475.5 478,-475.5 478,-454.5 308,-454.5"/>
+<polygon fill="none" stroke="black" points="308,-454.5 308,-475.5 478,-475.5 478,-454.5 308,-454.5"/>
+<text text-anchor="start" x="380" y="-461.3" font-family="Times,serif" font-size="14.00">User</text>
+</a>
+</g>
+<g id="a_node4_10"><a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="A unique identifier for the user; see Section 3.2.9.">
+<polygon fill="#66ccff" stroke="none" points="308,-433.5 308,-454.5 478,-454.5 478,-433.5 308,-433.5"/>
+<polygon fill="none" stroke="black" points="308,-433.5 308,-454.5 478,-454.5 478,-433.5 308,-433.5"/>
+<text text-anchor="start" x="316.5" y="-440.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+<g id="a_node4_11"><a xlink:href="/idmef_parser/IDMEF/User.html" xlink:title="The type of user represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. (See also Section 10.)">
+<polygon fill="#66ccff" stroke="none" points="308,-412.5 308,-433.5 478,-433.5 478,-412.5 308,-412.5"/>
+<polygon fill="none" stroke="black" points="308,-412.5 308,-433.5 478,-433.5 478,-412.5 308,-412.5"/>
+<text text-anchor="start" x="311" y="-419.3" font-family="Times,serif" font-size="14.00">[ENUM] category (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Source&#45;&gt;User -->
+<g id="edge4" class="edge"><title>Source&#45;&gt;User</title>
+<path fill="none" stroke="black" d="M195.009,-384.765C225.463,-394 259.2,-404.23 290.023,-413.577"/>
+<polygon fill="black" stroke="black" points="289.334,-417.025 299.92,-416.578 291.366,-410.326 289.334,-417.025"/>
+<text text-anchor="middle" x="224" y="-398.3" font-family="Times,serif" font-size="14.00">0..1</text>
+</g>
+<!-- Process -->
+<g id="node6" class="node"><title>Process</title>
+<g id="a_node6_12"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The Process class is used to describe processes being executed on sources, targets, and analyzers. ">
+<polygon fill="#997a3d" stroke="none" points="314,-365.5 314,-386.5 473,-386.5 473,-365.5 314,-365.5"/>
+<polygon fill="none" stroke="black" points="314,-365.5 314,-386.5 473,-386.5 473,-365.5 314,-365.5"/>
+<text text-anchor="start" x="372.5" y="-372.3" font-family="Times,serif" font-size="14.00">Process</text>
+</a>
+</g>
+<g id="a_node6_13"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The name of the program being executed. This is a short name; path and argument information are provided elsewhere.">
+<polygon fill="#ffcc66" stroke="none" points="314,-344.5 314,-365.5 473,-365.5 473,-344.5 314,-344.5"/>
+<polygon fill="none" stroke="black" points="314,-344.5 314,-365.5 473,-365.5 473,-344.5 314,-344.5"/>
+<text text-anchor="start" x="336" y="-351.3" font-family="Times,serif" font-size="14.00">[STRING] name (1) </text>
+</a>
+</g>
+<g id="a_node6_14"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The process identifier of the process.">
+<polygon fill="#ffcc66" stroke="none" points="314,-323.5 314,-344.5 473,-344.5 473,-323.5 314,-323.5"/>
+<polygon fill="none" stroke="black" points="314,-323.5 314,-344.5 473,-344.5 473,-323.5 314,-323.5"/>
+<text text-anchor="start" x="330.5" y="-330.3" font-family="Times,serif" font-size="14.00">[INTEGER] pid (0..1) </text>
+</a>
+</g>
+<g id="a_node6_15"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="The full path of the program being executed.">
+<polygon fill="#ffcc66" stroke="none" points="314,-302.5 314,-323.5 473,-323.5 473,-302.5 314,-302.5"/>
+<polygon fill="none" stroke="black" points="314,-302.5 314,-323.5 473,-323.5 473,-302.5 314,-302.5"/>
+<text text-anchor="start" x="332" y="-309.3" font-family="Times,serif" font-size="14.00">[STRING] path (0..1) </text>
+</a>
+</g>
+<g id="a_node6_16"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="A command&#45;line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.">
+<polygon fill="#ffcc66" stroke="none" points="314,-281.5 314,-302.5 473,-302.5 473,-281.5 314,-281.5"/>
+<polygon fill="none" stroke="black" points="314,-281.5 314,-302.5 473,-302.5 473,-281.5 314,-281.5"/>
+<text text-anchor="start" x="335" y="-288.3" font-family="Times,serif" font-size="14.00">[STRING] arg (0..*) </text>
+</a>
+</g>
+<g id="a_node6_17"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="An environment string associated with the process; generally of the format &quot;VARIABLE=value&quot;. &#160;Multiple environment strings may be specified with multiple uses of env.">
+<polygon fill="#ffcc66" stroke="none" points="314,-260.5 314,-281.5 473,-281.5 473,-260.5 314,-260.5"/>
+<polygon fill="none" stroke="black" points="314,-260.5 314,-281.5 473,-281.5 473,-260.5 314,-260.5"/>
+<text text-anchor="start" x="334" y="-267.3" font-family="Times,serif" font-size="14.00">[STRING] env (0..*) </text>
+</a>
+</g>
+<g id="a_node6_18"><a xlink:href="/idmef_parser/IDMEF/Process.html" xlink:title="A unique identifier for the process; see Section 3.2.9.">
+<polygon fill="#ffcc66" stroke="none" points="314,-239.5 314,-260.5 473,-260.5 473,-239.5 314,-239.5"/>
+<polygon fill="none" stroke="black" points="314,-239.5 314,-260.5 473,-260.5 473,-239.5 314,-239.5"/>
+<text text-anchor="start" x="317" y="-246.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Source&#45;&gt;Process -->
+<g id="edge5" class="edge"><title>Source&#45;&gt;Process</title>
+<path fill="none" stroke="black" d="M195.009,-341.689C227.122,-337.094 262.884,-331.977 295.031,-327.376"/>
+<polygon fill="black" stroke="black" points="295.929,-330.784 305.332,-325.902 294.937,-323.854 295.929,-330.784"/>
+<text text-anchor="middle" x="224" y="-341.3" font-family="Times,serif" font-size="14.00">0..1</text>
+</g>
+<!-- Service -->
+<g id="node7" class="node"><title>Service</title>
+<g id="a_node7_19"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &quot;attached&quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. ">
+<polygon fill="#997a7a" stroke="none" points="261,-192.5 261,-213.5 525,-213.5 525,-192.5 261,-192.5"/>
+<polygon fill="none" stroke="black" points="261,-192.5 261,-213.5 525,-213.5 525,-192.5 261,-192.5"/>
+<text text-anchor="start" x="372.5" y="-199.3" font-family="Times,serif" font-size="14.00">Service</text>
+</a>
+</g>
+<g id="a_node7_20"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The name of the service. &#160;Whenever possible, the name from the IANA list of well&#45;known ports SHOULD be used.">
+<polygon fill="#ffcccc" stroke="none" points="261,-171.5 261,-192.5 525,-192.5 525,-171.5 261,-171.5"/>
+<polygon fill="none" stroke="black" points="261,-171.5 261,-192.5 525,-192.5 525,-171.5 261,-171.5"/>
+<text text-anchor="start" x="328" y="-178.3" font-family="Times,serif" font-size="14.00">[STRING] name (0..1) </text>
+</a>
+</g>
+<g id="a_node7_21"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The port number being used.">
+<polygon fill="#ffcccc" stroke="none" points="261,-150.5 261,-171.5 525,-171.5 525,-150.5 261,-150.5"/>
+<polygon fill="none" stroke="black" points="261,-150.5 261,-171.5 525,-171.5 525,-150.5 261,-150.5"/>
+<text text-anchor="start" x="328" y="-157.3" font-family="Times,serif" font-size="14.00">[INTEGER] port (0..1) </text>
+</a>
+</g>
+<g id="a_node7_22"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A list of port numbers being used; see Section 3.2.8 for formatting rules. &#160;If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.">
+<polygon fill="#ffcccc" stroke="none" points="261,-129.5 261,-150.5 525,-150.5 525,-129.5 261,-129.5"/>
+<polygon fill="none" stroke="black" points="261,-129.5 261,-150.5 525,-150.5 525,-129.5 261,-129.5"/>
+<text text-anchor="start" x="317" y="-136.3" font-family="Times,serif" font-size="14.00">[PORTLIST] portlist (0..1) </text>
+</a>
+</g>
+<g id="a_node7_23"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="Additional information about the protocol being used. &#160;The intent of the protocol field is to carry additional information related to the protocol being used when the &lt;Service&gt; attributes iana_protocol_number or/and iana_protocol_name are filed.">
+<polygon fill="#ffcccc" stroke="none" points="261,-108.5 261,-129.5 525,-129.5 525,-108.5 261,-108.5"/>
+<polygon fill="none" stroke="black" points="261,-108.5 261,-129.5 525,-129.5 525,-108.5 261,-108.5"/>
+<text text-anchor="start" x="320.5" y="-115.3" font-family="Times,serif" font-size="14.00">[STRING] protocol (0..1) </text>
+</a>
+</g>
+<g id="a_node7_24"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="A unique identifier for the service; see Section 3.2.9.">
+<polygon fill="#ffcccc" stroke="none" points="261,-87.5 261,-108.5 525,-108.5 525,-87.5 261,-87.5"/>
+<polygon fill="none" stroke="black" points="261,-87.5 261,-108.5 525,-108.5 525,-87.5 261,-87.5"/>
+<text text-anchor="start" x="316.5" y="-94.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+<g id="a_node7_25"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IP version number.">
+<polygon fill="#ffcccc" stroke="none" points="261,-66.5 261,-87.5 525,-87.5 525,-66.5 261,-66.5"/>
+<polygon fill="none" stroke="black" points="261,-66.5 261,-87.5 525,-87.5 525,-66.5 261,-66.5"/>
+<text text-anchor="start" x="297" y="-73.3" font-family="Times,serif" font-size="14.00">[INTEGER] ip_version (Optional) </text>
+</a>
+</g>
+<g id="a_node7_26"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol number.">
+<polygon fill="#ffcccc" stroke="none" points="261,-45.5 261,-66.5 525,-66.5 525,-45.5 261,-45.5"/>
+<polygon fill="none" stroke="black" points="261,-45.5 261,-66.5 525,-66.5 525,-45.5 261,-45.5"/>
+<text text-anchor="start" x="264" y="-52.3" font-family="Times,serif" font-size="14.00">[INTEGER] iana_protocol_number (Optional) </text>
+</a>
+</g>
+<g id="a_node7_27"><a xlink:href="/idmef_parser/IDMEF/Service.html" xlink:title="The IANA protocol name.">
+<polygon fill="#ffcccc" stroke="none" points="261,-24.5 261,-45.5 525,-45.5 525,-24.5 261,-24.5"/>
+<polygon fill="none" stroke="black" points="261,-24.5 261,-45.5 525,-45.5 525,-24.5 261,-24.5"/>
+<text text-anchor="start" x="274.5" y="-31.3" font-family="Times,serif" font-size="14.00">[STRING] iana_protocol_name (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Source&#45;&gt;Service -->
+<g id="edge8" class="edge"><title>Source&#45;&gt;Service</title>
+<path fill="none" stroke="black" d="M153.216,-309.464C182.612,-284.91 219.584,-254.313 253,-227.5 254.192,-226.544 255.39,-225.584 256.594,-224.62"/>
+<polygon fill="black" stroke="black" points="258.983,-227.192 264.617,-218.218 254.617,-221.72 258.983,-227.192"/>
+<text text-anchor="middle" x="224" y="-262.3" font-family="Times,serif" font-size="14.00">0..1</text>
+</g>
+<!-- Address -->
+<g id="node3" class="node"><title>Address</title>
+<g id="a_node3_28"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The Address class is used to represent network, hardware, and application addresses. ">
+<polygon fill="#007a00" stroke="none" points="631,-643.5 631,-664.5 824,-664.5 824,-643.5 631,-643.5"/>
+<polygon fill="none" stroke="black" points="631,-643.5 631,-664.5 824,-664.5 824,-643.5 631,-643.5"/>
+<text text-anchor="start" x="705" y="-650.3" font-family="Times,serif" font-size="14.00">Address</text>
+</a>
+</g>
+<g id="a_node3_29"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The address information. &#160;The format of this data is governed by the category attribute.">
+<polygon fill="#00cc00" stroke="none" points="631,-622.5 631,-643.5 824,-643.5 824,-622.5 631,-622.5"/>
+<polygon fill="none" stroke="black" points="631,-622.5 631,-643.5 824,-643.5 824,-622.5 631,-622.5"/>
+<text text-anchor="start" x="664.5" y="-629.3" font-family="Times,serif" font-size="14.00">[STRING] address (1) </text>
+</a>
+</g>
+<g id="a_node3_30"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The network mask for the address, if appropriate.">
+<polygon fill="#00cc00" stroke="none" points="631,-601.5 631,-622.5 824,-622.5 824,-601.5 631,-601.5"/>
+<polygon fill="none" stroke="black" points="631,-601.5 631,-622.5 824,-622.5 824,-601.5 631,-601.5"/>
+<text text-anchor="start" x="655" y="-608.3" font-family="Times,serif" font-size="14.00">[STRING] netmask (0..1) </text>
+</a>
+</g>
+<g id="a_node3_31"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="A unique identifier for the address; see Section 3.2.9.">
+<polygon fill="#00cc00" stroke="none" points="631,-580.5 631,-601.5 824,-601.5 824,-580.5 631,-580.5"/>
+<polygon fill="none" stroke="black" points="631,-580.5 631,-601.5 824,-601.5 824,-580.5 631,-580.5"/>
+<text text-anchor="start" x="651" y="-587.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+<g id="a_node3_32"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The type of address represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;unknown&quot;. &#160;(See also Section 10.)">
+<polygon fill="#00cc00" stroke="none" points="631,-559.5 631,-580.5 824,-580.5 824,-559.5 631,-559.5"/>
+<polygon fill="none" stroke="black" points="631,-559.5 631,-580.5 824,-580.5 824,-559.5 631,-559.5"/>
+<text text-anchor="start" x="645.5" y="-566.3" font-family="Times,serif" font-size="14.00">[ENUM] category (Optional) </text>
+</a>
+</g>
+<g id="a_node3_33"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The name of the Virtual LAN to which the address belongs.">
+<polygon fill="#00cc00" stroke="none" points="631,-538.5 631,-559.5 824,-559.5 824,-538.5 631,-538.5"/>
+<polygon fill="none" stroke="black" points="631,-538.5 631,-559.5 824,-559.5 824,-538.5 631,-538.5"/>
+<text text-anchor="start" x="635.5" y="-545.3" font-family="Times,serif" font-size="14.00">[STRING] vlan&#45;name (Optional) </text>
+</a>
+</g>
+<g id="a_node3_34"><a xlink:href="/idmef_parser/IDMEF/Address.html" xlink:title="The number of the Virtual LAN to which the address belongs.">
+<polygon fill="#00cc00" stroke="none" points="631,-517.5 631,-538.5 824,-538.5 824,-517.5 631,-517.5"/>
+<polygon fill="none" stroke="black" points="631,-517.5 631,-538.5 824,-538.5 824,-517.5 631,-517.5"/>
+<text text-anchor="start" x="634" y="-524.3" font-family="Times,serif" font-size="14.00">[INTEGER] vlan&#45;num (Optional) </text>
+</a>
+</g>
+</g>
+<!-- Node&#45;&gt;Address -->
+<g id="edge1" class="edge"><title>Node&#45;&gt;Address</title>
+<path fill="none" stroke="black" d="M486.04,-572.708C525.131,-575.769 571.1,-579.369 612.287,-582.595"/>
+<polygon fill="black" stroke="black" points="612.128,-586.093 622.371,-583.384 612.675,-579.114 612.128,-586.093"/>
+<text text-anchor="middle" x="562" y="-582.3" font-family="Times,serif" font-size="14.00">0..*</text>
+</g>
+<!-- UserId -->
+<g id="node5" class="node"><title>UserId</title>
+<g id="a_node5_35"><a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. ">
+<polygon fill="#3d7a99" stroke="none" points="648,-470.5 648,-491.5 807,-491.5 807,-470.5 648,-470.5"/>
+<polygon fill="none" stroke="black" points="648,-470.5 648,-491.5 807,-491.5 807,-470.5 648,-470.5"/>
+<text text-anchor="start" x="709" y="-477.3" font-family="Times,serif" font-size="14.00">UserId</text>
+</a>
+</g>
+<g id="a_node5_36"><a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A user or group name.">
+<polygon fill="#66ccff" stroke="none" points="648,-449.5 648,-470.5 807,-470.5 807,-449.5 648,-449.5"/>
+<polygon fill="none" stroke="black" points="648,-449.5 648,-470.5 807,-470.5 807,-449.5 648,-449.5"/>
+<text text-anchor="start" x="662.5" y="-456.3" font-family="Times,serif" font-size="14.00">[STRING] name (0..1) </text>
+</a>
+</g>
+<g id="a_node5_37"><a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A user or group number.">
+<polygon fill="#66ccff" stroke="none" points="648,-428.5 648,-449.5 807,-449.5 807,-428.5 648,-428.5"/>
+<polygon fill="none" stroke="black" points="648,-428.5 648,-449.5 807,-449.5 807,-428.5 648,-428.5"/>
+<text text-anchor="start" x="652" y="-435.3" font-family="Times,serif" font-size="14.00">[INTEGER] number (0..1) </text>
+</a>
+</g>
+<g id="a_node5_38"><a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="A unique identifier for the user id, see Section 3.2.9.">
+<polygon fill="#66ccff" stroke="none" points="648,-407.5 648,-428.5 807,-428.5 807,-407.5 648,-407.5"/>
+<polygon fill="none" stroke="black" points="648,-407.5 648,-428.5 807,-428.5 807,-407.5 648,-407.5"/>
+<text text-anchor="start" x="651" y="-414.3" font-family="Times,serif" font-size="14.00">[STRING] ident (Optional) </text>
+</a>
+</g>
+<g id="a_node5_39"><a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The type of user information represented. &#160;The permitted values for this attribute are shown below. &#160;The default value is &quot;original&#45;user&quot;. &#160;(See also Section 10.)">
+<polygon fill="#66ccff" stroke="none" points="648,-386.5 648,-407.5 807,-407.5 807,-386.5 648,-386.5"/>
+<polygon fill="none" stroke="black" points="648,-386.5 648,-407.5 807,-407.5 807,-386.5 648,-386.5"/>
+<text text-anchor="start" x="657" y="-393.3" font-family="Times,serif" font-size="14.00">[ENUM] type (Optional) </text>
+</a>
+</g>
+<g id="a_node5_40"><a xlink:href="/idmef_parser/IDMEF/UserId.html" xlink:title="The tty the user is using.">
+<polygon fill="#66ccff" stroke="none" points="648,-365.5 648,-386.5 807,-386.5 807,-365.5 648,-365.5"/>
+<polygon fill="none" stroke="black" points="648,-365.5 648,-386.5 807,-386.5 807,-365.5 648,-365.5"/>
+<text text-anchor="start" x="657.5" y="-372.3" font-family="Times,serif" font-size="14.00">[STRING] tty (Optional) </text>
+</a>
+</g>
+</g>
+<!-- User&#45;&gt;UserId -->
+<g id="edge3" class="edge"><title>User&#45;&gt;UserId</title>
+<path fill="none" stroke="black" d="M486.04,-440.064C530.642,-437.915 584.198,-435.334 629.388,-433.156"/>
+<polygon fill="black" stroke="black" points="629.671,-436.647 639.49,-432.669 629.334,-429.655 629.671,-436.647"/>
+<text text-anchor="middle" x="562" y="-440.3" font-family="Times,serif" font-size="14.00">1..*</text>
+</g>
+<!-- WebService -->
+<g id="node8" class="node"><title>WebService</title>
+<g id="a_node8_41"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The WebService class carries additional information related to web traffic. ">
+<polygon fill="#997a7a" stroke="none" points="641,-302.5 641,-323.5 813,-323.5 813,-302.5 641,-302.5"/>
+<polygon fill="none" stroke="black" points="641,-302.5 641,-323.5 813,-323.5 813,-302.5 641,-302.5"/>
+<text text-anchor="start" x="693.5" y="-309.3" font-family="Times,serif" font-size="14.00">WebService</text>
+</a>
+</g>
+<g id="a_node8_42"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The URL in the request.">
+<polygon fill="#ffcccc" stroke="none" points="641,-281.5 641,-302.5 813,-302.5 813,-281.5 641,-281.5"/>
+<polygon fill="none" stroke="black" points="641,-281.5 641,-302.5 813,-302.5 813,-281.5 641,-281.5"/>
+<text text-anchor="start" x="677" y="-288.3" font-family="Times,serif" font-size="14.00">[STRING] url (1) </text>
+</a>
+</g>
+<g id="a_node8_43"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The CGI script in the request, without arguments.">
+<polygon fill="#ffcccc" stroke="none" points="641,-260.5 641,-281.5 813,-281.5 813,-260.5 641,-260.5"/>
+<polygon fill="none" stroke="black" points="641,-260.5 641,-281.5 813,-281.5 813,-260.5 641,-260.5"/>
+<text text-anchor="start" x="669" y="-267.3" font-family="Times,serif" font-size="14.00">[STRING] cgi (0..1) </text>
+</a>
+</g>
+<g id="a_node8_44"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The HTTP method (PUT, GET) used in the request.">
+<polygon fill="#ffcccc" stroke="none" points="641,-239.5 641,-260.5 813,-260.5 813,-239.5 641,-239.5"/>
+<polygon fill="none" stroke="black" points="641,-239.5 641,-260.5 813,-260.5 813,-239.5 641,-239.5"/>
+<text text-anchor="start" x="644" y="-246.3" font-family="Times,serif" font-size="14.00">[STRING] http&#45;method (0..1) </text>
+</a>
+</g>
+<g id="a_node8_45"><a xlink:href="/idmef_parser/IDMEF/WebService.html" xlink:title="The arguments to the CGI script.">
+<polygon fill="#ffcccc" stroke="none" points="641,-218.5 641,-239.5 813,-239.5 813,-218.5 641,-218.5"/>
+<polygon fill="none" stroke="black" points="641,-218.5 641,-239.5 813,-239.5 813,-218.5 641,-218.5"/>
+<text text-anchor="start" x="668.5" y="-225.3" font-family="Times,serif" font-size="14.00">[STRING] arg (0..*) </text>
+</a>
+</g>
+</g>
+<!-- Service&#45;&gt;WebService -->
+<g id="edge6" class="edge"><title>Service&#45;&gt;WebService</title>
+<path fill="none" stroke="black" d="M542.822,-187.635C573.424,-201.646 604.814,-216.017 632.77,-228.816"/>
+<polygon fill="none" stroke="black" points="534.812,-180.119 542.447,-187.464 531.898,-186.483 534.812,-180.119"/>
+</g>
+<!-- SNMPService -->
+<g id="node9" class="node"><title>SNMPService</title>
+<g id="a_node9_46"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. ">
+<polygon fill="#997a7a" stroke="none" points="599,-171.5 599,-192.5 855,-192.5 855,-171.5 599,-171.5"/>
+<polygon fill="none" stroke="black" points="599,-171.5 599,-192.5 855,-192.5 855,-171.5 599,-171.5"/>
+<text text-anchor="start" x="687.5" y="-178.3" font-family="Times,serif" font-size="14.00">SNMPService</text>
+</a>
+</g>
+<g id="a_node9_47"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object identifier in the request.">
+<polygon fill="#ffcccc" stroke="none" points="599,-150.5 599,-171.5 855,-171.5 855,-150.5 599,-150.5"/>
+<polygon fill="none" stroke="black" points="599,-150.5 599,-171.5 855,-171.5 855,-150.5 599,-150.5"/>
+<text text-anchor="start" x="668.5" y="-157.3" font-family="Times,serif" font-size="14.00">[STRING] oid (0..1) </text>
+</a>
+</g>
+<g id="a_node9_48"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.">
+<polygon fill="#ffcccc" stroke="none" points="599,-129.5 599,-150.5 855,-150.5 855,-129.5 599,-129.5"/>
+<polygon fill="none" stroke="black" points="599,-129.5 599,-150.5 855,-150.5 855,-129.5 599,-129.5"/>
+<text text-anchor="start" x="602" y="-136.3" font-family="Times,serif" font-size="14.00">[INTEGER] messageProcessingModel (0..1) </text>
+</a>
+</g>
+<g id="a_node9_49"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.">
+<polygon fill="#ffcccc" stroke="none" points="599,-108.5 599,-129.5 855,-129.5 855,-108.5 599,-108.5"/>
+<polygon fill="none" stroke="black" points="599,-108.5 599,-129.5 855,-129.5 855,-108.5 599,-108.5"/>
+<text text-anchor="start" x="633.5" y="-115.3" font-family="Times,serif" font-size="14.00">[INTEGER] securityModel (0..1) </text>
+</a>
+</g>
+<g id="a_node9_50"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s security name; see RFC 3411 [15] Section 3.2.2.">
+<polygon fill="#ffcccc" stroke="none" points="599,-87.5 599,-108.5 855,-108.5 855,-87.5 599,-87.5"/>
+<polygon fill="none" stroke="black" points="599,-87.5 599,-108.5 855,-108.5 855,-87.5 599,-87.5"/>
+<text text-anchor="start" x="639.5" y="-94.3" font-family="Times,serif" font-size="14.00">[STRING] securityName (0..1) </text>
+</a>
+</g>
+<g id="a_node9_51"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.">
+<polygon fill="#ffcccc" stroke="none" points="599,-66.5 599,-87.5 855,-87.5 855,-66.5 599,-66.5"/>
+<polygon fill="none" stroke="black" points="599,-66.5 599,-87.5 855,-87.5 855,-66.5 599,-66.5"/>
+<text text-anchor="start" x="636" y="-73.3" font-family="Times,serif" font-size="14.00">[INTEGER] securityLevel (0..1) </text>
+</a>
+</g>
+<g id="a_node9_52"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context name; see RFC 3411 [15] Section 3.3.3.">
+<polygon fill="#ffcccc" stroke="none" points="599,-45.5 599,-66.5 855,-66.5 855,-45.5 599,-45.5"/>
+<polygon fill="none" stroke="black" points="599,-45.5 599,-66.5 855,-66.5 855,-45.5 599,-45.5"/>
+<text text-anchor="start" x="641" y="-52.3" font-family="Times,serif" font-size="14.00">[STRING] contextName (0..1) </text>
+</a>
+</g>
+<g id="a_node9_53"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The object&#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.">
+<polygon fill="#ffcccc" stroke="none" points="599,-24.5 599,-45.5 855,-45.5 855,-24.5 599,-24.5"/>
+<polygon fill="none" stroke="black" points="599,-24.5 599,-45.5 855,-45.5 855,-24.5 599,-24.5"/>
+<text text-anchor="start" x="631" y="-31.3" font-family="Times,serif" font-size="14.00">[STRING] contextEngineID (0..1) </text>
+</a>
+</g>
+<g id="a_node9_54"><a xlink:href="/idmef_parser/IDMEF/SNMPService.html" xlink:title="The command sent to the SNMP server (GET, SET, etc.).">
+<polygon fill="#ffcccc" stroke="none" points="599,-3.5 599,-24.5 855,-24.5 855,-3.5 599,-3.5"/>
+<polygon fill="none" stroke="black" points="599,-3.5 599,-24.5 855,-24.5 855,-3.5 599,-3.5"/>
+<text text-anchor="start" x="650" y="-10.3" font-family="Times,serif" font-size="14.00">[STRING] command (0..1) </text>
+</a>
+</g>
+</g>
+<!-- Service&#45;&gt;SNMPService -->
+<g id="edge7" class="edge"><title>Service&#45;&gt;SNMPService</title>
+<path fill="none" stroke="black" d="M543.679,-110.032C559.441,-109.035 575.403,-108.026 590.986,-107.04"/>
+<polygon fill="none" stroke="black" points="533.134,-107.192 543.335,-110.054 533.576,-114.178 533.134,-107.192"/>
+</g>
+</g>
+</svg>
+
+</div>
+</div>
+<div class='tab-pane' id='png' role='tabpanel'>
+<img class='img-responsive block-center' src='/idmef_parser/img/IDMEF/Source.png'>
+</div>
+<div class='tab-pane' id='dot' role='tabpanel'>
+<pre><p>digraph Source {
+	graph [bb=&quot;0,0,863,669&quot;,
+		rankdir=LR
+	];
+	node [label=&quot;\N&quot;];
+	Source	 [height=1.2778,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#182f5f&quot; HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;The Source class contains information about the possible source(s) of the event(s) that generated an alert. An event may have more than one source (e.g., in a distributed denial-of-service attack). &quot;&gt;Source&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#284F9F&quot;  HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;A unique identifier for this source; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#284F9F&quot;  HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack.  The permitted values for this attribute are shown below.  The default value is &amp;quot;unknown&amp;quot;.  (See also Section 10.)&quot;&gt;[ENUM] spoofed (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#284F9F&quot;  HREF=&quot;/idmef_parser/IDMEF/Source.html&quot; TITLE=&quot;May be used by a network-based analyzer with multiple interfaces to indicate which interface this source was seen on.&quot;&gt;[STRING] interface (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;97.5,355.5&quot;,
+		shape=plaintext,
+		width=2.7083];
+	&quot;Node&quot;	 [height=1.5694,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#007a00&quot; HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The Node class is used to identify hosts and other network devices (routers, switches, etc.). &quot;&gt;Node&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The location of the equipment.&quot;&gt;[STRING] location (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The name of the equipment.  This information MUST be provided if no Address information is given.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;A unique identifier for the node; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Node.html&quot; TITLE=&quot;The &amp;quot;domain&amp;quot; from which the name information was obtained, if relevant.  The permitted values for this attribute are shown in the table below.  The default value is &amp;quot;unknown&amp;quot;. (See also Section 10 for extensions to the table.)&quot;&gt;[ENUM] category (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;393,565.5&quot;,
+		shape=plaintext,
+		width=2.5833];
+	Source -&gt; &quot;Node&quot;	 [label=&quot;0..1&quot;,
+		lp=&quot;224,480&quot;,
+		pos=&quot;e,299.85,518.75 146.39,401.78 175.85,429.01 215.1,463.16 253,489.5 264.93,497.79 277.85,505.89 290.85,513.54&quot;];
+	User	 [height=0.98611,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#3d7a99&quot; HREF=&quot;/idmef_parser/IDMEF/User.html&quot; TITLE=&quot;The User class is used to describe users. It is primarily used as a &amp;quot;container&amp;quot; class for the UserId aggregate class, as shown in Figure 16. &quot;&gt;User&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/User.html&quot; TITLE=&quot;A unique identifier for the user; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/User.html&quot; TITLE=&quot;The type of user represented.  The permitted values for this attribute are shown below.  The default value is &amp;quot;unknown&amp;quot;. (See also Section 10.)&quot;&gt;[ENUM] category (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;393,444.5&quot;,
+		shape=plaintext,
+		width=2.5833];
+	Source -&gt; User	 [label=&quot;0..1&quot;,
+		lp=&quot;224,402&quot;,
+		pos=&quot;e,299.92,416.58 195.01,384.77 225.46,394 259.2,404.23 290.02,413.58&quot;];
+	Process	 [height=2.1528,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a3d&quot; HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The Process class is used to describe processes being executed on sources, targets, and analyzers. &quot;&gt;Process&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The name of the program being executed. This is a short name; path and argument information are provided elsewhere.&quot;&gt;[STRING] name (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The process identifier of the process.&quot;&gt;[INTEGER] pid (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;The full path of the program being executed.&quot;&gt;[STRING] path (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;A command-line argument to the program. Multiple arguments may be specified (they are assumed to have occurred in the same order they are provided) with multiple uses of arg.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;An environment string associated with the process; generally of the format &amp;quot;VARIABLE=value&amp;quot;.  Multiple environment strings may be specified with multiple uses of env.&quot;&gt;[STRING] env (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCC66&quot;  HREF=&quot;/idmef_parser/IDMEF/Process.html&quot; TITLE=&quot;A unique identifier for the process; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;393,313.5&quot;,
+		shape=plaintext,
+		width=2.4306];
+	Source -&gt; Process	 [label=&quot;0..1&quot;,
+		lp=&quot;224,345&quot;,
+		pos=&quot;e,305.33,325.9 195.01,341.69 227.12,337.09 262.88,331.98 295.03,327.38&quot;];
+	Service	 [height=2.7361,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The Service class describes network services on sources and targets. It can identify services by name, port, and protocol. When Service occurs as an aggregate class of Source, it is understood that the service is one from which activity of interest is originating; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Source. Likewise, when Service occurs as an aggregate class of Target, it is understood that the service is one to which activity of interest is being directed; and that the service is &amp;quot;attached&amp;quot; to the Node, Process, and User information also contained in Target. If Service occurs in both Source and Target, then information in both locations should be the same. If information is the same in both locations and implementers wish to carry it in only one location, they should specify it as an aggregate of the Target class. &quot;&gt;Service&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The name of the service.  Whenever possible, the name from the IANA list of well-known ports SHOULD be used.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The port number being used.&quot;&gt;[INTEGER] port (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;A list of port numbers being used; see Section 3.2.8 for formatting rules.  If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list.&quot;&gt;[PORTLIST] portlist (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;Additional information about the protocol being used.  The intent of the protocol field is to carry additional information related to the protocol being used when the &amp;lt;Service&amp;gt; attributes iana_protocol_number or/and iana_protocol_name are filed.&quot;&gt;[STRING] protocol (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;A unique identifier for the service; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IP version number.&quot;&gt;[INTEGER] ip_version (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IANA protocol number.&quot;&gt;[INTEGER] iana_protocol_number (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/Service.html&quot; TITLE=&quot;The IANA protocol name.&quot;&gt;[STRING] iana_protocol_name (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;393,119.5&quot;,
+		shape=plaintext,
+		width=3.8889];
+	Source -&gt; Service	 [label=&quot;0..1&quot;,
+		lp=&quot;224,266&quot;,
+		pos=&quot;e,264.62,218.22 153.22,309.46 182.61,284.91 219.58,254.31 253,227.5 254.19,226.54 255.39,225.58 256.59,224.62&quot;];
+	Address	 [height=2.1528,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#007a00&quot; HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The Address class is used to represent network, hardware, and application addresses. &quot;&gt;Address&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The address information.  The format of this data is governed by the category attribute.&quot;&gt;[STRING] address (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The network mask for the address, if appropriate.&quot;&gt;[STRING] netmask (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;A unique identifier for the address; see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The type of address represented.  The permitted values for this attribute are shown below.  The default value is &amp;quot;unknown&amp;quot;.  (See also Section 10.)&quot;&gt;[ENUM] category (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The name of the Virtual LAN to which the address belongs.&quot;&gt;[STRING] vlan-name (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#00CC00&quot;  HREF=&quot;/idmef_parser/IDMEF/Address.html&quot; TITLE=&quot;The number of the Virtual LAN to which the address belongs.&quot;&gt;[INTEGER] vlan-num (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;727,591.5&quot;,
+		shape=plaintext,
+		width=2.9028];
+	&quot;Node&quot; -&gt; Address	 [label=&quot;0..*&quot;,
+		lp=&quot;562,586&quot;,
+		pos=&quot;e,622.37,583.38 486.04,572.71 525.13,575.77 571.1,579.37 612.29,582.59&quot;];
+	UserId	 [height=1.8611,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#3d7a99&quot; HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&amp;#39;s (or process&amp;#39;) privileges. &quot;&gt;UserId&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;A user or group name.&quot;&gt;[STRING] name (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;A user or group number.&quot;&gt;[INTEGER] number (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;A unique identifier for the user id, see Section 3.2.9.&quot;&gt;[STRING] ident (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;The type of user information represented.  The permitted values for this attribute are shown below.  The default value is &amp;quot;original-user&amp;quot;.  (See also Section 10.)&quot;&gt;[ENUM] type (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#66CCFF&quot;  HREF=&quot;/idmef_parser/IDMEF/UserId.html&quot; TITLE=&quot;The tty the user is using.&quot;&gt;[STRING] tty (Optional) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;727,428.5&quot;,
+		shape=plaintext,
+		width=2.4306];
+	User -&gt; UserId	 [label=&quot;1..*&quot;,
+		lp=&quot;562,444&quot;,
+		pos=&quot;e,639.49,432.67 486.04,440.06 530.64,437.91 584.2,435.33 629.39,433.16&quot;];
+	WebService	 [height=1.5694,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The WebService class carries additional information related to web traffic. &quot;&gt;WebService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The URL in the request.&quot;&gt;[STRING] url (1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The CGI script in the request, without arguments.&quot;&gt;[STRING] cgi (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The HTTP method (PUT, GET) used in the request.&quot;&gt;[STRING] http-method (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/WebService.html&quot; TITLE=&quot;The arguments to the CGI script.&quot;&gt;[STRING] arg (0..*) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;727,271.5&quot;,
+		shape=plaintext,
+		width=2.6111];
+	Service -&gt; WebService	 [arrowtail=invempty,
+		dir=back,
+		pos=&quot;s,533.35,183.3 542.82,187.64 573.42,201.65 604.81,216.02 632.77,228.82&quot;];
+	SNMPService	 [height=2.7361,
+		label=&lt;&lt;table BORDER=&quot;0&quot; CELLBORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt; &lt;tr &gt; &lt;td BGCOLOR=&quot;#997a7a&quot; HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The SNMPService class carries additional information related to SNMP traffic. The aggregate classes composing SNMPService must be interpreted as described in RFC 3411 [15] and RFC 3584 [16]. &quot;&gt;SNMPService&lt;/td&gt; &lt;/tr&gt;&quot; %&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object identifier in the request.&quot;&gt;[STRING] oid (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The SNMP version, typically 0 for SNMPv1, 1 for SNMPv2c, 2 for SNMPv2u and SNMPv2*, and 3 for SNMPv3; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] messageProcessingModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The identification of the security model in use, typically 0 for any, 1 for SNMPv1, 2 for SNMPv2c, and 3 for USM; see RFC 3411 [15] Section 5 for appropriate values.&quot;&gt;[INTEGER] securityModel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s security name; see RFC 3411 [15] Section 3.2.2.&quot;&gt;[STRING] securityName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The security level of the SNMP request; see RFC 3411 [15] Section 3.4.3.&quot;&gt;[INTEGER] securityLevel (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s context name; see RFC 3411 [15] Section 3.3.3.&quot;&gt;[STRING] contextName (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The object&amp;#39;s context engine identifier; see RFC 3411 [15] Section 3.3.2.&quot;&gt;[STRING] contextEngineID (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;tr&gt;&lt;td BGCOLOR=&quot;#FFCCCC&quot;  HREF=&quot;/idmef_parser/IDMEF/SNMPService.html&quot; TITLE=&quot;The command sent to the SNMP server (GET, SET, etc.).&quot;&gt;[STRING] command (0..1) &lt;/td&gt;&lt;/tr&gt;%&lt;/table&gt;&gt;,
+		pos=&quot;727,98.5&quot;,
+		shape=plaintext,
+		width=3.7778];
+	Service -&gt; SNMPService	 [arrowtail=invempty,
+		dir=back,
+		pos=&quot;s,533.35,110.69 543.68,110.03 559.44,109.04 575.4,108.03 590.99,107.04&quot;];
+}
+</p></pre>
+</div>
+</div>
+<hr>
+<h3>Aggregates</h3>
+<h4>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+(0..1)
+</h4>
+<blockquote>
+Information about the host or device that appears to be causing the events (network address, network name, etc.).
+</blockquote>
+<h4>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+(0..1)
+</h4>
+<blockquote>
+Information about the user that appears to be causing the event(s).
+</blockquote>
+<h4>
+<a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+(0..1)
+</h4>
+<blockquote>
+Information about the process that appears to be causing the event(s).
+</blockquote>
+<h4>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+(0..1)
+</h4>
+<blockquote>
+Information about the network service involved in the event(s).
+</blockquote>
+<hr>
+<h3>Attributes</h3>
+<h4>
+ident
+(Optional)
+</h4>
+<blockquote>
+A unique identifier for this source; see Section 3.2.9.
+</blockquote>
+<h4>
+spoofed
+(Optional)
+</h4>
+<blockquote>
+An indication of whether the source is, as far as the analyzer can determine, a spoofed address used for hiding the real origin of the attack.  The permitted values for this attribute are shown below.  The default value is "unknown".  (See also Section 10.)
+<table class='table table-striped table-bordered'>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Keyword</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>unknown</td>
+<td>Accuracy of source information unknown</td>
+</tr>
+<tr>
+<td>1</td>
+<td>yes</td>
+<td>Source is believed to be a decoy</td>
+</tr>
+<tr>
+<td>2</td>
+<td>no</td>
+<td>Source is believed to be "real"</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4>
+interface
+(Optional)
+</h4>
+<blockquote>
+May be used by a network-based analyzer with multiple interfaces to indicate which interface this source was seen on.
+</blockquote>
+</div>
+
+<hr>
+<div class='container'>
+<hr>
+<h4>IDMEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Action.html'>Action</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Alert.html'>Alert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Analyzer.html'>Analyzer</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/AnalyzerTime.html'>AnalyzerTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Checksum.html'>Checksum</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/Classification.html'>Classification</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CorrelationAlert.html'>CorrelationAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/CreateTime.html'>CreateTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/DetectTime.html'>DetectTime</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/File.html'>File</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/FileAccess.html'>FileAccess</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Heartbeat.html'>Heartbeat</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/IDMEF-Message.html'>IDMEF-Message</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Inode.html'>Inode</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Linkage.html'>Linkage</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/OverflowAlert.html'>OverflowAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Process.html'>Process</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Reference.html'>Reference</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IDMEF/SNMPService.html'>SNMPService</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Source.html'>Source</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/Target.html'>Target</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/ToolAlert.html'>ToolAlert</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/User.html'>User</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/UserId.html'>UserId</a>
+</li>
+<li>
+<a href='/idmef_parser/IDMEF/WebService.html'>WebService</a>
+</li>
+</ul>
+</div>
+</div>
+<hr>
+<h4>IODEF</h4>
+<div class='row'>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/AdditionalData.html'>AdditionalData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Address.html'>Address</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/AlternativeID.html'>AlternativeID</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Application.html'>Application</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Assessment.html'>Assessment</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Confidence.html'>Confidence</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Contact.html'>Contact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Counter.html'>Counter</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Email.html'>Email</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/EventData.html'>EventData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Expectation.html'>Expectation</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Flow.html'>Flow</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/History.html'>History</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/HistoryItem.html'>HistoryItem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IODEF-Document.html'>IODEF-Document</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Impact.html'>Impact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Incident.html'>Incident</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/IncidentID.html'>IncidentID</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/Method.html'>Method</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/MonetaryImpact.html'>MonetaryImpact</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Node.html'>Node</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/NodeRole.html'>NodeRole</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/OperatingSystem.html'>OperatingSystem</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/PostalAddress.html'>PostalAddress</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Record.html'>Record</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordData.html'>RecordData</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RecordItem.html'>RecordItem</a>
+</li>
+</ul>
+</div>
+<div class='col-md-3'>
+<ul>
+<li>
+<a href='/idmef_parser/IODEF/RecordPattern.html'>RecordPattern</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Reference.html'>Reference</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RegistryHandle.html'>RegistryHandle</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/RelatedActivity.html'>RelatedActivity</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/Service.html'>Service</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/System.html'>System</a>
+</li>
+<li>
+<a href='/idmef_parser/IODEF/TimeImpact.html'>TimeImpact</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</body>
 </html>
