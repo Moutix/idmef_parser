@@ -13,25 +13,25 @@
   "aggregates": {
     "name": {
       "name": "name",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "STRING",
       "description": "The name of the service.  Whenever possible, the name from the IANA list of well-known ports SHOULD be used."
     },
     "port": {
       "name": "port",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "INTEGER",
       "description": "The port number being used."
     },
     "portlist": {
       "name": "portlist",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "PORTLIST",
       "description": "A list of port numbers being used; see Section 3.2.8 for formatting rules.  If a portlist is given, the iana_protocol_number and iana_protocol_name MUST apply to all the elements of the list."
     },
     "protocol": {
       "name": "protocol",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "STRING",
       "description": "Additional information about the protocol being used.  The intent of the protocol field is to carry additional information related to the protocol being used when the <Service> attributes iana_protocol_number or/and iana_protocol_name are filed."
     }

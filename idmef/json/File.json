@@ -5,43 +5,43 @@
   "aggregates": {
     "name": {
       "name": "name",
-      "multiplicity": "1",
+      "multiplicity": "Required",
       "type": "STRING",
       "description": "The name of the file to which the alert applies, not including the path to the file."
     },
     "path": {
       "name": "path",
-      "multiplicity": "1",
+      "multiplicity": "Required",
       "type": "STRING",
       "description": "The full path to the file, including the name.  The path name should be represented in as \"universal\" a manner as possible, to facilitate processing of the alert."
     },
     "create-time": {
       "name": "create-time",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "DATETIME",
       "description": "Time the file was created.  Note that this is *not* the Unix \"st_ctime\" file attribute (which is not file creation time).  The Unix \"st_ctime\" attribute is contained in the \"Inode\" class."
     },
     "modify-time": {
       "name": "modify-time",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "DATETIME",
       "description": "Time the file was last modified."
     },
     "access-time": {
       "name": "access-time",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "DATETIME",
       "description": "Time the file was last accessed."
     },
     "data-size": {
       "name": "data-size",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "INTEGER",
       "description": "The size of the data, in bytes.  Typically what is meant when referring to file size.  On Unix UFS file systems, this value corresponds to stat.st_size.  On Windows NTFS, this value corresponds to Valid Data Length (VDL)."
     },
     "disk-size": {
       "name": "disk-size",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "INTEGER",
       "description": "The physical space on disk consumed by the file, in bytes.  On Unix UFS file systems, this value corresponds to 512 * stat.st_blocks.  On Windows NTFS, this value corresponds to End of File (EOF)."
     },
@@ -71,13 +71,13 @@
     },
     "ident": {
       "name": "ident",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "STRING",
       "description": "A unique identifier for this file; see Section 3.2.9."
     },
     "category": {
       "name": "category",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "ENUM",
       "description": "The type of file system the file resides on.  This attribute governs how path names and other attributes are interpreted.",
       "values": [
@@ -95,7 +95,7 @@
     },
     "file-type": {
       "name": "file-type",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "STRING",
       "description": "The type of file, as a mime-type."
     }

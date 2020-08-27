@@ -1,0 +1,38 @@
+{
+  "name": "Stream",
+  "description": "The Stram class contains specific information about the content of a file",
+  "aggregates": {
+  },
+  "attributes": {
+    "offsetunit": {
+      "name": "offsetunit",
+      "multiplicity": "Optional",
+      "type": "ENUM",
+      "description": "",
+      "values": [
+        {
+          "rank": "0",
+          "keyword": "line",
+          "description": "Offset is a count of lines."
+        },
+        {
+          "rank": "1",
+          "keyword": "binary",
+          "description": "Offset is a count of bytes."
+        }
+      ]
+    },
+    "offset": {
+      "name": "offset",
+      "multiplicity": "Optional",
+      "type": "INTEGER",
+      "description": "Amount of units (determined by the offsetunit attribute) to seek into the File"
+    },
+    "data": {
+      "name": "Data",
+      "multiplicity": "Required",
+      "type": "DATA",
+      "description": "Content of the file"
+    }
+  }
+}

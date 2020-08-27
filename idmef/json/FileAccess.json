@@ -11,7 +11,7 @@
     },
     "Permission": {
       "name": "Permission",
-      "multiplicity": "1..*",
+      "multiplicity": "Required",
       "type": "ENUM",
       "description": "Level of access allowed.  The permitted values are shown below.  There is no default value.  (See also Section 10.)",
       "values": [

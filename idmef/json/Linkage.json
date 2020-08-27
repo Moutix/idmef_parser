@@ -5,13 +5,13 @@
   "aggregates": {
     "name": {
       "name": "name",
-      "multiplicity": "1",
+      "multiplicity": "Required",
       "type": "STRING",
       "description": "The name of the file system object, not including the path."
     },
     "path": {
       "name": "path",
-      "multiplicity": "1",
+      "multiplicity": "Required",
       "type": "STRING",
       "description": "The full path to the file system object, including the name.  The path name should be represented in as \"universal\" a manner as possible, to facilitate processing of the alert."
     },

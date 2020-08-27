@@ -5,13 +5,13 @@
   "aggregates": {
     "name": {
       "name": "name",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "STRING",
       "description": "A user or group name."
     },
     "number": {
       "name": "number",
-      "multiplicity": "0..1",
+      "multiplicity": "Optional",
       "type": "INTEGER",
       "description": "A user or group number."
     }

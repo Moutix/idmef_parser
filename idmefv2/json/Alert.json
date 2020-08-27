@@ -56,6 +56,12 @@
       "type": null,
       "description": "The target(s) of the event(s) leading up to the alert."
     },
+    "Transaction": {
+      "name": "Transaction",
+      "multiplicity": "0..*",
+      "type": null,
+      "description": "The transaction(s) of the event(s) leading up to the alert."
+    },
     "Assessment": {
       "name": "Assessment",
       "multiplicity": "0..1",

@@ -1,0 +1,37 @@
+{
+  "name": "Transaction",
+  "description": "The Transaction class contains specific information about the data exchange during the attack.",
+  "aggregates": {
+    "File": {
+      "name": "File",
+      "multiplicity": "0..*",
+      "type": "File",
+      "description": "File exchange during the attack, can be a certificate"
+    }
+  },
+  "attributes": {
+    "direction": {
+      "name": "direction",
+      "multiplicity": "Optional",
+      "type": "Enum",
+      "description": "Direction of the attack source <-> target",
+      "values": [
+        {
+          "rank": "0",
+          "keyword": "unknown",
+          "description": "Direction of the attack unknown"
+        },
+        {
+          "rank": "1",
+          "keyword": "Source",
+          "description": "Source"
+        },
+        {
+          "rank": "2",
+          "keyword": "Target",
+          "description": "Target"
+        }
+      ]
+    }
+  }
+}
