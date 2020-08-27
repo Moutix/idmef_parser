@@ -1,11 +1,11 @@
 digraph OverflowAlert {
-	graph [bb="0,0,154,92",
+	graph [bb="0,0,203,92",
 		rankdir=LR
 	];
 	node [label="\N"];
 	OverflowAlert	 [height=1.2778,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#737373" HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="The OverflowAlert carries additional information related to buffer overflow attacks. It is intended to enable an analyzer to provide the details of the overflow attack itself. ">OverflowAlert</td> </tr>" %<tr><td BGCOLOR="#BFBFBF"  HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="The program that the overflow attack attempted to run (NOTE: this is not the program that was attacked).">[STRING] program (1) </td></tr>%<tr><td BGCOLOR="#BFBFBF"  HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="The size, in bytes, of the overflow (i.e., the number of bytes the attacker sent).">[INTEGER] size (0..1) </td></tr>%<tr><td BGCOLOR="#BFBFBF"  HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="Some or all of the overflow data itself (dependent on how much the analyzer can capture).">[BYTE[]] buffer (0..1) </td></tr>%</table>>,
-		pos="77,46",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#999999" HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="The OverflowAlert carries additional information related to buffer overflow attacks. It is intended to enable an analyzer to provide the details of the overflow attack itself. "><FONT FACE="Nimbus Sans L">OverflowAlert</FONT></td> </tr>" %<tr><td BGCOLOR="#BFBFBF"  HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="The program that the overflow attack attempted to run (NOTE: this is not the program that was attacked)."><FONT FACE="Nimbus Sans L">[STRING] program (Required)</FONT></td></tr>%<tr><td BGCOLOR="#BFBFBF"  HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="The size, in bytes, of the overflow (i.e., the number of bytes the attacker sent)."><FONT FACE="Nimbus Sans L">[INTEGER] size (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#BFBFBF"  HREF="/idmef_parser/IDMEF/OverflowAlert.html" TITLE="Some or all of the overflow data itself (dependent on how much the analyzer can capture)."><FONT FACE="Nimbus Sans L">[BYTE[]] buffer (Optional)</FONT></td></tr>%</table>>,
+		pos="101.5,46",
 		shape=plaintext,
-		width=2.1389];
+		width=2.8194];
 }

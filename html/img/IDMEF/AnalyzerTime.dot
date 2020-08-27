@@ -1,11 +1,11 @@
 digraph AnalyzerTime {
-	graph [bb="0,0,101,36",
+	graph [bb="0,0,106,36",
 		rankdir=LR
 	];
 	node [label="\N"];
 	AnalyzerTime	 [height=0.5,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c5c99" HREF="/idmef_parser/IDMEF/AnalyzerTime.html" TITLE="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. ">AnalyzerTime</td> </tr>" %</table>>,
-		pos="50.5,18",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#8a8acc" HREF="/idmef_parser/IDMEF/AnalyzerTime.html" TITLE="The AnalyzerTime class is used to indicate the current date and time on the analyzer. Its values should be filled in as late as possible in the message transmission process, ideally immediately before placing the message &quot;on the wire&quot;. "><FONT FACE="Nimbus Sans L">AnalyzerTime</FONT></td> </tr>" %</table>>,
+		pos="53,18",
 		shape=plaintext,
-		width=1.4028];
+		width=1.4722];
 }

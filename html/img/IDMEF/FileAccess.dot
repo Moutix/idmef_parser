@@ -1,19 +1,19 @@
 digraph FileAccess {
-	graph [bb="0,0,392,134",
+	graph [bb="0,0,458,134",
 		rankdir=LR
 	];
 	node [label="\N"];
 	FileAccess	 [height=0.69444,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a00" HREF="/idmef_parser/IDMEF/FileAccess.html" TITLE="The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems. ">FileAccess</td> </tr>" %<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/FileAccess.html" TITLE="Level of access allowed.  The permitted values are shown below.  There is no default value.  (See also Section 10.)">[ENUM] Permission (1..*) </td></tr>%</table>>,
-		pos="87,67",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cca300" HREF="/idmef_parser/IDMEF/FileAccess.html" TITLE="The FileAccess class represents the access permissions on a file. The representation is intended to be useful across operating systems. "><FONT FACE="Nimbus Sans L">FileAccess</FONT></td> </tr>" %<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/FileAccess.html" TITLE="Level of access allowed.  The permitted values are shown below.  There is no default value.  (See also Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] Permission (Required)</FONT></td></tr>%</table>>,
+		pos="104.5,67",
 		shape=plaintext,
-		width=2.4167];
+		width=2.9028];
 	UserId	 [height=1.8611,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#3d7a99" HREF="/idmef_parser/IDMEF/UserId.html" TITLE="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. ">UserId</td> </tr>" %<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="A user or group name.">[STRING] name (0..1) </td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="A user or group number.">[INTEGER] number (0..1) </td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="A unique identifier for the user id, see Section 3.2.9.">[STRING] ident (Optional) </td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="The type of user information represented.  The permitted values for this attribute are shown below.  The default value is &quot;original-user&quot;.  (See also Section 10.)">[ENUM] type (Optional) </td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="The tty the user is using.">[STRING] tty (Optional) </td></tr>%</table>>,
-		pos="304.5,67",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#52a3cc" HREF="/idmef_parser/IDMEF/UserId.html" TITLE="The UserId class provides specific information about a user. More than one UserId can be used within the User class to indicate attempts to transition from one user to another, or to provide complete information about a user&#39;s (or process&#39;) privileges. "><FONT FACE="Nimbus Sans L">UserId</FONT></td> </tr>" %<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="A user or group name."><FONT FACE="Nimbus Sans L">[STRING] name (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="A user or group number."><FONT FACE="Nimbus Sans L">[INTEGER] number (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="A unique identifier for the user id, see Section 3.2.9."><FONT FACE="Nimbus Sans L">[STRING] ident (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="The type of user information represented.  The permitted values for this attribute are shown below.  The default value is &quot;original-user&quot;.  (See also Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] type (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#66CCFF"  HREF="/idmef_parser/IDMEF/UserId.html" TITLE="The tty the user is using."><FONT FACE="Nimbus Sans L">[STRING] tty (Optional)</FONT></td></tr>%</table>>,
+		pos="355.5,67",
 		shape=plaintext,
-		width=2.4306];
+		width=2.8472];
 	FileAccess -> UserId	 [label=1,
-		lp="195.5,74.5",
-		pos="e,216.83,67 174.1,67 184.76,67 195.72,67 206.53,67"];
+		lp="231,74.5",
+		pos="e,252.65,67 209.13,67 220.15,67 231.39,67 242.5,67"];
 }

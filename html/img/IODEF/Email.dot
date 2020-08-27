@@ -1,11 +1,11 @@
 digraph Email {
-	graph [bb="0,0,187,50",
+	graph [bb="0,0,191,50",
 		rankdir=LR
 	];
 	node [label="\N"];
 	Email	 [height=0.69444,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#7a993d" HREF="/idmef_parser/IODEF/Email.html" TITLE="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">Email</td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Email.html" TITLE="A free-form description of the element content (e.g., hours of coverage for a given number).">[ENUM] meaning (Optional) </td></tr>%</table>>,
-		pos="93.5,25",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#a3cc52" HREF="/idmef_parser/IODEF/Email.html" TITLE="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). "><FONT FACE="Nimbus Sans L">Email</FONT></td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Email.html" TITLE="A free-form description of the element content (e.g., hours of coverage for a given number)."><FONT FACE="Nimbus Sans L">[ENUM] meaning (Optional)</FONT></td></tr>%</table>>,
+		pos="95.5,25",
 		shape=plaintext,
-		width=2.5972];
+		width=2.6528];
 }

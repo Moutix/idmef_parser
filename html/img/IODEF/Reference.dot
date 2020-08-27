@@ -1,11 +1,11 @@
 digraph Reference {
-	graph [bb="0,0,237,92",
+	graph [bb="0,0,246,92",
 		rankdir=LR
 	];
 	node [label="\N"];
 	Reference	 [height=1.2778,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c3d1f" HREF="/idmef_parser/IODEF/Reference.html" TITLE="The Reference class is a reference to a vulnerability, IDS alert, malware sample, advisory, or attack technique. A reference consists of a name, a URL to this reference, and an optional description. ">Reference</td> </tr>" %<tr><td BGCOLOR="#996633"  HREF="/idmef_parser/IODEF/Reference.html" TITLE="Name of the reference.">[ML_STRING] ReferenceName (1..1) </td></tr>%<tr><td BGCOLOR="#996633"  HREF="/idmef_parser/IODEF/Reference.html" TITLE="A URL associated with the reference.">[URL] URL (0..*) </td></tr>%<tr><td BGCOLOR="#996633"  HREF="/idmef_parser/IODEF/Reference.html" TITLE="A free-form text description of this reference.">[ML_STRING] Description (0..*) </td></tr>%</table>>,
-		pos="118.5,46",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#7a5229" HREF="/idmef_parser/IODEF/Reference.html" TITLE="The Reference class is a reference to a vulnerability, IDS alert, malware sample, advisory, or attack technique. A reference consists of a name, a URL to this reference, and an optional description. "><FONT FACE="Nimbus Sans L">Reference</FONT></td> </tr>" %<tr><td BGCOLOR="#996633"  HREF="/idmef_parser/IODEF/Reference.html" TITLE="Name of the reference."><FONT FACE="Nimbus Sans L">[ML_STRING] ReferenceName (1..1)</FONT></td></tr>%<tr><td BGCOLOR="#996633"  HREF="/idmef_parser/IODEF/Reference.html" TITLE="A URL associated with the reference."><FONT FACE="Nimbus Sans L">[URL] URL (0..*)</FONT></td></tr>%<tr><td BGCOLOR="#996633"  HREF="/idmef_parser/IODEF/Reference.html" TITLE="A free-form text description of this reference."><FONT FACE="Nimbus Sans L">[ML_STRING] Description (0..*)</FONT></td></tr>%</table>>,
+		pos="123,46",
 		shape=plaintext,
-		width=3.2917];
+		width=3.4167];
 }

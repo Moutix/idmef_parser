@@ -1,11 +1,11 @@
 digraph Confidence {
-	graph [bb="0,0,173,50",
+	graph [bb="0,0,176,50",
 		rankdir=LR
 	];
 	node [label="\N"];
 	Confidence	 [height=0.69444,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IODEF/Confidence.html" TITLE="The Confidence class represents a best estimate of the validity and accuracy of the described impact (see Section 3.10) of the incident activity. This estimate can be expressed as a category or a numeric calculation. ">Confidence</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Confidence.html" TITLE="A rating of the analytical validity of the specified Assessment.  The permitted values are shown below. There is no default value.">[ENUM] rating (Required) </td></tr>%</table>>,
-		pos="86.5,25",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cc401d" HREF="/idmef_parser/IODEF/Confidence.html" TITLE="The Confidence class represents a best estimate of the validity and accuracy of the described impact (see Section 3.10) of the incident activity. This estimate can be expressed as a category or a numeric calculation. "><FONT FACE="Nimbus Sans L">Confidence</FONT></td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Confidence.html" TITLE="A rating of the analytical validity of the specified Assessment.  The permitted values are shown below. There is no default value."><FONT FACE="Nimbus Sans L">[ENUM] rating (Required)</FONT></td></tr>%</table>>,
+		pos="88,25",
 		shape=plaintext,
-		width=2.4028];
+		width=2.4444];
 }

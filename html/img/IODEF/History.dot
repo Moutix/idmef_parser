@@ -1,73 +1,73 @@
 digraph History {
-	graph [bb="0,0,1014,483",
+	graph [bb="0,0,1031,483",
 		rankdir=LR
 	];
 	node [label="\N"];
 	History	 [height=0.69444,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#006a30" HREF="/idmef_parser/IODEF/History.html" TITLE="The History class is a log of the significant events or actions performed by the involved parties during the course of handling the incident. ">History</td> </tr>" %<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/History.html" TITLE="This attribute is defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%</table>>,
-		pos="97,220",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#008d40" HREF="/idmef_parser/IODEF/History.html" TITLE="The History class is a log of the significant events or actions performed by the involved parties during the course of handling the incident. "><FONT FACE="Nimbus Sans L">History</FONT></td> </tr>" %<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/History.html" TITLE="This attribute is defined in Section 3.2."><FONT FACE="Nimbus Sans L">[ENUM] restriction (Optional)</FONT></td></tr>%</table>>,
+		pos="98.5,220",
 		shape=plaintext,
-		width=2.6944];
+		width=2.7361];
 	HistoryItem	 [height=1.8611,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#006a30" HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="The HistoryItem class is an entry in the History (Section 3.11) log that documents a particular action or event that occurred in the course of handling the incident. The details of the entry are a free-form description, but each can be categorized with the type attribute. ">HistoryItem</td> </tr>" %<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="Timestamp of this entry in the history log (e.g., when the action described in the Description was taken).">[] DateTime (1..1) </td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="A free-form textual description of the action or event.">[ML_STRING] Description (0..*) </td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="This attribute has been defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="Classifies a performed action or occurrence documented in this history log entry.  As activity will likely have been instigated either through a previously conveyed expectation or internal investigation, this attribute is identical to the category attribute of the Expectation class.  The difference is only one of tense.  When an action is in this class, it has been completed.  See Section 3.13.">[ENUM] action (Required) </td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="A means by which to extend the action attribute.  See Section 5.1.">[STRING] ext-action (Optional) </td></tr>%</table>>,
-		pos="358,220",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#008d40" HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="The HistoryItem class is an entry in the History (Section 3.11) log that documents a particular action or event that occurred in the course of handling the incident. The details of the entry are a free-form description, but each can be categorized with the type attribute. "><FONT FACE="Nimbus Sans L">HistoryItem</FONT></td> </tr>" %<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="Timestamp of this entry in the history log (e.g., when the action described in the Description was taken)."><FONT FACE="Nimbus Sans L">[] DateTime (1..1)</FONT></td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="A free-form textual description of the action or event."><FONT FACE="Nimbus Sans L">[ML_STRING] Description (0..*)</FONT></td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="This attribute has been defined in Section 3.2."><FONT FACE="Nimbus Sans L">[ENUM] restriction (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="Classifies a performed action or occurrence documented in this history log entry.  As activity will likely have been instigated either through a previously conveyed expectation or internal investigation, this attribute is identical to the category attribute of the Expectation class.  The difference is only one of tense.  When an action is in this class, it has been completed.  See Section 3.13."><FONT FACE="Nimbus Sans L">[ENUM] action (Required)</FONT></td></tr>%<tr><td BGCOLOR="#00B050"  HREF="/idmef_parser/IODEF/HistoryItem.html" TITLE="A means by which to extend the action attribute.  See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-action (Optional)</FONT></td></tr>%</table>>,
+		pos="362,220",
 		shape=plaintext,
 		width=2.9444];
 	History -> HistoryItem	 [label="1..*",
-		lp="223,227.5",
-		pos="e,251.94,220 194.07,220 209.54,220 225.7,220 241.57,220"];
+		lp="226.5,227.5",
+		pos="e,255.96,220 197.37,220 213.21,220 229.73,220 245.93,220"];
 	IncidentID	 [height=1.2778,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c7a00" HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="The IncidentID class represents an incident tracking number that is unique in the context of the CSIRT and identifies the activity characterized in an IODEF Document. This identifier would serve as an index into the CSIRT incident handling system. The combination of the name attribute and the string in the element content MUST be a globally unique identifier describing the activity. Documents generated by a given CSIRT MUST NOT reuse the same value unless they are referencing the same incident. ">IncidentID</td> </tr>" %<tr><td BGCOLOR="#99CC00"  HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="An identifier describing the CSIRT that created the document.  In order to have a globally unique CSIRT name, the fully qualified domain name associated with the CSIRT MUST be used.">[STRING] name (Required) </td></tr>%<tr><td BGCOLOR="#99CC00"  HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="An identifier referencing a subset of the named incident.">[STRING] instance (Optional) </td></tr>%<tr><td BGCOLOR="#99CC00"  HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="This attribute has been defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%</table>>,
-		pos="634,437",
-		shape=plaintext,
-		width=2.6944];
-	HistoryItem -> IncidentID	 [label="0..1",
-		lp="493,373.5",
-		pos="e,536.78,391.82 417.41,287.39 446.73,318.66 484.04,354.83 522,382 524.07,383.48 526.18,384.94 528.33,386.38"];
-	Contact	 [height=3.3194,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#7a993d" HREF="/idmef_parser/IODEF/Contact.html" TITLE="The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. ">Contact</td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The name of the contact.  The contact may either be an organization or a person.  The type attribute disambiguates the semantics.">[ML_STRING] ContactName (0..1) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="A free-form description of this contact.  In the case of a person, this is often the organizational title of the individual.">[ML_STRING] Description (0..*) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The telephone number of the contact.">[] Telephone (0..*) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The facsimile telephone number of the contact.">[] Fax (0..1) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The timezone in which the contact resides formatted according to Section 2.9.">[TIMEZONE] Timezone (0..1) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:">[ENUM] role (Required) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="A means by which to extend the role attribute. See Section 5.1.">[STRING] ext-role (Optional) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="Indicates the type of contact being described. This attribute is defined as an enumerated list:">[ENUM] type (Required) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="A means by which to extend the type attribute. See Section 5.1.">[STRING] ext-type (Optional) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="This attribute is defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%</table>>,
-		pos="634,220",
-		shape=plaintext,
-		width=3.1111];
-	HistoryItem -> Contact	 [label="0..1",
-		lp="493,227.5",
-		pos="e,521.76,220 464.15,220 479.63,220 495.68,220 511.45,220"];
-	AdditionalData	 [height=1.8611,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a3d" HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. ">AdditionalData</td> </tr>" %<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="The data type of the element content.  The permitted values for this attribute are shown below.  The default value is &quot;string&quot;.">[ENUM] dtype (Required) </td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="A means by which to extend the dtype attribute.  See Section 5.1.">[STRING] ext-dtype (Optional) </td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="A free-form description of the element content.">[STRING] meaning (Optional) </td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="An identifier referencing the format and semantics of the element content.">[STRING] formatid (Optional) </td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="This attribute has been defined in Section 3.2.">[ENUM] restriction (Optional) </td></tr>%</table>>,
-		pos="909,67",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#7aa300" HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="The IncidentID class represents an incident tracking number that is unique in the context of the CSIRT and identifies the activity characterized in an IODEF Document. This identifier would serve as an index into the CSIRT incident handling system. The combination of the name attribute and the string in the element content MUST be a globally unique identifier describing the activity. Documents generated by a given CSIRT MUST NOT reuse the same value unless they are referencing the same incident. "><FONT FACE="Nimbus Sans L">IncidentID</FONT></td> </tr>" %<tr><td BGCOLOR="#99CC00"  HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="An identifier describing the CSIRT that created the document.  In order to have a globally unique CSIRT name, the fully qualified domain name associated with the CSIRT MUST be used."><FONT FACE="Nimbus Sans L">[STRING] name (Required)</FONT></td></tr>%<tr><td BGCOLOR="#99CC00"  HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="An identifier referencing a subset of the named incident."><FONT FACE="Nimbus Sans L">[STRING] instance (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#99CC00"  HREF="/idmef_parser/IODEF/IncidentID.html" TITLE="This attribute has been defined in Section 3.2."><FONT FACE="Nimbus Sans L">[ENUM] restriction (Optional)</FONT></td></tr>%</table>>,
+		pos="642,437",
 		shape=plaintext,
 		width=2.7639];
+	HistoryItem -> IncidentID	 [label="0..1",
+		lp="497.5,374.5",
+		pos="e,542.32,391.94 420.71,287.18 450.44,318.58 488.37,354.93 527,382 529.14,383.5 531.33,384.98 533.56,386.44"];
+	Contact	 [height=3.3194,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#a3cc52" HREF="/idmef_parser/IODEF/Contact.html" TITLE="The Contact class describes contact information for organizations and personnel involved in the incident. This class allows for the naming of the involved party, specifying contact information for them, and identifying their role in the incident. "><FONT FACE="Nimbus Sans L">Contact</FONT></td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The name of the contact.  The contact may either be an organization or a person.  The type attribute disambiguates the semantics."><FONT FACE="Nimbus Sans L">[ML_STRING] ContactName (0..1)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="A free-form description of this contact.  In the case of a person, this is often the organizational title of the individual."><FONT FACE="Nimbus Sans L">[ML_STRING] Description (0..*)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The telephone number of the contact."><FONT FACE="Nimbus Sans L">[] Telephone (0..*)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The facsimile telephone number of the contact."><FONT FACE="Nimbus Sans L">[] Fax (0..1)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="The timezone in which the contact resides formatted according to Section 2.9."><FONT FACE="Nimbus Sans L">[TIMEZONE] Timezone (0..1)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="Indicates the role the contact fulfills.  This attribute is defined as an enumerated list:"><FONT FACE="Nimbus Sans L">[ENUM] role (Required)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="A means by which to extend the role attribute. See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-role (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="Indicates the type of contact being described. This attribute is defined as an enumerated list:"><FONT FACE="Nimbus Sans L">[ENUM] type (Required)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="A means by which to extend the type attribute. See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-type (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Contact.html" TITLE="This attribute is defined in Section 3.2."><FONT FACE="Nimbus Sans L">[ENUM] restriction (Optional)</FONT></td></tr>%</table>>,
+		pos="642,220",
+		shape=plaintext,
+		width=3.1944];
+	HistoryItem -> Contact	 [label="0..1",
+		lp="497.5,227.5",
+		pos="e,526.94,220 468.26,220 484.14,220 500.64,220 516.88,220"];
+	AdditionalData	 [height=1.8611,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cca352" HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="The AdditionalData class serves as an extension mechanism for information not otherwise represented in the data model. For relatively simple information, atomic data types (e.g., integers, strings) are provided with a mechanism to annotate their meaning. The class can also be used to extend the data model (and the associated Schema) to support proprietary extensions by encapsulating entire XML documents conforming to another Schema (e.g., IDMEF). A detailed discussion for extending the data model and the schema can be found in Section 5. "><FONT FACE="Nimbus Sans L">AdditionalData</FONT></td> </tr>" %<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="The data type of the element content.  The permitted values for this attribute are shown below.  The default value is &quot;string&quot;."><FONT FACE="Nimbus Sans L">[ENUM] dtype (Required)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="A means by which to extend the dtype attribute.  See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-dtype (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="A free-form description of the element content."><FONT FACE="Nimbus Sans L">[STRING] meaning (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="An identifier referencing the format and semantics of the element content."><FONT FACE="Nimbus Sans L">[STRING] formatid (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC66"  HREF="/idmef_parser/IODEF/AdditionalData.html" TITLE="This attribute has been defined in Section 3.2."><FONT FACE="Nimbus Sans L">[ENUM] restriction (Optional)</FONT></td></tr>%</table>>,
+		pos="923.5,67",
+		shape=plaintext,
+		width=2.8194];
 	HistoryItem -> AdditionalData	 [label="0..*",
-		lp="634,84.5",
-		pos="e,809.2,51.533 415.44,152.75 444.05,123.77 481.33,92.914 522,77 610.6,42.327 719.61,43.026 799.16,50.534"];
+		lp="642,83.5",
+		pos="e,821.65,50.727 418.43,152.97 447.5,123.55 485.53,92.091 527,76 617.95,40.71 729.69,41.727 811.34,49.672"];
 	Contact -> Contact	 [label="0..*",
-		lp="634,365",
-		pos="e,654.86,339.75 613.14,339.75 617.48,350.65 624.43,357.5 634,357.5 640.58,357.5 645.92,354.26 650.03,348.7"];
+		lp="642,365",
+		pos="e,663.46,339.75 620.54,339.75 625,350.65 632.16,357.5 642,357.5 648.77,357.5 654.26,354.26 658.49,348.7"];
 	RegistryHandle	 [height=0.98611,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#7a993d" HREF="/idmef_parser/IODEF/RegistryHandle.html" TITLE="The RegistryHandle class represents a handle into an Internet registry or community-specific database. The handle is specified in the element content and the type attribute specifies the database. ">RegistryHandle</td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/RegistryHandle.html" TITLE="The database to which the handle belongs.  The default value is &#39;local&#39;.  The possible values are:">[ENUM] registry (Required) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/RegistryHandle.html" TITLE="A means by which to extend the registry attribute.  See Section 5.1.">[STRING] ext-registry (Optional) </td></tr>%</table>>,
-		pos="909,345",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#a3cc52" HREF="/idmef_parser/IODEF/RegistryHandle.html" TITLE="The RegistryHandle class represents a handle into an Internet registry or community-specific database. The handle is specified in the element content and the type attribute specifies the database. "><FONT FACE="Nimbus Sans L">RegistryHandle</FONT></td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/RegistryHandle.html" TITLE="The database to which the handle belongs.  The default value is &#39;local&#39;.  The possible values are:"><FONT FACE="Nimbus Sans L">[ENUM] registry (Required)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/RegistryHandle.html" TITLE="A means by which to extend the registry attribute.  See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-registry (Optional)</FONT></td></tr>%</table>>,
+		pos="923.5,345",
 		shape=plaintext,
-		width=2.9167];
+		width=2.9861];
 	Contact -> RegistryHandle	 [label="0..*",
-		lp="775,299.5",
-		pos="e,823.01,309.43 746.02,274.12 765.28,283.24 785.17,292.51 804,301 807.18,302.43 810.42,303.88 813.7,305.33"];
+		lp="786.5,299.5",
+		pos="e,835.65,309.44 757.24,274.58 776.78,283.56 796.92,292.66 816,301 819.39,302.48 822.84,303.97 826.33,305.47"];
 	PostalAddress	 [height=0.98611,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#7a993d" HREF="/idmef_parser/IODEF/PostalAddress.html" TITLE="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). ">PostalAddress</td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/PostalAddress.html" TITLE="A free-form description of the element content.">[ENUM] meaning (Optional) </td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/PostalAddress.html" TITLE="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;.  The interpretation of this code is described in Section 6.">[ENUM] lang (Required) </td></tr>%</table>>,
-		pos="909,256",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#a3cc52" HREF="/idmef_parser/IODEF/PostalAddress.html" TITLE="The PostalAddress class specifies a postal address formatted according to the POSTAL data type (Section 2.11). "><FONT FACE="Nimbus Sans L">PostalAddress</FONT></td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/PostalAddress.html" TITLE="A free-form description of the element content."><FONT FACE="Nimbus Sans L">[ENUM] meaning (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/PostalAddress.html" TITLE="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;.  The interpretation of this code is described in Section 6."><FONT FACE="Nimbus Sans L">[ENUM] lang (Required)</FONT></td></tr>%</table>>,
+		pos="923.5,256",
 		shape=plaintext,
-		width=2.5972];
+		width=2.6528];
 	Contact -> PostalAddress	 [label="0..1",
-		lp="775,246.5",
-		pos="e,815.38,243.79 746.04,234.64 765.65,237.23 785.99,239.91 805.35,242.46"];
+		lp="786.5,246.5",
+		pos="e,827.67,243.74 757.31,234.75 777.22,237.29 797.84,239.93 817.49,242.44"];
 	Email	 [height=0.69444,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#7a993d" HREF="/idmef_parser/IODEF/Email.html" TITLE="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). ">Email</td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Email.html" TITLE="A free-form description of the element content (e.g., hours of coverage for a given number).">[ENUM] meaning (Optional) </td></tr>%</table>>,
-		pos="909,177",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#a3cc52" HREF="/idmef_parser/IODEF/Email.html" TITLE="The Email class specifies an email address formatted according to EMAIL data type (Section 2.14). "><FONT FACE="Nimbus Sans L">Email</FONT></td> </tr>" %<tr><td BGCOLOR="#CCFF66"  HREF="/idmef_parser/IODEF/Email.html" TITLE="A free-form description of the element content (e.g., hours of coverage for a given number)."><FONT FACE="Nimbus Sans L">[ENUM] meaning (Optional)</FONT></td></tr>%</table>>,
+		pos="923.5,177",
 		shape=plaintext,
-		width=2.5972];
+		width=2.6528];
 	Contact -> Email	 [label="0..*",
-		lp="775,206.5",
-		pos="e,815.38,191.59 746.04,202.51 765.65,199.42 785.99,196.22 805.35,193.17"];
+		lp="786.5,205.5",
+		pos="e,827.67,191.64 757.31,202.39 777.31,199.33 798.02,196.17 817.76,193.15"];
 	Contact -> AdditionalData	 [label="0..*",
-		lp="775,151.5",
-		pos="e,809.34,122.29 746.04,157.77 764.05,147.67 782.68,137.23 800.61,127.19"];
+		lp="786.5,150.5",
+		pos="e,821.9,122.22 757.31,157.33 775.71,147.33 794.71,137 812.99,127.06"];
 }

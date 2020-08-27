@@ -1,11 +1,11 @@
 digraph Inode {
-	graph [bb="0,0,214,155",
+	graph [bb="0,0,247,155",
 		rankdir=LR
 	];
 	node [label="\N"];
 	Inode	 [height=2.1528,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a00" HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The Inode class is used to represent the additional information contained in a Unix file system i-node. ">Inode</td> </tr>" %<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The time of the last inode change, given by the st_ctime element of &quot;struct stat&quot;.">[DATETIME] change-time (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The inode number.">[INTEGER] number (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The major device number of the device the file resides on.">[INTEGER] major-device (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The minor device number of the device the file resides on.">[INTEGER] minor-device (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The major device of the file itself, if it is a character special device.">[INTEGER] c-major-device (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The minor device of the file itself, if it is a character special device.">[INTEGER] c-minor-device (0..1) </td></tr>%</table>>,
-		pos="107,77.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cca300" HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The Inode class is used to represent the additional information contained in a Unix file system i-node. "><FONT FACE="Nimbus Sans L">Inode</FONT></td> </tr>" %<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The time of the last inode change, given by the st_ctime element of &quot;struct stat&quot;."><FONT FACE="Nimbus Sans L">[DATETIME] change-time (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The inode number."><FONT FACE="Nimbus Sans L">[INTEGER] number (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The major device number of the device the file resides on."><FONT FACE="Nimbus Sans L">[INTEGER] major-device (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The minor device number of the device the file resides on."><FONT FACE="Nimbus Sans L">[INTEGER] minor-device (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The major device of the file itself, if it is a character special device."><FONT FACE="Nimbus Sans L">[INTEGER] c-major-device (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Inode.html" TITLE="The minor device of the file itself, if it is a character special device."><FONT FACE="Nimbus Sans L">[INTEGER] c-minor-device (Optional)</FONT></td></tr>%</table>>,
+		pos="123.5,77.5",
 		shape=plaintext,
-		width=2.9722];
+		width=3.4306];
 }

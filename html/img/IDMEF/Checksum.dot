@@ -1,11 +1,11 @@
 digraph Checksum {
-	graph [bb="0,0,195,92",
+	graph [bb="0,0,198,92",
 		rankdir=LR
 	];
 	node [label="\N"];
 	Checksum	 [height=1.2778,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a00" HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="The Checksum class represents checksum information associated with the file. This checksum information can be provided by file integrity checkers, among others. ">Checksum</td> </tr>" %<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="The value of the checksum.">[STRING] value (1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="The key to the checksum, if appropriate.">[STRING] key (0..1) </td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="default value.  (See also Section 10.)">[ENUM] algorithm (Required) </td></tr>%</table>>,
-		pos="97.5,46",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cca300" HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="The Checksum class represents checksum information associated with the file. This checksum information can be provided by file integrity checkers, among others. "><FONT FACE="Nimbus Sans L">Checksum</FONT></td> </tr>" %<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="The value of the checksum."><FONT FACE="Nimbus Sans L">[STRING] value (Required)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="The key to the checksum, if appropriate."><FONT FACE="Nimbus Sans L">[STRING] key (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCC00"  HREF="/idmef_parser/IDMEF/Checksum.html" TITLE="default value.  (See also Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] algorithm (Required)</FONT></td></tr>%</table>>,
+		pos="99,46",
 		shape=plaintext,
-		width=2.7083];
+		width=2.75];
 }

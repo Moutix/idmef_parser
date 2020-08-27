@@ -1,11 +1,11 @@
 digraph CreateTime {
-	graph [bb="0,0,87,36",
+	graph [bb="0,0,94,36",
 		rankdir=LR
 	];
 	node [label="\N"];
 	CreateTime	 [height=0.5,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c5c99" HREF="/idmef_parser/IDMEF/CreateTime.html" TITLE="The CreateTime class is used to indicate the date and time the alert or heartbeat was created by the analyzer. ">CreateTime</td> </tr>" %</table>>,
-		pos="43.5,18",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#8a8acc" HREF="/idmef_parser/IDMEF/CreateTime.html" TITLE="The CreateTime class is used to indicate the date and time the alert or heartbeat was created by the analyzer. "><FONT FACE="Nimbus Sans L">CreateTime</FONT></td> </tr>" %</table>>,
+		pos="47,18",
 		shape=plaintext,
-		width=1.2083];
+		width=1.3056];
 }

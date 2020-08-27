@@ -1,35 +1,35 @@
 digraph "Node" {
-	graph [bb="0,0,485,355",
+	graph [bb="0,0,494,355",
 		rankdir=LR
 	];
 	node [label="\N"];
 	"Node"	 [height=1.2778,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#182f5f" HREF="/idmef_parser/IODEF/Node.html" TITLE="The Node class names a system (e.g., PC, router) or network. ">Node</td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Node.html" TITLE="The name of the Node (e.g., fully qualified domain name).  This information MUST be provided if no Address information is given.">[ML_STRING] NodeName (0..*) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Node.html" TITLE="A free-from description of the physical location of the equipment.">[ML_STRING] Location (0..1) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Node.html" TITLE="A timestamp of when the resolution between the name and address was performed.  This information SHOULD be provided if both an Address and NodeName are specified.">[] DateTime (0..1) </td></tr>%</table>>,
-		pos="106,177.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#203f7f" HREF="/idmef_parser/IODEF/Node.html" TITLE="The Node class names a system (e.g., PC, router) or network. "><FONT FACE="Nimbus Sans L">Node</FONT></td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Node.html" TITLE="The name of the Node (e.g., fully qualified domain name).  This information MUST be provided if no Address information is given."><FONT FACE="Nimbus Sans L">[ML_STRING] NodeName (0..*)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Node.html" TITLE="A free-from description of the physical location of the equipment."><FONT FACE="Nimbus Sans L">[ML_STRING] Location (0..1)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Node.html" TITLE="A timestamp of when the resolution between the name and address was performed.  This information SHOULD be provided if both an Address and NodeName are specified."><FONT FACE="Nimbus Sans L">[] DateTime (0..1)</FONT></td></tr>%</table>>,
+		pos="106.5,177.5",
 		shape=plaintext,
-		width=2.9444];
+		width=2.9583];
 	Address	 [height=1.5694,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#182f5f" HREF="/idmef_parser/IODEF/Address.html" TITLE="The Address class represents a hardware (layer-2), network (layer-3), or application (layer-7) address. ">Address</td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The type of address represented.  The permitted values for this attribute are shown below.  The default value is &quot;ipv4-addr&quot;.">[ENUM] category (Required) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="A means by which to extend the category attribute.  See Section 5.1.">[STRING] ext-category (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The name of the Virtual LAN to which the address belongs.">[STRING] vlan-name (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The number of the Virtual LAN to which the address belongs.">[STRING] vlan-num (Optional) </td></tr>%</table>>,
-		pos="377.5,298.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#203f7f" HREF="/idmef_parser/IODEF/Address.html" TITLE="The Address class represents a hardware (layer-2), network (layer-3), or application (layer-7) address. "><FONT FACE="Nimbus Sans L">Address</FONT></td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The type of address represented.  The permitted values for this attribute are shown below.  The default value is &quot;ipv4-addr&quot;."><FONT FACE="Nimbus Sans L">[ENUM] category (Required)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="A means by which to extend the category attribute.  See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-category (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The name of the Virtual LAN to which the address belongs."><FONT FACE="Nimbus Sans L">[STRING] vlan-name (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/Address.html" TITLE="The number of the Virtual LAN to which the address belongs."><FONT FACE="Nimbus Sans L">[STRING] vlan-num (Optional)</FONT></td></tr>%</table>>,
+		pos="383,298.5",
 		shape=plaintext,
-		width=2.9861];
+		width=3.0833];
 	"Node" -> Address	 [label="0..*",
-		lp="241,249",
-		pos="e,269.65,250.53 209.66,223.59 226.22,231.03 243.48,238.78 260.34,246.34"];
+		lp="242.5,249",
+		pos="e,271.99,249.92 211.82,223.59 228.43,230.86 245.72,238.42 262.64,245.83"];
 	NodeRole	 [height=1.2778,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#182f5f" HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="The NodeRole class describes the intended function performed by a particular host. ">NodeRole</td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="Functionality provided by a node.">[ENUM] category (Required) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="A means by which to extend the category attribute.  See Section 5.1.">[STRING] ext-category (Optional) </td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;.  The interpretation of this code is described in Section 6.">[ENUM] lang (Required) </td></tr>%</table>>,
-		pos="377.5,177.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#203f7f" HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="The NodeRole class describes the intended function performed by a particular host. "><FONT FACE="Nimbus Sans L">NodeRole</FONT></td> </tr>" %<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="Functionality provided by a node."><FONT FACE="Nimbus Sans L">[ENUM] category (Required)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="A means by which to extend the category attribute.  See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-category (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#284f9f"  HREF="/idmef_parser/IODEF/NodeRole.html" TITLE="A valid language code per RFC 4646 [7] constrained by the definition of &quot;xs:language&quot;.  The interpretation of this code is described in Section 6."><FONT FACE="Nimbus Sans L">[ENUM] lang (Required)</FONT></td></tr>%</table>>,
+		pos="383,177.5",
 		shape=plaintext,
-		width=2.9861];
+		width=3.0833];
 	"Node" -> NodeRole	 [label="0..*",
-		lp="241,185",
-		pos="e,269.89,177.5 212.35,177.5 227.85,177.5 243.9,177.5 259.62,177.5"];
+		lp="242.5,185",
+		pos="e,271.97,177.5 213.01,177.5 229.01,177.5 245.61,177.5 261.88,177.5"];
 	Counter	 [height=1.5694,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IODEF/Counter.html" TITLE="The Counter class summarize multiple occurrences of some event, or conveys counts or rates on various features (e.g., packets, sessions, events). ">Counter</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="Specifies the units of the element content.">[ENUM] type (Required) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="A means by which to extend the type attribute. See Section 5.1.">[STRING] ext-type (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="If present, the Counter class represents a rate rather than a count over the entire event.  In that case, this attribute specifies the denominator of the rate (where the type attribute specified the nominator).  The possible values of this attribute are defined in Section 3.10.2">[ENUM] duration (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="A means by which to extend the duration attribute.  See Section 5.1.">[STRING] ext-duration (Optional) </td></tr>%</table>>,
-		pos="377.5,56.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cc401d" HREF="/idmef_parser/IODEF/Counter.html" TITLE="The Counter class summarize multiple occurrences of some event, or conveys counts or rates on various features (e.g., packets, sessions, events). "><FONT FACE="Nimbus Sans L">Counter</FONT></td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="Specifies the units of the element content."><FONT FACE="Nimbus Sans L">[ENUM] type (Required)</FONT></td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="A means by which to extend the type attribute. See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-type (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="If present, the Counter class represents a rate rather than a count over the entire event.  In that case, this attribute specifies the denominator of the rate (where the type attribute specified the nominator).  The possible values of this attribute are defined in Section 3.10.2"><FONT FACE="Nimbus Sans L">[ENUM] duration (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/Counter.html" TITLE="A means by which to extend the duration attribute.  See Section 5.1."><FONT FACE="Nimbus Sans L">[STRING] ext-duration (Optional)</FONT></td></tr>%</table>>,
+		pos="383,56.5",
 		shape=plaintext,
-		width=2.9722];
+		width=3.0417];
 	"Node" -> Counter	 [label="0..*",
-		lp="241,129",
-		pos="e,270.1,104.27 209.66,131.41 226.35,123.92 243.74,116.11 260.72,108.48"];
+		lp="242.5,128",
+		pos="e,273.38,104.47 211.82,131.41 228.82,123.97 246.52,116.22 263.82,108.66"];
 }

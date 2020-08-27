@@ -1,11 +1,11 @@
 digraph WebService {
-	graph [bb="0,0,188,113",
+	graph [bb="0,0,221,113",
 		rankdir=LR
 	];
 	node [label="\N"];
 	WebService	 [height=1.5694,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#997a7a" HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The WebService class carries additional information related to web traffic. ">WebService</td> </tr>" %<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The URL in the request.">[STRING] url (1) </td></tr>%<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The CGI script in the request, without arguments.">[STRING] cgi (0..1) </td></tr>%<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The HTTP method (PUT, GET) used in the request.">[STRING] http-method (0..1) </td></tr>%<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The arguments to the CGI script.">[STRING] arg (0..*) </td></tr>%</table>>,
-		pos="94,56.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cca3a3" HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The WebService class carries additional information related to web traffic. "><FONT FACE="Nimbus Sans L">WebService</FONT></td> </tr>" %<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The URL in the request."><FONT FACE="Nimbus Sans L">[STRING] url (Required)</FONT></td></tr>%<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The CGI script in the request, without arguments."><FONT FACE="Nimbus Sans L">[STRING] cgi (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The HTTP method (PUT, GET) used in the request."><FONT FACE="Nimbus Sans L">[STRING] http-method (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FFCCCC"  HREF="/idmef_parser/IDMEF/WebService.html" TITLE="The arguments to the CGI script."><FONT FACE="Nimbus Sans L">[STRING] arg (Optional)</FONT></td></tr>%</table>>,
+		pos="110.5,56.5",
 		shape=plaintext,
-		width=2.6111];
+		width=3.0694];
 }

@@ -1,11 +1,11 @@
 digraph MonetaryImpact {
-	graph [bb="0,0,197,71",
+	graph [bb="0,0,204,71",
 		rankdir=LR
 	];
 	node [label="\N"];
 	MonetaryImpact	 [height=0.98611,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="/idmef_parser/IODEF/MonetaryImpact.html" TITLE="The MonetaryImpact class describes the financial impact of the activity on an organization. For example, this impact may consider losses due to the cost of the investigation or recovery, diminished ">MonetaryImpact</td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/MonetaryImpact.html" TITLE="An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value.">[ENUM] severity (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/MonetaryImpact.html" TITLE="Defines the currency in which the monetary impact is expressed.  The permitted values are defined in ISO 4217:2001, Codes for the representation of currencies and funds [14].  There is no default value.">[STRING] currency (Required) </td></tr>%</table>>,
-		pos="98.5,35.5",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cc401d" HREF="/idmef_parser/IODEF/MonetaryImpact.html" TITLE="The MonetaryImpact class describes the financial impact of the activity on an organization. For example, this impact may consider losses due to the cost of the investigation or recovery, diminished "><FONT FACE="Nimbus Sans L">MonetaryImpact</FONT></td> </tr>" %<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/MonetaryImpact.html" TITLE="An estimate of the relative severity of the activity.  The permitted values are shown below.  There is no default value."><FONT FACE="Nimbus Sans L">[ENUM] severity (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#FF5024"  HREF="/idmef_parser/IODEF/MonetaryImpact.html" TITLE="Defines the currency in which the monetary impact is expressed.  The permitted values are defined in ISO 4217:2001, Codes for the representation of currencies and funds [14].  There is no default value."><FONT FACE="Nimbus Sans L">[STRING] currency (Required)</FONT></td></tr>%</table>>,
+		pos="102,35.5",
 		shape=plaintext,
-		width=2.7361];
+		width=2.8333];
 }

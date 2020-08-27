@@ -1,11 +1,11 @@
 digraph DetectTime {
-	graph [bb="0,0,87,36",
+	graph [bb="0,0,92,36",
 		rankdir=LR
 	];
 	node [label="\N"];
 	DetectTime	 [height=0.5,
-		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#5c5c99" HREF="/idmef_parser/IDMEF/DetectTime.html" TITLE="The DetectTime class is used to indicate the date and time that the event(s) producing an alert was detected by the analyzer. In the case of more than one event, it is the time that the first event was detected. (This may or may not be the same time as CreateTime; analyzers are not required to send alerts immediately upon detection). ">DetectTime</td> </tr>" %</table>>,
-		pos="43.5,18",
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#8a8acc" HREF="/idmef_parser/IDMEF/DetectTime.html" TITLE="The DetectTime class is used to indicate the date and time that the event(s) producing an alert was detected by the analyzer. In the case of more than one event, it is the time that the first event was detected. (This may or may not be the same time as CreateTime; analyzers are not required to send alerts immediately upon detection). "><FONT FACE="Nimbus Sans L">DetectTime</FONT></td> </tr>" %</table>>,
+		pos="46,18",
 		shape=plaintext,
-		width=1.2083];
+		width=1.2778];
 }
