@@ -2,7 +2,7 @@
 name: Reference
 description: 'The Reference class provides the "name" of an alert, or other information
   allowing the manager to determine what it is. '
-color: "#996633"
+color: "#b79370"
 aggregates:
   name:
     name: name

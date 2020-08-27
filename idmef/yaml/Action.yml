@@ -2,12 +2,12 @@
 name: Action
 description: 'The Action class is used to describe any actions taken by the analyzer
   in response to the event.  Is is represented in the IDMEF DTD as follows: '
-color: "#FF5024"
+color: "#ff8465"
 aggregates: {}
 attributes:
   category:
     name: category
-    multiplicity: 
+    multiplicity:
     type: ENUM
     description: The default value is "other".  (See also Section 10.)
     values:

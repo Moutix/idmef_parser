@@ -2,7 +2,7 @@
 name: Address
 description: 'The Address class is used to represent network, hardware, and application
   addresses. '
-color: "#00CC00"
+color: "#4cdb4c"
 aggregates:
   address:
     name: address

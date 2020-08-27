@@ -2,7 +2,7 @@
 name: Node
 description: 'The Node class is used to identify hosts and other network devices (routers,
   switches, etc.). '
-color: "#00CC00"
+color: "#4cdb4c"
 aggregates:
   location:
     name: location
@@ -18,7 +18,7 @@ aggregates:
   Address:
     name: Address
     multiplicity: 0..*
-    type: 
+    type:
     description: The network or hardware address of the equipment. Unless a name (above)
       is provided, at least one address must be specified.
 attributes:

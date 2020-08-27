@@ -72,7 +72,7 @@ class IDMEFGraph
     label = %{
       <<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
       <tr >
-        <td BGCOLOR="#{color ? darken_color(color, 0.6) : "#CECECE"}" HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
+        <td BGCOLOR="#{color ? darken_color(color, 0.8) : "#CECECE"}" HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
       </tr>"
     %}.gsub(/\s+/, " ").strip
 

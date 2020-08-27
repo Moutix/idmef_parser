@@ -3,28 +3,28 @@ name: Source
 description: 'The Source class contains information about the possible source(s) of
   the event(s) that generated an alert.  An event may have more than one source (e.g.,
   in a distributed denial-of-service attack). '
-color: "#284F9F"
+color: "#7e95c5"
 aggregates:
   Node:
     name: Node
     multiplicity: 0..1
-    type: 
+    type:
     description: Information about the host or device that appears to be causing the
       events (network address, network name, etc.).
   User:
     name: User
     multiplicity: 0..1
-    type: 
+    type:
     description: Information about the user that appears to be causing the event(s).
   Process:
     name: Process
     multiplicity: 0..1
-    type: 
+    type:
     description: Information about the process that appears to be causing the event(s).
   Service:
     name: Service
     multiplicity: 0..1
-    type: 
+    type:
     description: Information about the network service involved in the event(s).
 attributes:
   ident:

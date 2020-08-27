@@ -2,7 +2,7 @@
 name: Impact
 description: 'The Impact class is used to provide the analyzer''s assessment of the
   impact of the event on the target(s).  It is represented in the IDMEF DTD as follows: '
-color: "#FF5024"
+color: "#ff8465"
 aggregates: {}
 attributes:
   severity:

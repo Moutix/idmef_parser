@@ -6,7 +6,7 @@ description: 'The AdditionalData class is used to provide information that canno
   need to be sent; it can also be used to extend the data model and the DTD to support
   the transmission of complex data (such as packet headers).  Detailed instructions
   for extending the data model and the DTD are provided in Section 5. '
-color: "#7030A0"
+color: "#a982c6"
 aggregates: {}
 attributes:
   meaning:

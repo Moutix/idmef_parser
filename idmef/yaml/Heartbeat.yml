@@ -6,17 +6,17 @@ description: 'Analyzers use Heartbeat messages to indicate their current status 
   to the manager that the analyzer is up and running; lack of a Heartbeat message
   (or more likely, lack of some number of consecutive Heartbeat messages) indicates
   that the analyzer or its network connection has failed. '
-color: "#94C600"
+color: "#b4d74c"
 aggregates:
   Analyzer:
     name: Analyzer
     multiplicity: '1'
-    type: 
+    type:
     description: Identification information for the analyzer that originated the heartbeat.
   CreateTime:
     name: CreateTime
     multiplicity: '1'
-    type: 
+    type:
     description: The time the heartbeat was created.
   HeartbeatInterval:
     name: HeartbeatInterval
@@ -26,12 +26,12 @@ aggregates:
   AnalyzerTime:
     name: AnalyzerTime
     multiplicity: 0..1
-    type: 
+    type:
     description: The current time on the analyzer (see Section 6.3).
   AdditionalData:
     name: AdditionalData
     multiplicity: 0..*
-    type: 
+    type:
     description: Information included by the analyzer that does not fit into the data
       model.  This may be an atomic piece of data or a large amount of data provided
       through an extension to the IDMEF (see Section 5).

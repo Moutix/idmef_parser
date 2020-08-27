@@ -3,12 +3,12 @@ name: Classification
 description: 'The Classification class provides the "name" of an alert, or other information
   allowing the manager to determine what it is.  This name is chosen by the alert
   provider. '
-color: "#996633"
+color: "#b79370"
 aggregates:
   Reference:
     name: Reference
     multiplicity: 0..*
-    type: 
+    type:
     description: Information about the message, pointing to external documentation
       sites, that will provide background information about the alert.
 attributes:
