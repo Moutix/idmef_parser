@@ -1,6 +1,11 @@
 digraph Impact {
-	graph [rankdir=LR];
+	graph [bb="0,0,204,92",
+		rankdir=LR
+	];
 	node [label="\N"];
-	graph [bb="0,0,234,88"];
-	Impact [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="#" TITLE="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: ">Impact</td> </tr>" %<tr><td BGCOLOR="#FF5024" HREF="#" TITLE="Section 10.)">[ENUM] severity (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024" HREF="#" TITLE="Section 10.)">[ENUM] completion (Optional) </td></tr>%<tr><td BGCOLOR="#FF5024" HREF="#" TITLE="value is &quot;other&quot;.  (See also Section 10.)">[ENUM] type (Optional) </td></tr>%</table>>, shape=plaintext, pos="117,44", width="3.25", height="1.2361"];
+	Impact	 [height=1.2778,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cc6a51" HREF="#" TITLE="The Impact class is used to provide the analyzer&#39;s assessment of the impact of the event on the target(s). It is represented in the IDMEF DTD as follows: "><FONT FACE="Nimbus Sans L">Impact</FONT></td> </tr>" %<tr><td BGCOLOR="#ff8465"  HREF="#" TITLE="Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] severity (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#ff8465"  HREF="#" TITLE="Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] completion (Optional)</FONT></td></tr>%<tr><td BGCOLOR="#ff8465"  HREF="#" TITLE="value is &quot;other&quot;.  (See also Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] type (Optional)</FONT></td></tr>%</table>>,
+		pos="102,46",
+		shape=plaintext,
+		width=2.8333];
 }

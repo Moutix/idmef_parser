@@ -1,6 +1,11 @@
 digraph Action {
-	graph [rankdir=LR];
+	graph [bb="0,0,194,50",
+		rankdir=LR
+	];
 	node [label="\N"];
-	graph [bb="0,0,160,48"];
-	Action [label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr > <td BGCOLOR="#993016" HREF="#" TITLE="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: ">Action</td> </tr>" %<tr><td BGCOLOR="#FF5024" HREF="#" TITLE="The default value is &quot;other&quot;.  (See also Section 10.)">[ENUM] category () </td></tr>%</table>>, shape=plaintext, pos="80,24", width="2.2222", height="0.68056"];
+	Action	 [height=0.69444,
+		label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0"> <tr> <td BGCOLOR="#cc6a51" HREF="#" TITLE="The Action class is used to describe any actions taken by the analyzer in response to the event. Is is represented in the IDMEF DTD as follows: "><FONT FACE="Nimbus Sans L">Action</FONT></td> </tr>" %<tr><td BGCOLOR="#ff8465"  HREF="#" TITLE="The default value is &quot;other&quot;.  (See also Section 10.)"><FONT FACE="Nimbus Sans L">[ENUM] category (Required)</FONT></td></tr>%</table>>,
+		pos="97,25",
+		shape=plaintext,
+		width=2.6944];
 }
