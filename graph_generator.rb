@@ -71,8 +71,8 @@ class IDMEFGraph
     @nodes[node.id] = node
     label = %{
       <<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
-      <tr >
-        <td BGCOLOR="#{color ? darken_color(color, 0.8) : "#CECECE"}" HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}">#{name}</td>
+      <tr>
+      <td BGCOLOR="#{color ? darken_color(color, 0.8) : "#CECECE"}" HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(@classes[name]["description"])}"><FONT FACE="Nimbus Sans L">#{name}</FONT></td>
       </tr>"
     %}.gsub(/\s+/, " ").strip
 
@@ -102,7 +102,7 @@ class IDMEFGraph
   end
 
   def graph_attr(name, attr, color = nil)
-    return  %{<tr><td #{color ? "BGCOLOR=\"#{color}\" " : ''} HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(attr["description"])}">[#{attr["type"]}] #{attr["name"]} (#{attr["multiplicity"]}) </td></tr>%}
+    return  %{<tr><td #{color ? "BGCOLOR=\"#{color}\" " : ''} HREF="#{@link.nil? ? '#' : "#{@link}/#{name}.html"}" TITLE="#{CGI.escapeHTML(attr["description"])}"><FONT FACE="Nimbus Sans L">[#{attr["type"]}] #{attr["name"]} (#{attr["multiplicity"]})</FONT></td></tr>%}
   end
 end
 
