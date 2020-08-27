@@ -7,7 +7,7 @@ aggregates: {}
 attributes:
   category:
     name: category
-    multiplicity:
+    multiplicity: Required
     type: ENUM
     description: The default value is "other".  (See also Section 10.)
     values:

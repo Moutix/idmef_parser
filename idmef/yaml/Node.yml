@@ -6,12 +6,12 @@ color: "#4cdb4c"
 aggregates:
   location:
     name: location
-    multiplicity: 0..1
+    multiplicity: Optional
     type: STRING
     description: The location of the equipment.
   name:
     name: name
-    multiplicity: 0..1
+    multiplicity: Optional
     type: STRING
     description: The name of the equipment.  This information MUST be provided if
       no Address information is given.

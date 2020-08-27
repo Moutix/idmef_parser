@@ -6,12 +6,12 @@ color: "#b79370"
 aggregates:
   name:
     name: name
-    multiplicity: '1'
+    multiplicity: Required
     type: STRING
     description: The name of the alert, from one of the origins listed below.
   url:
     name: url
-    multiplicity: '1'
+    multiplicity: Required
     type: STRING
     description: A URL at which the manager (or the human operator of the manager)
       can find additional information about the alert.  The document pointed to by

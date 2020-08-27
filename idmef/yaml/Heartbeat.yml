@@ -20,7 +20,7 @@ aggregates:
     description: The time the heartbeat was created.
   HeartbeatInterval:
     name: HeartbeatInterval
-    multiplicity: 0..1
+    multiplicity: Optional
     type: INTEGER
     description: The interval in seconds at which heartbeats are generated.
   AnalyzerTime:

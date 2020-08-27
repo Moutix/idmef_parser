@@ -6,13 +6,13 @@ color: "#4cdb4c"
 aggregates:
   address:
     name: address
-    multiplicity: '1'
+    multiplicity: Required
     type: STRING
     description: The address information.  The format of this data is governed by
       the category attribute.
   netmask:
     name: netmask
-    multiplicity: 0..1
+    multiplicity: Optional
     type: STRING
     description: The network mask for the address, if appropriate.
 attributes:

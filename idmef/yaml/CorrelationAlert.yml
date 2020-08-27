@@ -7,13 +7,13 @@ color: "#BFBFBF"
 aggregates:
   name:
     name: name
-    multiplicity: '1'
+    multiplicity: Required
     type: STRING
     description: The reason for grouping the alerts together, for example, a particular
       correlation method.
   alertident:
     name: alertident
-    multiplicity: 1..*
+    multiplicity: Required
     type: STRING
     description: The list of alert identifiers that are related to this alert.  Because
       alert identifiers are only unique across the alerts sent by a single analyzer,

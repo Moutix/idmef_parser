@@ -7,13 +7,13 @@ aggregates:
   UserId:
     name: UserId
     multiplicity: '1'
-    type: 
+    type:
     description: The user (or group) to which these permissions apply.  The value
       of the "type" attribute must be "user-privs", "group-privs", or "other-privs"
       as appropriate.  Other values for "type" MUST NOT be used in this context.
   Permission:
     name: Permission
-    multiplicity: 1..*
+    multiplicity: Required
     type: ENUM
     description: Level of access allowed.  The permitted values are shown below.  There
       is no default value.  (See also Section 10.)

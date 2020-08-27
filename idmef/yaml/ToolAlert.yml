@@ -9,19 +9,19 @@ color: "#BFBFBF"
 aggregates:
   name:
     name: name
-    multiplicity: '1'
+    multiplicity: Required
     type: STRING
     description: The reason for grouping the alerts together, for example, the name
       of a particular tool.
   command:
     name: command
-    multiplicity: 0..1
+    multiplicity: Optional
     type: STRING
     description: The command or operation that the tool was asked to perform, for
       example, a BackOrifice ping.
   alertident:
     name: alertident
-    multiplicity: 1..*
+    multiplicity: Optional
     type: STRING
     description: The list of alert identifiers that are related to this alert.  Because
       alert identifiers are only unique across the alerts sent by a single analyzer,

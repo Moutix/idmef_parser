@@ -7,12 +7,12 @@ color: "#FFCC00"
 aggregates:
   value:
     name: value
-    multiplicity: '1'
+    multiplicity: Required
     type: STRING
     description: The value of the checksum.
   key:
     name: key
-    multiplicity: 0..1
+    multiplicity: Optional
     type: STRING
     description: The key to the checksum, if appropriate.
 attributes:
