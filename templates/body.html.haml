@@ -53,6 +53,19 @@
           = "(#{aggregate["multiplicity"]})"
       %blockquote
         = aggregate["description"]
+        - if aggregate["values"]
+          %table.table.table-striped.table-bordered
+            %thead
+              %tr
+                %th Rank
+                %th Keyword
+                %th Description
+            %tbody
+              - aggregate["values"].each do |value|
+                %tr
+                  %td= value["rank"]
+                  %td= value["keyword"]
+                  %td= value["description"]
 
   %hr
 
