@@ -2,6 +2,7 @@ require 'json'
 require 'yaml'
 require 'graphviz'
 require 'cgi'
+require_relative 'gen_pdf'
 
 class IDMEFGraph
   def initialize(idmef_class, classes, link = nil, direction = 'LR', color = true)
@@ -27,10 +28,15 @@ class IDMEFGraph
     @graph.output(dot: file)
   end
 
+  def gen_pdf! base_name, file
+    IDMEFPDF.new(base_name, "#{base_name}.png", file)
+  end
+
   def gen_all! base_name
     gen_svg! "#{base_name}.svg"
     gen_png! "#{base_name}.png"
     gen_dot! "#{base_name}.dot"
+    gen_pdf! base_name, "#{base_name}.pdf"
   end
 
   def to_svg

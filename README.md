@@ -10,6 +10,7 @@
 - RubyGems (tested with version 3.0.3)
     - haml (tested with version 5.1.2)
     - ruby-graphviz (tested with version 1.2.5)
+    - prawn (tested with version 2.3.0)
 
 ## Usage
 

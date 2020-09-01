@@ -13,6 +13,8 @@
       %a{href: "#png", "aria-control" => "png", role: "tab", "data-toggle" => "tab"} PNG
     %li{role: "presentation"}
       %a{href: "#dot", "aria-control" => "dot", role: "tab", "data-toggle" => "tab"} DOT
+    %li{role: "presentation"}
+      %a{href: "#pdf", "aria-control" => "pdf", role: "pdf", "data-toggle" => "tab"} PDF
 
 
   .tab-content
@@ -29,6 +31,9 @@
     #dot.tab-pane{role: "tabpanel"}
       %pre
         %p= CGI.escapeHTML(graph.to_dot)
+
+    #pdf.tab-pane{role: "tabpanel"}
+      %iframe{src: "/#{location}/img/#{generator}/#{active_class["name"]}.pdf", width: "100%", height: "500px"}
 
   %hr
 
